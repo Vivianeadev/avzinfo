@@ -3,222 +3,725 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponte para Investidores – Parceria com Universidades</title>
+    <title>Programa de Seleção de Propriedade Intelectual (IP) – Alunos</title>
     <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- CSS IDÊNTICO À PÁGINA PRINCIPAL -->
+    <!-- CSS ÚNICO E ORGANIZADO -->
     <style>
-        /* CSS IDÊNTICO - NÃO ALTERADO */
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Helvetica Neue',Arial,sans-serif}body{background:linear-gradient(135deg,#f9f5f0 0%,#faf0f4 100%);color:#3a3a3a;line-height:1.6;overflow-x:hidden;position:relative}body::before,body::after{content:'';position:fixed;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:0;opacity:.03}body::before{top:-200px;right:-200px;background:radial-gradient(circle,#7B3F00 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(123 63 0 / .1)}body::after{bottom:-200px;left:-200px;background:radial-gradient(circle,#8B4513 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(139 69 19 / .1)}.header{position:fixed;top:0;width:100%;background:rgb(255 255 255 / .95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;transition:all 0.3s ease;border-bottom:1px solid rgb(212 175 55 / .1);box-shadow:0 2px 20px rgb(123 63 0 / .05)}.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}.logo{font-size:1.8rem;font-weight:300;letter-spacing:2px;color:#2b2b2b;text-transform:uppercase;position:relative}.logo::after{content:'';position:absolute;bottom:-5px;left:0;width:60%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.logo span{display:block;font-size:11px;letter-spacing:8px;margin-top:2px;color:#888}.nav-menu{display:flex;list-style:none;gap:2rem}.nav-menu a{color:#3a3a3a;text-decoration:none;font-weight:400;transition:all 0.3s ease;position:relative;font-size:14px;letter-spacing:.5px}.nav-menu a:hover{color:#d4af37}.nav-menu a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:linear-gradient(135deg,#d4af37,#7B3F00);transition:width 0.3s ease}.nav-menu a:hover::after{width:100%}.hero{min-height:calc(100vh - 80px);display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;background:linear-gradient(135deg,rgb(249 245 240 / .9),rgb(250 240 244 / .9));overflow:hidden}.hero::before{content:'';position:absolute;top:10%;right:10%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgb(123 63 0 / .03) 0%,transparent 70%);filter:blur(40px);z-index:1}.hero-content{max-width:900px;z-index:2}.hero h1{font-size:clamp(2rem, 5vw, 3.2rem);margin-bottom:1rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;line-height:1.2}.hero h1 span{color:#d4af37;font-weight:500;text-shadow:0 0 30px rgb(212 175 55 / .2)}.hero-subtitle{font-size:1.2rem;color:#666;margin-bottom:2.5rem;font-weight:300;letter-spacing:.5px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7}.cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}.btn{padding:14px 28px;border:none;border-radius:2px;font-weight:400;text-decoration:none;display:inline-flex;align-items:center;gap:.8rem;transition:all 0.3s ease;cursor:pointer;font-size:14px;letter-spacing:.5px;position:relative;overflow:hidden}.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgb(255 255 255 / .2),transparent);transition:left 0.7s ease}.btn:hover::before{left:100%}.btn-primary{background:linear-gradient(to right,#d4af37,#f4e4b8);color:#2a2a2a;box-shadow:0 3px 15px rgb(212 175 55 / .3)}.btn-primary:hover{box-shadow:0 5px 20px rgb(212 175 55 / .4);transform:translateY(-2px)}.btn-secondary{background:#fff0;color:#666;border:1px solid #ddd;box-shadow:0 2px 8px rgb(0 0 0 / .05)}.btn-secondary:hover{border-color:#d4af37;color:#d4af37;box-shadow:0 4px 12px rgb(212 175 55 / .15)}.section{padding:5rem 2rem;background:rgb(255 255 255 / .7);position:relative}.section-light{background:linear-gradient(135deg,#f5f1ec 0%,#f7ecec 100%)}.container{max-width:1200px;margin:0 auto;position:relative;z-index:2}.section-title{font-size:clamp(1.6rem, 3vw, 2.2rem);text-align:center;margin-bottom:3rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;position:relative;padding-bottom:15px}.section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}.card{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:2.5rem 2rem;transition:all 0.3s ease;box-shadow:0 2px 10px rgb(0 0 0 / .05);position:relative}.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#7B3F00,transparent);opacity:0;transition:opacity 0.3s ease}.card:hover{border-color:rgb(123 63 0 / .15);box-shadow:0 8px 25px rgb(123 63 0 / .08);transform:translateY(-5px)}.card:hover::before{opacity:1}.card-icon{font-size:2.2rem;color:#d4af37;margin-bottom:1.5rem;text-shadow:0 0 10px rgb(212 175 55 / .2)}.card h3{font-size:1.3rem;margin-bottom:1rem;color:#2b2b2b;font-weight:500}.card p{color:#666;line-height:1.7;font-size:.95rem}.philosophy-content{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:3rem;margin-top:2rem;box-shadow:0 4px 20px rgb(0 0 0 / .03);position:relative}.philosophy-content::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:100px;height:1px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.philosophy-text{color:#666;line-height:1.8;font-size:1.05rem}.philosophy-text p{margin-bottom:1.5rem}.philosophy-text strong{color:#2b2b2b;font-weight:600}.philosophy-quote{margin-top:2.5rem;padding:2rem;border-left:3px solid #7B3F00;background:linear-gradient(90deg,rgb(123 63 0 / .03),transparent);border-radius:0 4px 4px 0;position:relative}.philosophy-quote::before{content:'"';position:absolute;top:-10px;left:-15px;font-size:4rem;color:rgb(123 63 0 / .1);font-family:serif;font-weight:700}.philosophy-quote p{font-style:italic;color:#555;font-size:1.2rem;line-height:1.7}.quote-author{color:#7B3F00;font-size:1rem;margin-top:1rem;text-align:right;font-weight:600}.footer{background:rgb(255 255 255 / .9);padding:3rem 2rem 2rem;text-align:center;border-top:1px solid rgb(123 63 0 / .1);position:relative}.footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.footer-content{max-width:1200px;margin:0 auto}.footer p{color:#888;margin-bottom:.8rem;font-size:.9rem}.social-links{display:flex;justify-content:center;gap:1.5rem;margin:2rem 0}.social-links a{color:#888;font-size:1.2rem;transition:all 0.3s ease;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgb(255 255 255 / .9);border:1px solid rgb(123 63 0 / .1)}.social-links a:hover{color:#7B3F00;transform:translateY(-3px);box-shadow:0 6px 15px rgb(123 63 0 / .15);border-color:rgb(123 63 0 / .2)}.language-switcher{position:fixed;top:10px;right:10px;z-index:1001;display:flex;gap:1px;background:rgb(255 255 255 / .97);border-radius:1px;padding:2px;border:1px solid rgb(123 63 0 / .08);box-shadow:0 1px 6px rgb(0 0 0 / .06);backdrop-filter:blur(10px);min-width:120px;height:34px;align-items:center;justify-content:center}.lang-btn{background:#fff0;border:none;color:#888;padding:3px 6px;border-radius:0;cursor:pointer;transition:all 0.2s ease;font-size:.65rem;font-weight:400;display:flex;align-items:center;gap:2px;min-height:28px;min-width:38px;justify-content:center;flex:1;height:100%}.lang-btn:hover{background:rgb(123 63 0 / .04);color:#666}.lang-btn.active{background:rgb(123 63 0 / .08);color:#7B3F00;font-weight:500;border-radius:0}.lang-flag{font-size:.7rem}.lang-content{display:none}.lang-content.active{display:block}@media (max-width:768px){.nav-menu{display:none}.cards-grid{grid-template-columns:1fr}.cta-buttons{flex-direction:column;align-items:center}.btn{padding:12px 24px;width:100%;max-width:300px;justify-content:center}.philosophy-content{padding:2rem 1.5rem}.philosophy-quote{padding:1.5rem}.language-switcher{top:8px;right:8px;min-width:110px;height:32px}.lang-btn{padding:2px 5px;font-size:.6rem;min-height:26px;min-width:34px;gap:1px}.hero{padding:5rem 1.5rem 3rem;min-height:calc(100vh - 70px)}}@media (max-width:480px){.section{padding:4rem 1rem}.philosophy-content{padding:1.5rem 1rem}.language-switcher{top:6px;right:6px;min-width:100px;height:30px}.lang-btn{padding:1px 4px;font-size:.55rem;min-height:24px;min-width:30px}.hero{padding:4rem 1rem 2.5rem}}@media (min-width:1366px){.hero{padding:7rem 2rem 5rem;min-height:calc(100vh - 90px)}}@media (min-width:1440px){.hero{padding:7.5rem 2rem 5.5rem;min-height:calc(100vh - 85px)}}@media (min-width:1920px){.hero{padding:8rem 2rem 6rem;min-height:calc(100vh - 100px)}}@media (min-width:2560px){.hero{padding:10rem 2rem 8rem;min-height:calc(100vh - 120px)}}body[dir="rtl"] .logo::after,body[dir="rtl"] .nav-menu a::after,body[dir="rtl"] .section-title::after{left:auto;right:0;transform:none}body[dir="rtl"] .section-title::after,body[dir="rtl"] .philosophy-content::before{right:50%;transform:translateX(50%)}body[dir="rtl"] .philosophy-quote{border-left:none;border-right:3px solid #7B3F00;background:linear-gradient(90deg,transparent,rgb(123 63 0 / .03))}body[dir="rtl"] .philosophy-quote::before{left:auto;right:-15px}.text-center{text-align:center}.mb-2{margin-bottom:2rem}.mb-3{margin-bottom:3rem}body[dir="rtl"] .lang-content[data-lang="ar"]{display:block!important;text-align:right;direction:rtl}body[dir="rtl"] #fundadora p[style*="color: #888"]{text-align:right}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Helvetica Neue',Arial,sans-serif}
         
-        /* ESTILOS ESPECÍFICOS SIMPLIFICADOS */
-        .coordinator-section {
-            background: linear-gradient(135deg, rgba(249, 245, 240, 0.7) 0%, rgba(250, 240, 244, 0.7) 100%);
-            border-radius: 8px;
-            padding: 3rem;
-            margin: 3rem 0;
-            border: 1px solid rgba(212, 175, 55, 0.1);
+        body{
+            background:linear-gradient(135deg,#f9f5f0 0%,#faf0f4 100%);
+            color:#3a3a3a;
+            line-height:1.6;
+            overflow-x:hidden;
+            position:relative
         }
         
-        @media (max-width: 768px) {
-            .coordinator-section {
-                padding: 2rem;
-                margin: 2rem 0;
-            }
+        body::before,body::after{
+            content:'';
+            position:fixed;
+            width:500px;
+            height:500px;
+            border-radius:50%;
+            pointer-events:none;
+            z-index:0;
+            opacity:.03
         }
         
-        .coordinator-grid {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 3rem;
-            align-items: center;
+        body::before{
+            top:-200px;
+            right:-200px;
+            background:radial-gradient(circle,#7B3F00 0%,transparent 70%);
+            box-shadow:0 0 150px 150px rgb(123 63 0 / .1)
         }
         
-        @media (max-width: 768px) {
-            .coordinator-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+        body::after{
+            bottom:-200px;
+            left:-200px;
+            background:radial-gradient(circle,#8B4513 0%,transparent 70%);
+            box-shadow:0 0 150px 150px rgb(139 69 19 / .1)
         }
         
-        .coordinator-photo {
-            width: 100%;
-            height: 300px;
-            background-color: #f5f1ec;
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        /* HEADER */
+        .header{
+            position:fixed;
+            top:0;
+            width:100%;
+            background:rgb(255 255 255 / .95);
+            backdrop-filter:blur(10px);
+            z-index:1000;
+            padding:1rem 0;
+            transition:all 0.3s ease;
+            border-bottom:1px solid rgb(212 175 55 / .1);
+            box-shadow:0 2px 20px rgb(123 63 0 / .05)
         }
         
-        .coordinator-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .nav-container{
+            max-width:1200px;
+            margin:0 auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0 2rem
         }
         
-        .photo-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #f5f1ec 0%, #f7ecec 100%);
-            color: #7B3F00;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 2rem;
+        .logo{
+            font-size:1.8rem;
+            font-weight:300;
+            letter-spacing:2px;
+            color:#2b2b2b;
+            text-transform:uppercase;
+            position:relative
         }
         
-        .simple-card {
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(212, 175, 55, 0.08);
-            border-radius: 4px;
-            padding: 2rem;
-            transition: all 0.3s ease;
+        .logo::after{
+            content:'';
+            position:absolute;
+            bottom:-5px;
+            left:0;
+            width:60%;
+            height:1px;
+            background:linear-gradient(to right,transparent,#7B3F00,transparent)
         }
         
-        .simple-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(123, 63, 0, 0.08);
+        .logo span{
+            display:block;
+            font-size:11px;
+            letter-spacing:8px;
+            margin-top:2px;
+            color:#888
         }
         
-        .invitation-box {
-            background: linear-gradient(135deg, rgba(123, 63, 0, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
-            border: 1px solid rgba(123, 63, 0, 0.1);
-            border-radius: 8px;
-            padding: 2.5rem;
-            text-align: center;
-            margin: 3rem 0;
+        .nav-menu{
+            display:flex;
+            list-style:none;
+            gap:2rem
         }
         
-        @media (max-width: 768px) {
-            .invitation-box {
-                padding: 2rem;
-                margin: 2rem 0;
-            }
+        .nav-menu a{
+            color:#3a3a3a;
+            text-decoration:none;
+            font-weight:400;
+            transition:all 0.3s ease;
+            position:relative;
+            font-size:14px;
+            letter-spacing:.5px
         }
         
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 4px;
-            border-left: 3px solid #7B3F00;
+        .nav-menu a:hover{
+            color:#d4af37
         }
         
-        .benefit-icon {
-            color: #7B3F00;
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
+        .nav-menu a::after{
+            content:'';
+            position:absolute;
+            bottom:-5px;
+            left:0;
+            width:0;
+            height:1px;
+            background:linear-gradient(135deg,#d4af37,#7B3F00);
+            transition:width 0.3s ease
         }
         
-        /* ESTILOS PARA CARTA ABERTA DISCRETA */
-        .open-letter-container {
-            position: relative;
-            margin: 2rem 0;
+        .nav-menu a:hover::after{
+            width:100%
         }
         
-        .open-letter-trigger {
-            display: block;
-            width: 100%;
-            background: rgba(123, 63, 0, 0.05);
-            border: 1px solid rgba(123, 63, 0, 0.1);
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #7B3F00;
-            font-weight: 500;
+        /* HERO SECTION */
+        .hero{
+            min-height:calc(100vh - 80px);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:6rem 2rem 4rem;
+            position:relative;
+            background:linear-gradient(135deg,rgb(249 245 240 / .9),rgb(250 240 244 / .9));
+            overflow:hidden
         }
         
-        .open-letter-trigger:hover {
-            background: rgba(123, 63, 0, 0.08);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(123, 63, 0, 0.1);
+        .hero::before{
+            content:'';
+            position:absolute;
+            top:10%;
+            right:10%;
+            width:300px;
+            height:300px;
+            border-radius:50%;
+            background:radial-gradient(circle,rgb(123 63 0 / .03) 0%,transparent 70%);
+            filter:blur(40px);
+            z-index:1
         }
         
-        .open-letter-trigger i {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
+        .hero-content{
+            max-width:900px;
+            z-index:2
         }
         
-        .open-letter-trigger.active i {
-            transform: rotate(180deg);
+        .hero h1{
+            font-size:clamp(2rem, 5vw, 3.2rem);
+            margin-bottom:1rem;
+            font-weight:400;
+            letter-spacing:1px;
+            color:#2b2b2b;
+            line-height:1.2
         }
         
-        .open-letter-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 0 0 8px 8px;
-            margin-top: -5px;
+        .hero h1 span{
+            color:#d4af37;
+            font-weight:500;
+            text-shadow:0 0 30px rgb(212 175 55 / .2)
         }
         
-        .open-letter-content.active {
-            max-height: 2000px;
-            padding: 3rem;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-top: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        .hero-subtitle{
+            font-size:1.2rem;
+            color:#666;
+            margin-bottom:2.5rem;
+            font-weight:300;
+            letter-spacing:.5px;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+            line-height:1.7
         }
         
-        .letter-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        /* BUTTONS */
+        .cta-buttons{
+            display:flex;
+            gap:1.5rem;
+            justify-content:center;
+            flex-wrap:wrap
         }
         
-        .letter-header h3 {
-            color: #2b2b2b;
-            font-weight: 500;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+        .btn{
+            padding:14px 28px;
+            border:none;
+            border-radius:2px;
+            font-weight:400;
+            text-decoration:none;
+            display:inline-flex;
+            align-items:center;
+            gap:.8rem;
+            transition:all 0.3s ease;
+            cursor:pointer;
+            font-size:14px;
+            letter-spacing:.5px;
+            position:relative;
+            overflow:hidden
         }
         
-        .letter-header p {
-            color: #7B3F00;
-            font-style: italic;
+        .btn::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
+            background:linear-gradient(90deg,transparent,rgb(255 255 255 / .2),transparent);
+            transition:left 0.7s ease
         }
         
-        .letter-body {
-            color: #555;
-            line-height: 1.8;
-            font-size: 1.05rem;
+        .btn:hover::before{
+            left:100%
         }
         
-        .letter-body p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
+        .btn-primary{
+            background:linear-gradient(to right,#d4af37,#f4e4b8);
+            color:#2a2a2a;
+            box-shadow:0 3px 15px rgb(212 175 55 / .3)
         }
         
-        .letter-signature {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            text-align: right;
-            color: #7B3F00;
-            font-weight: 500;
-            font-style: italic;
+        .btn-primary:hover{
+            box-shadow:0 5px 20px rgb(212 175 55 / .4);
+            transform:translateY(-2px)
         }
         
-        @media (max-width: 768px) {
-            .open-letter-content.active {
-                padding: 2rem 1.5rem;
-            }
-            
-            .open-letter-trigger {
-                padding: 1.2rem;
-                font-size: 0.9rem;
-            }
+        .btn-secondary{
+            background:#fff0;
+            color:#666;
+            border:1px solid #ddd;
+            box-shadow:0 2px 8px rgb(0 0 0 / .05)
+        }
+        
+        .btn-secondary:hover{
+            border-color:#d4af37;
+            color:#d4af37;
+            box-shadow:0 4px 12px rgb(212 175 55 / .15)
+        }
+        
+        /* SECTIONS */
+        .section{
+            padding:5rem 2rem;
+            background:rgb(255 255 255 / .7);
+            position:relative
+        }
+        
+        .section-light{
+            background:linear-gradient(135deg,#f5f1ec 0%,#f7ecec 100%)
+        }
+        
+        .container{
+            max-width:1200px;
+            margin:0 auto;
+            position:relative;
+            z-index:2
+        }
+        
+        .section-title{
+            font-size:clamp(1.6rem, 3vw, 2.2rem);
+            text-align:center;
+            margin-bottom:3rem;
+            font-weight:400;
+            letter-spacing:1px;
+            color:#2b2b2b;
+            position:relative;
+            padding-bottom:15px
+        }
+        
+        .section-title::after{
+            content:'';
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
+            width:60px;
+            height:2px;
+            background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)
+        }
+        
+        /* CARDS */
+        .cards-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:2rem
+        }
+        
+        .card{
+            background:rgb(255 255 255 / .9);
+            border:1px solid rgb(212 175 55 / .08);
+            border-radius:4px;
+            padding:2.5rem 2rem;
+            transition:all 0.3s ease;
+            box-shadow:0 2px 10px rgb(0 0 0 / .05);
+            position:relative
+        }
+        
+        .card::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:2px;
+            background:linear-gradient(to right,transparent,#7B3F00,transparent);
+            opacity:0;
+            transition:opacity 0.3s ease
+        }
+        
+        .card:hover{
+            border-color:rgb(123 63 0 / .15);
+            box-shadow:0 8px 25px rgb(123 63 0 / .08);
+            transform:translateY(-5px)
+        }
+        
+        .card:hover::before{
+            opacity:1
+        }
+        
+        .card-icon{
+            font-size:2.2rem;
+            color:#d4af37;
+            margin-bottom:1.5rem;
+            text-shadow:0 0 10px rgb(212 175 55 / .2)
+        }
+        
+        .card h3{
+            font-size:1.3rem;
+            margin-bottom:1rem;
+            color:#2b2b2b;
+            font-weight:500
+        }
+        
+        .card p{
+            color:#666;
+            line-height:1.7;
+            font-size:.95rem
+        }
+        
+        /* PHILOSOPHY CONTENT */
+        .philosophy-content{
+            background:rgb(255 255 255 / .9);
+            border:1px solid rgb(212 175 55 / .08);
+            border-radius:4px;
+            padding:3rem;
+            margin-top:2rem;
+            box-shadow:0 4px 20px rgb(0 0 0 / .03);
+            position:relative
+        }
+        
+        .philosophy-content::before{
+            content:'';
+            position:absolute;
+            top:-1px;
+            left:50%;
+            transform:translateX(-50%);
+            width:100px;
+            height:1px;
+            background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)
+        }
+        
+        .philosophy-text{
+            color:#666;
+            line-height:1.8;
+            font-size:1.05rem
+        }
+        
+        .philosophy-text p{
+            margin-bottom:1.5rem
+        }
+        
+        .philosophy-text strong{
+            color:#2b2b2b;
+            font-weight:600
+        }
+        
+        .philosophy-quote{
+            margin-top:2.5rem;
+            padding:2rem;
+            border-left:3px solid #7B3F00;
+            background:linear-gradient(90deg,rgb(123 63 0 / .03),transparent);
+            border-radius:0 4px 4px 0;
+            position:relative
+        }
+        
+        .philosophy-quote::before{
+            content:'"';
+            position:absolute;
+            top:-10px;
+            left:-15px;
+            font-size:4rem;
+            color:rgb(123 63 0 / .1);
+            font-family:serif;
+            font-weight:700
+        }
+        
+        .philosophy-quote p{
+            font-style:italic;
+            color:#555;
+            font-size:1.2rem;
+            line-height:1.7
+        }
+        
+        .quote-author{
+            color:#7B3F00;
+            font-size:1rem;
+            margin-top:1rem;
+            text-align:right;
+            font-weight:600
+        }
+        
+        /* FOOTER */
+        .footer{
+            background:rgb(255 255 255 / .9);
+            padding:3rem 2rem 2rem;
+            text-align:center;
+            border-top:1px solid rgb(123 63 0 / .1);
+            position:relative
+        }
+        
+        .footer::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:1px;
+            background:linear-gradient(to right,transparent,#7B3F00,transparent)
+        }
+        
+        .footer-content{
+            max-width:1200px;
+            margin:0 auto
+        }
+        
+        .footer p{
+            color:#888;
+            margin-bottom:.8rem;
+            font-size:.9rem
+        }
+        
+        .social-links{
+            display:flex;
+            justify-content:center;
+            gap:1.5rem;
+            margin:2rem 0
+        }
+        
+        .social-links a{
+            color:#888;
+            font-size:1.2rem;
+            transition:all 0.3s ease;
+            width:44px;
+            height:44px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:rgb(255 255 255 / .9);
+            border:1px solid rgb(123 63 0 / .1)
+        }
+        
+        .social-links a:hover{
+            color:#7B3F00;
+            transform:translateY(-3px);
+            box-shadow:0 6px 15px rgb(123 63 0 / .15);
+            border-color:rgb(123 63 0 / .2)
+        }
+        
+        /* LANGUAGE SWITCHER */
+        .language-switcher{
+            position:fixed;
+            top:10px;
+            right:10px;
+            z-index:1001;
+            display:flex;
+            gap:1px;
+            background:rgb(255 255 255 / .97);
+            border-radius:1px;
+            padding:2px;
+            border:1px solid rgb(123 63 0 / .08);
+            box-shadow:0 1px 6px rgb(0 0 0 / .06);
+            backdrop-filter:blur(10px);
+            min-width:120px;
+            height:34px;
+            align-items:center;
+            justify-content:center
+        }
+        
+        .lang-btn{
+            background:#fff0;
+            border:none;
+            color:#888;
+            padding:3px 6px;
+            border-radius:0;
+            cursor:pointer;
+            transition:all 0.2s ease;
+            font-size:.65rem;
+            font-weight:400;
+            display:flex;
+            align-items:center;
+            gap:2px;
+            min-height:28px;
+            min-width:38px;
+            justify-content:center;
+            flex:1;
+            height:100%
+        }
+        
+        .lang-btn:hover{
+            background:rgb(123 63 0 / .04);
+            color:#666
+        }
+        
+        .lang-btn.active{
+            background:rgb(123 63 0 / .08);
+            color:#7B3F00;
+            font-weight:500;
+            border-radius:0
+        }
+        
+        .lang-flag{
+            font-size:.7rem
+        }
+        
+        .lang-content{
+            display:none
+        }
+        
+        .lang-content.active{
+            display:block
+        }
+        
+        /* VALUATION TOOL (APENAS O ESSENCIAL) */
+        .valuation-tool-container{
+            background:rgb(255 255 255 / .95);
+            border:1px solid rgb(212 175 55 / .08);
+            border-radius:4px;
+            padding:3rem;
+            margin-top:2rem;
+            box-shadow:0 4px 20px rgb(0 0 0 / .03);
+            position:relative
+        }
+        
+        .valuation-form{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+            gap:2rem;
+            margin-bottom:3rem
+        }
+        
+        .form-section{
+            background:rgb(250 245 240 / .4);
+            border:1px solid rgb(212 175 55 / .08);
+            border-radius:4px;
+            padding:2rem;
+            transition:all 0.3s ease
+        }
+        
+        .form-section:hover{
+            border-color:rgb(123 63 0 / .15);
+            box-shadow:0 8px 25px rgb(123 63 0 / .05);
+            transform:translateY(-2px)
+        }
+        
+        .valuation-result-preview{
+            background:linear-gradient(135deg, #7B3F00, #d4af37);
+            color:white;
+            padding:2.5rem;
+            border-radius:4px;
+            text-align:center;
+            margin-top:2rem;
+            box-shadow:0 8px 30px rgb(123 63 0 / .2);
+            position:relative;
+            overflow:hidden
+        }
+        
+        .valuation-disclaimer-box{
+            background:linear-gradient(135deg, rgb(250 245 240 / .95) 0%, rgb(255 249 242 / .95) 100%);
+            border:1px solid rgb(212 175 55 / .15);
+            border-radius:4px;
+            padding:2.5rem;
+            margin-bottom:3rem;
+            position:relative;
+            box-shadow:0 4px 20px rgb(0 0 0 / .03);
+            border-left:4px solid #d4af37
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width:768px){
+            .nav-menu{display:none}
+            .cards-grid{grid-template-columns:1fr}
+            .cta-buttons{flex-direction:column;align-items:center}
+            .btn{padding:12px 24px;width:100%;max-width:300px;justify-content:center}
+            .philosophy-content{padding:2rem 1.5rem}
+            .philosophy-quote{padding:1.5rem}
+            .language-switcher{top:8px;right:8px;min-width:110px;height:32px}
+            .lang-btn{padding:2px 5px;font-size:.6rem;min-height:26px;min-width:34px;gap:1px}
+            .hero{padding:5rem 1.5rem 3rem;min-height:calc(100vh - 70px)}
+            .valuation-form{grid-template-columns:1fr}
+            .valuation-tool-container{padding:1.5rem}
+        }
+        
+        @media (max-width:480px){
+            .section{padding:4rem 1rem}
+            .philosophy-content{padding:1.5rem 1rem}
+            .language-switcher{top:6px;right:6px;min-width:100px;height:30px}
+            .lang-btn{padding:1px 4px;font-size:.55rem;min-height:24px;min-width:30px}
+            .hero{padding:4rem 1rem 2.5rem}
+        }
+        
+        @media (min-width:1366px){
+            .hero{padding:7rem 2rem 5rem;min-height:calc(100vh - 90px)}
+        }
+        
+        @media (min-width:1440px){
+            .hero{padding:7.5rem 2rem 5.5rem;min-height:calc(100vh - 85px)}
+        }
+        
+        @media (min-width:1920px){
+            .hero{padding:8rem 2rem 6rem;min-height:calc(100vh - 100px)}
+        }
+        
+        @media (min-width:2560px){
+            .hero{padding:10rem 2rem 8rem;min-height:calc(100vh - 120px)}
+        }
+        
+        /* RTL SUPPORT */
+        body[dir="rtl"] .logo::after,
+        body[dir="rtl"] .nav-menu a::after,
+        body[dir="rtl"] .section-title::after{
+            left:auto;
+            right:0;
+            transform:none
+        }
+        
+        body[dir="rtl"] .section-title::after,
+        body[dir="rtl"] .philosophy-content::before{
+            right:50%;
+            transform:translateX(50%)
+        }
+        
+        body[dir="rtl"] .philosophy-quote{
+            border-left:none;
+            border-right:3px solid #7B3F00;
+            background:linear-gradient(90deg,transparent,rgb(123 63 0 / .03))
+        }
+        
+        body[dir="rtl"] .philosophy-quote::before{
+            left:auto;
+            right:-15px
+        }
+        
+        body[dir="rtl"] .lang-content[data-lang="ar"]{
+            display:block!important;
+            text-align:right;
+            direction:rtl
+        }
+        
+        /* UTILITY CLASSES */
+        .text-center{text-align:center}
+        .mb-2{margin-bottom:2rem}
+        .mb-3{margin-bottom:3rem}
+        
+        /* PRODUCT CARDS (OBJETO DA SELEÇÃO) */
+        .products-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:2rem
+        }
+        
+        .product-card{
+            background:rgb(255 255 255 / .95);
+            border:1px solid rgb(123 63 0 / .08);
+            border-radius:8px;
+            padding:2.5rem 2rem;
+            transition:all 0.4s ease;
+            box-shadow:0 4px 15px rgb(0 0 0 / .03);
+            position:relative;
+            overflow:hidden
+        }
+        
+        .product-card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 12px 30px rgb(123 63 0 / .1);
+            border-color:rgb(123 63 0 / .15)
+        }
+        
+        .product-badge{
+            position:absolute;
+            top:15px;
+            right:15px;
+            background:linear-gradient(135deg,#d4af37,#7B3F00);
+            color:#fff;
+            padding:4px 12px;
+            border-radius:20px;
+            font-size:.75rem;
+            font-weight:600;
+            letter-spacing:.5px
+        }
+        
+        .product-icon{
+            font-size:2.5rem;
+            color:#7B3F00;
+            margin-bottom:1.5rem;
+            transition:all 0.3s ease
+        }
+        
+        .product-card:hover .product-icon{
+            color:#d4af37;
+            transform:scale(1.1)
         }
     </style>
 </head>
@@ -242,501 +745,477 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">PROGRAMA IP<span>Ponte para Investidores</span></div>
+            <div class="logo">PROGRAMA IP<span>Seleção de Propriedade Intelectual</span></div>
             <ul class="nav-menu">
-                <li><a href="#convite">
-                    <span class="lang-content active" data-lang="pt">Convite</span>
-                    <span class="lang-content" data-lang="en">Invitation</span>
-                    <span class="lang-content" data-lang="ar">دعوة</span>
+                <li><a href="#inicio">
+                    <span class="lang-content active" data-lang="pt">Início</span>
+                    <span class="lang-content" data-lang="en">Home</span>
+                    <span class="lang-content" data-lang="ar">الرئيسية</span>
                 </a></li>
-                <li><a href="#coordenadora">
-                    <span class="lang-content active" data-lang="pt">Manifesto</span>
-                    <span class="lang-content" data-lang="en">Manifesto</span>
-                    <span class="lang-content" data-lang="ar">بيان</span>
+                <li><a href="#apresentacao">
+                    <span class="lang-content active" data-lang="pt">Apresentação</span>
+                    <span class="lang-content" data-lang="en">Presentation</span>
+                    <span class="lang-content" data-lang="ar">العرض</span>
                 </a></li>
-                <li><a href="#beneficios">
-                    <span class="lang-content active" data-lang="pt">Benefícios</span>
-                    <span class="lang-content" data-lang="en">Benefits</span>
-                    <span class="lang-content" data-lang="ar">فوائد</span>
+                <li><a href="#elegibilidade">
+                    <span class="lang-content active" data-lang="pt">Elegibilidade</span>
+                    <span class="lang-content" data-lang="en">Eligibility</span>
+                    <span class="lang-content" data-lang="ar">الأهلية</span>
                 </a></li>
-                <li><a href="#como-funciona">
-                    <span class="lang-content active" data-lang="pt">Como Funciona</span>
-                    <span class="lang-content" data-lang="en">How It Works</span>
-                    <span class="lang-content" data-lang="ar">كيف يعمل</span>
+                <li><a href="#objeto">
+                    <span class="lang-content active" data-lang="pt">Objeto da Seleção</span>
+                    <span class="lang-content" data-lang="en">Selection Object</span>
+                    <span class="lang-content" data-lang="ar">موضوع الاختيار</span>
+                </a></li>
+                <li><a href="#criterios">
+                    <span class="lang-content active" data-lang="pt">Critérios</span>
+                    <span class="lang-content" data-lang="en">Criteria</span>
+                    <span class="lang-content" data-lang="ar">المعايير</span>
+                </a></li>
+                <li><a href="#juridico">
+                    <span class="lang-content active" data-lang="pt">Aspectos Jurídicos</span>
+                    <span class="lang-content" data-lang="en">Legal Aspects</span>
+                    <span class="lang-content" data-lang="ar">الجوانب القانونية</span>
                 </a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>
-                <span class="lang-content active" data-lang="pt">Ponte Direta para <span>Investidores</span></span>
-                <span class="lang-content" data-lang="en">Direct Bridge to <span>Investidores</span></span>
-                <span class="lang-content" data-lang="ar">جسر مباشر إلى <span>المستثمرين</span></span>
-            </h1>
+            <h1 class="lang-content active" data-lang="pt">Programa de Seleção de <span>Propriedade Intelectual</span></h1>
+            <h1 class="lang-content" data-lang="en">Intellectual Property <span>Selection Program</span></h1>
+            <h1 class="lang-content" data-lang="ar">برنامج اختيار <span>الملكية الفكرية</span></h1>
             
-            <p class="hero-subtitle">
-                <span class="lang-content active" data-lang="pt">Conectamos projetos acadêmicos de excelência com investidores reais. Uma parceria simples entre sua universidade e o mercado.</span>
-                <span class="lang-content" data-lang="en">We connect excellence academic projects with real investors. A simple partnership between your university and the market.</span>
-                <span class="lang-content" data-lang="ar">نربط مشاريع أكاديمية متميزة بمستثمرين حقيقيين. شراكة بسيطة بين جامعتك والسوق.</span>
+            <p class="hero-subtitle lang-content active" data-lang="pt">
+                Programa técnico-acadêmico para identificação, avaliação e potencial desenvolvimento de ativos intelectuais de alunos, 
+                desenvolvedores em formação e pesquisadores independentes.
+            </p>
+            <p class="hero-subtitle lang-content" data-lang="en">
+                Technical-academic program for identification, evaluation and potential development of intellectual assets from students, 
+                developers in training and independent researchers.
+            </p>
+            <p class="hero-subtitle lang-content" data-lang="ar">
+                برنامج تقني أكاديمي لتحديد وتقييم وتطوير محتمل للأصول الفكرية للطلاب والمطورين في مرحلة التدريب والباحثين المستقلين.
+            </p>
+            <div class="cta-buttons">
+                <a href="#elegibilidade" class="btn btn-primary">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span class="lang-content active" data-lang="pt">Ver Elegibilidade</span>
+                    <span class="lang-content" data-lang="en">View Eligibility</span>
+                    <span class="lang-content" data-lang="ar">عرض الأهلية</span>
+                </a>
+                <a href="#criterios" class="btn btn-secondary">
+                    <i class="fas fa-balance-scale"></i>
+                    <span class="lang-content active" data-lang="pt">Critérios Técnicos</span>
+                    <span class="lang-content" data-lang="en">Technical Criteria</span>
+                    <span class="lang-content" data-lang="ar">المعايير التقنية</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Apresentação -->
+    <section id="apresentacao" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="pt">Apresentação Formal do Programa</span>
+                <span class="lang-content" data-lang="en">Formal Program Presentation</span>
+                <span class="lang-content" data-lang="ar">العرض الرسمي للبرنامج</span>
+            </h2>
+            
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <!-- Portuguese Content -->
+                    <div class="lang-content active" data-lang="pt">
+                        <p>O <strong>Programa de Seleção de Propriedade Intelectual (IP) – Alunos</strong> constitui uma iniciativa de caráter técnico-acadêmico voltada à identificação e avaliação qualificada de ativos intelectuais desenvolvidos no âmbito educacional e de pesquisa independente.</p>
+                        
+                        <p>O programa tem como objetivo principal estabelecer um canal institucional para análise técnica e jurídica de softwares, sistemas, algoritmos, modelos de inteligência artificial, arquiteturas digitais e protocolos criados por estudantes, desenvolvedores em formação e pesquisadores independentes.</p>
+                        
+                        <p>Esta iniciativa não configura vínculo empregatício, promessa de investimento ou oferta pública. Trata-se de mecanismo de avaliação e potencial identificação de ativos intelectíveis passíveis de desenvolvimento futuro, mediante acordos específicos e separados.</p>
+                        
+                        <p>O foco reside na avaliação objetiva de mérito técnico, originalidade, estrutura arquitetural, maturidade do projeto, aspectos de segurança e potencial de aplicação real em contextos institucionais ou de infraestrutura crítica.</p>
+                    </div>
+                    
+                    <!-- English Content -->
+                    <div class="lang-content" data-lang="en">
+                        <p>The <strong>Intellectual Property (IP) Selection Program – Students</strong> constitutes a technical-academic initiative aimed at the identification and qualified evaluation of intellectual assets developed within educational and independent research contexts.</p>
+                        
+                        <p>The program's primary objective is to establish an institutional channel for technical and legal analysis of software, systems, algorithms, artificial intelligence models, digital architectures, and protocols created by students, developers in training, and independent researchers.</p>
+                        
+                        <p>This initiative does not constitute employment relationship, investment promise, or public offering. It is a mechanism for evaluation and potential identification of intellectual assets amenable to future development, through specific and separate agreements.</p>
+                        
+                        <p>The focus lies on the objective assessment of technical merit, originality, architectural structure, project maturity, security aspects, and potential for real application in institutional or critical infrastructure contexts.</p>
+                    </div>
+                    
+                    <!-- Arabic Content -->
+                    <div class="lang-content" data-lang="ar">
+                        <p>يُشكل <strong>برنامج اختيار الملكية الفكرية (IP) – الطلاب</strong> مبادرة تقنية أكاديمية تهدف إلى تحديد وتقييم مؤهل للأصول الفكرية المطورة في سياقات التعليم والبحث المستقل.</p>
+                        
+                        <p>الهدف الرئيسي للبرنامج هو إنشاء قناة مؤسسية للتحليل التقني والقانوني للبرمجيات، الأنظمة، الخوارزميات، نماذج الذكاء الاصطناعي، الهياكل الرقمية والبروتوكولات التي ينشئها الطلاب والمطورون في مرحلة التدريب والباحثون المستقلون.</p>
+                        
+                        <p>لا تشكل هذه المبادرة علاقة عمل أو وعدًا استثماريًا أو عرضًا عامًا. إنها آلية للتقييم والتحديد المحتمل للأصول الفكرية القابلة للتطوير المستقبلي، من خلال اتفاقيات محددة ومنفصلة.</p>
+                        
+                        <p>التركيز يكمن في التقييم الموضوعي للجدارة التقنية، الأصالة، الهيكل المعماري، نضج المشروع، جوانب الأمان وإمكانية التطبيق الفعلي في السياقات المؤسسية أو البنية التحتية الحرجة.</p>
+                    </div>
+                </div>
+                
+                <div class="philosophy-quote">
+                    <p class="lang-content active" data-lang="pt">"A avaliação técnica precede qualquer consideração comercial. O mérito arquitetural é a base."</p>
+                    <p class="lang-content" data-lang="en">"Technical evaluation precedes any commercial consideration. Architectural merit is the foundation."</p>
+                    <p class="lang-content" data-lang="ar">"التقييم التقني يسبق أي اعتبار تجاري. الجدارة المعمارية هي الأساس."</p>
+                    <div class="quote-author lang-content active" data-lang="pt">— Princípio do Programa</div>
+                    <div class="quote-author lang-content" data-lang="en">— Program Principle</div>
+                    <div class="quote-author lang-content" data-lang="ar">— مبدأ البرنامج</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Elegibilidade -->
+    <section id="elegibilidade" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="pt">Elegibilidade para Participação</span>
+                <span class="lang-content" data-lang="en">Eligibility for Participation</span>
+                <span class="lang-content" data-lang="ar">الأهلية للمشاركة</span>
+            </h2>
+            
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="pt">Estudantes</span>
+                        <span class="lang-content" data-lang="en">Students</span>
+                        <span class="lang-content" data-lang="ar">الطلاب</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Matriculados em instituições de ensino superior ou técnico no Brasil, com projetos desenvolvidos no âmbito acadêmico ou de iniciação científica.</span>
+                        <span class="lang-content" data-lang="en">Enrolled in higher education or technical institutions in Brazil, with projects developed in academic or scientific initiation contexts.</span>
+                        <span class="lang-content" data-lang="ar">مسجلون في مؤسسات التعليم العالي أو التقني في البرازيل، مع مشاريع مطورة في سياقات أكاديمية أو بدء علمي.</span>
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="pt">Desenvolvedores em Formação</span>
+                        <span class="lang-content" data-lang="en">Developers in Training</span>
+                        <span class="lang-content" data-lang="ar">المطورون في مرحلة التدريب</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Indivíduos em programas de capacitação, bootcamps ou formação autodidata com projetos técnicos concluídos ou em estágio avançado.</span>
+                        <span class="lang-content" data-lang="en">Individuals in training programs, bootcamps or self-taught training with completed technical projects or at an advanced stage.</span>
+                        <span class="lang-content" data-lang="ar">أفراد في برامج تدريب، معسكرات تدريبية أو تعلم ذاتي مع مشاريع تقنية مكتملة أو في مرحلة متقدمة.</span>
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="pt">Pesquisadores Independentes</span>
+                        <span class="lang-content" data-lang="en">Independent Researchers</span>
+                        <span class="lang-content" data-lang="ar">الباحثون المستقلون</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Profissionais atuando em pesquisa aplicada sem vínculo institucional formal, com produção intelectual registrada.</span>
+                        <span class="lang-content" data-lang="en">Professionals engaged in applied research without formal institutional affiliation, with registered intellectual production.</span>
+                        <span class="lang-content" data-lang="ar">محترفون يعملون في البحث التطبيقي دون ارتباط مؤسسي رسمي، مع إنتاج فكري مسجل.</span>
+                    </p>
+                </div>
+
+                <!-- Card 4 - Não Elegível -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="pt">Não Elegíveis</span>
+                        <span class="lang-content" data-lang="en">Not Eligible</span>
+                        <span class="lang-content" data-lang="ar">غير مؤهلين</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Empresas constituídas, projetos com financiamento corporativo ativo, ou ativos já comercializados em escala. Profissionais com vínculo empregatício em posição sênior no setor.</span>
+                        <span class="lang-content" data-lang="en">Incorporated companies, projects with active corporate funding, or assets already commercialized at scale. Professionals with employment in senior industry positions.</span>
+                        <span class="lang-content" data-lang="ar">شركات مسجلة، مشاريع بتمويل مؤسسي نشط، أو أصول مسوقة بالفعل على نطاق واسع. محترفون بعقد عمل في مناصب رفيعة في القطاع.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Objeto da Seleção -->
+    <section id="objeto" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="pt">Objeto da Seleção</span>
+                <span class="lang-content" data-lang="en">Selection Object</span>
+                <span class="lang-content" data-lang="ar">موضوع الاختيار</span>
+            </h2>
+            
+            <p class="text-center mb-3" style="color: #666; font-size: 1.05rem;">
+                <span class="lang-content active" data-lang="pt">Ativos intelectuais imateriais nas seguintes categorias técnicas</span>
+                <span class="lang-content" data-lang="en">Intangible intellectual assets in the following technical categories</span>
+                <span class="lang-content" data-lang="ar">أصول فكرية غير ملموسة في الفئات التقنية التالية</span>
             </p>
             
-            <div class="cta-buttons">
-                <a href="https://avzinfra.info/" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span class="lang-content active" data-lang="pt">Conheça o Convite aos Estudantes</span>
-                    <span class="lang-content" data-lang="en">View Student Invitation</span>
-                    <span class="lang-content" data-lang="ar">شاهد دعوة الطلاب</span>
-                </a>
-                <a href="#beneficios" class="btn btn-secondary">
-                    <i class="fas fa-university"></i>
-                    <span class="lang-content active" data-lang="pt">Benefícios para a Universidade</span>
-                    <span class="lang-content" data-lang="en">University Benefits</span>
-                    <span class="lang-content" data-lang="ar">فوائد الجامعة</span>
-                </a>
+            <div class="products-grid">
+                <!-- Categoria 1 -->
+                <div class="product-card">
+                    <div class="product-badge">
+                        <span class="lang-content active" data-lang="pt">Software</span>
+                        <span class="lang-content" data-lang="en">Software</span>
+                        <span class="lang-content" data-lang="ar">البرمجيات</span>
+                    </div>
+                    <div class="product-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Sistemas de Software</h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Aplicações, plataformas, sistemas embarcados ou qualquer solução de software com arquitetura definida e funcionalidade implementada.</span>
+                        <span class="lang-content" data-lang="en">Applications, platforms, embedded systems or any software solution with defined architecture and implemented functionality.</span>
+                        <span class="lang-content" data-lang="ar">تطبيقات، منصات، أنظمة مدمجة أو أي حل برمجي بهندسة محددة ووظيفة مطبقة.</span>
+                    </p>
+                </div>
+
+                <!-- Categoria 2 -->
+                <div class="product-card">
+                    <div class="product-badge">
+                        <span class="lang-content active" data-lang="pt">IA & Algoritmos</span>
+                        <span class="lang-content" data-lang="en">AI & Algorithms</span>
+                        <span class="lang-content" data-lang="ar">الذكاء الاصطناعي والخوارزميات</span>
+                    </div>
+                    <div class="product-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Modelos e Algoritmos</h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Modelos de machine learning, algoritmos de processamento, sistemas de recomendação, modelos generativos ou qualquer solução baseada em IA/ML.</span>
+                        <span class="lang-content" data-lang="en">Machine learning models, processing algorithms, recommendation systems, generative models or any AI/ML-based solution.</span>
+                        <span class="lang-content" data-lang="ar">نماذج التعلم الآلي، خوارزميات المعالجة، أنظمة التوصية، نماذج توليدية أو أي حل قائم على الذكاء الاصطناعي/التعلم الآلي.</span>
+                    </p>
+                </div>
+
+                <!-- Categoria 3 -->
+                <div class="product-card">
+                    <div class="product-badge">
+                        <span class="lang-content active" data-lang="pt">Protocolos</span>
+                        <span class="lang-content" data-lang="en">Protocols</span>
+                        <span class="lang-content" data-lang="ar">البروتوكولات</span>
+                    </div>
+                    <div class="product-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Protocolos e Arquiteturas</h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Protocolos de comunicação, arquiteturas distribuídas, sistemas de consenso, modelos criptográficos ou soluções de infraestrutura digital.</span>
+                        <span class="lang-content" data-lang="en">Communication protocols, distributed architectures, consensus systems, cryptographic models or digital infrastructure solutions.</span>
+                        <span class="lang-content" data-lang="ar">بروتوكولات الاتصال، الهياكل الموزعة، أنظمة الإجماع، النماذج التشفيرية أو حلول البنية التحتية الرقمية.</span>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção: Convite Simples -->
-    <section id="convite" class="section">
+    <!-- Seção Critérios de Avaliação -->
+    <section id="criterios" class="section">
         <div class="container">
             <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Uma Proposta Clara</span>
-                <span class="lang-content" data-lang="en">A Clear Proposal</span>
-                <span class="lang-content" data-lang="ar">اقتراح واضح</span>
+                <span class="lang-content active" data-lang="pt">Critérios de Avaliação Técnica</span>
+                <span class="lang-content" data-lang="en">Technical Evaluation Criteria</span>
+                <span class="lang-content" data-lang="ar">معايير التقييم التقني</span>
             </h2>
             
-            <div class="invitation-box">
-                <h3 style="color: #2b2b2b; margin-bottom: 1rem;">
-                    <span class="lang-content active" data-lang="pt">Convide seus alunos a conectar com investidores</span>
-                    <span class="lang-content" data-lang="en">Invite your students to connect with investors</span>
-                    <span class="lang-content" data-lang="ar">ادع طلابك للاتصال بالمستثمرين</span>
-                </h3>
-                
-                <p style="color: #666; max-width: 700px; margin: 0 auto 2rem;">
-                    <span class="lang-content active" data-lang="pt">Selecione projetos acadêmicos promissores de seus alunos. Nós apresentamos esses projetos a investidores reais. Simples assim.</span>
-                    <span class="lang-content" data-lang="en">Select promising academic projects from your students. We present these projects to real investors. That simple.</span>
-                    <span class="lang-content" data-lang="ar">اختر مشاريع أكاديمية واعدة من طلابك. نقدم هذه المشاريع لمستثمرين حقيقيين. بهذه البساطة.</span>
-                </p>
-                
-                <div class="cta-buttons">
-                    <a href="#como-funciona" class="btn btn-primary">
-                        <i class="fas fa-play-circle"></i>
-                        <span class="lang-content active" data-lang="pt">Como Funciona</span>
-                        <span class="lang-content" data-lang="en">How It Works</span>
-                        <span class="lang-content" data-lang="ar">كيف يعمل</span>
-                    </a>
-                </div>
-            </div>
-            
             <div class="cards-grid">
+                <!-- Critério 1 -->
                 <div class="card">
                     <div class="card-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>
-                        <span class="lang-content active" data-lang="pt">Ponte Direta</span>
-                        <span class="lang-content" data-lang="en">Direct Bridge</span>
-                        <span class="lang-content" data-lang="ar">جسر مباشر</span>
+                        <span class="lang-content active" data-lang="pt">Originalidade</span>
+                        <span class="lang-content" data-lang="en">Originality</span>
+                        <span class="lang-content" data-lang="ar">الأصالة</span>
                     </h3>
                     <p>
-                        <span class="lang-content active" data-lang="pt">Conectamos projetos acadêmicos diretamente com investidores interessados em tecnologia e inovação.</span>
-                        <span class="lang-content" data-lang="en">We connect academic projects directly with investors interested in technology and innovation.</span>
-                        <span class="lang-content" data-lang="ar">نربط المشاريع الأكاديمية مباشرة بمستثمرين مهتمين بالتكنولوجيا والابتكار.</span>
+                        <span class="lang-content active" data-lang="pt">Grau de inovação conceitual ou implementacional. Diferenciadores em relação ao estado da arte. Contribuição para avanço técnico na área.</span>
+                        <span class="lang-content" data-lang="en">Degree of conceptual or implementational innovation. Differentiators relative to state of the art. Contribution to technical advancement in the field.</span>
+                        <span class="lang-content" data-lang="ar">درجة الابتكار المفاهيمي أو التنفيذي. عوامل التمييز بالنسبة لأحدث التقنيات. المساهمة في التقدم التقني في المجال.</span>
                     </p>
                 </div>
 
+                <!-- Critério 2 -->
                 <div class="card">
                     <div class="card-icon">
-                        <i class="fas fa-filter"></i>
+                        <i class="fas fa-sitemap"></i>
                     </div>
                     <h3>
-                        <span class="lang-content active" data-lang="pt">Seleção Simplificada</span>
-                        <span class="lang-content" data-lang="en">Simplified Selection</span>
-                        <span class="lang-content" data-lang="ar">اختيار مبسط</span>
+                        <span class="lang-content active" data-lang="pt">Estrutura Técnica</span>
+                        <span class="lang-content" data-lang="en">Technical Structure</span>
+                        <span class="lang-content" data-lang="ar">الهيكل التقني</span>
                     </h3>
                     <p>
-                        <span class="lang-content active" data-lang="pt">A universidade indica os projetos. Nós fazemos a curadoria técnica e apresentamos aos investidores.</span>
-                        <span class="lang-content" data-lang="en">The university indicates the projects. We do technical curation and present to investors.</span>
-                        <span class="lang-content" data-lang="ar">تحدد الجامعة المشاريع. نقوم بالتقييم التقني ونقدم للمستثمرين.</span>
+                        <span class="lang-content active" data-lang="pt">Qualidade arquitetural, modularidade, coesão, acoplamento. Clareza na separação de responsabilidades. Documentação técnica adequada.</span>
+                        <span class="lang-content" data-lang="en">Architectural quality, modularity, cohesion, coupling. Clarity in separation of responsibilities. Adequate technical documentation.</span>
+                        <span class="lang-content" data-lang="ar">الجودة المعمارية، النمطية، التماسك، الاقتران. الوضوح في فصل المسؤوليات. التوثيق التقني المناسب.</span>
                     </p>
                 </div>
 
+                <!-- Critério 3 -->
                 <div class="card">
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>
-                        <span class="lang-content active" data-lang="pt">Resultado Concreto</span>
-                        <span class="lang-content" data-lang="en">Concrete Result</span>
-                        <span class="lang-content" data-lang="ar">نتيجة ملموسة</span>
+                        <span class="lang-content active" data-lang="pt">Maturidade do Projeto</span>
+                        <span class="lang-content" data-lang="en">Project Maturity</span>
+                        <span class="lang-content" data-lang="ar">نضج المشروع</span>
                     </h3>
                     <p>
-                        <span class="lang-content active" data-lang="pt">Projetos que teriam ficado na gaveta ganham a chance real de se tornarem produtos ou empresas.</span>
-                        <span class="lang-content" data-lang="en">Projects that would have stayed in the drawer get a real chance to become products or companies.</span>
-                        <span class="lang-content" data-lang="ar">المشاريع التي كانت ستبقى في الدرج تحصل على فرصة حقيقية لتصبح منتجات أو شركات.</span>
+                        <span class="lang-content active" data-lang="pt">Estágio de desenvolvimento (protótipo, MVP, produção). Robustez da implementação. Qualidade do código. Testabilidade e cobertura de testes.</span>
+                        <span class="lang-content" data-lang="en">Development stage (prototype, MVP, production). Implementation robustness. Code quality. Testability and test coverage.</span>
+                        <span class="lang-content" data-lang="ar">مرحلة التطوير (نموذج أولي، الحد الأدنى من المنتج القابل للتطبيق، الإنتاج). متانة التنفيذ. جودة الكود. قابلية الاختبار وتغطية الاختبارات.</span>
+                    </p>
+                </div>
+
+                <!-- Critério 4 -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="pt">Segurança</span>
+                        <span class="lang-content" data-lang="en">Security</span>
+                        <span class="lang-content" data-lang="ar">الأمان</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Considerações de segurança por design. Tratamento de dados sensíveis. Resistência a ataques conhecidos. Práticas de desenvolvimento seguro.</span>
+                        <span class="lang-content" data-lang="en">Security by design considerations. Sensitive data handling. Resistance to known attacks. Secure development practices.</span>
+                        <span class="lang-content" data-lang="ar">اعتبارات الأمان بالتصميم. معالجة البيانات الحساسة. مقاومة الهجمات المعروفة. ممارسات التطوير الآمن.</span>
+                    </p>
+                </div>
+
+                <!-- Critério 5 -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="pt">Potencial de Aplicação</span>
+                        <span class="lang-content" data-lang="en">Application Potential</span>
+                        <span class="lang-content" data-lang="ar">إمكانية التطبيق</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Relevância para problemas reais. Escalabilidade. Potencial de integração em sistemas existentes. Viabilidade técnica para produção.</span>
+                        <span class="lang-content" data-lang="en">Relevance to real problems. Scalability. Integration potential in existing systems. Technical feasibility for production.</span>
+                        <span class="lang-content" data-lang="ar">الأهمية للمشاكل الحقيقية. قابلية التوسع. إمكانية التكامل في الأنظمة الحالية. الجدوى التقنية للإنتاج.</span>
+                    </p>
+                </div>
+
+                <!-- Critério 6 -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-balance-scale-right"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="pt">Aspectos Legais</span>
+                        <span class="lang-content" data-lang="en">Legal Aspects</span>
+                        <span class="lang-content" data-lang="ar">الجوانب القانونية</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="pt">Clareza na titularidade. Compatibilidade com licenças de software. Conformidade com regulamentações aplicáveis. Ausência de violação de direitos de terceiros.</span>
+                        <span class="lang-content" data-lang="en">Clarity in ownership. Compatibility with software licenses. Compliance with applicable regulations. Absence of third-party rights infringement.</span>
+                        <span class="lang-content" data-lang="ar">الوضوح في الملكية. التوافق مع تراخيص البرمجيات. الامتثال للوائح المعمول بها. عدم انتهاك حقوق الغير.</span>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Carta Aberta Discreta -->
-    <section class="section section-light">
+    <!-- Seção Aspectos Jurídicos -->
+    <section id="juridico" class="section section-light">
         <div class="container">
-            <div class="open-letter-container">
-                <button class="open-letter-trigger" id="letter-trigger">
-                    <span class="lang-content active" data-lang="pt">
-                        <i class="fas fa-envelope-open-text"></i>
-                        Carta Aberta às Universidades de Angola
-                        <i class="fas fa-chevron-down"></i>
-                    </span>
-                    <span class="lang-content" data-lang="en">
-                        <i class="fas fa-envelope-open-text"></i>
-                        Open Letter to Universities of Angola
-                        <i class="fas fa-chevron-down"></i>
-                    </span>
-                    <span class="lang-content" data-lang="ar">
-                        <i class="fas fa-envelope-open-text"></i>
-                        رسالة مفتوحة إلى جامعات أنغولا
-                        <i class="fas fa-chevron-down"></i>
-                    </span>
-                </button>
-                
-                <div class="open-letter-content" id="letter-content">
-                    <!-- Conteúdo em Português -->
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="pt">Aspectos Jurídicos e de Propriedade Intelectual</span>
+                <span class="lang-content" data-lang="en">Legal and Intellectual Property Aspects</span>
+                <span class="lang-content" data-lang="ar">الجوانب القانونية والملكية الفكرية</span>
+            </h2>
+            
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <!-- Portuguese Content -->
                     <div class="lang-content active" data-lang="pt">
-                        <div class="letter-header">
-                            <h3>Carta Aberta às Universidades de Angola</h3>
-                            <p>Uma mensagem sobre cooperação legítima e desenvolvimento intelectual</p>
-                        </div>
+                        <h3 style="color: #2b2b2b; margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem;">Titularidade e Direitos</h3>
+                        <p>O participante mantém a titularidade inicial integral sobre os ativos intelectuais submetidos. A participação no programa não implica transferência, cessão ou licenciamento automático de quaisquer direitos de propriedade intelectual.</p>
                         
-                        <div class="letter-body">
-                            <p>Eu acredito em um mundo que ainda respeita fronteiras, regras e soberania, mas que é plenamente capaz de evoluir por meio da cooperação legítima entre nações. Um mundo onde o crescimento exponencial não está restrito a grandes centros financeiros globais, mas pode — e deve — alcançar países em desenvolvimento, desde que sustentado por ordem institucional, responsabilidade técnica e respeito às leis locais.</p>
-                            
-                            <p>É com esse entendimento que manifesto meu profundo anseio em apresentar o projeto LAYER 2026 às universidades da região de Angola.</p>
-                            
-                            <p>O LAYER 2026 nasce como uma iniciativa séria, construída sobre rigor técnico, responsabilidade jurídica e ética institucional. Não se trata de uma promessa de mercado, nem de um discurso aspiracional vazio, mas de um programa voltado a reconhecer, avaliar e estruturar o conhecimento acadêmico como ativo intelectual real, com valor técnico, patrimonial e social.</p>
-                            
-                            <p>Ao longo dos anos, inúmeros projetos acadêmicos e pesquisas tecnológicas foram interrompidos ou esquecidos não por ausência de mérito, mas pela falta de avaliação qualificada, estrutura institucional e proteção intelectual adequada. Esse cenário afeta especialmente regiões com grande potencial humano, mas com menos acesso a mecanismos formais de validação técnica.</p>
-                            
-                            <p>Este programa existe para interromper esse ciclo.</p>
-                            
-                            <p>Aqui, ideias não são exploradas, romantizadas ou apropriadas. Elas são avaliadas com critério, estruturadas com seriedade e tratadas com o respeito que o conhecimento exige. O foco não está em promessas de financiamento ou atalhos artificiais, mas na maturidade técnica e institucional necessária para que projetos possam existir de forma legítima no mundo real.</p>
-                            
-                            <p>Tenho profunda satisfação em apresentar este projeto porque acredito que universidades são guardiãs do futuro intelectual de uma nação. Trabalhar em conjunto com instituições acadêmicas angolanas é, para mim, um exercício de respeito à soberania, à identidade local e à construção de capacidades duradouras — não de dependência externa.</p>
-                            
-                            <p>Mais do que selecionar projetos, assumo o compromisso de lutar para que cada participante tenha sucesso real, dentro dos limites da lei, com segurança intelectual, visibilidade responsável e autonomia sobre sua própria criação. O sucesso aqui não é acaso, nem discurso — é consequência direta de mérito, estrutura e seriedade.</p>
-                            
-                            <p>Se você cria algo novo, fundamentado e tecnicamente sólido, este projeto foi feito para você.</p>
-                            
-                            <p>Porque o conhecimento não nasce para permanecer restrito a arquivos — ele nasce para se tornar legado, patrimônio e continuidade.</p>
-                        </div>
+                        <p>Qualquer discussão sobre potencial cessão, licenciamento ou aquisição futura será objeto de acordo específico, separado e formal, celebrado com plena capacidade jurídica das partes e sujeito à assessoria jurídica independente.</p>
                         
-                        <div class="letter-signature">
-                            <p>Com respeito e compromisso,</p>
-                            <p>A Coordenadora do Programa</p>
-                        </div>
+                        <h3 style="color: #2b2b2b; margin: 2rem 0 1.5rem; font-weight: 500; font-size: 1.1rem;">Natureza do Programa</h3>
+                        <p>Este programa possui caráter estritamente educacional e técnico-avaliativo. Não constitui:</p>
+                        <ul style="color: #666; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                            <li>Vínculo empregatício ou relação de trabalho</li>
+                            <li>Promessa de investimento ou aporte financeiro</li>
+                            <li>Oferta pública ou captação de recursos</li>
+                            <li>Compromisso de desenvolvimento ou comercialização</li>
+                        </ul>
+                        
+                        <h3 style="color: #2b2b2b; margin: 2rem 0 1.5rem; font-weight: 500; font-size: 1.1rem;">Avisos Legais</h3>
+                        <p>A avaliação técnica conduzida no âmbito deste programa não constitui garantia de qualidade, segurança ou viabilidade comercial. A instituição isenta-se de qualquer responsabilidade por decisões tomadas com base nos resultados da avaliação.</p>
+                        <p>A submissão de materiais implica aceitação tácita dos termos e condições do programa, incluindo políticas de confidencialidade aplicáveis.</p>
                     </div>
                     
-                    <!-- Conteúdo em Inglês -->
+                    <!-- English Content -->
                     <div class="lang-content" data-lang="en">
-                        <div class="letter-header">
-                            <h3>Open Letter to Universities of Angola</h3>
-                            <p>A message about legitimate cooperation and intellectual development</p>
-                        </div>
+                        <h3 style="color: #2b2b2b; margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem;">Ownership and Rights</h3>
+                        <p>The participant retains full initial ownership of submitted intellectual assets. Participation in the program does not imply automatic transfer, assignment or licensing of any intellectual property rights.</p>
                         
-                        <div class="letter-body">
-                            <p>I believe in a world that still respects borders, rules and sovereignty, but is fully capable of evolving through legitimate cooperation between nations. A world where exponential growth is not restricted to major global financial centers, but can — and should — reach developing countries, as long as it is supported by institutional order, technical responsibility and respect for local laws.</p>
-                            
-                            <p>It is with this understanding that I express my deep desire to present the LAYER 2026 project to universities in the Angola region.</p>
-                            
-                            <p>LAYER 2026 emerges as a serious initiative, built on technical rigor, legal responsibility and institutional ethics. It is not a market promise, nor an empty aspirational discourse, but a program aimed at recognizing, evaluating and structuring academic knowledge as a real intellectual asset, with technical, patrimonial and social value.</p>
-                            
-                            <p>Over the years, numerous academic projects and technological research have been interrupted or forgotten not due to lack of merit, but due to lack of qualified evaluation, institutional structure and adequate intellectual protection. This scenario especially affects regions with great human potential, but with less access to formal technical validation mechanisms.</p>
-                            
-                            <p>This program exists to interrupt this cycle.</p>
-                            
-                            <p>Here, ideas are not exploited, romanticized or appropriated. They are evaluated with criteria, structured with seriousness and treated with the respect that knowledge demands. The focus is not on funding promises or artificial shortcuts, but on the technical and institutional maturity necessary for projects to exist legitimately in the real world.</p>
-                            
-                            <p>I have deep satisfaction in presenting this project because I believe that universities are guardians of a nation's intellectual future. Working together with Angolan academic institutions is, for me, an exercise in respecting sovereignty, local identity and building lasting capacities — not external dependence.</p>
-                            
-                            <p>More than selecting projects, I commit to fighting so that each participant has real success, within the limits of the law, with intellectual security, responsible visibility and autonomy over their own creation. Success here is not chance, nor discourse — it is a direct consequence of merit, structure and seriousness.</p>
-                            
-                            <p>If you create something new, well-founded and technically solid, this project was made for you.</p>
-                            
-                            <p>Because knowledge is not born to remain restricted to files — it is born to become legacy, heritage and continuity.</p>
-                        </div>
+                        <p>Any discussion regarding potential future assignment, licensing or acquisition will be subject to specific, separate and formal agreement, executed with full legal capacity of the parties and subject to independent legal advice.</p>
                         
-                        <div class="letter-signature">
-                            <p>With respect and commitment,</p>
-                            <p>The Program Coordinator</p>
-                        </div>
+                        <h3 style="color: #2b2b2b; margin: 2rem 0 1.5rem; font-weight: 500; font-size: 1.1rem;">Program Nature</h3>
+                        <p>This program is strictly educational and technical-evaluative in nature. It does not constitute:</p>
+                        <ul style="color: #666; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                            <li>Employment relationship or work contract</li>
+                            <li>Investment promise or financial contribution</li>
+                            <li>Public offering or fundraising</li>
+                            <li>Development or commercialization commitment</li>
+                        </ul>
+                        
+                        <h3 style="color: #2b2b2b; margin: 2rem 0 1.5rem; font-weight: 500; font-size: 1.1rem;">Legal Notices</h3>
+                        <p>The technical evaluation conducted within this program does not constitute warranty of quality, safety or commercial viability. The institution disclaims any liability for decisions made based on evaluation results.</p>
+                        <p>Submission of materials implies tacit acceptance of the program's terms and conditions, including applicable confidentiality policies.</p>
                     </div>
                     
-                    <!-- Conteúdo em Árabe -->
+                    <!-- Arabic Content -->
                     <div class="lang-content" data-lang="ar">
-                        <div class="letter-header" style="text-align: right;">
-                            <h3>رسالة مفتوحة إلى جامعات أنغولا</h3>
-                            <p>رسالة حول التعاون المشروع والتنمية الفكرية</p>
-                        </div>
+                        <h3 style="color: #2b2b2b; margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem; text-align: right;">الملكية والحقوق</h3>
+                        <p style="text-align: right;">يحتفظ المشارك بملكية أولية كاملة للأصول الفكرية المقدمة. المشاركة في البرنامج لا تعني النقل التلقائي أو التنازل أو الترخيص لأي حقوق ملكية فكرية.</p>
                         
-                        <div class="letter-body" style="text-align: right;">
-                            <p>أؤمن بعالم لا يزال يحترم الحدود والقواعد والسيادة، ولكنه قادر تمامًا على التطور من خلال التعاون المشروع بين الأمم. عالم حيث النمو الأسي لا يقتصر على المراكز المالية العالمية الكبرى، بل يمكن - ويجب - أن يصل إلى البلدان النامية، طالما أنه مدعوم بالنظام المؤسسي والمسؤولية الفنية واحترام القوانين المحلية.</p>
-                            
-                            <p>بهذا الفهم أعبر عن رغبتي العميقة في تقديم مشروع LAYER 2026 إلى الجامعات في منطقة أنغولا.</p>
-                            
-                            <p>يظهر LAYER 2026 كمبادرة جادة، مبنية على الدقة الفنية والمسؤولية القانونية والأخلاقيات المؤسسية. إنه ليس وعدًا سوقيًا، ولا خطابًا تطلعيًا فارغًا، بل برنامج يهدف إلى الاعتراف بالمعرفة الأكاديمية وتقييمها وهيكلتها كأصل فكري حقيقي، ذي قيمة فنية وتراثية واجتماعية.</p>
-                            
-                            <p>على مر السنين، تمت مقاطعة أو نسيان العديد من المشاريع الأكاديمية والبحوث التكنولوجية ليس بسبب عدم الجدارة، ولكن بسبب عدم وجود تقييم مؤهل وهيكل مؤسسي وحماية فكرية مناسبة. يؤثر هذا السيناريو بشكل خاص على المناطق ذات الإمكانات البشرية الكبيرة، ولكن مع وصول أقل إلى آليات التحقق الفني الرسمية.</p>
-                            
-                            <p>يوجد هذا البرنامج لقطع هذه الدورة.</p>
-                            
-                            <p>هنا، لا يتم استغلال الأفكار أو رومنسيتها أو تخصيصها. يتم تقييمها بمعايير، وهيكلتها بجدية، ومعاملتها بالاحترام الذي يتطلبه المعرفة. لا يركز على وعود التمويل أو الحلول الاصطناعية، بل على النضج الفني والمؤسسي الضروري لكي توجد المشاريع بشكل مشروع في العالم الحقيقي.</p>
-                            
-                            <p>أشعر ببالغ الرضا في تقديم هذا المشروع لأنني أؤمن أن الجامعات هي حراس المستقبل الفكري للأمة. العمل مع المؤسسات الأكاديمية الأنغولية هو، بالنسبة لي، تمرين في احترام السيادة والهوية المحلية وبناء قدرات دائمة - وليس الاعتماد الخارجي.</p>
-                            
-                            <p>أكثر من اختيار المشاريع، ألتزم بالكفاح من أجل أن يحقق كل مشارك نجاحًا حقيقيًا، في حدود القانون، بأمان فكري ورؤية مسؤولة واستقلالية على إبداعه الخاص. النجاح هنا ليس صدفة، ولا خطاب - بل هو نتيجة مباشرة للجدارة والهيكل والجدية.</p>
-                            
-                            <p>إذا كنت تخلق شيئًا جديدًا وأساسيًا ومتينًا تقنيًا، فقد تم صنع هذا المشروع من أجلك.</p>
-                            
-                            <p>لأن المعرفة لا تولد لتبقى محصورة في الملفات - بل تولد لتصبح إرثًا وتراثًا واستمرارية.</p>
-                        </div>
+                        <p style="text-align: right;">أي مناقشة بشأن التنازل أو الترخيص أو الاستحواذ المستقبلي المحتمل ستخضع لاتفاق محدد ومنفصل ورسمي، يتم تنفيذه بكامل الأهلية القانونية للأطراف وخاضعًا للمشورة القانونية المستقلة.</p>
                         
-                        <div class="letter-signature" style="text-align: right;">
-                            <p>مع الاحترام والالتزام،</p>
-                            <p>منسق البرنامج</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção: Manifesto da Coordenadora -->
-    <section id="coordenadora" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Manifesto da Coordenadora</span>
-                <span class="lang-content" data-lang="en">Coordinator's Manifesto</span>
-                <span class="lang-content" data-lang="ar">بيان المنسق</span>
-            </h2>
-            
-            <div class="coordinator-section">
-                <div class="coordinator-grid">
-                    <!-- Espaço para sua foto -->
-                    <div class="coordinator-photo">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user-circle" style="font-size: 4rem; margin-bottom: 1rem;"></i>
-                            <div>
-                                <span class="lang-content active" data-lang="pt">Sua foto aparecerá aqui</span>
-                                <span class="lang-content" data-lang="en">Your photo will appear here</span>
-                                <span class="lang-content" data-lang="ar">صورتك ستظهر هنا</span>
-                            </div>
-                        </div>
-                        <!-- Remova o div acima e descomente a linha abaixo quando tiver a foto -->
-                        <!-- <img src="sua-foto.jpg" alt="Coordenadora do Programa"> -->
-                    </div>
-                    
-                    <div class="philosophy-text">
-                        <div class="lang-content active" data-lang="pt">
-                            <h3 style="color: #2b2b2b; margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem;">Sempre planejei um presente ao mundo...</h3>
-                            <p>"Por anos, carreguei o desejo profundo de criar algo verdadeiramente valioso para a humanidade. Sempre planejei um presente ao mundo, mas faltavam as ferramentas certas para transformar essa visão em realidade."</p>
-                            
-                            <p>"Hoje, com este programa, finalmente tenho o instrumento que sempre busquei. Uma ponte direta entre o talento acadêmico e o mercado real. Uma maneira simples, mas poderosa, de transformar ideias em impacto."</p>
-                            
-                            <p>"Convidamos universidades que compartilham essa visão. Instituições que desejam ver o avanço real da produção intelectual de seus alunos. Não é sobre complexidade, é sobre conexão genuína entre quem cria e quem investe."</p>
-                            
-                            <p style="font-style: italic; margin-top: 2rem; color: #7B3F00;">
-                                "O melhor presente que podemos dar ao mundo é permitir que boas ideias encontrem seu caminho."
-                            </p>
-                        </div>
+                        <h3 style="color: #2b2b2b; margin: 2rem 0 1.5rem; font-weight: 500; font-size: 1.1rem; text-align: right;">طبيعة البرنامج</h3>
+                        <p style="text-align: right;">هذا البرنامج ذو طبيعة تعليمية وتقنية تقييمية صارمة. لا يشكل:</p>
+                        <ul style="color: #666; margin-right: 1.5rem; margin-bottom: 1.5rem; text-align: right;">
+                            <li>علاقة عمل أو عقد عمل</li>
+                            <li>وعد استثماري أو مساهمة مالية</li>
+                            <li>عرض عام أو جمع تبرعات</li>
+                            <li>التزام تطوير أو تسويق</li>
+                        </ul>
                         
-                        <div class="lang-content" data-lang="en">
-                            <h3 style="color: #2b2b2b; margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem;">I always planned a gift to the world...</h3>
-                            <p>"For years, I carried the deep desire to create something truly valuable for humanity. I always planned a gift to the world, but I lacked the right tools to turn this vision into reality."</p>
-                            
-                            <p>"Today, with this program, I finally have the instrument I always sought. A direct bridge between academic talent and the real market. A simple, yet powerful way to transform ideas into impact."</p>
-                            
-                            <p>"We invite universities that share this vision. Institutions that want to see the real advancement of their students' intellectual production. It's not about complexity, it's about genuine connection between creators and investors."</p>
-                            
-                            <p style="font-style: italic; margin-top: 2rem; color: #7B3F00;">
-                                "The best gift we can give the world is to allow good ideas to find their way."
-                            </p>
-                        </div>
-                        
-                        <div class="lang-content" data-lang="ar">
-                            <h3 style="color: #2b2b2b; margin-bottom: 1.5rem; font-weight: 500; font-size: 1.1rem; text-align: right;">دائمًا خططت لهدية للعالم...</h3>
-                            <p style="text-align: right;">"لسنوات، حملت الرغبة العميقة في إنشاء شيء ذي قيمة حقيقية للبشرية. لطالما خططت لهدية للعالم، لكنني افتقرت إلى الأدوات المناسبة لتحويل هذه الرؤية إلى واقع."</p>
-                            
-                            <p style="text-align: right;">"اليوم، مع هذا البرنامج، لدي أخيرًا الأداة التي سعيت إليها دائمًا. جسر مباشر بين المواهب الأكاديمية والسوق الحقيقي. طريقة بسيطة لكنها قوية لتحويل الأفكار إلى تأثير."</p>
-                            
-                            <p style="text-align: right;">"ندعو الجامعات التي تشارك هذه الرؤية. مؤسسات ترغب في رؤية التقدم الحقيقي للإنتاج الفكري لطلابها. الأمر لا يتعلق بالتعقيد، بل بالاتصال الحقيقي بين المبدعين والمستثمرين."</p>
-                            
-                            <p style="font-style: italic; margin-top: 2rem; color: #7B3F00; text-align: right;">
-                                "أفضل هدية يمكننا تقديمها للعالم هي السماح للأفكار الجيدة بإيجاد طريقها."
-                            </p>
-                        </div>
+                        <h3 style="color: #2b2b2b; margin: 2rem 0 1.5rem; font-weight: 500; font-size: 1.1rem; text-align: right;">إشعارات قانونية</h3>
+                        <p style="text-align: right;">التقييم التقني الذي يجري ضمن هذا البرنامج لا يشكل ضمانًا للجودة أو السلامة أو الجدوى التجارية. تتنصل المؤسسة من أي مسؤولية عن القرارات المتخذة بناءً على نتائج التقييم.</p>
+                        <p style="text-align: right;">تقديم المواد يعني القبول الضمني لشروط وأحكام البرنامج، بما في ذلك سياسات السرية المعمول بها.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção: Benefícios -->
-    <section id="beneficios" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Benefícios para Sua Universidade</span>
-                <span class="lang-content" data-lang="en">Benefits for Your University</span>
-                <span class="lang-content" data-lang="ar">فوائد لجامعتك</span>
-            </h2>
-            
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <div>
-                        <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
-                            <span class="lang-content active" data-lang="pt">Diferencial Competitivo</span>
-                            <span class="lang-content" data-lang="en">Competitive Advantage</span>
-                            <span class="lang-content" data-lang="ar">ميزة تنافسية</span>
-                        </h4>
-                        <p style="color: #666;">
-                            <span class="lang-content active" data-lang="pt">Ofereça aos seus alunos uma ponte real para o mercado, tornando sua universidade mais atrativa para talentos promissores.</span>
-                            <span class="lang-content" data-lang="en">Offer your students a real bridge to the market, making your university more attractive to promising talents.</span>
-                            <span class="lang-content" data-lang="ar">قدم لطلابك جسرًا حقيقيًا إلى السوق، مما يجعل جامعتك أكثر جاذبية للمواهب الواعدة.</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div>
-                        <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
-                            <span class="lang-content active" data-lang="pt">Resultados Mensuráveis</span>
-                            <span class="lang-content" data-lang="en">Measurable Results</span>
-                            <span class="lang-content" data-lang="ar">نتائج قابلة للقياس</span>
-                        </h4>
-                        <p style="color: #666;">
-                            <span class="lang-content active" data-lang="pt">Acompanhe quantos projetos de seus alunos foram apresentados a investidores e quantos evoluíram para negócios reais.</span>
-                            <span class="lang-content" data-lang="en">Track how many of your students' projects were presented to investors and how many evolved into real businesses.</span>
-                            <span class="lang-content" data-lang="ar">تتبع عدد مشاريع طلابك التي تم تقديمها للمستثمرين وعددها التي تطورت إلى أعمال حقيقية.</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <div>
-                        <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
-                            <span class="lang-content active" data-lang="pt">Conexão com o Mercado</span>
-                            <span class="lang-content" data-lang="en">Market Connection</span>
-                            <span class="lang-content" data-lang="ar">اتصال بالسوق</span>
-                        </h4>
-                        <p style="color: #666;">
-                            <span class="lang-content active" data-lang="pt">Estabeleça uma conexão direta entre a produção acadêmica e o ecossistema de investimento em tecnologia.</span>
-                            <span class="lang-content" data-lang="en">Establish a direct connection between academic production and the technology investment ecosystem.</span>
-                            <span class="lang-content" data-lang="ar">أنشئ اتصالًا مباشرًا بين الإنتاج الأكاديمي والنظام البيئي للاستثمار التكنولوجي.</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
-                            <span class="lang-content active" data-lang="pt">Formação Completa</span>
-                            <span class="lang-content" data-lang="en">Complete Education</span>
-                            <span class="lang-content" data-lang="ar">تعليم كامل</span>
-                        </h4>
-                        <p style="color: #666;">
-                            <span class="lang-content active" data-lang="pt">Vá além da teoria: mostre aos alunos o caminho real desde a ideia acadêmica até o investimento concreto.</span>
-                            <span class="lang-content" data-lang="en">Go beyond theory: show students the real path from academic idea to concrete investment.</span>
-                            <span class="lang-content" data-lang="ar">تجاوز النظرية: أظهر للطلاب المسار الحقيقي من الفكرة الأكاديمية إلى الاستثمار الملموس.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção: Como Funciona -->
-    <section id="como-funciona" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Como Funciona</span>
-                <span class="lang-content" data-lang="en">How It Works</span>
-                <span class="lang-content" data-lang="ar">كيف يعمل</span>
-            </h2>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-1"></i>
-                    </div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Seleção</span>
-                        <span class="lang-content" data-lang="en">Selection</span>
-                        <span class="lang-content" data-lang="ar">الاختيار</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">A universidade identifica projetos acadêmicos promissores desenvolvidos por seus alunos.</span>
-                        <span class="lang-content" data-lang="en">The university identifies promising academic projects developed by its students.</span>
-                        <span class="lang-content" data-lang="ar">تحدد الجامعة المشاريع الأكاديمية الواعدة المطورة من قبل طلابها.</span>
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-2"></i>
-                    </div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Apresentação</span>
-                        <span class="lang-content" data-lang="en">Presentation</span>
-                        <span class="lang-content" data-lang="ar">العرض</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Nós preparamos os projetos e os apresentamos a investidores qualificados em tecnologia.</span>
-                        <span class="lang-content" data-lang="en">We prepare the projects and present them to qualified technology investors.</span>
-                        <span class="lang-content" data-lang="ar">نقوم بإعداد المشاريع ونعرضها على مستثمرين تقنيين مؤهلين.</span>
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-3"></i>
-                    </div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Conexão</span>
-                        <span class="lang-content" data-lang="en">Connection</span>
-                        <span class="lang-content" data-lang="ar">الاتصال</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Investidores interessados conectam diretamente com os estudantes para possíveis investimentos.</span>
-                        <span class="lang-content" data-lang="en">Interested investors connect directly with students for potential investments.</span>
-                        <span class="lang-content" data-lang="ar">يتصل المستثمرون المهتمون مباشرة بالطلاب لاستثمارات محتملة.</span>
-                    </p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://avzinfra.info/" target="_blank" class="btn btn-primary" style="padding: 16px 32px; font-size: 1rem;">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span class="lang-content active" data-lang="pt">Conheça o Convite aos Estudantes</span>
-                    <span class="lang-content" data-lang="en">View Student Invitation</span>
-                    <span class="lang-content" data-lang="ar">شاهد دعوة الطلاب</span>
-                </a>
             </div>
         </div>
     </section>
@@ -745,33 +1224,33 @@
     <footer class="footer">
         <div class="footer-content">
             <p>
-                <span class="lang-content active" data-lang="pt">© 2026 Ponte para Investidores – Parceria com Universidades.</span>
-                <span class="lang-content" data-lang="en">© 2026 Bridge to Investors – University Partnership.</span>
-                <span class="lang-content" data-lang="ar">© 2026 جسر إلى المستثمرين – شراكة جامعية.</span>
+                <span class="lang-content active" data-lang="pt">© 2026 Programa de Seleção de Propriedade Intelectual – Alunos. Todos os direitos reservados.</span>
+                <span class="lang-content" data-lang="en">© 2026 Intellectual Property Selection Program – Students. All rights reserved.</span>
+                <span class="lang-content" data-lang="ar">© 2026 برنامج اختيار الملكية الفكرية – الطلاب. جميع الحقوق محفوظة.</span>
             </p>
             
             <p style="color: #7B3F00; font-size: 0.9rem; margin-top: 1.5rem; font-weight: 500;">
-                <span class="lang-content active" data-lang="pt">"Conectando talento acadêmico com investimento real."</span>
-                <span class="lang-content" data-lang="en">"Connecting academic talent with real investment."</span>
-                <span class="lang-content" data-lang="ar">"ربط المواهب الأكاديمية باستثمار حقيقي."</span>
+                <span class="lang-content active" data-lang="pt">"Avaliação técnica rigorosa. Mérito arquitetural. Conformidade jurídica."</span>
+                <span class="lang-content" data-lang="en">"Rigorous technical evaluation. Architectural merit. Legal compliance."</span>
+                <span class="lang-content" data-lang="ar">"تقييم تقني صارم. جدارة معمارية. امتثال قانوني."</span>
             </p>
             
             <div class="social-links">
                 <a href="#">
-                    <i class="fas fa-university"></i>
+                    <i class="fas fa-file-contract"></i>
                 </a>
                 <a href="#">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fas fa-graduation-cap"></i>
                 </a>
                 <a href="#">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-balance-scale"></i>
                 </a>
             </div>
             
             <p style="color: #888; font-size: 0.8rem; margin-top: 2rem;">
-                <span class="lang-content active" data-lang="pt">Uma ponte simples entre universidades e investidores.</span>
-                <span class="lang-content" data-lang="en">A simple bridge between universities and investors.</span>
-                <span class="lang-content" data-lang="ar">جسر بسيط بين الجامعات والمستثمرين.</span>
+                <span class="lang-content active" data-lang="pt">Documento institucional. Não contém ofertas comerciais. Para informações formais, contate a administração do programa.</span>
+                <span class="lang-content" data-lang="en">Institutional document. Contains no commercial offers. For formal information, contact program administration.</span>
+                <span class="lang-content" data-lang="ar">وثيقة مؤسسية. لا تحتوي على عروض تجارية. للمعلومات الرسمية، اتصل بإدارة البرنامج.</span>
             </p>
         </div>
     </footer>
@@ -865,29 +1344,6 @@
             // Ajuste inicial
             adjustHeroHeight();
             window.addEventListener('resize', adjustHeroHeight);
-            
-            // Toggle da Carta Aberta
-            const triggerButton = document.getElementById('letter-trigger');
-            const letterContent = document.getElementById('letter-content');
-            let isLetterOpen = false;
-            
-            if (triggerButton && letterContent) {
-                triggerButton.addEventListener('click', function() {
-                    isLetterOpen = !isLetterOpen;
-                    letterContent.classList.toggle('active', isLetterOpen);
-                    triggerButton.classList.toggle('active', isLetterOpen);
-                    
-                    // Rolar suavemente para a carta se estiver aberta
-                    if (isLetterOpen) {
-                        setTimeout(() => {
-                            triggerButton.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }, 300);
-                    }
-                });
-            }
         });
     </script>
 </body>
