@@ -144,6 +144,42 @@
             padding: 1.5rem;
         }
     }
+    /* NOVOS ESTILOS PARA COMPLIANCE (sem alterar os existentes) */
+    .legal-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(123,63,0,0.1);
+        font-size: 0.8rem;
+        color: #888;
+    }
+    .legal-footer a {
+        color: #7B3F00;
+        text-decoration: none;
+        margin: 0 0.5rem;
+    }
+    .legal-footer a:hover {
+        text-decoration: underline;
+    }
+    .compliance-details {
+        background: rgba(255,255,255,0.7);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-left: 3px solid #7B3F00;
+        font-size: 0.9rem;
+    }
+    .compliance-details summary {
+        font-weight: 600;
+        color: #7B3F00;
+        cursor: pointer;
+        list-style: none;
+    }
+    .compliance-details summary::-webkit-details-marker {
+        display: none;
+    }
+    .compliance-details summary i {
+        margin-right: 0.5rem;
+    }
     </style>
 </head>
 <body>
@@ -310,6 +346,14 @@
                             <span class="lang-content" data-lang="ar">مساهمات تطوعية لتوسيع النظام البيئي واختيار المواهب الجديدة.</span>
                         </p>
                         
+                        <!-- DISCLAIMER SOBRE DOAÇÕES (adicionado sem alterar layout) -->
+                        <div style="font-size:0.75rem; color:#888; margin-bottom:0.5rem; text-align:center;">
+                            <i class="fas fa-info-circle"></i> 
+                            <span class="lang-content active" data-lang="pt">Doações voluntárias, sem contrapartida. Não constituem oferta de valores mobiliários.</span>
+                            <span class="lang-content" data-lang="en">Voluntary donations, no consideration. Does not constitute a securities offering.</span>
+                            <span class="lang-content" data-lang="ar">تبرعات طوعية، بدون مقابل. لا تشكل عرضًا للأوراق المالية.</span>
+                        </div>
+                        
                         <div class="exclusive-address" onclick="copyAddress()" title="Clique para copiar">
                             <i class="fas fa-wallet"></i>
                             <span id="walletAddress">0xd41cf3bcafe10e833e2772e48b5474c9b94ce318</span>
@@ -451,6 +495,16 @@
                         <div class="slider-container"><input type="range" id="replicationBarriers" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="replicationBarriersValue">5</span>/10</div></div>
                     </div>
                     
+                    <!-- NOVO CHECKBOX DE CONFIRMAÇÃO DE AUTORIA -->
+                    <div class="checkbox-item" style="justify-content: center; margin: 1.5rem 0;">
+                        <input type="checkbox" id="authorshipConfirm" required>
+                        <label for="authorshipConfirm" style="font-weight:600; color:#7B3F00;">
+                            <span class="lang-content active" data-lang="pt"><strong>Confirmo que sou o legítimo autor e titular dos direitos sobre este ativo intelectual.</strong></span>
+                            <span class="lang-content" data-lang="en"><strong>I confirm that I am the legitimate author and owner of the rights to this intellectual asset.</strong></span>
+                            <span class="lang-content" data-lang="ar"><strong>أؤكد أنني المؤلف والمالك الشرعي لحقوق هذا الأصل الفكري.</strong></span>
+                        </label>
+                    </div>
+                    
                     <div class="declaration-box">
                         <div class="declaration-title"><i class="fas fa-balance-scale"></i><span class="lang-content active" data-lang="pt">DECLARAÇÃO DE AUTORIA</span><span class="lang-content" data-lang="en">AUTHORSHIP DECLARATION</span><span class="lang-content" data-lang="ar">إقرار المؤلفية</span></div>
                         <p><span class="lang-content active" data-lang="pt">Eu declaro que sou o autor legítimo deste ativo intelectual e que as informações fornecidas são verdadeiras e completas na medida do meu conhecimento. Reconheço que este sistema gera uma autodeclaração intrínseca, não uma avaliação de mercado, e que não há garantias ou recomendações econômicas associadas.</span>
@@ -509,6 +563,15 @@
                         <li><span class="lang-content active" data-lang="pt">Compreendo que o sistema <strong>NÃO faz matchmaking, curadoria financeira ou deal flow</strong>.</span><span class="lang-content" data-lang="en">I understand that the system <strong>does NOT do matchmaking, financial curation or deal flow</strong>.</span><span class="lang-content" data-lang="ar">أفهم أن النظام <strong>لا يجري وساطة أو تنقيحًا ماليًا أو تدفق صفقات</strong>.</span></li>
                         <li><span class="lang-content active" data-lang="pt"><strong>Todo envio será um ato consciente meu</strong>, realizado através do meu próprio cliente de e-mail.</span><span class="lang-content" data-lang="en"><strong>Every submission will be my conscious act</strong>, carried out through my own email client.</span><span class="lang-content" data-lang="ar"><strong>كل إرسال سيكون فعلًا واعيًا من قبلي</strong>، يتم من خلال عميل البريد الإلكتروني الخاص بي.</span></li>
                     </ol>
+                    
+                    <!-- NOVO AVISO SOBRE SEGURANÇA DO E-MAIL -->
+                    <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 0.8rem; margin: 1rem 0; font-size:0.8rem;">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="lang-content active" data-lang="pt"><strong>Segurança:</strong> O envio será feito por e-mail comum, sem criptografia de ponta a ponta. Dados sensíveis podem estar sujeitos a interceptação. Recomendamos o uso de canais seguros para informações confidenciais.</span>
+                        <span class="lang-content" data-lang="en"><strong>Security:</strong> The submission will be made by regular email, without end-to-end encryption. Sensitive data may be subject to interception. We recommend using secure channels for confidential information.</span>
+                        <span class="lang-content" data-lang="ar"><strong>الأمان:</strong> سيتم الإرسال عبر البريد الإلكتروني العادي، بدون تشفير من طرف إلى طرف. قد تخضع البيانات الحساسة للاعتراض. نوصي باستخدام قنوات آمنة للمعلومات السرية.</span>
+                    </div>
+                    
                     <div class="form-group" style="margin-top: 1.5rem;">
                         <div class="checkbox-item"><input type="checkbox" id="legalConsent" required><label for="legalConsent" style="font-weight: 600; color: #7B3F00;"><span class="lang-content active" data-lang="pt"><strong>CONCORDO E ACEITO</strong> integralmente os termos acima declarados.</span><span class="lang-content" data-lang="en"><strong>I AGREE AND ACCEPT</strong> fully the terms stated above.</span><span class="lang-content" data-lang="ar"><strong>أوافق وأقبل</strong> بالكامل الشروط المذكورة أعلاه.</span></label></div>
                     </div>
@@ -547,6 +610,29 @@
             <p style="color: #7B3F00; font-size: 0.9rem; margin-top: 1.5rem; font-weight: 500;"><span class="lang-content active" data-lang="pt">"Soberania do autor, neutralidade da Layer, decisão sempre externa."</span>
             <span class="lang-content" data-lang="en">"Author sovereignty, Layer neutrality, decision always external."</span>
             <span class="lang-content" data-lang="ar">"سيادة المؤلف، حيادية الـLayer، القرار دائمًا خارجي."</span></p>
+            
+            <!-- NOVOS LINKS DE COMPLIANCE (expansíveis) -->
+            <div class="legal-footer">
+                <details class="compliance-details">
+                    <summary><i class="fas fa-shield-alt"></i> <span class="lang-content active" data-lang="pt">Política de Privacidade e Termos de Uso</span><span class="lang-content" data-lang="en">Privacy Policy and Terms of Use</span><span class="lang-content" data-lang="ar">سياسة الخصوصية وشروط الاستخدام</span></summary>
+                    <div style="text-align: left; margin-top: 1rem;">
+                        <h4 style="color:#7B3F00;">Política de Privacidade</h4>
+                        <p>O Layer Talent Governance Model não armazena dados pessoais em servidores próprios. As informações fornecidas no formulário são processadas localmente no seu navegador e, quando você opta por submeter via ASIA, são enviadas por e-mail para o endereço institucional. Este envio é realizado através do seu próprio cliente de e-mail, sem qualquer intervenção ou armazenamento intermediário por nossa parte.</p>
+                        <p>O e-mail padrão não possui criptografia de ponta a ponta; portanto, recomendamos que não inclua informações sensíveis ou confidenciais. Caso deseje maior segurança, utilize meios criptografados (como PGP) antes do envio.</p>
+                        <p>Você tem o direito de acessar, corrigir ou solicitar a exclusão de seus dados pessoais sempre que possível. Para isso, entre em contato pelo e-mail: <strong>contato@layertalent.model</strong> (fictício).</p>
+                        <h4 style="color:#7B3F00; margin-top:1rem;">Termos de Uso</h4>
+                        <p>Ao utilizar esta plataforma, você declara estar ciente de que:</p>
+                        <ul>
+                            <li>O sistema gera apenas uma autodeclaração intrínseca, sem valor de mercado ou legal vinculante.</li>
+                            <li>Não há qualquer recomendação econômica ou financeira.</li>
+                            <li>A plataforma não se responsabiliza por decisões tomadas com base nos resultados apresentados.</li>
+                            <li>As doações são voluntárias, irrevogáveis e não conferem participação, direitos ou expectativa de retorno.</li>
+                            <li>O responsável pela iniciativa é <strong>Layer Talent Ltda.</strong>, CNPJ 12.345.678/0001-90 (exemplo).</li>
+                        </ul>
+                    </div>
+                </details>
+                <p style="margin-top:1rem; font-size:0.75rem;">Layer Talent Ltda. - CNPJ 12.345.678/0001-90 | contato@layertalent.model</p>
+            </div>
         </div>
     </footer>
 
@@ -687,6 +773,13 @@
                         alert('Preencha todos os campos obrigatórios');
                         return false;
                     }
+                }
+            }
+            if (section === 3) {
+                // Verificar se o checkbox de autoria está marcado
+                if (!document.getElementById('authorshipConfirm').checked) {
+                    alert('Você deve confirmar que é o autor legítimo do ativo.');
+                    return false;
                 }
             }
             return true;
