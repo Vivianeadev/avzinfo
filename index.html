@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- CSS IDÊNTICO À PÁGINA PRINCIPAL (inalterado) -->
+    <!-- CSS IDÊNTICO (com acréscimo da classe discreet-note) -->
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Helvetica Neue',Arial,sans-serif}body{background:linear-gradient(135deg,#f9f5f0 0%,#faf0f4 100%);color:#3a3a3a;line-height:1.6;overflow-x:hidden;position:relative}body::before,body::after{content:'';position:fixed;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:0;opacity:.03}body::before{top:-200px;right:-200px;background:radial-gradient(circle,#7B3F00 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(123 63 0 / .1)}body::after{bottom:-200px;left:-200px;background:radial-gradient(circle,#8B4513 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(139 69 19 / .1)}.header{position:fixed;top:0;width:100%;background:rgb(255 255 255 / .95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;transition:all 0.3s ease;border-bottom:1px solid rgb(212 175 55 / .1);box-shadow:0 2px 20px rgb(123 63 0 / .05)}.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}.logo{font-size:1.8rem;font-weight:300;letter-spacing:2px;color:#2b2b2b;text-transform:uppercase;position:relative}.logo::after{content:'';position:absolute;bottom:-5px;left:0;width:60%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.logo span{display:block;font-size:11px;letter-spacing:8px;margin-top:2px;color:#888}.nav-menu{display:flex;list-style:none;gap:2rem}.nav-menu a{color:#3a3a3a;text-decoration:none;font-weight:400;transition:all 0.3s ease;position:relative;font-size:14px;letter-spacing:.5px}.nav-menu a:hover{color:#d4af37}.nav-menu a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:linear-gradient(135deg,#d4af37,#7B3F00);transition:width 0.3s ease}.nav-menu a:hover::after{width:100%}.hero{min-height:calc(100vh - 80px);display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;background:linear-gradient(135deg,rgb(249 245 240 / .9),rgb(250 240 244 / .9));overflow:hidden}.hero::before{content:'';position:absolute;top:10%;right:10%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgb(123 63 0 / .03) 0%,transparent 70%);filter:blur(40px);z-index:1}.hero-content{max-width:900px;z-index:2}.hero h1{font-size:clamp(2rem, 5vw, 3.2rem);margin-bottom:1rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;line-height:1.2}.hero h1 span{color:#d4af37;font-weight:500;text-shadow:0 0 30px rgb(212 175 55 / .2)}.hero-subtitle{font-size:1.2rem;color:#666;margin-bottom:2.5rem;font-weight:300;letter-spacing:.5px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7}.cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}.btn{padding:14px 28px;border:none;border-radius:2px;font-weight:400;text-decoration:none;display:inline-flex;align-items:center;gap:.8rem;transition:all 0.3s ease;cursor:pointer;font-size:14px;letter-spacing:.5px;position:relative;overflow:hidden}.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgb(255 255 255 / .2),transparent);transition:left 0.7s ease}.btn:hover::before{left:100%}.btn-primary{background:linear-gradient(to right,#d4af37,#f4e4b8);color:#2a2a2a;box-shadow:0 3px 15px rgb(212 175 55 / .3)}.btn-primary:hover{box-shadow:0 5px 20px rgb(212 175 55 / .4);transform:translateY(-2px)}.btn-secondary{background:#fff0;color:#666;border:1px solid #ddd;box-shadow:0 2px 8px rgb(0 0 0 / .05)}.btn-secondary:hover{border-color:#d4af37;color:#d4af37;box-shadow:0 4px 12px rgb(212 175 55 / .15)}.section{padding:5rem 2rem;background:rgb(255 255 255 / .7);position:relative}.section-light{background:linear-gradient(135deg,#f5f1ec 0%,#f7ecec 100%)}.container{max-width:1200px;margin:0 auto;position:relative;z-index:2}.section-title{font-size:clamp(1.6rem, 3vw, 2.2rem);text-align:center;margin-bottom:3rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;position:relative;padding-bottom:15px}.section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}.card{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:2.5rem 2rem;transition:all 0.3s ease;box-shadow:0 2px 10px rgb(0 0 0 / .05);position:relative}.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#7B3F00,transparent);opacity:0;transition:opacity 0.3s ease}.card:hover{border-color:rgb(123 63 0 / .15);box-shadow:0 8px 25px rgb(123 63 0 / .08);transform:translateY(-5px)}.card:hover::before{opacity:1}.card-icon{font-size:2.2rem;color:#d4af37;margin-bottom:1.5rem;text-shadow:0 0 10px rgb(212 175 55 / .2)}.card h3{font-size:1.3rem;margin-bottom:1rem;color:#2b2b2b;font-weight:500}.card p{color:#666;line-height:1.7;font-size:.95rem}.philosophy-content{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:3rem;margin-top:2rem;box-shadow:0 4px 20px rgb(0 0 0 / .03);position:relative}.philosophy-content::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:100px;height:1px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.philosophy-text{color:#666;line-height:1.8;font-size:1.05rem}.philosophy-text p{margin-bottom:1.5rem}.philosophy-text strong{color:#2b2b2b;font-weight:600}.philosophy-quote{margin-top:2.5rem;padding:2rem;border-left:3px solid #7B3F00;background:linear-gradient(90deg,rgb(123 63 0 / .03),transparent);border-radius:0 4px 4px 0;position:relative}.philosophy-quote::before{content:'"';position:absolute;top:-10px;left:-15px;font-size:4rem;color:rgb(123 63 0 / .1);font-family:serif;font-weight:700}.philosophy-quote p{font-style:italic;color:#555;font-size:1.2rem;line-height:1.7}.quote-author{color:#7B3F00;font-size:1rem;margin-top:1rem;text-align:right;font-weight:600}.footer{background:rgb(255 255 255 / .9);padding:3rem 2rem 2rem;text-align:center;border-top:1px solid rgb(123 63 0 / .1);position:relative}.footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.footer-content{max-width:1200px;margin:0 auto}.footer p{color:#888;margin-bottom:.8rem;font-size:.9rem}.social-links{display:flex;justify-content:center;gap:1.5rem;margin:2rem 0}.social-links a{color:#888;font-size:1.2rem;transition:all 0.3s ease;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgb(255 255 255 / .9);border:1px solid rgb(123 63 0 / .1)}.social-links a:hover{color:#7B3F00;transform:translateY(-3px);box-shadow:0 6px 15px rgb(123 63 0 / .15);border-color:rgb(123 63 0 / .2)}.language-switcher{position:fixed;top:10px;right:10px;z-index:1001;display:flex;gap:1px;background:rgb(255 255 255 / .97);border-radius:1px;padding:2px;border:1px solid rgb(123 63 0 / .08);box-shadow:0 1px 6px rgb(0 0 0 / .06);backdrop-filter:blur(10px);min-width:120px;height:34px;align-items:center;justify-content:center}.lang-btn{background:#fff0;border:none;color:#888;padding:3px 6px;border-radius:0;cursor:pointer;transition:all 0.2s ease;font-size:.65rem;font-weight:400;display:flex;align-items:center;gap:2px;min-height:28px;min-width:38px;justify-content:center;flex:1;height:100%}.lang-btn:hover{background:rgb(123 63 0 / .04);color:#666}.lang-btn.active{background:rgb(123 63 0 / .08);color:#7B3F00;font-weight:500;border-radius:0}.lang-flag{font-size:.7rem}.lang-content{display:none}.lang-content.active{display:block}@media (max-width:768px){.nav-menu{display:none}.cards-grid{grid-template-columns:1fr}.cta-buttons{flex-direction:column;align-items:center}.btn{padding:12px 24px;width:100%;max-width:300px;justify-content:center}.philosophy-content{padding:2rem 1.5rem}.philosophy-quote{padding:1.5rem}.language-switcher{top:8px;right:8px;min-width:110px;height:32px}.lang-btn{padding:2px 5px;font-size:.6rem;min-height:26px;min-width:34px;gap:1px}.hero{padding:5rem 1.5rem 3rem;min-height:calc(100vh - 70px)}}@media (max-width:480px){.section{padding:4rem 1rem}.philosophy-content{padding:1.5rem 1rem}.language-switcher{top:6px;right:6px;min-width:100px;height:30px}.lang-btn{padding:1px 4px;font-size:.55rem;min-height:24px;min-width:30px}.hero{padding:4rem 1rem 2.5rem}}@media (min-width:1366px){.hero{padding:7rem 2rem 5rem;min-height:calc(100vh - 90px)}}@media (min-width:1440px){.hero{padding:7.5rem 2rem 5.5rem;min-height:calc(100vh - 85px)}}@media (min-width:1920px){.hero{padding:8rem 2rem 6rem;min-height:calc(100vh - 100px)}}@media (min-width:2560px){.hero{padding:10rem 2rem 8rem;min-height:calc(100vh - 120px)}}body[dir="rtl"] .logo::after,body[dir="rtl"] .nav-menu a::after,body[dir="rtl"] .section-title::after{left:auto;right:0;transform:none}body[dir="rtl"] .section-title::after,body[dir="rtl"] .philosophy-content::before{right:50%;transform:translateX(50%)}body[dir="rtl"] .philosophy-quote{border-left:none;border-right:3px solid #7B3F00;background:linear-gradient(90deg,transparent,rgb(123 63 0 / .03))}body[dir="rtl"] .philosophy-quote::before{left:auto;right:-15px}.text-center{text-align:center}.mb-2{margin-bottom:2rem}.mb-3{margin-bottom:3rem}body[dir="rtl"] .lang-content[data-lang="ar"]{display:block!important;text-align:right;direction:rtl}body[dir="rtl"] #fundadora p[style*="color: #888"]{text-align:right}.coordinator-section{background:linear-gradient(135deg,rgb(249 245 240 / .7) 0%,rgb(250 240 244 / .7) 100%);border-radius:8px;padding:3rem;margin:3rem 0;border:1px solid rgb(212 175 55 / .1)}@media (max-width:768px){.coordinator-section{padding:2rem;margin:2rem 0}}.coordinator-grid{display:grid;grid-template-columns:250px 1fr;gap:3rem;align-items:center}@media (max-width:768px){.coordinator-grid{grid-template-columns:1fr;gap:2rem}}.coordinator-photo{width:100%;height:300px;background-color:#f5f1ec;border-radius:4px;overflow:hidden;position:relative;border:1px solid rgb(212 175 55 / .1);box-shadow:0 4px 15px rgb(0 0 0 / .05)}.coordinator-photo img{width:100%;height:100%;object-fit:cover}.photo-placeholder{display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:linear-gradient(135deg,#f5f1ec 0%,#f7ecec 100%);color:#7B3F00;font-size:1.2rem;text-align:center;padding:2rem}.simple-card{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:2rem;transition:all 0.3s ease}.simple-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgb(123 63 0 / .08)}.invitation-box{background:linear-gradient(135deg,rgb(123 63 0 / .05) 0%,rgb(212 175 55 / .05) 100%);border:1px solid rgb(123 63 0 / .1);border-radius:8px;padding:2.5rem;text-align:center;margin:3rem 0}@media (max-width:768px){.invitation-box{padding:2rem;margin:2rem 0}}.benefit-item{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;padding:1.5rem;background:rgb(255 255 255 / .7);border-radius:4px;border-left:3px solid #7B3F00}.benefit-icon{color:#7B3F00;font-size:1.5rem;margin-top:.2rem}
         
@@ -31,7 +31,7 @@
             }
         }
 
-        /* ESTILOS ADICIONAIS PARA EVENTOS (inseridos sem alterar o CSS original) */
+        /* ESTILOS PARA EVENTOS (já existentes) */
         .event-status {
             display: inline-block;
             padding: 4px 12px;
@@ -62,6 +62,20 @@
             font-size: 0.9rem;
             line-height: 1.6;
         }
+
+        /* NOVO ESTILO PARA O TEXTO DISCRETO ABAIXO DO BOTÃO */
+        .discreet-note {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+            max-width: 400px;
+            text-align: center;
+        }
+        .discreet-note i {
+            color: #7B3F00;
+            margin-right: 0.3rem;
+        }
     </style>
 </head>
 <body>
@@ -82,7 +96,7 @@
         </button>
     </div>
 
-    <!-- Header (com novo link para Eventos) -->
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">PROGRAMA IP<span>Ponte para Investidores</span></div>
@@ -127,17 +141,31 @@
             
             <p class="hero-subtitle">
                 <span class="lang-content active" data-lang="pt">Conectamos talentos independentes e projetos inovadores diretamente com investidores reais. Estrutura institucional para profissionais, freelancers e iniciantes.</span>
-               <span class="lang-content" data-lang="en">We connect independent talents and innovative projects directly with real investors. Institutional structure for professionals, freelancers, and beginners.</span>
-               <span class="lang-content" data-lang="ar">نحن نربط المواهب المستقلة والمشاريع المبتكرة مباشرة بالمستثمرين الحقيقيين. هيكل مؤسسي للمحترفين والمستقلين والمبتدئين.</span></p>
+                <span class="lang-content" data-lang="en">We connect independent talents and innovative projects directly with real investors. Institutional structure for professionals, freelancers, and beginners.</span>
+                <span class="lang-content" data-lang="ar">نحن نربط المواهب المستقلة والمشاريع المبتكرة مباشرة بالمستثمرين الحقيقيين. هيكل مؤسسي للمحترفين والمستقلين والمبتدئين.</span>
+            </p>
             
             <div class="cta-buttons">
-                <!-- BOTÃO COM LINK DINÂMICO -->
-                <a href="#" class="btn btn-primary" id="developer-invitation-link">
+                <!-- BOTÃO COM LINK FIXO PARA layer-governance.html -->
+                <a href="layer-governance.html" class="btn btn-primary" id="developer-invitation-link">
                     <i class="fas fa-graduation-cap"></i>
                     <span class="lang-content active" data-lang="pt">Conheça o Convite para Desenvolvedores</span>
                     <span class="lang-content" data-lang="en">View Developer Invitation</span>
                     <span class="lang-content" data-lang="ar">شاهد دعوة المطورين</span>
                 </a>
+                <!-- TEXTO DISCRETO ABAIXO DO BOTÃO -->
+                <div class="discreet-note">
+                    <span class="lang-content active" data-lang="pt">
+                        <i class="fas fa-arrow-right"></i> Desenvolvedores: preencha seus dados para valuation do seu ativo e envie seu material para apresentação a potenciais compradores.
+                    </span>
+                    <span class="lang-content" data-lang="en">
+                        <i class="fas fa-arrow-right"></i> Developers: fill in your details for asset valuation and submit your material for presentation to potential buyers.
+                    </span>
+                    <span class="lang-content" data-lang="ar">
+                        <i class="fas fa-arrow-left"></i> المطورون: قم بتعبئة بياناتك لتقييم أصولك وإرسال المواد الخاصة بك لعرضها على المشترين المحتملين.
+                    </span>
+                </div>
+
                 <a href="#beneficios" class="btn btn-secondary">
                     <i class="fas fa-user-tie"></i>
                     <span class="lang-content active" data-lang="pt">Benefícios para Profissionais</span>
@@ -151,12 +179,9 @@
     <!-- Seção: Convite -->
     <section id="convite" class="section">
         <div class="container">
-            
             <div class="cards-grid">
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
+                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
                     <h3>
                         <span class="lang-content active" data-lang="pt">Ponte Direta</span>
                         <span class="lang-content" data-lang="en">Direct Bridge</span>
@@ -168,11 +193,8 @@
                         <span class="lang-content" data-lang="ar">نربط المبدعين والمحترفين المستقلين مباشرة بمستثمرين مهتمين بالتكنولوجيا والابتكار.</span>
                     </p>
                 </div>
-
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-filter"></i>
-                    </div>
+                    <div class="card-icon"><i class="fas fa-filter"></i></div>
                     <h3>
                         <span class="lang-content active" data-lang="pt">Seleção Técnica</span>
                         <span class="lang-content" data-lang="en">Technical Selection</span>
@@ -184,11 +206,8 @@
                         <span class="lang-content" data-lang="ar">نحدد المشاريع الجديرة المطورة من قبل المواهب المستقلة. نقوم بالتقييم التقني ونقدم للمستثمرين.</span>
                     </p>
                 </div>
-
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>
                         <span class="lang-content active" data-lang="pt">Destino Intelectual</span>
                         <span class="lang-content" data-lang="en">Intellectual Destination</span>
@@ -220,21 +239,15 @@
                     </div>
                     
                     <div class="manifesto-text">
+                        <!-- conteúdo do manifesto em três idiomas (idêntico ao original) -->
                         <div class="lang-content active" data-lang="pt">
                             <p><strong>Por anos, caminhei por um território onde quase ninguém olhava para a tecnologia como estrutura de direitos.</strong> Eu estudava Direito, observando sistemas, contratos, soberania, propriedade, responsabilidade. Enquanto muitos viam apenas código, eu via algo maior: arquiteturas jurídicas invisíveis que sustentam, ou derrubam o futuro.</p>
-                            
                             <p>Sempre carreguei o desejo profundo de criar algo verdadeiramente valioso para a humanidade. Não como produto vazio, mas como instrumento legítimo, capaz de organizar, proteger e dar destino real à criação intelectual das pessoas. O problema nunca foi a visão. O problema era simples: faltava o instrumento certo.</p>
-                            
                             <p>Hoje, esse instrumento existe.</p>
-                            
                             <p>Este programa nasce como uma ponte formal e segura entre a produção intelectual independente e o mercado real. Uma estrutura pensada não apenas para funcionar tecnicamente, mas para respeitar direitos, autoria, propriedade intelectual e responsabilidade. Nada aqui é improviso. Tudo foi desenhado com base jurídica, clareza e propósito.</p>
-                            
                             <p>Não falamos apenas com desenvolvedores. Falamos com criadores. Com profissionais, freelancers e inovadores que constroem soluções reais, mas que esbarram em um mercado desorganizado, muitas vezes predatório, onde boas ideias são absorvidas sem proteção ou reconhecimento.</p>
-                            
                             <p>Convidamos talentos independentes que compartilham dessa visão. Profissionais que entendem que conhecimento não pode ficar restrito a portfólios pessoais. Que acreditam que sua produção intelectual merece destino, proteção e impacto real, sem perder sua integridade jurídica.</p>
-                            
                             <p>Tudo o que foi criado aqui carrega a marca do Direito aplicado à tecnologia. Um olhar que entende que inovação só é sustentável quando respeita regras, direitos e responsabilidades.</p>
-                            
                             <p style="font-style: italic; margin-top: 2rem; color: #7B3F00; border-left: 2px solid #d4af37; padding-left: 1rem;">
                                 "Se você acredita que o futuro da tecnologia precisa de mais do que código — precisa de estrutura, ética e fundamento legal, então você entende exatamente por que este programa existe.<br>E nasce do Direito, para organizar o futuro que a tecnologia insiste em criar sem regras."
                             </p>
@@ -242,19 +255,12 @@
                         
                         <div class="lang-content" data-lang="en">
                             <p><strong>For years, I walked through a territory where almost no one looked at technology as a structure of rights.</strong> I studied Law, observing systems, contracts, sovereignty, property, responsibility. While many saw only code, I saw something greater: invisible legal architectures that support, or bring down, the future.</p>
-                            
                             <p>I always carried the deep desire to create something truly valuable for humanity. Not as an empty product, but as a legitimate instrument, capable of organizing, protecting, and giving real purpose to people's intellectual creations. The problem was never the vision. The problem was simple: the right instrument was missing.</p>
-                            
                             <p>Today, that instrument exists.</p>
-                            
                             <p>This program is born as a formal and secure bridge between independent intellectual production and the real market. A structure designed not only to function technically, but to respect rights, authorship, intellectual property, and responsibility. Nothing here is improvised. Everything was designed with legal basis, clarity, and purpose.</p>
-                            
                             <p>We don't just talk to developers. We talk to creators. To professionals, freelancers, and innovators who build real solutions, but who stumble upon a disorganized, often predatory market, where good ideas are absorbed without protection or recognition.</p>
-                            
                             <p>We invite independent talents who share this vision. Professionals who understand that knowledge cannot be restricted to personal portfolios. That believe their intellectual production deserves purpose, protection, and real impact, without losing its legal integrity.</p>
-                            
                             <p>Everything created here carries the mark of Law applied to technology. A perspective that understands that innovation is only sustainable when it respects rules, rights, and responsibilities.</p>
-                            
                             <p style="font-style: italic; margin-top: 2rem; color: #7B3F00; border-left: 2px solid #d4af37; padding-left: 1rem;">
                                 "If you believe that the future of technology needs more than code — it needs structure, ethics, and legal foundation, then you understand exactly why this program exists.<br>And it is born from Law, to organize the future that technology insists on creating without rules."
                             </p>
@@ -262,19 +268,12 @@
                         
                         <div class="lang-content" data-lang="ar">
                             <p style="text-align: right;"><strong>لسنوات، سلكت طريقًا لم ينظر فيه أحد تقريبًا إلى التكنولوجيا كبنية للحقوق.</strong> درست القانون، وراقبت الأنظمة والعقود والسيادة والملكية والمسؤولية. بينما رأى الكثيرون مجرد رمز برمجي، رأيت شيئًا أكبر: هياكل قانونية خفية تدعم المستقبل أو تسقطه.</p>
-                            
                             <p style="text-align: right;">لطالما حملت الرغبة العميقة في إنشاء شيء ذي قيمة حقيقية للبشرية. ليس كمنتج فارغ، ولكن كأداة شرعية، قادرة على تنظيم وحماية وإعطاء هدف حقيقي للإبداعات الفكرية للناس. لم تكن المشكلة أبدًا في الرؤية. كانت المشكلة بسيطة: الأداة المناسبة كانت مفقودة.</p>
-                            
                             <p style="text-align: right;">اليوم، هذه الأداة موجودة.</p>
-                            
                             <p style="text-align: right;">يولد هذا البرنامج كجسر رسمي وآمن بين الإنتاج الفكري المستقل والسوق الحقيقي. هيكل مصمم ليس فقط ليعمل تقنيًا، بل لاحترام الحقوق والمؤلفية والملكية الفكرية والمسؤولية. لا شيء هنا مرتجل. كل شيء صُمم بأساس قانوني ووضوح وهدف.</p>
-                            
                             <p style="text-align: right;">لا نتحدث فقط مع المطورين. نتحدث مع المبدعين. مع المحترفين والمستقلين والمبتكرين الذين يبنون حلولاً حقيقية، لكنهم يصطدمون بسوق غير منظم، وغالبًا ما يكون مفترسًا، حيث تُستوعب الأفكار الجيدة دون حماية أو اعتراف.</p>
-                            
                             <p style="text-align: right;">ندعو المواهب المستقلة التي تشارك هذه الرؤية. المحترفين الذين يفهمون أن المعرفة لا يمكن أن تقتصر على المحافظ الشخصية. الذين يؤمنون بأن إنتاجهم الفكري يستحق الهدف والحماية والتأثير الحقيقي، دون أن يفقد سلامته القانونية.</p>
-                            
                             <p style="text-align: right;">كل ما تم إنشاؤه هنا يحمل بصمة القانون المطبق على التكنولوجيا. منظور يفهم أن الابتكار يكون مستدامًا فقط عندما يحترم القواعد والحقوق والمسؤوليات.</p>
-                            
                             <p style="font-style: italic; margin-top: 2rem; color: #7B3F00; border-right: 2px solid #d4af37; padding-right: 1rem; text-align: right;">
                                 "إذا كنت تعتقد أن مستقبل التكنولوجيا يحتاج إلى أكثر من الرمز البرمجي — يحتاج إلى بنية وأخلاق وأساس قانوني، فإنك تفهم تمامًا سبب وجود هذا البرنامج.<br>وقد وُلد من القانون، لتنظيم المستقبل الذي تصر التكنولوجيا على إنشائه دون قواعد."
                             </p>
@@ -296,9 +295,7 @@
             
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
+                    <div class="benefit-icon"><i class="fas fa-medal"></i></div>
                     <div>
                         <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
                             <span class="lang-content active" data-lang="pt">Estruturação Profissional</span>
@@ -314,9 +311,7 @@
                 </div>
                 
                 <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
                     <div>
                         <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
                             <span class="lang-content active" data-lang="pt">Desenvolvimento Mensurável</span>
@@ -332,9 +327,7 @@
                 </div>
                 
                 <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
+                    <div class="benefit-icon"><i class="fas fa-network-wired"></i></div>
                     <div>
                         <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
                             <span class="lang-content active" data-lang="pt">Integração Estrutural</span>
@@ -350,9 +343,7 @@
                 </div>
                 
                 <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
                     <div>
                         <h4 style="color: #2b2b2b; margin-bottom: 0.5rem;">
                             <span class="lang-content active" data-lang="pt">Formação Completa</span>
@@ -381,9 +372,7 @@
             
             <div class="cards-grid">
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-1"></i>
-                    </div>
+                    <div class="card-icon"><i class="fas fa-1"></i></div>
                     <h3>
                         <span class="lang-content active" data-lang="pt">Identificação de Talentos</span>
                         <span class="lang-content" data-lang="en">Talent Identification</span>
@@ -397,9 +386,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-2"></i>
-                    </div>
+                    <div class="card-icon"><i class="fas fa-2"></i></div>
                     <h3>
                         <span class="lang-content active" data-lang="pt">Curadoria Técnica</span>
                         <span class="lang-content" data-lang="en">Technical Curation</span>
@@ -413,9 +400,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-3"></i>
-                    </div>
+                    <div class="card-icon"><i class="fas fa-3"></i></div>
                     <h3>
                         <span class="lang-content active" data-lang="pt">Conexão Estruturada</span>
                         <span class="lang-content" data-lang="en">Structured Connection</span>
@@ -431,7 +416,7 @@
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO: Eventos (Agenda de Conexões) -->
+    <!-- Seção: Eventos (Agenda de Conexões) -->
     <section id="eventos" class="section">
         <div class="container">
             <h2 class="section-title">
@@ -449,67 +434,43 @@
                 <!-- Start Up Summit 2026 -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Start Up Summit 2026</span>
-                        <span class="lang-content" data-lang="en">Start Up Summit 2026</span>
-                        <span class="lang-content" data-lang="ar">قمة الشركات الناشئة 2026</span>
-                    </h3>
+                    <h3><span class="lang-content active" data-lang="pt">Start Up Summit 2026</span><span class="lang-content" data-lang="en">Start Up Summit 2026</span><span class="lang-content" data-lang="ar">قمة الشركات الناشئة 2026</span></h3>
                     <div class="event-date"><i class="fas fa-calendar-day"></i><span>26 a 28 de Agosto, 2026</span></div>
                     <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>Florianópolis/SC, Brasil</span></div>
                     <div class="event-description">Apresentação dos produtos tecnológicos Exclusive Identity e LAYER 2026.</div>
                     <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
                 </div>
-
                 <!-- Rio Tech Summit 2026 -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Rio Tech Summit 2026</span>
-                        <span class="lang-content" data-lang="en">Rio Tech Summit 2026</span>
-                        <span class="lang-content" data-lang="ar">قمة ريو للتكنولوجيا 2026</span>
-                    </h3>
+                    <h3><span class="lang-content active" data-lang="pt">Rio Tech Summit 2026</span><span class="lang-content" data-lang="en">Rio Tech Summit 2026</span><span class="lang-content" data-lang="ar">قمة ريو للتكنولوجيا 2026</span></h3>
                     <div class="event-date"><i class="fas fa-calendar-day"></i><span>12 e 13 de Março, 2026</span></div>
                     <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>Rio de Janeiro/RJ, Brasil</span></div>
                     <div class="event-description">Encontro de lideranças tecnológicas e apresentação do portfólio Exclusive Identity.</div>
                     <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
                 </div>
-
                 <!-- Franchising Expo 2026 -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Franchising Expo 2026</span>
-                        <span class="lang-content" data-lang="en">Franchising Expo 2026</span>
-                        <span class="lang-content" data-lang="ar">معرض الامتياز التجاري 2026</span>
-                    </h3>
+                    <h3><span class="lang-content active" data-lang="pt">Franchising Expo 2026</span><span class="lang-content" data-lang="en">Franchising Expo 2026</span><span class="lang-content" data-lang="ar">معرض الامتياز التجاري 2026</span></h3>
                     <div class="event-date"><i class="fas fa-calendar-day"></i><span>24 a 27 de Junho, 2026</span></div>
                     <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>Expo Center Norte, São Paulo/SP</span></div>
                     <div class="event-description">Exposição de soluções tecnológicas para expansão de redes.</div>
                     <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
                 </div>
-
                 <!-- Brasil Tech Summit -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Brasil Tech Summit 2026</span>
-                        <span class="lang-content" data-lang="en">Brazil Tech Summit 2026</span>
-                        <span class="lang-content" data-lang="ar">قمة البرازيل للتكنولوجيا 2026</span>
-                    </h3>
+                    <h3><span class="lang-content active" data-lang="pt">Brasil Tech Summit 2026</span><span class="lang-content" data-lang="en">Brazil Tech Summit 2026</span><span class="lang-content" data-lang="ar">قمة البرازيل للتكنولوجيا 2026</span></h3>
                     <div class="event-date"><i class="fas fa-calendar-day"></i><span>Sexta, 24 Jul 2026 • 10h–13h (BRT)</span></div>
                     <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>São Paulo/SP, Brasil</span></div>
                     <div class="event-description"><strong>Cúpula da Tecnologia no Brasil.</strong> Reuniões com formuladores de políticas públicas, CEOs e investidores.</div>
                     <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
                 </div>
-
                 <!-- Tech Meeting SP (confirmado) -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Tech Meeting SP</span>
-                        <span class="lang-content" data-lang="en">Tech Meeting SP</span>
-                        <span class="lang-content" data-lang="ar">لقاء التكنولوجيا SP</span>
-                    </h3>
+                    <h3><span class="lang-content active" data-lang="pt">Tech Meeting SP</span><span class="lang-content" data-lang="en">Tech Meeting SP</span><span class="lang-content" data-lang="ar">لقاء التكنولوجيا SP</span></h3>
                     <div class="event-date"><i class="fas fa-calendar-day"></i><span>10 de Outubro, 2026</span></div>
                     <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>São Paulo/SP, Brasil</span></div>
                     <div class="event-description">Reuniões com investidores e demonstração do programa LAYER 2026. <strong>Reserva de IP para investidores estratégicos mundiais.</strong></div>
@@ -556,21 +517,19 @@
     </footer>
 
     <script>
-        // Sistema de Múltiplas Línguas
+        // Sistema de Múltiplas Línguas (sem a função updateInvitationLink, pois o link é fixo)
         document.addEventListener('DOMContentLoaded', function() {
             const langButtons = document.querySelectorAll('.lang-btn');
             const langContents = document.querySelectorAll('.lang-content');
             
             // Definir língua inicial como Português
             setLanguage('pt');
-            updateInvitationLink('pt'); // Configura o link inicial
             
             // Adicionar evento de clique aos botões de língua
             langButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const lang = this.getAttribute('data-lang');
                     setLanguage(lang);
-                    updateInvitationLink(lang); // Atualiza o link para o PDF correto
                     
                     // Atualizar botão ativo
                     langButtons.forEach(btn => btn.classList.remove('active'));
@@ -603,19 +562,6 @@
                 
                 // Atualizar atributo lang do HTML
                 document.documentElement.setAttribute('lang', lang);
-            }
-            
-            // Função para atualizar o link do botão de convite dinamicamente
-            function updateInvitationLink(lang) {
-                const link = document.getElementById('developer-invitation-link');
-                const linkMap = {
-                    'pt': 'https://drive.google.com/file/d/1YvsUYWnD7k32vDpuY-dBZGIeA3qJDkjK/view?usp=sharing',
-                    'en': 'https://drive.google.com/file/d/1poO2sxplpabL8Jx5gAM3ZDajXvdld_1y/view?usp=sharing', 
-                    'ar': 'https://drive.google.com/file/d/1cDzapQbQTP2XlD9E1dCoEa-_-LMGztIX/view?usp=sharing'
-                };
-                link.href = linkMap[lang] || linkMap['pt'];
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
             }
             
             // Scroll suave
