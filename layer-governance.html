@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layer Talent Governance Model | AVZ Infra</title>
+    <title>AVZ Infra | Institutional Access Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* (todo o CSS original permanece exatamente igual) */
+        /* (CSS ORIGINAL 100% INTACTO) */
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}body{background:linear-gradient(135deg,#f9f5f0 0%,#faf0f4 100%);color:#3a3a3a;line-height:1.6;overflow-x:hidden;position:relative}body::before,body::after{content:'';position:fixed;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:0;opacity:.03}body::before{top:-200px;right:-200px;background:radial-gradient(circle,#7B3F00 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(123 63 0 / .1)}body::after{bottom:-200px;left:-200px;background:radial-gradient(circle,#8B4513 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(139 69 19 / .1)}.header{position:fixed;top:0;width:100%;background:rgb(255 255 255 / .95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;transition:all 0.3s ease;border-bottom:1px solid rgb(212 175 55 / .1);box-shadow:0 2px 20px rgb(123 63 0 / .05)}.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}.logo{font-size:1.8rem;font-weight:300;letter-spacing:2px;color:#2b2b2b;text-transform:uppercase;position:relative}.logo::after{content:'';position:absolute;bottom:-5px;left:0;width:60%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.logo span{display:block;font-size:11px;letter-spacing:8px;margin-top:2px;color:#888}
         .hamburger{display:none;flex-direction:column;cursor:pointer;z-index:1002;padding:10px}.hamburger span{width:28px;height:2px;background:linear-gradient(135deg,#d4af37,#7B3F00);margin:3px 0;transition:all 0.4s ease;border-radius:2px}.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}.nav-menu{display:flex;list-style:none;gap:2rem}.nav-menu a{color:#3a3a3a;text-decoration:none;font-weight:400;transition:all 0.3s ease;position:relative;font-size:14px;letter-spacing:.5px}.nav-menu a:hover{color:#d4af37}.nav-menu a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:linear-gradient(135deg,#d4af37,#7B3F00);transition:width 0.3s ease}.nav-menu a:hover::after{width:100%}.menu-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);backdrop-filter:blur(3px);z-index:1000;display:none;opacity:0;transition:opacity 0.3s ease}.menu-overlay.active{display:block;opacity:1}.lang-toggle{position:fixed;top:90px;right:20px;z-index:999;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-radius:40px;padding:8px 16px;border:1px solid rgba(212,175,55,0.25);box-shadow:0 8px 20px rgba(123,63,0,0.12);display:flex;align-items:center;gap:10px;cursor:pointer;transition:all 0.4s ease;min-width:120px;justify-content:center}.lang-toggle:hover{border-color:#d4af37;box-shadow:0 8px 32px rgba(212,175,55,0.3);transform:translateY(-2px)}.lang-toggle .current-lang{display:flex;align-items:center;gap:8px;font-family:'Cinzel',serif;font-weight:500;color:#2b2b2b}.lang-toggle .current-lang span{font-size:0.9rem}.lang-toggle .lang-flag{font-size:1.2rem}.lang-toggle .lang-arrow{color:#d4af37;font-size:0.8rem;transition:transform 0.3s ease}.lang-dropdown{position:absolute;top:110%;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);border-radius:20px;border:1px solid rgba(212,175,55,0.25);box-shadow:0 15px 30px rgba(123,63,0,0.15);padding:8px 0;min-width:140px;display:none;overflow:hidden;list-style:none}.lang-dropdown.show{display:block}.lang-dropdown li{padding:10px 20px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all 0.4s ease;color:#2b2b2b;font-size:0.9rem}.lang-dropdown li:hover{background:rgba(212,175,55,0.1);color:#d4af37}.lang-dropdown li.active{background:linear-gradient(135deg,#D4AF37 0%,#F4E4B8 50%,#7B3F00 100%);color:#2b2b2b;font-weight:500}.hero{min-height:calc(100vh - 80px);display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;background:linear-gradient(135deg,rgb(249 245 240 / .9),rgb(250 240 244 / .9));overflow:hidden}.hero::before{content:'';position:absolute;top:10%;right:10%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgb(123 63 0 / .03) 0%,transparent 70%);filter:blur(40px);z-index:1}.hero-content{max-width:900px;z-index:2}.hero h1{font-size:clamp(2rem, 5vw, 3.2rem);margin-bottom:1rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;line-height:1.2}.hero h1 span{color:#d4af37;font-weight:500;text-shadow:0 0 30px rgb(212 175 55 / .2)}.hero-subtitle{font-size:1.2rem;color:#666;margin-bottom:2.5rem;font-weight:300;letter-spacing:.5px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7}.cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}.btn{padding:14px 28px;border:none;border-radius:2px;font-weight:400;text-decoration:none;display:inline-flex;align-items:center;gap:.8rem;transition:all 0.3s ease;cursor:pointer;font-size:14px;letter-spacing:.5px;position:relative;overflow:hidden}.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgb(255 255 255 / .2),transparent);transition:left 0.7s ease}.btn:hover::before{left:100%}.btn-primary{background:linear-gradient(to right,#d4af37,#f4e4b8);color:#2a2a2a;box-shadow:0 3px 15px rgb(212 175 55 / .3)}.btn-primary:hover{box-shadow:0 5px 20px rgb(212 175 55 / .4);transform:translateY(-2px)}.btn-secondary{background:#fff0;color:#666;border:1px solid #ddd;box-shadow:0 2px 8px rgb(0 0 0 / .05)}.btn-secondary:hover{border-color:#d4af37;color:#d4af37;box-shadow:0 4px 12px rgb(212 175 55 / .15)}.btn-layer{background:linear-gradient(to right,#7B3F00,#8B4513);color:#fff;border:1px solid #7B3F00;box-shadow:0 3px 15px rgb(123 63 0 / .3)}.btn-layer:hover{background:linear-gradient(to right,#8B4513,#7B3F00);color:#fff;box-shadow:0 5px 20px rgb(123 63 0 / .4);transform:translateY(-2px);border-color:#8B4513}.section{padding:5rem 2rem;background:rgb(255 255 255 / .7);position:relative}.section-light{background:linear-gradient(135deg,#f5f1ec 0%,#f7ecec 100%)}.container{max-width:1200px;margin:0 auto;position:relative;z-index:2}.section-title{font-size:clamp(1.6rem, 3vw, 2.2rem);text-align:center;margin-bottom:3rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;position:relative;padding-bottom:15px}.section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}.card{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:2.5rem 2rem;transition:all 0.3s ease;box-shadow:0 2px 10px rgb(0 0 0 / .05);position:relative}.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#7B3F00,transparent);opacity:0;transition:opacity 0.3s ease}.card:hover{border-color:rgb(123 63 0 / .15);box-shadow:0 8px 25px rgb(123 63 0 / .08);transform:translateY(-5px)}.card:hover::before{opacity:1}.card-icon{font-size:2.2rem;color:#d4af37;margin-bottom:1.5rem;text-shadow:0 0 10px rgb(212 175 55 / .2)}.card h3{font-size:1.3rem;margin-bottom:1rem;color:#2b2b2b;font-weight:500}.card p{color:#666;line-height:1.7;font-size:.95rem}.products-section{background:linear-gradient(135deg,#f8f3e8 0%,#f5efe8 100%);position:relative;overflow:hidden}.products-section::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgb(123 63 0 / .03) 0%,transparent 70%);filter:blur(30px)}.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}.product-card{background:rgb(255 255 255 / .95);border:1px solid rgb(123 63 0 / .08);border-radius:8px;padding:2.5rem 2rem;transition:all 0.4s ease;box-shadow:0 4px 15px rgb(0 0 0 / .03);position:relative;overflow:hidden}.product-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8);transform:translateX(-100%);transition:transform 0.5s ease}.product-card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgb(123 63 0 / .1);border-color:rgb(123 63 0 / .15)}.product-card:hover::before{transform:translateX(0)}.product-icon{font-size:2.5rem;color:#7B3F00;margin-bottom:1.5rem;transition:all 0.3s ease}.product-card:hover .product-icon{color:#d4af37;transform:scale(1.1)}.product-badge{position:absolute;top:15px;right:15px;background:linear-gradient(135deg,#d4af37,#7B3F00);color:#fff;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:600;letter-spacing:.5px}.product-features{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgb(123 63 0 / .08);list-style:none}.product-features li{margin-bottom:.5rem;color:#666;font-size:.9rem;display:flex;align-items:center;gap:.5rem}.product-features li i{color:#7B3F00;font-size:.8rem}.philosophy-content{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:3rem;margin-top:2rem;box-shadow:0 4px 20px rgb(0 0 0 / .03);position:relative}.philosophy-content::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:100px;height:1px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.philosophy-text{color:#666;line-height:1.8;font-size:1.05rem}.philosophy-text p{margin-bottom:1.5rem}.philosophy-text strong{color:#2b2b2b;font-weight:600}.philosophy-quote{margin-top:2.5rem;padding:2rem;border-left:3px solid #7B3F00;background:linear-gradient(90deg,rgb(123 63 0 / .03),transparent);border-radius:0 4px 4px 0;position:relative}.philosophy-quote::before{content:'"';position:absolute;top:-10px;left:-15px;font-size:4rem;color:rgb(123 63 0 / .1);font-family:serif;font-weight:700}.philosophy-quote p{font-style:italic;color:#555;font-size:1.2rem;line-height:1.7}.quote-author{color:#7B3F00;font-size:1rem;margin-top:1rem;text-align:right;font-weight:600}.footer{background:rgb(255 255 255 / .9);padding:3rem 2rem 2rem;text-align:center;border-top:1px solid rgb(123 63 0 / .1);position:relative}.footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.footer-content{max-width:1200px;margin:0 auto}.footer p{color:#888;margin-bottom:.8rem;font-size:.9rem}.social-links{display:flex;justify-content:center;gap:1.5rem;margin:2rem 0}.social-links a{color:#888;font-size:1.2rem;transition:all 0.3s ease;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgb(255 255 255 / .9);border:1px solid rgb(123 63 0 / .1)}.social-links a:hover{color:#7B3F00;transform:translateY(-3px);box-shadow:0 6px 15px rgb(123 63 0 / .15);border-color:rgb(123 63 0 / .2)}.lang-content{display:none}.lang-content.active{display:block}.layer-badge{display:inline-block;padding:8px 20px;background:linear-gradient(135deg,#7B3F00,#d4af37);color:white;border-radius:20px;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2rem;font-weight:600}.layer-form{background:rgb(255 255 255 / .95);border:1px solid rgb(212 175 55 / .1);border-radius:8px;padding:3rem;margin-top:2rem;box-shadow:0 8px 30px rgb(123 63 0 / .05)}.form-section{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid rgb(212 175 55 / .1)}.form-section-title{color:#7B3F00;font-size:1.2rem;margin-bottom:1.5rem;font-weight:500;display:flex;align-items:center;gap:10px}.form-section-title i{color:#d4af37}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}.form-group{margin-bottom:1.5rem}.form-group label{display:block;color:#2b2b2b;margin-bottom:0.5rem;font-weight:500;font-size:0.9rem}.form-control{width:100%;padding:12px 16px;border:1px solid rgb(212 175 55 / .2);border-radius:4px;background:rgb(255 255 255 / .9);color:#3a3a3a;font-size:0.95rem;transition:all 0.3s ease}.form-control:focus{outline:none;border-color:#d4af37;box-shadow:0 0 0 2px rgb(212 175 55 / .1)}.form-control.select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%237B3F00' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:16px}.checkbox-group{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.5rem}.checkbox-item{display:flex;align-items:center;gap:8px;cursor:pointer}.checkbox-item input[type="checkbox"]{appearance:none;width:18px;height:18px;border:2px solid rgb(212 175 55 / .3);border-radius:3px;cursor:pointer;position:relative}.checkbox-item input[type="checkbox"]:checked{background-color:#d4af37;border-color:#d4af37}.checkbox-item input[type="checkbox"]:checked::after{content:'✓';position:absolute;color:white;font-size:12px;top:50%;left:50%;transform:translate(-50%, -50%)}.checkbox-item label{margin-bottom:0;cursor:pointer;font-size:0.9rem;color:#666}.slider-container{margin-top:0.5rem}.slider-value{text-align:center;color:#7B3F00;font-weight:600;margin-top:10px;font-size:1.1rem}input[type="range"]{width:100%;height:6px;-webkit-appearance:none;background:linear-gradient(to right, rgb(212 175 55 / .2), #d4af37);border-radius:3px;outline:none}input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#7B3F00;cursor:pointer;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.2)}.layer-results{background:linear-gradient(135deg,#f9f5f0 0%,#f5f0e8 100%);border:1px solid rgb(212 175 55 / .2);border-radius:8px;padding:2.5rem;margin-top:3rem;display:none}.layer-results.active{display:block;animation:fadeIn 0.5s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.result-title{color:#7B3F00;font-size:1.4rem;margin-bottom:1.5rem;text-align:center;font-weight:500}.result-value{text-align:center;font-size:2.5rem;color:#2b2b2b;margin-bottom:2rem;font-weight:300}.result-value span{color:#d4af37;font-weight:600}.result-details{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem}.result-item{background:white;padding:1.5rem;border-radius:4px;border:1px solid rgb(212 175 55 / .1);text-align:center}.result-item-title{color:#666;font-size:0.9rem;margin-bottom:0.5rem}.result-item-value{color:#7B3F00;font-size:1.2rem;font-weight:600}.declaration-box{background:rgb(250 245 240 / .8);border:2px solid #d4af37;padding:2rem;margin-top:2rem;border-radius:8px;font-size:0.95rem;color:#666;line-height:1.6}.declaration-title{color:#7B3F00;font-weight:600;margin-bottom:1rem;font-size:1.1rem;text-align:center}body[dir="rtl"] .declaration-box{border-right:2px solid #d4af37}.actions{display:flex;gap:1rem;justify-content:center;margin-top:3rem;flex-wrap:wrap}.btn-pdf{background:linear-gradient(to right,#7B3F00,#8B4513);color:white}.btn-pdf:hover{background:linear-gradient(to right,#8B4513,#7B3F00)}.btn-submit{background:linear-gradient(to right,#7B3F00,#d4af37);color:white}.btn-submit:hover{background:linear-gradient(to right,#d4af37,#7B3F00)}.submission-form{background:rgb(255 255 255 / .98);border:2px solid #7B3F00;border-radius:8px;padding:2.5rem;margin-top:2rem;display:none;box-shadow:0 10px 40px rgb(123 63 0 / .1)}.submission-form.active{display:block;animation:fadeIn 0.5s ease}.legal-consent{background:rgb(249 245 240 / .9);padding:1.5rem;border-radius:6px;margin:2rem 0;border-left:4px solid #7B3F00}body[dir="rtl"] .legal-consent{border-left:none;border-right:4px solid #7B3F00}.system-info{font-size:0.85rem;color:#888;text-align:center;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgb(123 63 0 / .1)}.hidden{display:none}.required::after{content:" *";color:#d4af37}.form-help{font-size:0.8rem;color:#888;margin-top:0.25rem;font-style:italic}.progress-bar{height:4px;background:rgb(212 175 55 / .2);border-radius:2px;margin:2rem 0;overflow:hidden}.progress{height:100%;background:linear-gradient(to right, #d4af37, #7B3F00);width:0%;transition:width 0.5s ease}.step-indicator{display:flex;justify-content:space-between;margin-bottom:2rem}.step{text-align:center;flex:1;position:relative}.step-number{width:30px;height:30px;border-radius:50%;background:rgb(212 175 55 / .1);color:#666;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-size:0.9rem;font-weight:500}.step.active .step-number{background:#d4af37;color:white}.step-label{font-size:0.8rem;color:#666}.step.active .step-label{color:#7B3F00;font-weight:500}body[dir="rtl"] .form-control.select{background-position:left 16px center;padding-right:16px;padding-left:40px}body[dir="rtl"] .step-indicator{flex-direction:row-reverse}body[dir="rtl"] .actions{flex-direction:row-reverse}body[dir="rtl"] .btn i{order:1;margin-left:0.8rem;margin-right:0}body[dir="rtl"] .checkbox-group{justify-content:flex-end}body[dir="rtl"] .slider-value{direction:ltr;unicode-bidi:bidi-override}.arabic-pdf{font-family:'Noto Naskh Arabic', serif !important;direction:rtl !important;text-align:right !important}.warning-box{background:linear-gradient(135deg,#fff8e1 0%,#fff3cd 100%);border:1px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.legal-footer{margin-top:2rem;padding-top:1rem;border-top:1px solid rgb(123 63 0 / .1);font-size:.8rem;color:#888}.legal-footer a{color:#7B3F00;text-decoration:none;margin:0 .5rem}.legal-footer a:hover{text-decoration:underline}.compliance-details{background:rgb(255 255 255 / .7);border-radius:8px;padding:1.5rem;margin:1rem 0;border-left:3px solid #7B3F00;font-size:.9rem}.compliance-details summary{font-weight:600;color:#7B3F00;cursor:pointer;list-style:none}.compliance-details summary::-webkit-details-marker{display:none}.compliance-details summary i{margin-right:.5rem}@media (max-width: 1024px){.lang-toggle{top:85px;right:15px}}@media (max-width: 768px){.hamburger{display:flex}.nav-menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:2rem;transition:right 0.5s cubic-bezier(0.25,0.46,0.45,0.94);box-shadow:-10px 0 30px rgba(123,63,0,0.1);border-left:1px solid rgba(212,175,55,0.2);z-index:1001;padding:2rem}.nav-menu.active{right:0}.nav-menu a{font-size:1.2rem;padding:10px 0}.nav-menu a::after{bottom:0}.lang-toggle{top:75px;right:10px;min-width:100px;padding:6px 12px}.cards-grid,.products-grid{grid-template-columns:1fr}.cta-buttons{flex-direction:column;align-items:center}.btn{padding:12px 24px;width:100%;max-width:300px;justify-content:center}.philosophy-content{padding:2rem 1.5rem}.philosophy-quote{padding:1.5rem}.hero{padding:5rem 1.5rem 3rem;min-height:calc(100vh - 70px)}}@media (max-width:480px){.section{padding:4rem 1rem}.lang-toggle{top:70px;right:8px;min-width:90px;padding:5px 10px}.lang-toggle .current-lang span{font-size:0.8rem}.hero{padding:4rem 1rem 2.5rem}}@media (min-width:1366px){.hero{padding:7rem 2rem 5rem;min-height:calc(100vh - 90px)}}@media (min-width:1440px){.hero{padding:7.5rem 2rem 5.5rem;min-height:calc(100vh - 85px)}}@media (min-width:1920px){.hero{padding:8rem 2rem 6rem;min-height:calc(100vh - 100px)}}@media (min-width:2560px){.hero{padding:10rem 2rem 8rem;min-height:calc(100vh - 120px)}}body[dir="rtl"] .logo::after,body[dir="rtl"] .nav-menu a::after,body[dir="rtl"] .section-title::after{left:auto;right:0;transform:none}body[dir="rtl"] .section-title::after,body[dir="rtl"] .philosophy-content::before{right:50%;transform:translateX(50%)}body[dir="rtl"] .philosophy-quote{border-left:none;border-right:3px solid #7B3F00;background:linear-gradient(90deg,transparent,rgb(123 63 0 / .03))}body[dir="rtl"] .philosophy-quote::before{left:auto;right:-15px}.text-center{text-align:center}.mb-2{margin-bottom:2rem}.mb-3{margin-bottom:3rem}body[dir="rtl"] .lang-content[data-lang="ar"]{display:block!important;text-align:right;direction:rtl}
     </style>
 </head>
 <body>
-    <!-- Menu Overlay (fundo escuro) -->
+    <!-- Menu Overlay -->
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- Botão de Idioma Unificado (estilo premium) -->
+    <!-- Botão de Idioma Premium - 3 IDIOMAS OFICIAIS -->
     <div class="lang-toggle" id="langToggle">
         <div class="current-lang" id="currentLang">
             <span class="lang-flag">🇧🇷</span>
@@ -27,26 +25,25 @@
         </div>
         <i class="fas fa-chevron-down lang-arrow" id="langArrow"></i>
         <ul class="lang-dropdown" id="langDropdown">
-            <li data-lang="pt" class="active">
+            <li data-lang="pt" class="active" data-country="br">
                 <span class="lang-flag">🇧🇷</span>
-                <span>Português</span>
+                <span>Português (Brasil/Portugal/Angola/Moçambique)</span>
             </li>
-            <li data-lang="en">
+            <li data-lang="en" data-country="us">
                 <span class="lang-flag">🇺🇸</span>
-                <span>English</span>
+                <span>English (USA/UK/Canada/Australia)</span>
             </li>
-            <li data-lang="ar">
+            <li data-lang="ar" data-country="ae">
                 <span class="lang-flag">🇸🇦</span>
-                <span>العربية</span>
+                <span>العربية (UAE/KSA/Qatar/Kuwait)</span>
             </li>
         </ul>
     </div>
 
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">LAYER TALENT<span>Governance Model</span></div>
+            <div class="logo">AVZ INFRA<span>Global Access Portal</span></div>
             
-            <!-- Hambúrguer Menu (visível apenas em mobile) -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -55,357 +52,379 @@
             
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio"><span class="lang-content active" data-lang="pt">Início</span><span class="lang-content" data-lang="en">Home</span><span class="lang-content" data-lang="ar">الرئيسية</span></a></li>
-                <li><a href="#modelo"><span class="lang-content active" data-lang="pt">Modelo de Governança</span><span class="lang-content" data-lang="en">Governance Model</span><span class="lang-content" data-lang="ar">نموذج الحوكمة</span></a></li>
-                <li><a href="#autodeclaracao"><span class="lang-content active" data-lang="pt">Autodeclaração</span><span class="lang-content" data-lang="en">Self-Declaration</span><span class="lang-content" data-lang="ar">الإقرار الذاتي</span></a></li>
+                <li><a href="#portal"><span class="lang-content active" data-lang="pt">Portal</span><span class="lang-content" data-lang="en">Portal</span><span class="lang-content" data-lang="ar">البوابة</span></a></li>
+                <li><a href="#submissao"><span class="lang-content active" data-lang="pt">Submissão</span><span class="lang-content" data-lang="en">Submission</span><span class="lang-content" data-lang="ar">تقديم</span></a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- SEÇÃO INICIAL COM PAÍSES ATENDIDOS -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <div class="layer-badge">
-                <span class="lang-content active" data-lang="pt">MODELO DE GOVERNAÇA DE TALENTOS</span>
-                <span class="lang-content" data-lang="en">TALENT GOVERNANCE MODEL</span>
-                <span class="lang-content" data-lang="ar">نموذج حوكمة المواهب</span>
+            <div class="layer-badge" style="background: #0a3147;">
+                <span class="lang-content active" data-lang="pt">🌍 ATENDIMENTO GLOBAL · 9 PAÍSES</span>
+                <span class="lang-content" data-lang="en">🌍 GLOBAL REACH · 9 COUNTRIES</span>
+                <span class="lang-content" data-lang="ar">🌍 تغطية عالمية · 9 دول</span>
             </div>
             
-            <h1 class="lang-content active" data-lang="pt"><span>Autovaloração Intrínseca</span> &amp; Submissão Assistida</h1>
-            <h1 class="lang-content" data-lang="en"><span>Intrinsic Self-Valuation</span> &amp; Assisted Submission</h1>
-            <h1 class="lang-content" data-lang="ar"><span>التقييم الذاتي الجوهري</span> والإرسال المساعد</h1>
+            <h1>
+                <span class="lang-content active" data-lang="pt"><span>AVZ Infra</span> · Institutional Portal</span>
+                <span class="lang-content" data-lang="en"><span>AVZ Infra</span> · Institutional Portal</span>
+                <span class="lang-content" data-lang="ar"><span>AVZ Infra</span> · البوابة المؤسسية</span>
+            </h1>
             
-            <p class="hero-subtitle lang-content active" data-lang="pt">Sistema computacional autoral de autovaloração intrínseca de ativos intelectuais, seguido de submissão institucional assistida, sem intermediação financeira e sem automação de envio.</p>
-            <p class="hero-subtitle lang-content" data-lang="en">Authorial computational system for intrinsic self-valuation of intellectual assets, followed by assisted institutional submission, without financial intermediation and without automated sending.</p>
-            <p class="hero-subtitle lang-content" data-lang="ar">نظام حوسبي تأليفي للتقييم الذاتي الجوهري للأصول الفكرية، يليه إرسال مؤسسي مساعد، دون وساطة مالية وبدون إرسال آلي.</p>
-            
-            <div class="warning-box">
-                <i class="fas fa-exclamation-triangle"></i>
-                <span class="lang-content active" data-lang="pt"><strong>AVISO IMPORTANTE:</strong> Este sistema não executa valuation de mercado, não faz recomendações econômicas e não envia dados automaticamente. Todo envio é um ato consciente do usuário através do seu próprio cliente de e-mail.</span>
-                <span class="lang-content" data-lang="en"><strong>IMPORTANT NOTICE:</strong> This system does not perform market valuation, does not make economic recommendations and does not send data automatically. Every submission is a conscious act by the user through their own email client.</span>
-                <span class="lang-content" data-lang="ar"><strong>تنبيه مهم:</strong> لا يقوم هذا النظام بإجراء تقييم السوق، ولا يقدم توصيات اقتصادية ولا يرسل البيانات تلقائيًا. كل إرسال هو فعل واعٍ من قبل المستخدم من خلال عميل البريد الإلكتروني الخاص به.</span>
-            </div>
-            
+            <p class="hero-subtitle">
+                <span class="lang-content active" data-lang="pt">Brasil · Portugal · Angola · Moçambique · EUA · Reino Unido · Canadá · Austrália · Emirados Árabes · Arábia Saudita · Catar · Kuwait</span>
+                <span class="lang-content" data-lang="en">Brazil · Portugal · Angola · Mozambique · USA · UK · Canada · Australia · UAE · Saudi Arabia · Qatar · Kuwait</span>
+                <span class="lang-content" data-lang="ar">البرازيل · البرتغال · أنغولا · موزمبيق · الولايات المتحدة · المملكة المتحدة · كندا · أستراليا · الإمارات · السعودية · قطر · الكويت</span>
+            </p>
+
             <div class="cta-buttons">
-                <a href="#autodeclaracao" class="btn btn-primary"><i class="fas fa-feather-alt"></i><span class="lang-content active" data-lang="pt">Iniciar Autodeclaração</span><span class="lang-content" data-lang="en">Start Self-Declaration</span><span class="lang-content" data-lang="ar">بدء الإقرار الذاتي</span></a>
-                <a href="#modelo" class="btn btn-secondary"><i class="fas fa-balance-scale"></i><span class="lang-content active" data-lang="pt">Princípios do Modelo</span><span class="lang-content" data-lang="en">Model Principles</span><span class="lang-content" data-lang="ar">مبادئ النموذج</span></a>
+                <a href="#portal" class="btn btn-primary"><i class="fas fa-globe"></i><span class="lang-content active" data-lang="pt">Acessar Portal Global</span><span class="lang-content" data-lang="en">Access Global Portal</span><span class="lang-content" data-lang="ar">الدخول إلى البوابة</span></a>
             </div>
         </div>
     </section>
 
-    <section id="modelo" class="section section-light">
+    <!-- SEÇÃO PORTAL -->
+    <section id="portal" class="section" style="background: linear-gradient(135deg, #f0ebe4, #e8e1d8);">
         <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Princípios do Layer Talent Governance Model</span>
-                <span class="lang-content" data-lang="en">Layer Talent Governance Model Principles</span>
-                <span class="lang-content" data-lang="ar">مبادئ نموذج حوكمة المواهب</span>
+            <div style="display: inline-block; background: #0a3147; color: white; padding: 0.5rem 2rem; border-radius: 40px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; border: 1px solid rgba(212, 175, 55, 0.3);">
+                <span class="lang-content active" data-lang="pt">⚡ ACESSO RESTRITO · DESENVOLVEDORES CONVIDADOS</span>
+                <span class="lang-content" data-lang="en">⚡ RESTRICTED ACCESS · INVITED DEVELOPERS</span>
+                <span class="lang-content" data-lang="ar">⚡ دخول مقيد · المطورون المدعوون</span>
+            </div>
+
+            <h1 style="font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 1.5rem;">
+                <span class="lang-content active" data-lang="pt">Portal de Submissão Institucional</span>
+                <span class="lang-content" data-lang="en">Institutional Submission Portal</span>
+                <span class="lang-content" data-lang="ar">بوابة التقديم المؤسسية</span>
+            </h1>
+            <h2 style="font-size: 1.6rem; color: #7B3F00; margin-bottom: 2rem; font-family: 'Cinzel', serif;">
+                <span class="lang-content active" data-lang="pt">Para Desenvolvedores Convidados</span>
+                <span class="lang-content" data-lang="en">For Invited Developers</span>
+                <span class="lang-content" data-lang="ar">للمطورين المدعوين</span>
             </h2>
             
-            <div class="philosophy-content">
-                <div class="philosophy-text">
-                    <div class="lang-content active" data-lang="pt">
-                        <h3 style="color: #7B3F00; margin-bottom: 1rem; font-weight: 500;">🔹 Arquitetura Jurídica e Funcional</h3>
-                        <p><strong>1. AUTOVALORAÇÃO INTRÍNSECA</strong></p>
-                        <ul style="margin-left: 2rem; color: #666; line-height: 1.8;">
-                            <li>Análise baseada em critérios técnicos, criativos e contextuais</li>
-                            <li>Ponderação transparente (sem "caixa preta")</li>
-                            <li>Geração de faixa estimativa (não valor único)</li>
-                            <li>Declarações de limitação visíveis ao usuário</li>
-                        </ul>
-                        <p><strong>2. SUBMISSÃO INSTITUCIONAL ASSISTIDA</strong></p>
-                        <ul style="margin-left: 2rem; color: #666; line-height: 1.8;">
-                            <li>Não há envio automático de dados</li>
-                            <li>Não há upload para servidores de terceiros</li>
-                            <li>Abertura do cliente de e-mail do usuário</li>
-                            <li>Usuário controla o ato final de submissão</li>
-                        </ul>
-                        <p><strong>3. PRINCÍPIOS INEGOCIÁVEIS</strong></p>
-                        <ul style="margin-left: 2rem; color: #666; line-height: 1.8;">
-                            <li>❌ Sem intermediação financeira</li>
-                            <li>❌ Sem recomendação econômica</li>
-                            <li>❌ Sem automação de envio de projetos</li>
-                            <li>✅ Soberania do autor preservada</li>
-                            <li>✅ Neutralidade da Layer mantida</li>
-                        </ul>
-                        <div class="philosophy-quote"><p>"A soberania é do autor, a neutralidade é da Layer, e a decisão é sempre externa."</p><div class="quote-author">— Layer Talent Governance Model</div></div>
-                    </div>
-                    <div class="lang-content" data-lang="en">
-                        <h3 style="color: #7B3F00; margin-bottom: 1rem; font-weight: 500;">🔹 Legal and Functional Architecture</h3>
-                        <p><strong>1. INTRINSIC SELF-VALUATION</strong></p>
-                        <ul style="margin-left: 2rem; color: #666; line-height: 1.8;">
-                            <li>Analysis based on technical, creative and contextual criteria</li>
-                            <li>Transparent weighting (no "black box")</li>
-                            <li>Generation of estimated range (not single value)</li>
-                            <li>Limitation statements visible to user</li>
-                        </ul>
-                        <p><strong>2. ASSISTED INSTITUTIONAL SUBMISSION</strong></p>
-                        <ul style="margin-left: 2rem; color: #666; line-height: 1.8;">
-                            <li>No automatic data sending</li>
-                            <li>No upload to third-party servers</li>
-                            <li>Opens user's email client</li>
-                            <li>User controls final submission act</li>
-                        </ul>
-                        <p><strong>3. NON-NEGOTIABLE PRINCIPLES</strong></p>
-                        <ul style="margin-left: 2rem; color: #666; line-height: 1.8;">
-                            <li>❌ No financial intermediation</li>
-                            <li>❌ No economic recommendation</li>
-                            <li>❌ No project sending automation</li>
-                            <li>✅ Author sovereignty preserved</li>
-                            <li>✅ Layer neutrality maintained</li>
-                        </ul>
-                        <div class="philosophy-quote"><p>"Sovereignty belongs to the author, neutrality to the Layer, and the decision is always external."</p><div class="quote-author">— Layer Talent Governance Model</div></div>
-                    </div>
-                    <div class="lang-content" data-lang="ar">
-                        <h3 style="color: #7B3F00; margin-bottom: 1rem; font-weight: 500;">🔹 الهندسة المعمارية القانونية والوظيفية</h3>
-                        <p><strong>1. التقييم الذاتي الجوهري</strong></p>
-                        <ul style="margin-right: 2rem; color: #666; line-height: 1.8; text-align: right;">
-                            <li>تحليل قائم على المعايير التقنية والإبداعية والسياقية</li>
-                            <li>ترجيح شفاف (بدون "صندوق أسود")</li>
-                            <li>توليد نطاق تقديري (ليس قيمة واحدة)</li>
-                            <li>بيانات القيود مرئية للمستخدم</li>
-                        </ul>
-                        <p><strong>2. الإرسال المؤسسي المساعد</strong></p>
-                        <ul style="margin-right: 2rem; color: #666; line-height: 1.8; text-align: right;">
-                            <li>لا يوجد إرسال تلقائي للبيانات</li>
-                            <li>لا يوجد تحميل إلى خوادم الطرف الثالث</li>
-                            <li>يفتح عميل البريد الإلكتروني للمستخدم</li>
-                            <li>يتحكم المستخدم في فعل الإرسال النهائي</li>
-                        </ul>
-                        <p><strong>3. مبادئ غير قابلة للتفاوض</strong></p>
-                        <ul style="margin-right: 2rem; color: #666; line-height: 1.8; text-align: right;">
-                            <li>❌ لا وساطة مالية</li>
-                            <li>❌ لا توصية اقتصادية</li>
-                            <li>❌ لا أتمتة إرسال المشاريع</li>
-                            <li>✅ الحفاظ على سيادة المؤلف</li>
-                            <li>✅ الحفاظ على حيادية الـLayer</li>
-                        </ul>
-                        <div class="philosophy-quote"><p>"السيادة للمؤلف، الحيادية للـLayer، والقرار دائمًا خارجي."</p><div class="quote-author">— نموذج حوكمة المواهب</div></div>
-                    </div>
-                </div>
+            <p style="color: #666; font-size: 1.1rem; max-width: 900px; margin: 0 auto 2rem;">
+                <span class="lang-content active" data-lang="pt">Ambiente exclusivo para apresentação estruturada de ativos tecnológicos. Sua submissão será avaliada para potencial licenciamento, aquisição ou parceria estratégica nos mercados da América Latina, Europa, América do Norte e Oriente Médio.</span>
+                <span class="lang-content" data-lang="en">Exclusive environment for structured presentation of technological assets. Your submission will be evaluated for potential licensing, acquisition or strategic partnership in Latin America, Europe, North America and Middle East markets.</span>
+                <span class="lang-content" data-lang="ar">بيئة حصرية للعرض المنظم للأصول التكنولوجية. سيتم تقييم طلبك للترخيص المحتمل أو الاستحواذ أو الشراكة الاستراتيجية في أسواق أمريكا اللاتينية وأوروبا وأمريكا الشمالية والشرق الأوسط.</span>
+            </p>
+
+            <div class="warning-box" style="border-left-color: #0a3147; text-align: left;">
+                <i class="fas fa-gavel" style="color: #0a3147; margin-right: 10px;"></i>
+                <strong>
+                    <span class="lang-content active" data-lang="pt">A submissão não caracteriza contrato, investimento ou aquisição automática.</span>
+                    <span class="lang-content" data-lang="en">Submission does not constitute contract, investment or automatic acquisition.</span>
+                    <span class="lang-content" data-lang="ar">التقديم لا يشكل عقدًا أو استثمارًا أو استحواذًا تلقائيًا.</span>
+                </strong>
             </div>
-            <!-- A seção exclusive-section (doações) foi removida -->
         </div>
     </section>
 
-    <section id="autodeclaracao" class="section">
+    <!-- SEÇÃO DE SUBMISSÃO COM VALUATION (PERCEPÇÃO DE VALOR) -->
+    <section id="submissao" class="section">
         <div class="container">
             <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Sistema de Autodeclaração Intrínseca</span>
-                <span class="lang-content" data-lang="en">Intrinsic Self-Declaration System</span>
-                <span class="lang-content" data-lang="ar">نظام الإقرار الذاتي الجوهري</span>
+                <span class="lang-content active" data-lang="pt">Formulário de Valuation & Submissão</span>
+                <span class="lang-content" data-lang="en">Valuation & Submission Form</span>
+                <span class="lang-content" data-lang="ar">نموذج التقييم والتقديم</span>
             </h2>
-            
-            <div class="step-indicator">
-                <div class="step active" id="step1"><div class="step-number">1</div><div class="step-label lang-content active" data-lang="pt">Identificação</div><div class="step-label lang-content" data-lang="en">Identification</div><div class="step-label lang-content" data-lang="ar">التعريف</div></div>
-                <div class="step" id="step2"><div class="step-number">2</div><div class="step-label lang-content active" data-lang="pt">Características</div><div class="step-label lang-content" data-lang="en">Features</div><div class="step-label lang-content" data-lang="ar">المميزات</div></div>
-                <div class="step" id="step3"><div class="step-number">3</div><div class="step-label lang-content active" data-lang="pt">Contexto</div><div class="step-label lang-content" data-lang="en">Context</div><div class="step-label lang-content" data-lang="ar">السياق</div></div>
-                <div class="step" id="step4"><div class="step-number">4</div><div class="step-label lang-content active" data-lang="pt">Resultado</div><div class="step-label lang-content" data-lang="en">Result</div><div class="step-label lang-content" data-lang="ar">النتيجة</div></div>
-            </div>
-            
-            <div class="progress-bar"><div class="progress" id="progress-bar" style="width: 25%;"></div></div>
-            
-            <div class="warning-box">
-                <i class="fas fa-info-circle"></i>
-                <span class="lang-content active" data-lang="pt"><strong>DECLARAÇÃO DE LIMITAÇÃO:</strong> Este sistema gera uma <strong>autodeclaração intrínseca</strong> com base nos dados fornecidos pelo autor. Não constitui uma avaliação de mercado, não tem valor jurídico vinculante e não representa recomendação econômica.</span>
-                <span class="lang-content" data-lang="en"><strong>LIMITATION DECLARATION:</strong> This system generates an <strong>intrinsic self-declaration</strong> based on data provided by the author. It does not constitute a market valuation, has no binding legal value and does not represent economic recommendation.</span>
-                <span class="lang-content" data-lang="ar"><strong>إعلان القيود:</strong> يقوم هذا النظام بإنشاء <strong>إقرار ذاتي جوهري</strong> بناءً على البيانات المقدمة من المؤلف. لا يشكل تقييمًا للسوق، وليس له قيمة قانونية ملزمة ولا يمثل توصية اقتصادية.</span>
-            </div>
-            
-            <form id="selfDeclarationForm" class="layer-form">
-                <!-- SEÇÃO 1 -->
-                <div class="form-section" id="section-1">
-                    <div class="form-section-title"><i class="fas fa-fingerprint"></i><span class="lang-content active" data-lang="pt">Identificação do Ativo Intelectual</span><span class="lang-content" data-lang="en">Intellectual Asset Identification</span><span class="lang-content" data-lang="ar">تعريف الأصل الفكري</span></div>
-                    <div class="form-grid">
-                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Nome/Título do Ativo</span><span class="lang-content" data-lang="en">Asset Name/Title</span><span class="lang-content" data-lang="ar">اسم/عنوان الأصل</span></label><input type="text" class="form-control" id="assetName" required></div>
-                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Domínio Principal</span><span class="lang-content" data-lang="en">Main Domain</span><span class="lang-content" data-lang="ar">المجال الرئيسي</span></label>
-                            <select class="form-control select" id="mainDomain" required><option value=""><span class="lang-content active" data-lang="pt">Selecione o domínio...</span><span class="lang-content" data-lang="en">Select domain...</span><span class="lang-content" data-lang="ar">اختر المجال...</span></option>
-                                <option value="software"><span class="lang-content active" data-lang="pt">Software/Tecnologia da Informação</span><span class="lang-content" data-lang="en">Software/Information Technology</span><span class="lang-content" data-lang="ar">برمجيات/تكنولوجيا المعلومات</span></option>
-                                <option value="hardware"><span class="lang-content active" data-lang="pt">Hardware/Dispositivos Físicos</span><span class="lang-content" data-lang="en">Hardware/Physical Devices</span><span class="lang-content" data-lang="ar">عتاد/أجهزة مادية</span></option>
-                                <option value="algorithm"><span class="lang-content active" data-lang="pt">Algoritmo/Método Matemático</span><span class="lang-content" data-lang="en">Algorithm/Mathematical Method</span><span class="lang-content" data-lang="ar">خوارزمية/طريقة رياضية</span></option>
-                                <option value="design"><span class="lang-content active" data-lang="pt">Design/Interface/UX</span><span class="lang-content" data-lang="en">Design/Interface/UX</span><span class="lang-content" data-lang="ar">تصميم/واجهة/تجربة مستخدم</span></option>
-                                <option value="content"><span class="lang-content active" data-lang="pt">Conteúdo/Educacional</span><span class="lang-content" data-lang="en">Content/Educational</span><span class="lang-content" data-lang="ar">محتوى/تعليمي</span></option>
-                                <option value="process"><span class="lang-content active" data-lang="pt">Processo/Metodologia</span><span class="lang-content" data-lang="en">Process/Methodology</span><span class="lang-content" data-lang="ar">عملية/منهجية</span></option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Ano de Desenvolvimento</span><span class="lang-content" data-lang="en">Development Year</span><span class="lang-content" data-lang="ar">سنة التطوير</span></label>
-                            <select class="form-control select" id="developmentYear" required><option value=""><span class="lang-content active" data-lang="pt">Selecione o ano...</span><span class="lang-content" data-lang="en">Select year...</span><span class="lang-content" data-lang="ar">اختر السنة...</span></option>
-                                <option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option>
-                            </select>
-                        </div>
-                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Estado Atual</span><span class="lang-content" data-lang="en">Current State</span><span class="lang-content" data-lang="ar">الحالة الحالية</span></label>
-                            <select class="form-control select" id="currentState" required><option value=""><span class="lang-content active" data-lang="pt">Selecione o estado...</span><span class="lang-content" data-lang="en">Select state...</span><span class="lang-content" data-lang="ar">اختر الحالة...</span></option>
-                                <option value="concept"><span class="lang-content active" data-lang="pt">Conceito/Projeto Inicial</span><span class="lang-content" data-lang="en">Concept/Initial Project</span><span class="lang-content" data-lang="ar">مفهوم/مشروع أولي</span></option>
-                                <option value="prototype"><span class="lang-content active" data-lang="pt">Protótipo Funcional</span><span class="lang-content" data-lang="en">Functional Prototype</span><span class="lang-content" data-lang="ar">نموذج أولي وظيفي</span></option>
-                                <option value="mature"><span class="lang-content active" data-lang="pt">Versão Madura/Estável</span><span class="lang-content" data-lang="en">Mature/Stable Version</span><span class="lang-content" data-lang="ar">نسخة ناضجة/مستقرة</span></option>
-                                <option value="deployed"><span class="lang-content active" data-lang="pt">Implementado em Produção</span><span class="lang-content" data-lang="en">Deployed in Production</span><span class="lang-content" data-lang="ar">مُنفذ في الإنتاج</span></option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Descrição do Ativo (Opcional)</span><span class="lang-content" data-lang="en">Asset Description (Optional)</span><span class="lang-content" data-lang="ar">وصف الأصل (اختياري)</span></label><textarea class="form-control" id="assetDescription" rows="3"></textarea></div>
-                    <div class="text-center" style="margin-top: 2rem;"><button type="button" class="btn btn-primary" onclick="nextSection(2)"><i class="fas fa-arrow-right"></i><span class="lang-content active" data-lang="pt">Continuar para Características</span><span class="lang-content" data-lang="en">Continue to Features</span><span class="lang-content" data-lang="ar">المتابعة إلى المميزات</span></button></div>
+
+            <!-- AVISO IMPORTANTE SOBRE VALUATION -->
+            <div class="declaration-box" style="border-color: #0a3147; margin-bottom: 2rem;">
+                <div class="declaration-title" style="color: #0a3147;">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="lang-content active" data-lang="pt">DECLARAÇÃO DE PERCEPÇÃO DE VALOR</span>
+                    <span class="lang-content" data-lang="en">VALUE PERCEPTION DECLARATION</span>
+                    <span class="lang-content" data-lang="ar">إعلان تصور القيمة</span>
                 </div>
-                
-                <!-- SEÇÃO 2 -->
-                <div class="form-section hidden" id="section-2">
-                    <div class="form-section-title"><i class="fas fa-star"></i><span class="lang-content active" data-lang="pt">Características Intrínsecas</span><span class="lang-content" data-lang="en">Intrinsic Features</span><span class="lang-content" data-lang="ar">المميزات الجوهرية</span></div>
-                    
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Nível de Originalidade</span><span class="lang-content" data-lang="en">Originality Level</span><span class="lang-content" data-lang="ar">مستوى الأصالة</span></label>
-                        <div class="slider-container"><input type="range" id="originality" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="originalityValue">5</span>/10</div></div>
+                <p>
+                    <span class="lang-content active" data-lang="pt">Os campos abaixo representam <strong>sua percepção de valor</strong> sobre o ativo, não constituindo avaliação de mercado, recomendação financeira ou garantia de valuation por parte da AVZ Infra. Estes dados serão utilizados apenas como referência para análise interna.</span>
+                    <span class="lang-content" data-lang="en">The fields below represent <strong>your value perception</strong> of the asset, not constituting market valuation, financial recommendation or valuation guarantee by AVZ Infra. This data will be used only as reference for internal analysis.</span>
+                    <span class="lang-content" data-lang="ar">تمثل الحقول أدناه <strong>تصورك للقيمة</strong> للأصل، ولا تشكل تقييمًا للسوق أو توصية مالية أو ضمان تقييم من قبل AVZ Infra. سيتم استخدام هذه البيانات فقط كمرجع للتحليل الداخلي.</span>
+                </p>
+            </div>
+
+            <div class="layer-form">
+                <!-- DECLARAÇÕES INICIAIS -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-check-circle" style="color: #0a3147;"></i>
+                        <span class="lang-content active" data-lang="pt">Declarações Obrigatórias</span>
+                        <span class="lang-content" data-lang="en">Mandatory Declarations</span>
+                        <span class="lang-content" data-lang="ar">التصريحات الإلزامية</span>
                     </div>
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Complexidade Técnica</span><span class="lang-content" data-lang="en">Technical Complexity</span><span class="lang-content" data-lang="ar">التعقيد التقني</span></label>
-                        <div class="slider-container"><input type="range" id="complexity" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="complexityValue">5</span>/10</div></div>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">Tempo de Desenvolvimento Estimado</span><span class="lang-content" data-lang="en">Estimated Development Time</span><span class="lang-content" data-lang="ar">وقت التطوير المقدر</span></label>
-                            <select class="form-control select" id="devTime"><option value="1-3"><span class="lang-content active" data-lang="pt">1-3 meses</span><span class="lang-content" data-lang="en">1-3 months</span><span class="lang-content" data-lang="ar">1-3 أشهر</span></option>
-                                <option value="4-6"><span class="lang-content active" data-lang="pt">4-6 meses</span><span class="lang-content" data-lang="en">4-6 months</span><span class="lang-content" data-lang="ar">4-6 أشهر</span></option>
-                                <option value="7-12" selected><span class="lang-content active" data-lang="pt">7-12 meses</span><span class="lang-content" data-lang="en">7-12 months</span><span class="lang-content" data-lang="ar">7-12 أشهر</span></option>
-                                <option value="13-24"><span class="lang-content active" data-lang="pt">13-24 meses</span><span class="lang-content" data-lang="en">13-24 months</span><span class="lang-content" data-lang="ar">13-24 أشهر</span></option>
-                                <option value="24+"><span class="lang-content active" data-lang="pt">Mais de 24 meses</span><span class="lang-content" data-lang="en">More than 24 months</span><span class="lang-content" data-lang="ar">أكثر من 24 شهرًا</span></option>
-                            </select>
-                        </div>
-                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">Nível de Documentação</span><span class="lang-content" data-lang="en">Documentation Level</span><span class="lang-content" data-lang="ar">مستوى التوثيق</span></label>
-                            <div class="slider-container"><input type="range" id="documentation" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="documentationValue">5</span>/10</div></div>
-                        </div>
-                    </div>
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Grau de Inovação</span><span class="lang-content" data-lang="en">Innovation Degree</span><span class="lang-content" data-lang="ar">درجة الابتكار</span></label>
-                        <div class="slider-container"><input type="range" id="innovation" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="innovationValue">5</span>/10</div></div>
-                    </div>
-                    
-                    <div class="actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevSection(1)"><i class="fas fa-arrow-left"></i><span class="lang-content active" data-lang="pt">Voltar</span><span class="lang-content" data-lang="en">Back</span><span class="lang-content" data-lang="ar">رجوع</span></button>
-                        <button type="button" class="btn btn-primary" onclick="nextSection(3)"><i class="fas fa-arrow-right"></i><span class="lang-content active" data-lang="pt">Continuar para Contexto</span><span class="lang-content" data-lang="en">Continue to Context</span><span class="lang-content" data-lang="ar">المتابعة إلى السياق</span></button>
-                    </div>
-                </div>
-                
-                <!-- SEÇÃO 3 -->
-                <div class="form-section hidden" id="section-3">
-                    <div class="form-section-title"><i class="fas fa-globe"></i><span class="lang-content active" data-lang="pt">Contexto e Potencial</span><span class="lang-content" data-lang="en">Context and Potential</span><span class="lang-content" data-lang="ar">السياق والإمكانات</span></div>
-                    
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Aplicabilidade do Ativo</span><span class="lang-content" data-lang="en">Asset Applicability</span><span class="lang-content" data-lang="ar">قابلية تطبيق الأصل</span></label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-item"><input type="checkbox" id="applicability-academic" value="academic"><label for="applicability-academic"><span class="lang-content active" data-lang="pt">Acadêmico/Pesquisa</span><span class="lang-content" data-lang="en">Academic/Research</span><span class="lang-content" data-lang="ar">أكاديمي/بحثي</span></label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="applicability-commercial" value="commercial" checked><label for="applicability-commercial"><span class="lang-content active" data-lang="pt">Comercial/Empresarial</span><span class="lang-content" data-lang="en">Commercial/Business</span><span class="lang-content" data-lang="ar">تجاري/أعمال</span></label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="applicability-social" value="social"><label for="applicability-social"><span class="lang-content active" data-lang="pt">Social/Comunitário</span><span class="lang-content" data-lang="en">Social/Community</span><span class="lang-content" data-lang="ar">اجتماعي/مجتمعي</span></label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="applicability-governmental" value="governmental"><label for="applicability-governmental"><span class="lang-content active" data-lang="pt">Governamental/Público</span><span class="lang-content" data-lang="en">Governmental/Public</span><span class="lang-content" data-lang="ar">حكومي/عام</span></label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="applicability-educational" value="educational"><label for="applicability-educational"><span class="lang-content active" data-lang="pt">Educacional/Ensino</span><span class="lang-content" data-lang="en">Educational/Teaching</span><span class="lang-content" data-lang="ar">تعليمي/تدريس</span></label></div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Potencial de Escala</span><span class="lang-content" data-lang="en">Scaling Potential</span><span class="lang-content" data-lang="ar">إمكانية التوسع</span></label>
-                        <div class="slider-container"><input type="range" id="scaling" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="scalingValue">5</span>/10</div></div>
-                    </div>
-                    
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Grau de Conclusão</span><span class="lang-content" data-lang="en">Completion Degree</span><span class="lang-content" data-lang="ar">درجة الإنجاز</span></label>
-                        <div class="slider-container"><input type="range" id="completion" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="completionValue">5</span>/10</div></div>
-                    </div>
-                    
-                    <div class="form-group"><label><span class="lang-content active" data-lang="pt">Barreiras de Replicação</span><span class="lang-content" data-lang="en">Replication Barriers</span><span class="lang-content" data-lang="ar">عوائق الاستنساخ</span></label>
-                        <div class="slider-container"><input type="range" id="replicationBarriers" min="1" max="10" value="5" class="slider"><div class="slider-value"><span id="replicationBarriersValue">5</span>/10</div></div>
-                    </div>
-                    
-                    <!-- NOVO CHECKBOX DE CONFIRMAÇÃO DE AUTORIA -->
-                    <div class="checkbox-item" style="justify-content: center; margin: 1.5rem 0;">
-                        <input type="checkbox" id="authorshipConfirm" required>
-                        <label for="authorshipConfirm" style="font-weight:600; color:#7B3F00;">
-                            <span class="lang-content active" data-lang="pt"><strong>Confirmo que sou o legítimo autor e titular dos direitos sobre este ativo intelectual.</strong></span>
-                            <span class="lang-content" data-lang="en"><strong>I confirm that I am the legitimate author and owner of the rights to this intellectual asset.</strong></span>
-                            <span class="lang-content" data-lang="ar"><strong>أؤكد أنني المؤلف والمالك الشرعي لحقوق هذا الأصل الفكري.</strong></span>
+                    <div class="checkbox-item" style="margin-bottom: 1rem;">
+                        <input type="checkbox" id="elegibilidade">
+                        <label for="elegibilidade">
+                            <span class="lang-content active" data-lang="pt"><strong>Confirmo que fui formalmente convidado(a) pela AVZ Infra</strong> para submeter meu projeto.</span>
+                            <span class="lang-content" data-lang="en"><strong>I confirm that I have been formally invited by AVZ Infra</strong> to submit my project.</span>
+                            <span class="lang-content" data-lang="ar"><strong>أؤكد أنني تلقيت دعوة رسمية من AVZ Infra</strong> لتقديم مشروعي.</span>
                         </label>
                     </div>
-                    
-                    <div class="declaration-box">
-                        <div class="declaration-title"><i class="fas fa-balance-scale"></i><span class="lang-content active" data-lang="pt">DECLARAÇÃO DE AUTORIA</span><span class="lang-content" data-lang="en">AUTHORSHIP DECLARATION</span><span class="lang-content" data-lang="ar">إقرار المؤلفية</span></div>
-                        <p><span class="lang-content active" data-lang="pt">Eu declaro que sou o autor legítimo deste ativo intelectual e que as informações fornecidas são verdadeiras e completas na medida do meu conhecimento. Reconheço que este sistema gera uma autodeclaração intrínseca, não uma avaliação de mercado, e que não há garantias ou recomendações econômicas associadas.</span>
-                        <span class="lang-content" data-lang="en">I declare that I am the legitimate author of this intellectual asset and that the information provided is true and complete to the best of my knowledge. I acknowledge that this system generates an intrinsic self-declaration, not a market valuation, and that there are no guarantees or economic recommendations associated.</span>
-                        <span class="lang-content" data-lang="ar">أقر بأنني المؤلف الشرعي لهذا الأصل الفكري وأن المعلومات المقدمة صحيحة وكاملة إلى أفضل علمي. أقر بأن هذا النظام يولد إقرارًا ذاتيًا جوهريًا، وليس تقييمًا للسوق، وأنه لا توجد ضمانات أو توصيات اقتصادية مرتبطة به.</span></p>
-                    </div>
-                    
-                    <div class="actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevSection(2)"><i class="fas fa-arrow-left"></i><span class="lang-content active" data-lang="pt">Voltar</span><span class="lang-content" data-lang="en">Back</span><span class="lang-content" data-lang="ar">رجوع</span></button>
-                        <button type="button" class="btn btn-primary" onclick="calculateSelfDeclaration()"><i class="fas fa-feather-alt"></i><span class="lang-content active" data-lang="pt">Gerar Autodeclaração</span><span class="lang-content" data-lang="en">Generate Self-Declaration</span><span class="lang-content" data-lang="ar">إنشاء الإقرار الذاتي</span></button>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="voluntaria">
+                        <label for="voluntaria">
+                            <span class="lang-content active" data-lang="pt"><strong>Declaro que o envio é voluntário</strong> e não gera obrigações contratuais.</span>
+                            <span class="lang-content" data-lang="en"><strong>I declare that the submission is voluntary</strong> and does not create contractual obligations.</span>
+                            <span class="lang-content" data-lang="ar"><strong>أعلن أن التقديم طوعي</strong> ولا ينشئ التزامات تعاقدية.</span>
+                        </label>
                     </div>
                 </div>
-            </form>
-            
-            <!-- RESULTADOS -->
-            <div id="selfDeclarationResults" class="layer-results">
-                <div class="result-title"><span class="lang-content active" data-lang="pt">Resultado da Autodeclaração Intrínseca</span><span class="lang-content" data-lang="en">Intrinsic Self-Declaration Result</span><span class="lang-content" data-lang="ar">نتيجة الإقرار الذاتي الجوهري</span></div>
-                
-                <div class="declaration-box">
-                    <div class="declaration-title"><i class="fas fa-file-alt"></i><span class="lang-content active" data-lang="pt">ÍNDICE DE MATURIDADE DO ATIVO (IMA)</span><span class="lang-content" data-lang="en">ASSET MATURITY INDEX (AMI)</span><span class="lang-content" data-lang="ar">مؤشر نضج الأصل</span></div>
-                    <div class="result-value"><span id="intrinsicRange">A ser calculado</span></div>
+
+                <!-- IDENTIFICAÇÃO DO PROJETO -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-cube" style="color: #0a3147;"></i>
+                        <span class="lang-content active" data-lang="pt">Identificação do Ativo</span>
+                        <span class="lang-content" data-lang="en">Asset Identification</span>
+                        <span class="lang-content" data-lang="ar">تحديد الأصل</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="required">
+                                <span class="lang-content active" data-lang="pt">Nome do Ativo/Projeto</span>
+                                <span class="lang-content" data-lang="en">Asset/Project Name</span>
+                                <span class="lang-content" data-lang="ar">اسم الأصل/المشروع</span>
+                            </label>
+                            <input type="text" class="form-control" id="projectName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="required">
+                                <span class="lang-content active" data-lang="pt">Categoria Tecnológica</span>
+                                <span class="lang-content" data-lang="en">Technology Category</span>
+                                <span class="lang-content" data-lang="ar">الفئة التكنولوجية</span>
+                            </label>
+                            <select class="form-control select" id="projectCategory" required>
+                                <option value="">Selecione...</option>
+                                <option value="Software/SaaS">Software/SaaS</option>
+                                <option value="Hardware/IoT">Hardware/IoT</option>
+                                <option value="Inteligência Artificial/ML">Inteligência Artificial/ML</option>
+                                <option value="Blockchain/Cripto">Blockchain/Cripto</option>
+                                <option value="Infraestrutura/Cloud">Infraestrutura/Cloud</option>
+                                <option value="Biotech/Healthtech">Biotech/Healthtech</option>
+                                <option value="Fintech/Insurtech">Fintech/Insurtech</option>
+                                <option value="Edtech">Edtech</option>
+                                <option value="Cleantech/Energy">Cleantech/Energy</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">
+                            <span class="lang-content active" data-lang="pt">Descrição Técnica Detalhada</span>
+                            <span class="lang-content" data-lang="en">Detailed Technical Description</span>
+                            <span class="lang-content" data-lang="ar">وصف تقني مفصل</span>
+                        </label>
+                        <textarea class="form-control" id="technicalDescription" rows="4" required placeholder="Descreva o ativo, funcionalidades, tecnologias, diferenciais competitivos, propriedade intelectual, estágio de desenvolvimento..."></textarea>
+                    </div>
                 </div>
-                
-                <div class="result-details">
-                    <div class="result-item"><div class="result-item-title"><span class="lang-content active" data-lang="pt">Índice de Originalidade</span><span class="lang-content" data-lang="en">Originality Index</span><span class="lang-content" data-lang="ar">مؤشر الأصالة</span></div><div class="result-item-value" id="originalityIndex">0/10</div></div>
-                    <div class="result-item"><div class="result-item-title"><span class="lang-content active" data-lang="pt">Complexidade Técnica</span><span class="lang-content" data-lang="en">Technical Complexity</span><span class="lang-content" data-lang="ar">التعقيد التقني</span></div><div class="result-item-value" id="techComplexityResult">0/10</div></div>
-                    <div class="result-item"><div class="result-item-title"><span class="lang-content active" data-lang="pt">Grau de Inovação</span><span class="lang-content" data-lang="en">Innovation Degree</span><span class="lang-content" data-lang="ar">درجة الابتكار</span></div><div class="result-item-value" id="innovationResult">0/10</div></div>
-                    <div class="result-item"><div class="result-item-title"><span class="lang-content active" data-lang="pt">Potencial de Escala</span><span class="lang-content" data-lang="en">Scaling Potential</span><span class="lang-content" data-lang="ar">إمكانية التوسع</span></div><div class="result-item-value" id="scalingResult">0/10</div></div>
-                    <div class="result-item"><div class="result-item-title"><span class="lang-content active" data-lang="pt">Grau de Conclusão</span><span class="lang-content" data-lang="en">Completion Degree</span><span class="lang-content" data-lang="ar">درجة الإنجاز</span></div><div class="result-item-value" id="completionResult">0/10</div></div>
-                    <div class="result-item"><div class="result-item-title"><span class="lang-content active" data-lang="pt">Domínio Principal</span><span class="lang-content" data-lang="en">Main Domain</span><span class="lang-content" data-lang="ar">المجال الرئيسي</span></div><div class="result-item-value" id="domainResult">-</div></div>
+
+                <!-- NOVA SEÇÃO: PERCEPÇÃO DE VALUATION (ITEM IMPORTANTÍSSIMO) -->
+                <div class="form-section" style="background: rgba(10, 49, 71, 0.02); border-radius: 8px; padding: 2rem;">
+                    <div class="form-section-title">
+                        <i class="fas fa-chart-pie" style="color: #0a3147;"></i>
+                        <span class="lang-content active" data-lang="pt">Percepção de Valor & Projeções</span>
+                        <span class="lang-content" data-lang="en">Value Perception & Projections</span>
+                        <span class="lang-content" data-lang="ar">تصور القيمة والتوقعات</span>
+                        <span style="margin-left: auto; font-size: 0.7rem; background: #0a3147; color: white; padding: 0.2rem 1rem; border-radius: 20px;">
+                            <span class="lang-content active" data-lang="pt">Autoavaliação</span>
+                            <span class="lang-content" data-lang="en">Self-assessment</span>
+                            <span class="lang-content" data-lang="ar">تقييم ذاتي</span>
+                        </span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="pt">Expectativa de Valuation (USD)</span>
+                                <span class="lang-content" data-lang="en">Expected Valuation (USD)</span>
+                                <span class="lang-content" data-lang="ar">التقييم المتوقع (دولار)</span>
+                            </label>
+                            <select class="form-control select" id="valuationRange">
+                                <option value="">Selecione uma faixa...</option>
+                                <option value="Até $100k">Até $100k</option>
+                                <option value="$100k - $500k">$100k - $500k</option>
+                                <option value="$500k - $1M">$500k - $1M</option>
+                                <option value="$1M - $5M">$1M - $5M</option>
+                                <option value="$5M - $10M">$5M - $10M</option>
+                                <option value="$10M - $50M">$10M - $50M</option>
+                                <option value="$50M - $100M">$50M - $100M</option>
+                                <option value="Acima de $100M">Acima de $100M</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="pt">Receita Projetada (12 meses)</span>
+                                <span class="lang-content" data-lang="en">Projected Revenue (12 months)</span>
+                                <span class="lang-content" data-lang="ar">الإيرادات المتوقعة (12 شهرًا)</span>
+                            </label>
+                            <select class="form-control select" id="projectedRevenue">
+                                <option value="">Selecione...</option>
+                                <option value="Pré-receita">Pré-receita</option>
+                                <option value="Até $100k">Até $100k</option>
+                                <option value="$100k - $500k">$100k - $500k</option>
+                                <option value="$500k - $1M">$500k - $1M</option>
+                                <option value="$1M - $5M">$1M - $5M</option>
+                                <option value="$5M - $10M">$5M - $10M</option>
+                                <option value="Acima de $10M">Acima de $10M</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="pt">Mercado-Alvo Principal</span>
+                                <span class="lang-content" data-lang="en">Primary Target Market</span>
+                                <span class="lang-content" data-lang="ar">السوق المستهدف الرئيسي</span>
+                            </label>
+                            <select class="form-control select" id="targetMarket">
+                                <option value="">Selecione...</option>
+                                <option value="América Latina">América Latina</option>
+                                <option value="América do Norte">América do Norte</option>
+                                <option value="Europa">Europa</option>
+                                <option value="Oriente Médio">Oriente Médio</option>
+                                <option value="Ásia">Ásia</option>
+                                <option value="África">África</option>
+                                <option value="Global">Global</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="pt">Estágio de Maturidade</span>
+                                <span class="lang-content" data-lang="en">Maturity Stage</span>
+                                <span class="lang-content" data-lang="ar">مرحلة النضج</span>
+                            </label>
+                            <select class="form-control select" id="maturityStage" required>
+                                <option value="">Selecione...</option>
+                                <option value="Ideia/Conceito">Ideia/Conceito</option>
+                                <option value="MVP/Protótipo">MVP/Protótipo</option>
+                                <option value="Em desenvolvimento">Em desenvolvimento</option>
+                                <option value="Beta/testes">Beta/testes</option>
+                                <option value="Lançado/mercado">Lançado/mercado</option>
+                                <option value="Escalando">Escalando</option>
+                                <option value="Maduro/lucrativo">Maduro/lucrativo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="pt">Propriedade Intelectual</span>
+                                <span class="lang-content" data-lang="en">Intellectual Property</span>
+                                <span class="lang-content" data-lang="ar">الملكية الفكرية</span>
+                            </label>
+                            <select class="form-control select" id="ipStatus">
+                                <option value="">Selecione...</option>
+                                <option value="Nenhuma">Nenhuma</option>
+                                <option value="Pedido de patente">Pedido de patente</option>
+                                <option value="Patente concedida">Patente concedida</option>
+                                <option value="Direitos autorais">Direitos autorais</option>
+                                <option value="Marca registrada">Marca registrada</option>
+                                <option value="Segredo industrial">Segredo industrial</option>
+                                <option value="Código-fonte proprietário">Código-fonte proprietário</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="pt">Modelo de Negócio</span>
+                                <span class="lang-content" data-lang="en">Business Model</span>
+                                <span class="lang-content" data-lang="ar">نموذج الأعمال</span>
+                            </label>
+                            <select class="form-control select" id="businessModel" required>
+                                <option value="">Selecione...</option>
+                                <option value="Venda direta">Venda direta</option>
+                                <option value="Assinatura/SaaS">Assinatura/SaaS</option>
+                                <option value="Licenciamento">Licenciamento</option>
+                                <option value="Marketplace">Marketplace</option>
+                                <option value="Publicidade">Publicidade</option>
+                                <option value="Transacional">Transacional</option>
+                                <option value="Híbrido">Híbrido</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="declaration-box" style="background: rgb(255 248 225 / .9); border-color: #ff9800;">
-                    <div class="declaration-title" style="color: #ff9800;"><i class="fas fa-exclamation-triangle"></i><span class="lang-content active" data-lang="pt">DECLARAÇÃO DE LIMITAÇÃO INSTITUCIONAL</span><span class="lang-content" data-lang="en">INSTITUTIONAL LIMITATION DECLARATION</span><span class="lang-content" data-lang="ar">إعلان القيود المؤسسية</span></div>
-                    <p><span class="lang-content active" data-lang="pt"><strong>Este documento é uma autodeclaração intrínseca, não uma avaliação de mercado.</strong><br>1. Não constitui recomendação econômica, financeira ou de investimento.<br>2. Não representa garantia de valor de mercado ou potencial comercial.<br>3. O Layer Talent Governance Model é neutro e não intervém em decisões econômicas.<br>4. A soberania sobre o ativo permanece integralmente com o autor.</span>
-                    <span class="lang-content" data-lang="en"><strong>This document is an intrinsic self-declaration, not a market valuation.</strong><br>1. It does not constitute economic, financial or investment recommendation.<br>2. It does not represent guarantee of market value or commercial potential.<br>3. The Layer Talent Governance Model is neutral and does not intervene in economic decisions.<br>4. Sovereignty over the asset remains entirely with the author.</span>
-                    <span class="lang-content" data-lang="ar"><strong>هذا المستند هو إقرار ذاتي جوهري، وليس تقييمًا للسوق.</strong><br>1. لا يشكل توصية اقتصادية أو مالية أو استثمارية.<br>2. لا يمثل ضمانًا للقيمة السوقية أو الإمكانات التجارية.<br>3. نموذج حوكمة المواهب محايد ولا يتدخل في القرارات الاقتصادية.<br>4. تبقى السيادة على الأصل كاملة مع المؤلف.</span></p>
+
+                <!-- ÍNDICE DE MATURIDADE (sliders) -->
+                <div class="form-section" style="background: #f8f6f2; border-radius: 8px; padding: 2rem;">
+                    <div class="form-section-title">
+                        <i class="fas fa-chart-line" style="color: #0a3147;"></i>
+                        <span class="lang-content active" data-lang="pt">Índice de Maturidade Interno</span>
+                        <span class="lang-content" data-lang="en">Internal Maturity Index</span>
+                        <span class="lang-content" data-lang="ar">مؤشر النضج الداخلي</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Completude Técnica <span id="techCompleteVal" style="float: right;">5/10</span></label>
+                        <input type="range" id="techComplete" min="1" max="10" value="5" class="slider" oninput="document.getElementById('techCompleteVal').textContent = this.value + '/10'">
+                    </div>
+                    <div class="form-group">
+                        <label>Potencial de Escala <span id="scaleVal" style="float: right;">5/10</span></label>
+                        <input type="range" id="scalePotential" min="1" max="10" value="5" class="slider" oninput="document.getElementById('scaleVal').textContent = this.value + '/10'">
+                    </div>
+                    <div class="form-group">
+                        <label>Diferencial Competitivo <span id="competitiveVal" style="float: right;">5/10</span></label>
+                        <input type="range" id="competitive" min="1" max="10" value="5" class="slider" oninput="document.getElementById('competitiveVal').textContent = this.value + '/10'">
+                    </div>
                 </div>
-                
+
+                <!-- PAÍSES DE INTERESSE -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-globe-americas" style="color: #0a3147;"></i>
+                        <span class="lang-content active" data-lang="pt">Países de Interesse para Expansão</span>
+                        <span class="lang-content" data-lang="en">Target Countries for Expansion</span>
+                        <span class="lang-content" data-lang="ar">الدول المستهدفة للتوسع</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                        <div class="checkbox-item"><input type="checkbox" id="country-br"><label for="country-br">Brasil</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-pt"><label for="country-pt">Portugal</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-ao"><label for="country-ao">Angola</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-mz"><label for="country-mz">Moçambique</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-us"><label for="country-us">USA</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-uk"><label for="country-uk">UK</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-ca"><label for="country-ca">Canada</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-au"><label for="country-au">Australia</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-ae"><label for="country-ae">UAE</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-sa"><label for="country-sa">Saudi Arabia</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-qa"><label for="country-qa">Qatar</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="country-kw"><label for="country-kw">Kuwait</label></div>
+                    </div>
+                </div>
+
+                <!-- PROTOCOLO DE SUBMISSÃO -->
+                <div class="form-section" style="background: #f0e8e0; border-radius: 8px; padding: 2rem;">
+                    <div class="form-section-title">
+                        <i class="fas fa-shield-alt" style="color: #0a3147;"></i>
+                        <span class="lang-content active" data-lang="pt">Fluxo de Análise</span>
+                        <span class="lang-content" data-lang="en">Analysis Flow</span>
+                        <span class="lang-content" data-lang="ar">تدفق التحليل</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">1</div><span style="font-size: 0.8rem;">Recebimento</span></div>
+                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">2</div><span style="font-size: 0.8rem;">Análise Técnica</span></div>
+                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">3</div><span style="font-size: 0.8rem;">Valuation</span></div>
+                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">4</div><span style="font-size: 0.8rem;">Proposta</span></div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; margin-top: 1rem; color: #666;"><i class="fas fa-clock"></i> Prazo médio: 45 dias</p>
+                </div>
+
+                <!-- BOTÃO DE SUBMISSÃO -->
                 <div class="actions">
-                    <button type="button" class="btn btn-pdf" onclick="generateDossierPDF()"><i class="fas fa-download"></i><span class="lang-content active" data-lang="pt">Gerar Dossiê Autodeclaratório (PDF)</span><span class="lang-content" data-lang="en">Generate Self-Declaration Dossier (PDF)</span><span class="lang-content" data-lang="ar">إنشاء ملف الإقرار الذاتي (PDF)</span></button>
-                    <button type="button" class="btn btn-submit" onclick="showASIAConfirmation()"><i class="fas fa-paper-plane"></i><span class="lang-content active" data-lang="pt">Submeter Dossiê à Camada Institucional</span><span class="lang-content" data-lang="en">Submit Dossier to Institutional Layer</span><span class="lang-content" data-lang="ar">إرسال الملف إلى الطبقة المؤسسية</span></button>
-                </div>
-            </div>
-            
-            <!-- CAMADA ASIA -->
-            <div id="asiaConfirmation" class="submission-form">
-                <div class="form-section-title"><i class="fas fa-shield-alt"></i><span class="lang-content active" data-lang="pt">Camada de Submissão Institucional Assistida (ASIA)</span><span class="lang-content" data-lang="en">Assisted Institutional Submission Layer (ASIA)</span><span class="lang-content" data-lang="ar">طبقة الإرسال المؤسسي المساعد (ASIA)</span></div>
-                
-                <div class="legal-consent">
-                    <h4 style="color: #7B3F00; margin-bottom: 1rem;"><i class="fas fa-balance-scale"></i><span class="lang-content active" data-lang="pt">DECLARAÇÃO JURÍDICA OBRIGATÓRIA</span><span class="lang-content" data-lang="en">MANDATORY LEGAL DECLARATION</span><span class="lang-content" data-lang="ar">إقرار قانوني إلزامي</span></h4>
-                    <p style="margin-bottom: 1rem;"><span class="lang-content active" data-lang="pt">Eu, autor do ativo intelectual declarado, CONFIRMO E CONCORDO que:</span><span class="lang-content" data-lang="en">I, author of the declared intellectual asset, CONFIRM AND AGREE that:</span><span class="lang-content" data-lang="ar">أنا، مؤلف الأصل الفكري المعلن، أوكد وأوافق على أن:</span></p>
-                    <ol style="margin-left: 1.5rem; color: #666; line-height: 1.7;">
-                        <li><span class="lang-content active" data-lang="pt">Compreendo que este sistema <strong>NÃO envia dados automaticamente</strong> a terceiros.</span><span class="lang-content" data-lang="en">I understand that this system <strong>does NOT send data automatically</strong> to third parties.</span><span class="lang-content" data-lang="ar">أفهم أن هذا النظام <strong>لا يرسل البيانات تلقائيًا</strong> لأطراف ثالثة.</span></li>
-                        <li><span class="lang-content active" data-lang="pt">Compreendo que <strong>NÃO há upload automático</strong> para servidores institucionais.</span><span class="lang-content" data-lang="en">I understand that <strong>there is NO automatic upload</strong> to institutional servers.</span><span class="lang-content" data-lang="ar">أفهم أنه <strong>لا يوجد تحميل تلقائي</strong> للخوادم المؤسسية.</span></li>
-                        <li><span class="lang-content active" data-lang="pt">Compreendo que o sistema <strong>NÃO faz matchmaking, curadoria financeira ou deal flow</strong>.</span><span class="lang-content" data-lang="en">I understand that the system <strong>does NOT do matchmaking, financial curation or deal flow</strong>.</span><span class="lang-content" data-lang="ar">أفهم أن النظام <strong>لا يجري وساطة أو تنقيحًا ماليًا أو تدفق صفقات</strong>.</span></li>
-                        <li><span class="lang-content active" data-lang="pt"><strong>Todo envio será um ato consciente meu</strong>, realizado através do meu próprio cliente de e-mail.</span><span class="lang-content" data-lang="en"><strong>Every submission will be my conscious act</strong>, carried out through my own email client.</span><span class="lang-content" data-lang="ar"><strong>كل إرسال سيكون فعلًا واعيًا من قبلي</strong>، يتم من خلال عميل البريد الإلكتروني الخاص بي.</span></li>
-                    </ol>
-                    
-                    <!-- NOVO AVISO SOBRE SEGURANÇA DO E-MAIL -->
-                    <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 0.8rem; margin: 1rem 0; font-size:0.8rem;">
-                        <i class="fas fa-shield-alt"></i>
-                        <span class="lang-content active" data-lang="pt"><strong>Segurança:</strong> O envio será feito por e-mail comum, sem criptografia de ponta a ponta. Dados sensíveis podem estar sujeitos a interceptação. Recomendamos o uso de canais seguros para informações confidenciais.</span>
-                        <span class="lang-content" data-lang="en"><strong>Security:</strong> The submission will be made by regular email, without end-to-end encryption. Sensitive data may be subject to interception. We recommend using secure channels for confidential information.</span>
-                        <span class="lang-content" data-lang="ar"><strong>الأمان:</strong> سيتم الإرسال عبر البريد الإلكتروني العادي، بدون تشفير من طرف إلى طرف. قد تخضع البيانات الحساسة للاعتراض. نوصي باستخدام قنوات آمنة للمعلومات السرية.</span>
-                    </div>
-                    
-                    <div class="form-group" style="margin-top: 1.5rem;">
-                        <div class="checkbox-item"><input type="checkbox" id="legalConsent" required><label for="legalConsent" style="font-weight: 600; color: #7B3F00;"><span class="lang-content active" data-lang="pt"><strong>CONCORDO E ACEITO</strong> integralmente os termos acima declarados.</span><span class="lang-content" data-lang="en"><strong>I AGREE AND ACCEPT</strong> fully the terms stated above.</span><span class="lang-content" data-lang="ar"><strong>أوافق وأقبل</strong> بالكامل الشروط المذكورة أعلاه.</span></label></div>
-                    </div>
-                </div>
-                
-                <div class="form-grid">
-                    <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Nome Completo do Autor</span><span class="lang-content" data-lang="en">Author's Full Name</span><span class="lang-content" data-lang="ar">الاسم الكامل للمؤلف</span></label><input type="text" class="form-control" id="authorName" required></div>
-                    <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">E-mail para Contato</span><span class="lang-content" data-lang="en">Contact Email</span><span class="lang-content" data-lang="ar">البريد الإلكتروني للاتصال</span></label><input type="email" class="form-control" id="authorEmail" required></div>
-                </div>
-                
-                <div class="system-info">
-                    <p><i class="fas fa-info-circle"></i><span class="lang-content active" data-lang="pt"><strong>Informações do Sistema:</strong> Versão 1.0 | Data/Hora: <span id="systemDateTime">12/02/2026, 19:01:31</span> | Protocolo: ASIA-2026</span>
-                    <span class="lang-content" data-lang="en"><strong>System Information:</strong> Version 1.0 | Date/Time: <span id="systemDateTimeEn">12/02/2026, 19:01:31</span> | Protocol: ASIA-2026</span>
-                    <span class="lang-content" data-lang="ar"><strong>معلومات النظام:</strong> الإصدار 1.0 | التاريخ/الوقت: <span id="systemDateTimeAr">12/02/2026, 19:01:31</span> | البروتوكول: ASIA-2026</span></p>
-                </div>
-                
-                <div class="actions">
-                    <button type="button" class="btn btn-secondary" onclick="hideASIAConfirmation()"><i class="fas fa-times"></i><span class="lang-content active" data-lang="pt">Cancelar</span><span class="lang-content" data-lang="en">Cancel</span><span class="lang-content" data-lang="ar">إلغاء</span></button>
-                    <button type="button" class="btn btn-submit" onclick="initiateASIAProtocol()"><i class="fas fa-envelope-open-text"></i><span class="lang-content active" data-lang="pt">Iniciar Protocolo ASIA</span><span class="lang-content" data-lang="en">Initiate ASIA Protocol</span><span class="lang-content" data-lang="ar">بدء بروتوكول ASIA</span></button>
-                </div>
-                
-                <div class="system-info">
-                    <p><i class="fas fa-exclamation-circle"></i><span class="lang-content active" data-lang="pt"><strong>ATENÇÃO:</strong> O Protocolo ASIA abrirá seu cliente de e-mail com o dossiê preparado. Você deve <strong>revisar e enviar manualmente</strong> o e-mail para concluir a submissão.</span>
-                    <span class="lang-content" data-lang="en"><strong>ATTENTION:</strong> The ASIA Protocol will open your email client with the prepared dossier. You must <strong>review and manually send</strong> the email to complete the submission.</span>
-                    <span class="lang-content" data-lang="ar"><strong>تنبيه:</strong> سيفتح بروتوكول ASIA عميل البريد الإلكتروني الخاص بك مع الملف المعد. يجب عليك <strong>مراجعة وإرسال</strong> البريد الإلكتروني يدويًا لإكمال الإرسال.</span></p>
+                    <button class="btn btn-layer" onclick="submitProject()" style="background: #0a3147;">
+                        <i class="fas fa-paper-plane"></i>
+                        <span class="lang-content active" data-lang="pt">Enviar para Avaliação</span>
+                        <span class="lang-content" data-lang="en">Submit for Evaluation</span>
+                        <span class="lang-content" data-lang="ar">إرسال للتقييم</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -413,82 +432,31 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p><span class="lang-content active" data-lang="pt">© 2026 Layer Talent Governance Model. Sistema computacional autoral de autovaloração intrínseca.</span>
-            <span class="lang-content" data-lang="en">© 2026 Layer Talent Governance Model. Authorial computational system for intrinsic self-valuation.</span>
-            <span class="lang-content" data-lang="ar">© 2026 نموذج حوكمة المواهب. نظام حوسبي تأليفي للتقييم الذاتي الجوهري.</span></p>
-            <p style="color: #7B3F00; font-size: 0.9rem; margin-top: 1.5rem; font-weight: 500;"><span class="lang-content active" data-lang="pt">"Soberania do autor, neutralidade da Layer, decisão sempre externa."</span>
-            <span class="lang-content" data-lang="en">"Author sovereignty, Layer neutrality, decision always external."</span>
-            <span class="lang-content" data-lang="ar">"سيادة المؤلف، حيادية الـLayer، القرار دائمًا خارجي."</span></p>
-            
-            <!-- NOVOS LINKS DE COMPLIANCE (expansíveis) -->
+            <div class="logo" style="font-size: 1.4rem;">AVZ INFRA<span>Global Infrastructure</span></div>
+            <p style="color: #7B3F00; margin: 1rem 0;">Brasil · Portugal · Angola · Moçambique · USA · UK · Canada · Australia · UAE · KSA · Qatar · Kuwait</p>
+            <div style="margin: 2rem 0;">
+                <a href="https://avzinfra.com" target="_blank" style="color: #0a3147; text-decoration: none; font-weight: 500;">avzinfra.com</a>
+            </div>
             <div class="legal-footer">
-                <details class="compliance-details">
-                    <summary><i class="fas fa-shield-alt"></i> <span class="lang-content active" data-lang="pt">Política de Privacidade e Termos de Uso</span><span class="lang-content" data-lang="en">Privacy Policy and Terms of Use</span><span class="lang-content" data-lang="ar">سياسة الخصوصية وشروط الاستخدام</span></summary>
-                    <div style="text-align: left; margin-top: 1rem;">
-                        <h4 style="color:#7B3F00;">Política de Privacidade</h4>
-                        <p>O Layer Talent Governance Model não armazena dados pessoais em servidores próprios. As informações fornecidas no formulário são processadas localmente no seu navegador e, quando você opta por submeter via ASIA, são enviadas por e-mail para o endereço institucional. Este envio é realizado através do seu próprio cliente de e-mail, sem qualquer intervenção ou armazenamento intermediário por nossa parte.</p>
-                        <p>O e-mail padrão não possui criptografia de ponta a ponta; portanto, recomendamos que não inclua informações sensíveis ou confidenciais. Caso deseje maior segurança, utilize meios criptografados (como PGP) antes do envio.</p>
-                        <p>Você tem o direito de acessar, corrigir ou solicitar a exclusão de seus dados pessoais sempre que possível. Para isso, entre em contato pelo e-mail: <strong>avzproptech@outlook.com</strong> </p>
-                        <h4 style="color:#7B3F00; margin-top:1rem;">Termos de Uso</h4>
-                        <p>Ao utilizar esta plataforma, você declara estar ciente de que:</p>
-                        <ul>
-                            <li>O sistema gera apenas uma autodeclaração intrínseca, sem valor de mercado ou legal vinculante.</li>
-                            <li>Não há qualquer recomendação econômica ou financeira.</li>
-                            <li>A plataforma não se responsabiliza por decisões tomadas com base nos resultados apresentados.</li>
-                            <li>As doações são voluntárias, irrevogáveis e não conferem participação, direitos ou expectativa de retorno.</li>
-                        </ul>
-                    </div>
-                </details>
-                <p style="margin-top:1rem; font-size:0.75rem;">Layer Talent 2026</p>
+                <p>© 2026 AVZ Infra. Todos os direitos reservados.</p>
+                <p style="font-size:0.7rem;">Este é um ambiente controlado e de acesso restrito a desenvolvedores convidados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Configuração do Sistema
-        const LAYER_CONFIG = {
-            SYSTEM_VERSION: "1.0",
-            PROTOCOL: "ASIA-2026",
+        // CONFIGURAÇÃO
+        const AVZ_CONFIG = {
             INSTITUTIONAL_EMAIL: "avzproptech@outlook.com",
-            WEIGHTS: { originality: 0.25, complexity: 0.20, innovation: 0.20, scaling: 0.15, completion: 0.10, documentation: 0.10 }
+            PORTAL_VERSION: "2.0",
+            COUNTRIES: ['Brasil', 'Portugal', 'Angola', 'Moçambique', 'USA', 'UK', 'Canada', 'Australia', 'UAE', 'Saudi Arabia', 'Qatar', 'Kuwait']
         };
 
-        // Estado global
-        let currentSection = 1;
-        let assetData = {};
-
-        // Sistema de tradução
-        const TRANSLATIONS = {
-            domain_software: { pt: 'Software/TI', en: 'Software/IT', ar: 'برمجيات/تكنولوجيا المعلومات' },
-            domain_hardware: { pt: 'Hardware', en: 'Hardware', ar: 'عتاد' },
-            domain_algorithm: { pt: 'Algoritmo', en: 'Algorithm', ar: 'خوارزمية' },
-            domain_design: { pt: 'Design/UX', en: 'Design/UX', ar: 'تصميم/تجربة مستخدم' },
-            domain_content: { pt: 'Conteúdo', en: 'Content', ar: 'محتوى' },
-            domain_process: { pt: 'Processo', en: 'Process', ar: 'عملية' },
-            state_concept: { pt: 'Conceito', en: 'Concept', ar: 'مفهوم' },
-            state_prototype: { pt: 'Protótipo', en: 'Prototype', ar: 'نموذج أولي' },
-            state_mature: { pt: 'Versão Madura', en: 'Mature Version', ar: 'نسخة ناضجة' },
-            state_deployed: { pt: 'Em Produção', en: 'In Production', ar: 'في الإنتاج' },
-            // Níveis de maturidade
-            maturity_1: { pt: 'Nível 1 – Semente', en: 'Level 1 – Seed', ar: 'المستوى 1 – بذرة' },
-            maturity_2: { pt: 'Nível 2 – Em Desenvolvimento', en: 'Level 2 – In Development', ar: 'المستوى 2 – قيد التطوير' },
-            maturity_3: { pt: 'Nível 3 – Validado', en: 'Level 3 – Validated', ar: 'المستوى 3 – مُتحقق' },
-            maturity_4: { pt: 'Nível 4 – Maduro', en: 'Level 4 – Mature', ar: 'المستوى 4 – ناضج' },
-            maturity_5: { pt: 'Nível 5 – Escalável', en: 'Level 5 – Scalable', ar: 'المستوى 5 – قابل للتوسع' }
-        };
-
-        function translate(key, lang) {
-            return TRANSLATIONS[key]?.[lang] || key;
-        }
-
-        // Inicialização
+        // INICIALIZAÇÃO
         document.addEventListener('DOMContentLoaded', function() {
             initLanguage();
-            initSliders();
-            updateDateTime();
-            setInterval(updateDateTime, 60000);
 
-            // Menu Hambúrguer
+            // Menu mobile
             const hamburger = document.getElementById('hamburger');
             const navMenu = document.getElementById('navMenu');
             const menuOverlay = document.getElementById('menuOverlay');
@@ -498,92 +466,49 @@
                     this.classList.toggle('active');
                     navMenu.classList.toggle('active');
                     menuOverlay.classList.toggle('active');
-                    
-                    if (navMenu.classList.contains('active')) {
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        document.body.style.overflow = '';
-                    }
                 });
             }
-            
-            if (menuOverlay) {
-                menuOverlay.addEventListener('click', function() {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    menuOverlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            }
-            
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    if (window.innerWidth <= 768) {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                        menuOverlay.classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-                });
-            });
 
-            // Sistema de Idioma Unificado
+            // Sistema de idiomas
             const langToggle = document.getElementById('langToggle');
             const langDropdown = document.getElementById('langDropdown');
             const langArrow = document.getElementById('langArrow');
             const currentLang = document.getElementById('currentLang');
             const langOptions = document.querySelectorAll('.lang-dropdown li');
             
-            // Set initial language to Portuguese
-            let currentLanguage = 'pt';
-            
-            // Toggle dropdown
             langToggle.addEventListener('click', function(e) {
                 e.stopPropagation();
                 langDropdown.classList.toggle('show');
                 langArrow.style.transform = langDropdown.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
             });
             
-            // Close dropdown when clicking outside
             document.addEventListener('click', function() {
                 langDropdown.classList.remove('show');
                 langArrow.style.transform = 'rotate(0)';
             });
             
-            // Select language
             langOptions.forEach(option => {
                 option.addEventListener('click', function(e) {
                     e.stopPropagation();
                     const lang = this.getAttribute('data-lang');
-                    
-                    // Update current language display
                     const flag = this.querySelector('.lang-flag').textContent;
                     const langName = this.querySelector('span:last-child').textContent;
+                    
                     currentLang.innerHTML = `<span class="lang-flag">${flag}</span><span>${langName}</span>`;
                     
-                    // Update active state in dropdown
                     langOptions.forEach(opt => opt.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Set language
                     setLanguage(lang);
-                    currentLanguage = lang;
                     
-                    // Close dropdown
-                    langDropdown.classList.remove('show');
-                    langArrow.style.transform = 'rotate(0)';
-                    
-                    // Update RTL for Arabic
                     if (lang === 'ar') {
                         document.body.setAttribute('dir', 'rtl');
-                        document.documentElement.setAttribute('dir', 'rtl');
-                        document.documentElement.setAttribute('lang', 'ar');
                     } else {
                         document.body.removeAttribute('dir');
-                        document.documentElement.removeAttribute('dir');
-                        document.documentElement.setAttribute('lang', lang);
                     }
+                    
+                    langDropdown.classList.remove('show');
+                    langArrow.style.transform = 'rotate(0)';
                 });
             });
         });
@@ -597,281 +522,83 @@
             setLanguage('pt');
         }
 
-        function initSliders() {
-            document.querySelectorAll('.slider').forEach(slider => {
-                const span = document.getElementById(slider.id + 'Value');
-                if (span) {
-                    slider.addEventListener('input', () => span.textContent = slider.value);
-                }
-            });
-        }
-
-        function updateDateTime() {
-            const now = new Date().toLocaleString('pt-BR');
-            document.querySelectorAll('#systemDateTime, #systemDateTimeEn, #systemDateTimeAr').forEach(el => {
-                el.textContent = now;
-            });
-        }
-
-        // Navegação
-        function nextSection(section) {
-            if (!validateSection(currentSection)) return;
-            document.getElementById(`section-${currentSection}`).classList.add('hidden');
-            document.getElementById(`section-${section}`).classList.remove('hidden');
-            updateProgress(section);
-            currentSection = section;
-            scrollToSection(section);
-        }
-
-        function prevSection(section) {
-            document.getElementById(`section-${currentSection}`).classList.add('hidden');
-            document.getElementById(`section-${section}`).classList.remove('hidden');
-            updateProgress(section);
-            currentSection = section;
-            scrollToSection(section);
-        }
-
-        function updateProgress(section) {
-            document.getElementById('progress-bar').style.width = `${(section / 4) * 100}%`;
-            for (let i = 1; i <= 4; i++) {
-                document.getElementById(`step${i}`).classList.toggle('active', i <= section);
-            }
-        }
-
-        function scrollToSection(section) {
-            setTimeout(() => document.getElementById(`section-${section}`).scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
-        }
-
-        function validateSection(section) {
-            if (section === 1) {
-                const required = ['assetName', 'mainDomain', 'developmentYear', 'currentState'];
-                for (const id of required) {
-                    if (!document.getElementById(id).value) {
-                        alert('Preencha todos os campos obrigatórios');
-                        return false;
-                    }
-                }
-            }
-            if (section === 3) {
-                if (!document.getElementById('authorshipConfirm').checked) {
-                    alert('Você deve confirmar que é o autor legítimo do ativo.');
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        function calculateSelfDeclaration() {
-            if (!validateSection(3)) return;
-
-            assetData = {
-                name: document.getElementById('assetName').value,
-                domain: document.getElementById('mainDomain').value,
-                year: document.getElementById('developmentYear').value,
-                state: document.getElementById('currentState').value,
-                description: document.getElementById('assetDescription').value,
-                originality: parseInt(document.getElementById('originality').value),
-                complexity: parseInt(document.getElementById('complexity').value),
-                innovation: parseInt(document.getElementById('innovation').value),
-                documentation: parseInt(document.getElementById('documentation').value),
-                devTime: document.getElementById('devTime').value,
-                scaling: parseInt(document.getElementById('scaling').value),
-                completion: parseInt(document.getElementById('completion').value),
-                replication: parseInt(document.getElementById('replicationBarriers').value),
-                applicability: ['academic', 'commercial', 'social', 'governmental', 'educational'].filter(id => 
-                    document.getElementById(`applicability-${id}`)?.checked)
-            };
-
-            let score = (
-                assetData.originality * LAYER_CONFIG.WEIGHTS.originality +
-                assetData.complexity * LAYER_CONFIG.WEIGHTS.complexity +
-                assetData.innovation * LAYER_CONFIG.WEIGHTS.innovation +
-                assetData.scaling * LAYER_CONFIG.WEIGHTS.scaling +
-                assetData.completion * LAYER_CONFIG.WEIGHTS.completion +
-                assetData.documentation * LAYER_CONFIG.WEIGHTS.documentation
-            );
-
-            const multipliers = { software: 1.3, hardware: 1.2, algorithm: 1.4, design: 1.1, content: 1.0, process: 1.2 };
-            score *= (multipliers[assetData.domain] || 1.0);
-            score = Math.min(10, Math.max(1, score));
-
-            // Mapear para nível de maturidade
-            let maturityLevel, maturityKey;
-            if (score <= 2.0) {
-                maturityKey = 'maturity_1';
-                maturityLevel = 'Nível 1 – Semente';
-            } else if (score <= 4.0) {
-                maturityKey = 'maturity_2';
-                maturityLevel = 'Nível 2 – Em Desenvolvimento';
-            } else if (score <= 6.0) {
-                maturityKey = 'maturity_3';
-                maturityLevel = 'Nível 3 – Validado';
-            } else if (score <= 8.0) {
-                maturityKey = 'maturity_4';
-                maturityLevel = 'Nível 4 – Maduro';
-            } else {
-                maturityKey = 'maturity_5';
-                maturityLevel = 'Nível 5 – Escalável';
-            }
-
-            assetData.score = score;
-            assetData.maturityLevel = maturityLevel;
-            assetData.maturityKey = maturityKey;
-
+        // FUNÇÃO DE SUBMISSÃO COM TODOS OS DADOS
+        function submitProject() {
             const lang = document.documentElement.lang || 'pt';
-            document.getElementById('intrinsicRange').textContent = `${translate(maturityKey, lang)} (${score.toFixed(1)}/10)`;
-            document.getElementById('originalityIndex').textContent = `${assetData.originality}/10`;
-            document.getElementById('techComplexityResult').textContent = `${assetData.complexity}/10`;
-            document.getElementById('innovationResult').textContent = `${assetData.innovation}/10`;
-            document.getElementById('scalingResult').textContent = `${assetData.scaling}/10`;
-            document.getElementById('completionResult').textContent = `${assetData.completion}/10`;
-            document.getElementById('domainResult').textContent = translate(`domain_${assetData.domain}`, lang);
-
-            document.getElementById('selfDeclarationForm').style.display = 'none';
-            document.getElementById('selfDeclarationResults').classList.add('active');
-            updateProgress(4);
-            setTimeout(() => document.getElementById('selfDeclarationResults').scrollIntoView({ behavior: 'smooth' }), 300);
-        }
-
-        async function generateDossierPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            const lang = document.documentElement.lang || 'pt';
-            const now = new Date();
             
-            doc.setFontSize(18);
-            doc.setTextColor(123, 63, 0);
-            doc.text("LAYER TALENT GOVERNANCE MODEL", 105, 20, { align: 'center' });
-            doc.setFontSize(12);
-            doc.setTextColor(128, 128, 128);
-            doc.text(lang === 'pt' ? "Dossiê Autodeclaratório" : lang === 'en' ? "Self-Declaration Dossier" : "ملف الإقرار الذاتي", 105, 30, { align: 'center' });
-            
-            doc.setDrawColor(212, 175, 55);
-            doc.line(20, 35, 190, 35);
-            
-            doc.setFontSize(10);
-            doc.text(`Protocolo: ${LAYER_CONFIG.PROTOCOL}`, 20, 45);
-            doc.text(`Data: ${now.toLocaleDateString()}`, 190, 45, { align: 'right' });
-            
-            let y = 60;
-            doc.setFontSize(12);
-            doc.setTextColor(123, 63, 0);
-            doc.text("1. IDENTIFICAÇÃO", 20, y);
-            
-            doc.setFontSize(10);
-            doc.setTextColor(102, 102, 102);
-            y += 8;
-            doc.text(`Nome/Título: ${assetData.name}`, 20, y);
-            y += 6;
-            doc.text(`Domínio: ${translate(`domain_${assetData.domain}`, lang)}`, 20, y);
-            y += 6;
-            doc.text(`Ano: ${assetData.year} | Estado: ${translate(`state_${assetData.state}`, lang)}`, 20, y);
-            
-            y += 12;
-            doc.setFontSize(12);
-            doc.setTextColor(123, 63, 0);
-            doc.text("2. RESULTADO", 20, y);
-            
-            y += 8;
-            doc.setFontSize(16);
-            doc.setTextColor(212, 175, 55);
-            doc.text(`${translate(assetData.maturityKey, lang)}`, 105, y, { align: 'center' });
-            y += 8;
-            doc.setFontSize(14);
-            doc.setTextColor(43, 43, 43);
-            doc.text(`${assetData.score.toFixed(1)}/10`, 105, y, { align: 'center' });
-            
-            y += 15;
-            doc.setFontSize(10);
-            doc.setTextColor(102, 102, 102);
-            doc.text("Métricas:", 20, y);
-            y += 6;
-            doc.text(`• Originalidade: ${assetData.originality}/10`, 25, y);
-            y += 5;
-            doc.text(`• Complexidade: ${assetData.complexity}/10`, 25, y);
-            y += 5;
-            doc.text(`• Inovação: ${assetData.innovation}/10`, 25, y);
-            y += 5;
-            doc.text(`• Escala: ${assetData.scaling}/10`, 25, y);
-            y += 5;
-            doc.text(`• Conclusão: ${assetData.completion}/10`, 25, y);
-            
-            y += 15;
-            doc.setFontSize(8);
-            doc.setTextColor(128, 128, 128);
-            doc.text("DECLARAÇÃO DE LIMITAÇÃO: Este documento é uma autodeclaração intrínseca, não uma avaliação de mercado.", 105, 270, { align: 'center' });
-            doc.text("© 2026 Layer Talent Governance Model", 105, 280, { align: 'center' });
-            
-            doc.save(`Dossie_${assetData.name.replace(/\s+/g, '_')}.pdf`);
-        }
-
-        function showASIAConfirmation() {
-            document.getElementById('selfDeclarationResults').style.display = 'none';
-            document.getElementById('asiaConfirmation').classList.add('active');
-            setTimeout(() => document.getElementById('asiaConfirmation').scrollIntoView({ behavior: 'smooth' }), 300);
-        }
-
-        function hideASIAConfirmation() {
-            document.getElementById('asiaConfirmation').classList.remove('active');
-            document.getElementById('selfDeclarationResults').style.display = 'block';
-        }
-
-        function initiateASIAProtocol() {
-            const name = document.getElementById('authorName').value;
-            const email = document.getElementById('authorEmail').value;
-            const consent = document.getElementById('legalConsent').checked;
-            const lang = document.documentElement.lang || 'pt';
-
-            if (!name || !email || !consent) {
-                alert(lang === 'pt' ? 'Preencha todos os campos e aceite a declaração.' : 
-                      lang === 'en' ? 'Fill all fields and accept the declaration.' : 
-                      'املأ جميع الحقول واقبل الإقرار.');
+            // Validações básicas
+            if (!document.getElementById('elegibilidade')?.checked || !document.getElementById('voluntaria')?.checked) {
+                alert('Por favor, confirme as declarações obrigatórias.');
                 return;
             }
 
-            const subject = encodeURIComponent(
-                lang === 'pt' ? 'Submissão de Dossiê Autodeclaratório' :
-                lang === 'en' ? 'Self-Declaration Dossier Submission' :
-                'إرسال ملف الإقرار الذاتي'
+            const projectName = document.getElementById('projectName')?.value;
+            const category = document.getElementById('projectCategory')?.value;
+            const description = document.getElementById('technicalDescription')?.value;
+            const maturity = document.getElementById('maturityStage')?.value;
+
+            if (!projectName || !category || !description || !maturity) {
+                alert('Preencha todos os campos obrigatórios.');
+                return;
+            }
+
+            // Coletar todos os dados
+            const valuationRange = document.getElementById('valuationRange')?.value || 'Não informado';
+            const projectedRevenue = document.getElementById('projectedRevenue')?.value || 'Não informado';
+            const targetMarket = document.getElementById('targetMarket')?.value || 'Não informado';
+            const ipStatus = document.getElementById('ipStatus')?.value || 'Não informado';
+            const businessModel = document.getElementById('businessModel')?.value || 'Não informado';
+            
+            // Índices
+            const techComplete = document.getElementById('techComplete')?.value || 5;
+            const scalePotential = document.getElementById('scalePotential')?.value || 5;
+            const competitive = document.getElementById('competitive')?.value || 5;
+
+            // Países selecionados
+            const selectedCountries = [];
+            const countryIds = ['br', 'pt', 'ao', 'mz', 'us', 'uk', 'ca', 'au', 'ae', 'sa', 'qa', 'kw'];
+            countryIds.forEach(id => {
+                if (document.getElementById(`country-${id}`)?.checked) {
+                    selectedCountries.push(id.toUpperCase());
+                }
+            });
+
+            // Construir email
+            const subject = encodeURIComponent(`[SUBMISSÃO] ${projectName} | ${category}`);
+            
+            const body = encodeURIComponent(
+                `========================================\n` +
+                `AVZ INFRA - PORTAL DE SUBMISSÃO\n` +
+                `========================================\n\n` +
+                `PROJETO: ${projectName}\n` +
+                `CATEGORIA: ${category}\n` +
+                `DATA: ${new Date().toLocaleString()}\n` +
+                `IDIOMA: ${lang}\n\n` +
+                `=== PERCEPÇÃO DE VALOR ===\n` +
+                `Valuation esperado: ${valuationRange}\n` +
+                `Receita projetada: ${projectedRevenue}\n` +
+                `Mercado-alvo: ${targetMarket}\n` +
+                `Estágio: ${maturity}\n` +
+                `Propriedade Intelectual: ${ipStatus}\n` +
+                `Modelo de Negócio: ${businessModel}\n\n` +
+                `=== ÍNDICE DE MATURIDADE ===\n` +
+                `Completude Técnica: ${techComplete}/10\n` +
+                `Potencial de Escala: ${scalePotential}/10\n` +
+                `Diferencial Competitivo: ${competitive}/10\n\n` +
+                `=== PAÍSES DE INTERESSE ===\n` +
+                `${selectedCountries.length > 0 ? selectedCountries.join(', ') : 'Nenhum selecionado'}\n\n` +
+                `=== DESCRIÇÃO TÉCNICA ===\n${description}\n\n` +
+                `---\n` +
+                `Esta submissão foi realizada por desenvolvedor convidado.\n` +
+                `Protocolo: AVZ-${Date.now().toString().slice(-6)}\n` +
+                `Ambiente de acesso restrito.`
             );
-            
-            const body = encodeURIComponent(`
-                Autor: ${name}
-                Email: ${email}
-                Ativo: ${assetData.name}
-                Domínio: ${translate(`domain_${assetData.domain}`, lang)}
-                Nível de Maturidade: ${translate(assetData.maturityKey, lang)} (${assetData.score.toFixed(1)}/10)
-                
-                Métricas:
-                - Originalidade: ${assetData.originality}/10
-                - Complexidade: ${assetData.complexity}/10
-                - Inovação: ${assetData.innovation}/10
-                - Escala: ${assetData.scaling}/10
-                - Conclusão: ${assetData.completion}/10
-                
-                Protocolo: ${LAYER_CONFIG.PROTOCOL}
-                Data: ${new Date().toLocaleString()}
-                
-                ---
-                Este é um dossiê autodeclaratório gerado pelo Layer Talent Governance Model.
-                Não constitui avaliação de mercado ou recomendação econômica.
-            `);
 
-            window.open(`mailto:${LAYER_CONFIG.INSTITUTIONAL_EMAIL}?subject=${subject}&body=${body}`);
-            
-            alert(lang === 'pt' ? 'Cliente de e-mail aberto. Envie manualmente para concluir.' :
-                  lang === 'en' ? 'Email client opened. Send manually to complete.' :
-                  'تم فتح عميل البريد الإلكتروني. أرسل يدويًا لإكمال.');
+            // Abrir email
+            window.location.href = `mailto:${AVZ_CONFIG.INSTITUTIONAL_EMAIL}?subject=${subject}&body=${body}`;
+
+            alert('✅ Cliente de email aberto. Envie a mensagem para completar sua submissão.');
         }
-
-        // Expor funções globalmente
-        window.nextSection = nextSection;
-        window.prevSection = prevSection;
-        window.calculateSelfDeclaration = calculateSelfDeclaration;
-        window.generateDossierPDF = generateDossierPDF;
-        window.showASIAConfirmation = showASIAConfirmation;
-        window.hideASIAConfirmation = hideASIAConfirmation;
-        window.initiateASIAProtocol = initiateASIAProtocol;
     </script>
 </body>
 </html>
