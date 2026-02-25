@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponte para Investidores – Estruturação para Criadores Independentes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* VARIÁVEIS DE DESIGN UNIFICADO */
+        /* VARIÁVEIS DE DESIGN - ATUALIZADAS PARA AZUL MARINHO E DOURADO */
         :root {
-            --color-primary: #7B3F00;
-            --color-secondary: #d4af37;
-            --color-accent: #8B4513;
-            --color-light: #f4e4b8;
-            --color-dark: #2b2b2b;
-            --color-text: #3d3d3d;
-            --color-bg: linear-gradient(135deg, #f9f5f0 0%, #faf0f4 100%);
+            --color-primary: #0a3147;
+            --color-primary-light: #1a4b6d;
             --gold-primary: #D4AF37;
             --gold-secondary: #F4E4B8;
-            --gold-accent: #B8860B;
-            --carbon: #1A1A1A;
-            --platinum: #E5E4E2;
+            --gold-dark: #B8860B;
+            --color-dark: #1A1A1A;
+            --color-text: #2b2b2b;
+            --color-text-light: #4a4a4a;
+            --color-bg: linear-gradient(135deg, #f9f5f0 0%, #faf0f4 100%);
+            
+            /* Transições e Efeitos */
             --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --shadow-luxury: 0 25px 50px rgba(123, 63, 0, 0.1);
+            --shadow-luxury: 0 25px 50px rgba(10, 49, 71, 0.1);
             --shadow-gold: 0 8px 32px rgba(212, 175, 55, 0.3);
             --shadow-gold-strong: 0 0 30px rgba(212, 175, 55, 0.2);
-            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F4E4B8 50%, #7B3F00 100%);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F4E4B8 50%, #B8860B 100%);
+            --gradient-gold-subtle: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 228, 184, 0.1) 100%);
         }
 
         * {
@@ -36,7 +36,7 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--color-bg);
             color: var(--color-text);
             line-height: 1.6;
@@ -92,7 +92,7 @@
             padding: 0.8rem 0;
             transition: var(--transition);
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-            box-shadow: 0 5px 20px rgba(123, 63, 0, 0.05);
+            box-shadow: 0 5px 20px rgba(10, 49, 71, 0.05);
         }
 
         .nav-container {
@@ -108,7 +108,7 @@
             font-family: 'Cinzel', serif;
             font-size: 1.8rem;
             font-weight: 600;
-            color: var(--color-dark);
+            color: var(--color-primary);
             text-transform: uppercase;
             letter-spacing: 2px;
             position: relative;
@@ -130,7 +130,7 @@
             display: block;
             font-size: 0.7rem;
             letter-spacing: 3px;
-            color: var(--color-primary);
+            color: var(--gold-dark);
             margin-top: 2px;
             font-weight: 300;
             font-family: 'Marcellus', serif;
@@ -174,7 +174,7 @@
         }
 
         .nav-menu a {
-            color: var(--color-dark);
+            color: var(--color-text);
             text-decoration: none;
             font-weight: 400;
             transition: var(--transition);
@@ -214,7 +214,7 @@
             border-radius: 40px;
             padding: 8px 16px;
             border: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 8px 20px rgba(123, 63, 0, 0.12);
+            box-shadow: 0 8px 20px rgba(10, 49, 71, 0.12);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -236,7 +236,7 @@
             gap: 8px;
             font-family: 'Cinzel', serif;
             font-weight: 500;
-            color: var(--color-dark);
+            color: var(--color-primary);
         }
 
         .lang-toggle .current-lang span {
@@ -261,7 +261,7 @@
             backdrop-filter: blur(10px);
             border-radius: 20px;
             border: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 15px 30px rgba(123, 63, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(10, 49, 71, 0.15);
             padding: 8px 0;
             min-width: 140px;
             display: none;
@@ -280,7 +280,7 @@
             gap: 10px;
             cursor: pointer;
             transition: var(--transition);
-            color: var(--color-dark);
+            color: var(--color-text);
             font-size: 0.9rem;
         }
 
@@ -291,7 +291,7 @@
 
         .lang-dropdown li.active {
             background: var(--gradient-gold);
-            color: var(--color-dark);
+            color: white;
             font-weight: 500;
         }
 
@@ -306,7 +306,7 @@
             position: relative;
             background: 
                 radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(123, 63, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(10, 49, 71, 0.08) 0%, transparent 50%),
                 linear-gradient(135deg, rgb(249 245 240 / .95), rgb(250 240 244 / .95));
             overflow: hidden;
         }
@@ -322,12 +322,12 @@
             margin-bottom: 1.5rem;
             font-weight: 400;
             letter-spacing: 1px;
-            color: var(--color-dark);
+            color: var(--color-primary);
             line-height: 1.2;
         }
 
         .hero h1 span {
-            background: linear-gradient(135deg, #D4AF37 0%, #F4E4B8 50%, #FFD700 100%);
+            background: linear-gradient(135deg, #D4AF37 0%, #F4E4B8 50%, #B8860B 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -347,7 +347,7 @@
             line-height: 1.7;
         }
 
-        /* BOTÕES */
+        /* BOTÕES - ATUALIZADOS */
         .btn {
             padding: 1.2rem 2.8rem;
             border: none;
@@ -363,7 +363,7 @@
             position: relative;
             overflow: hidden;
             letter-spacing: .5px;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Inter', sans-serif;
             text-transform: uppercase;
         }
 
@@ -384,7 +384,7 @@
 
         .btn-primary {
             background: var(--gradient-gold);
-            color: var(--color-dark);
+            color: var(--color-primary);
             box-shadow: var(--shadow-gold);
         }
 
@@ -395,8 +395,8 @@
 
         .btn-secondary {
             background: transparent;
-            color: var(--color-text);
-            border: 1px solid rgba(123, 63, 0, 0.2);
+            color: var(--color-primary);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
@@ -432,7 +432,7 @@
             margin-bottom: 4rem;
             font-weight: 400;
             letter-spacing: 1px;
-            color: var(--color-dark);
+            color: var(--color-primary);
             position: relative;
             padding-bottom: 20px;
         }
@@ -500,7 +500,7 @@
         .card h3 {
             font-family: 'Cinzel', serif;
             font-size: 1.6rem;
-            color: #5a3a1a;
+            color: var(--color-primary);
             margin-bottom: 1rem;
             letter-spacing: 1px;
             font-weight: 600;
@@ -508,7 +508,7 @@
 
         .card p,
         .event-description {
-            color: #3d3d3d;
+            color: var(--color-text-light);
             font-size: 1rem;
             line-height: 1.7;
             font-family: 'Marcellus', serif;
@@ -523,20 +523,24 @@
             padding: 1.5rem;
             background: rgba(255, 255, 255, 0.7);
             border-radius: 12px;
-            border-left: 3px solid var(--color-primary);
+            border-left: 3px solid var(--gold-primary);
         }
 
         .benefit-icon {
-            color: var(--color-primary);
+            color: var(--gold-primary);
             font-size: 1.5rem;
             margin-top: 0.2rem;
         }
 
         .benefit-item h4 {
             font-family: 'Cinzel', serif;
-            color: #5a3a1a;
+            color: var(--color-primary);
             margin-bottom: 0.5rem;
             font-weight: 600;
+        }
+
+        .benefit-item p {
+            color: var(--color-text-light);
         }
 
         /* COORDINATOR SECTION */
@@ -562,7 +566,7 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid rgba(212, 175, 55, 0.1);
-            box-shadow: 0 8px 25px rgba(123, 63, 0, 0.08);
+            box-shadow: 0 8px 25px rgba(10, 49, 71, 0.08);
         }
 
         .coordinator-photo img {
@@ -574,7 +578,7 @@
         .manifesto-text {
             font-size: 0.95rem;
             line-height: 1.7;
-            color: #3d3d3d;
+            color: var(--color-text-light);
         }
 
         .manifesto-text p {
@@ -582,10 +586,14 @@
             font-family: 'Marcellus', serif;
         }
 
+        .manifesto-text strong {
+            color: var(--color-primary);
+        }
+
         /* EVENTOS */
         .event-date, .event-location {
             font-size: 0.9rem;
-            color: #3d3d3d;
+            color: var(--color-text-light);
             margin: 0.5rem 0;
             display: flex;
             align-items: center;
@@ -593,7 +601,7 @@
         }
 
         .event-date i, .event-location i {
-            color: var(--color-primary);
+            color: var(--gold-primary);
             width: 1.2rem;
         }
 
@@ -607,7 +615,7 @@
             margin-top: 1rem;
             background: rgba(212, 175, 55, 0.08);
             border: 1px solid rgba(212, 175, 55, 0.2);
-            color: #5a3a1a;
+            color: var(--color-primary);
             font-family: 'Marcellus', serif;
         }
 
@@ -625,7 +633,8 @@
 
         /* FOOTER */
         .footer {
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--color-primary);
+            color: white;
             padding: 4rem 2rem 2rem;
             text-align: center;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
@@ -649,10 +658,14 @@
         }
 
         .footer p {
-            color: #3d3d3d;
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1rem;
             font-size: 0.9rem;
             font-family: 'Marcellus', serif;
+        }
+
+        .footer p:last-child {
+            color: var(--gold-secondary);
         }
 
         .social-links {
@@ -663,7 +676,7 @@
         }
 
         .social-links a {
-            color: #3d3d3d;
+            color: rgba(255, 255, 255, 0.8);
             font-size: 1.2rem;
             transition: var(--transition);
             width: 44px;
@@ -672,15 +685,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(123, 63, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         .social-links a:hover {
-            color: var(--color-primary);
+            color: var(--gold-primary);
             transform: translateY(-3px);
             box-shadow: var(--shadow-gold);
-            border-color: rgba(212, 175, 55, 0.3);
+            border-color: var(--gold-primary);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         /* LANGUAGE CONTENT */
@@ -701,7 +715,7 @@
         /* DISCREET NOTE */
         .discreet-note {
             font-size: 0.85rem;
-            color: #888;
+            color: var(--color-text-light);
             margin-top: 0.5rem;
             line-height: 1.5;
             max-width: 400px;
@@ -709,8 +723,13 @@
         }
 
         .discreet-note i {
-            color: var(--color-primary);
+            color: var(--gold-primary);
             margin-right: 0.3rem;
+        }
+
+        body[dir="rtl"] .discreet-note i {
+            margin-right: 0;
+            margin-left: 0.3rem;
         }
 
         /* UTILITIES */
@@ -736,12 +755,19 @@
         
         body[dir="rtl"] .benefit-item {
             border-left: none;
-            border-right: 3px solid var(--color-primary);
+            border-right: 3px solid var(--gold-primary);
         }
         
         body[dir="rtl"] .lang-content[data-lang="ar"] {
             text-align: right;
             direction: rtl;
+        }
+
+        body[dir="rtl"] .manifesto-text p[style*="border-left"] {
+            border-left: none;
+            border-right: 2px solid var(--gold-primary);
+            padding-left: 0;
+            padding-right: 1rem;
         }
 
         /* RESPONSIVIDADE COM MENU HAMBÚRGUER */
@@ -776,7 +802,7 @@
                 align-items: center;
                 gap: 2rem;
                 transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                box-shadow: -10px 0 30px rgba(123, 63, 0, 0.1);
+                box-shadow: -10px 0 30px rgba(10, 49, 71, 0.1);
                 border-left: 1px solid rgba(212, 175, 55, 0.2);
                 z-index: 1001;
                 padding: 2rem;
@@ -865,13 +891,13 @@
                 align-items: center;
                 text-align: center;
                 border-left: none;
-                border-top: 3px solid var(--color-primary);
+                border-top: 3px solid var(--gold-primary);
                 padding: 1.5rem;
             }
 
             body[dir="rtl"] .benefit-item {
                 border-right: none;
-                border-top: 3px solid var(--color-primary);
+                border-top: 3px solid var(--gold-primary);
             }
         }
 
@@ -1103,7 +1129,7 @@
                             <p>Não falamos apenas com desenvolvedores. Falamos com criadores. Com profissionais, freelancers e inovadores que constroem soluções reais, mas que esbarram em um mercado desorganizado, muitas vezes predatório, onde boas ideias são absorvidas sem proteção ou reconhecimento.</p>
                             <p>Convidamos talentos independentes que compartilham dessa visão. Profissionais que entendem que conhecimento não pode ficar restrito a portfólios pessoais. Que acreditam que sua produção intelectual merece destino, proteção e impacto real, sem perder sua integridade jurídica.</p>
                             <p>Tudo o que foi criado aqui carrega a marca do Direito aplicado à tecnologia. Um olhar que entende que inovação só é sustentável quando respeita regras, direitos e responsabilidades.</p>
-                            <p style="font-style: italic; margin-top: 2rem; color: #7B3F00; border-left: 2px solid #d4af37; padding-left: 1rem;">
+                            <p style="font-style: italic; margin-top: 2rem; color: var(--color-primary); border-left: 2px solid var(--gold-primary); padding-left: 1rem;">
                                 "Se você acredita que o futuro da tecnologia precisa de mais do que código — precisa de estrutura, ética e fundamento legal, então você entende exatamente por que este programa existe.<br>E nasce do Direito, para organizar o futuro que a tecnologia insiste em criar sem regras."
                             </p>
                         </div>
@@ -1116,7 +1142,7 @@
                             <p>We don't just talk to developers. We talk to creators. To professionals, freelancers, and innovators who build real solutions, but who stumble upon a disorganized, often predatory market, where good ideas are absorbed without protection or recognition.</p>
                             <p>We invite independent talents who share this vision. Professionals who understand that knowledge cannot be restricted to personal portfolios. That believe their intellectual production deserves purpose, protection, and real impact, without losing its legal integrity.</p>
                             <p>Everything created here carries the mark of Law applied to technology. A perspective that understands that innovation is only sustainable when it respects rules, rights, and responsibilities.</p>
-                            <p style="font-style: italic; margin-top: 2rem; color: #7B3F00; border-left: 2px solid #d4af37; padding-left: 1rem;">
+                            <p style="font-style: italic; margin-top: 2rem; color: var(--color-primary); border-left: 2px solid var(--gold-primary); padding-left: 1rem;">
                                 "If you believe that the future of technology needs more than code — it needs structure, ethics, and legal foundation, then you understand exactly why this program exists.<br>And it is born from Law, to organize the future that technology insists on creating without rules."
                             </p>
                         </div>
@@ -1129,7 +1155,7 @@
                             <p style="text-align: right;">لا نتحدث فقط مع المطورين. نتحدث مع المبدعين. مع المحترفين والمستقلين والمبتكرين الذين يبنون حلولاً حقيقية، لكنهم يصطدمون بسوق غير منظم، وغالبًا ما يكون مفترسًا، حيث تُستوعب الأفكار الجيدة دون حماية أو اعتراف.</p>
                             <p style="text-align: right;">ندعو المواهب المستقلة التي تشارك هذه الرؤية. المحترفين الذين يفهمون أن المعرفة لا يمكن أن تقتصر على المحافظ الشخصية. الذين يؤمنون بأن إنتاجهم الفكري يستحق الهدف والحماية والتأثير الحقيقي، دون أن يفقد سلامته القانونية.</p>
                             <p style="text-align: right;">كل ما تم إنشاؤه هنا يحمل بصمة القانون المطبق على التكنولوجيا. منظور يفهم أن الابتكار يكون مستدامًا فقط عندما يحترم القواعد والحقوق والمسؤوليات.</p>
-                            <p style="font-style: italic; margin-top: 2rem; color: #7B3F00; border-right: 2px solid #d4af37; padding-right: 1rem; text-align: right;">
+                            <p style="font-style: italic; margin-top: 2rem; color: var(--color-primary); border-right: 2px solid var(--gold-primary); padding-right: 1rem; text-align: right;">
                                 "إذا كنت تعتقد أن مستقبل التكنولوجيا يحتاج إلى أكثر من الرمز البرمجي — يحتاج إلى بنية وأخلاق وأساس قانوني، فإنك تفهم تمامًا سبب وجود هذا البرنامج.<br>وقد وُلد من القانون، لتنظيم المستقبل الذي تصر التكنولوجيا على إنشائه دون قواعد."
                             </p>
                         </div>
@@ -1279,7 +1305,7 @@
                 <span class="lang-content" data-lang="en">Connection Agenda</span>
                 <span class="lang-content" data-lang="ar">جدول اللقاءات</span>
             </h2>
-            <p class="text-center mb-3" style="color: #3d3d3d; font-size: 1.05rem; font-family: 'Marcellus', serif;">
+            <p class="text-center mb-3" style="color: var(--color-text-light); font-size: 1.05rem; font-family: 'Marcellus', serif;">
                 <span class="lang-content active" data-lang="pt">Eventos onde estaremos presentes para conectar talentos e investidores.</span>
                 <span class="lang-content" data-lang="en">Events where we will be present to connect talents and investors.</span>
                 <span class="lang-content" data-lang="ar">الفعاليات التي سنكون فيها لتوحيد المواهب والمستثمرين.</span>
@@ -1334,7 +1360,7 @@
             </div>
 
             <div style="margin-top: 3rem; text-align: center;">
-                <p style="color: #3d3d3d; font-family: 'Marcellus', serif;">Deseja agendar uma reunião em um desses eventos? Entre em contato.</p>
+                <p style="color: var(--color-text-light); font-family: 'Marcellus', serif;">Deseja agendar uma reunião em um desses eventos? Entre em contato.</p>
                 <a href="mailto:avzproptech@outlook.com?subject=Agendamento%20em%20evento" class="btn btn-primary" style="margin-top: 1rem;">
                     <i class="fas fa-calendar-check"></i> Solicitar reunião
                 </a>
@@ -1351,7 +1377,7 @@
                 <span class="lang-content" data-lang="ar">© 2026 جسر إلى المستثمرين – هيكلة للمبدعين المستقلين.</span>
             </p>
             
-            <p style="color: var(--color-primary); font-size: 0.9rem; margin-top: 1.5rem; font-weight: 500;">
+            <p style="color: var(--gold-secondary); font-size: 0.9rem; margin-top: 1.5rem; font-weight: 500;">
                 <span class="lang-content active" data-lang="pt">"Conectando talento independente com investimento real."</span>
                 <span class="lang-content" data-lang="en">"Connecting independent talent with real investment."</span>
                 <span class="lang-content" data-lang="ar">"ربط المواهب المستقلة باستثمار حقيقي."</span>
@@ -1363,7 +1389,7 @@
                 <a href="#"><i class="fas fa-chart-line"></i></a>
             </div>
             
-            <p style="color: #888; font-size: 0.8rem; margin-top: 2rem;">
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.8rem; margin-top: 2rem;">
                 <span class="lang-content active" data-lang="pt">Uma ponte institucional entre criadores independentes e investidores.</span>
                 <span class="lang-content" data-lang="en">An institutional bridge between independent creators and investors.</span>
                 <span class="lang-content" data-lang="ar">جسر مؤسسي بين المبدعين المستقلين والمستثمرين.</span>
@@ -1543,12 +1569,12 @@
                 if (window.scrollY > 100) {
                     header.style.background = 'rgb(255 255 255 / .99)';
                     header.style.backdropFilter = 'blur(25px)';
-                    header.style.boxShadow = '0 8px 30px rgba(123, 63, 0, 0.1)';
+                    header.style.boxShadow = '0 8px 30px rgba(10, 49, 71, 0.1)';
                     header.style.borderBottomColor = 'rgba(212, 175, 55, 0.2)';
                 } else {
                     header.style.background = 'rgb(255 255 255 / .98)';
                     header.style.backdropFilter = 'blur(20px)';
-                    header.style.boxShadow = '0 5px 20px rgba(123, 63, 0, 0.05)';
+                    header.style.boxShadow = '0 5px 20px rgba(10, 49, 71, 0.05)';
                     header.style.borderBottomColor = 'rgba(212, 175, 55, 0.15)';
                 }
             });
