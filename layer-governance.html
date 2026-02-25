@@ -3,53 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVZ Infra | Portfólio Global de Projetos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <title>AVZ Infra · Análise de Maturidade & Inovação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&family=Marcellus&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS ORIGINAL 100% INTACTO */
+        /* ========== CSS ORIGINAL 100% INTACTO ========== */
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}body{background:linear-gradient(135deg,#f9f5f0 0%,#faf0f4 100%);color:#3a3a3a;line-height:1.6;overflow-x:hidden;position:relative}body::before,body::after{content:'';position:fixed;width:500px;height:500px;border-radius:50%;pointer-events:none;z-index:0;opacity:.03}body::before{top:-200px;right:-200px;background:radial-gradient(circle,#7B3F00 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(123 63 0 / .1)}body::after{bottom:-200px;left:-200px;background:radial-gradient(circle,#8B4513 0%,transparent 70%);box-shadow:0 0 150px 150px rgb(139 69 19 / .1)}.header{position:fixed;top:0;width:100%;background:rgb(255 255 255 / .95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;transition:all 0.3s ease;border-bottom:1px solid rgb(212 175 55 / .1);box-shadow:0 2px 20px rgb(123 63 0 / .05)}.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}.logo{font-size:1.8rem;font-weight:300;letter-spacing:2px;color:#2b2b2b;text-transform:uppercase;position:relative}.logo::after{content:'';position:absolute;bottom:-5px;left:0;width:60%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.logo span{display:block;font-size:11px;letter-spacing:8px;margin-top:2px;color:#888}
         .hamburger{display:none;flex-direction:column;cursor:pointer;z-index:1002;padding:10px}.hamburger span{width:28px;height:2px;background:linear-gradient(135deg,#d4af37,#7B3F00);margin:3px 0;transition:all 0.4s ease;border-radius:2px}.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}.nav-menu{display:flex;list-style:none;gap:2rem}.nav-menu a{color:#3a3a3a;text-decoration:none;font-weight:400;transition:all 0.3s ease;position:relative;font-size:14px;letter-spacing:.5px}.nav-menu a:hover{color:#d4af37}.nav-menu a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:linear-gradient(135deg,#d4af37,#7B3F00);transition:width 0.3s ease}.nav-menu a:hover::after{width:100%}.menu-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);backdrop-filter:blur(3px);z-index:1000;display:none;opacity:0;transition:opacity 0.3s ease}.menu-overlay.active{display:block;opacity:1}.lang-toggle{position:fixed;top:90px;right:20px;z-index:999;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-radius:40px;padding:8px 16px;border:1px solid rgba(212,175,55,0.25);box-shadow:0 8px 20px rgba(123,63,0,0.12);display:flex;align-items:center;gap:10px;cursor:pointer;transition:all 0.4s ease;min-width:120px;justify-content:center}.lang-toggle:hover{border-color:#d4af37;box-shadow:0 8px 32px rgba(212,175,55,0.3);transform:translateY(-2px)}.lang-toggle .current-lang{display:flex;align-items:center;gap:8px;font-family:'Cinzel',serif;font-weight:500;color:#2b2b2b}.lang-toggle .current-lang span{font-size:0.9rem}.lang-toggle .lang-flag{font-size:1.2rem}.lang-toggle .lang-arrow{color:#d4af37;font-size:0.8rem;transition:transform 0.3s ease}.lang-dropdown{position:absolute;top:110%;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);border-radius:20px;border:1px solid rgba(212,175,55,0.25);box-shadow:0 15px 30px rgba(123,63,0,0.15);padding:8px 0;min-width:200px;display:none;overflow:hidden;list-style:none}.lang-dropdown.show{display:block}.lang-dropdown li{padding:10px 20px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all 0.4s ease;color:#2b2b2b;font-size:0.9rem}.lang-dropdown li:hover{background:rgba(212,175,55,0.1);color:#d4af37}.lang-dropdown li.active{background:linear-gradient(135deg,#D4AF37 0%,#F4E4B8 50%,#7B3F00 100%);color:#2b2b2b;font-weight:500}.hero{min-height:calc(100vh - 80px);display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;background:linear-gradient(135deg,rgb(249 245 240 / .9),rgb(250 240 244 / .9));overflow:hidden}.hero::before{content:'';position:absolute;top:10%;right:10%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgb(123 63 0 / .03) 0%,transparent 70%);filter:blur(40px);z-index:1}.hero-content{max-width:900px;z-index:2}.hero h1{font-size:clamp(2rem, 5vw, 3.2rem);margin-bottom:1rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;line-height:1.2}.hero h1 span{color:#d4af37;font-weight:500;text-shadow:0 0 30px rgb(212 175 55 / .2)}.hero-subtitle{font-size:1.2rem;color:#666;margin-bottom:2.5rem;font-weight:300;letter-spacing:.5px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7}.cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}.btn{padding:14px 28px;border:none;border-radius:2px;font-weight:400;text-decoration:none;display:inline-flex;align-items:center;gap:.8rem;transition:all 0.3s ease;cursor:pointer;font-size:14px;letter-spacing:.5px;position:relative;overflow:hidden}.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgb(255 255 255 / .2),transparent);transition:left 0.7s ease}.btn:hover::before{left:100%}.btn-primary{background:linear-gradient(to right,#d4af37,#f4e4b8);color:#2a2a2a;box-shadow:0 3px 15px rgb(212 175 55 / .3)}.btn-primary:hover{box-shadow:0 5px 20px rgb(212 175 55 / .4);transform:translateY(-2px)}.btn-secondary{background:#fff0;color:#666;border:1px solid #ddd;box-shadow:0 2px 8px rgb(0 0 0 / .05)}.btn-secondary:hover{border-color:#d4af37;color:#d4af37;box-shadow:0 4px 12px rgb(212 175 55 / .15)}.btn-layer{background:linear-gradient(to right,#7B3F00,#8B4513);color:#fff;border:1px solid #7B3F00;box-shadow:0 3px 15px rgb(123 63 0 / .3)}.btn-layer:hover{background:linear-gradient(to right,#8B4513,#7B3F00);color:#fff;box-shadow:0 5px 20px rgb(123 63 0 / .4);transform:translateY(-2px);border-color:#8B4513}.section{padding:5rem 2rem;background:rgb(255 255 255 / .7);position:relative}.section-light{background:linear-gradient(135deg,#f5f1ec 0%,#f7ecec 100%)}.container{max-width:1200px;margin:0 auto;position:relative;z-index:2}.section-title{font-size:clamp(1.6rem, 3vw, 2.2rem);text-align:center;margin-bottom:3rem;font-weight:400;letter-spacing:1px;color:#2b2b2b;position:relative;padding-bottom:15px}.section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}.card{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:2.5rem 2rem;transition:all 0.3s ease;box-shadow:0 2px 10px rgb(0 0 0 / .05);position:relative}.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#7B3F00,transparent);opacity:0;transition:opacity 0.3s ease}.card:hover{border-color:rgb(123 63 0 / .15);box-shadow:0 8px 25px rgb(123 63 0 / .08);transform:translateY(-5px)}.card:hover::before{opacity:1}.card-icon{font-size:2.2rem;color:#d4af37;margin-bottom:1.5rem;text-shadow:0 0 10px rgb(212 175 55 / .2)}.card h3{font-size:1.3rem;margin-bottom:1rem;color:#2b2b2b;font-weight:500}.card p{color:#666;line-height:1.7;font-size:.95rem}.products-section{background:linear-gradient(135deg,#f8f3e8 0%,#f5efe8 100%);position:relative;overflow:hidden}.products-section::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgb(123 63 0 / .03) 0%,transparent 70%);filter:blur(30px)}.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}.product-card{background:rgb(255 255 255 / .95);border:1px solid rgb(123 63 0 / .08);border-radius:8px;padding:2.5rem 2rem;transition:all 0.4s ease;box-shadow:0 4px 15px rgb(0 0 0 / .03);position:relative;overflow:hidden}.product-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8);transform:translateX(-100%);transition:transform 0.5s ease}.product-card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgb(123 63 0 / .1);border-color:rgb(123 63 0 / .15)}.product-card:hover::before{transform:translateX(0)}.product-icon{font-size:2.5rem;color:#7B3F00;margin-bottom:1.5rem;transition:all 0.3s ease}.product-card:hover .product-icon{color:#d4af37;transform:scale(1.1)}.product-badge{position:absolute;top:15px;right:15px;background:linear-gradient(135deg,#d4af37,#7B3F00);color:#fff;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:600;letter-spacing:.5px}.product-features{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgb(123 63 0 / .08);list-style:none}.product-features li{margin-bottom:.5rem;color:#666;font-size:.9rem;display:flex;align-items:center;gap:.5rem}.product-features li i{color:#7B3F00;font-size:.8rem}.philosophy-content{background:rgb(255 255 255 / .9);border:1px solid rgb(212 175 55 / .08);border-radius:4px;padding:3rem;margin-top:2rem;box-shadow:0 4px 20px rgb(0 0 0 / .03);position:relative}.philosophy-content::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:100px;height:1px;background:linear-gradient(to right,#d4af37,#7B3F00,#f4e4b8)}.philosophy-text{color:#666;line-height:1.8;font-size:1.05rem}.philosophy-text p{margin-bottom:1.5rem}.philosophy-text strong{color:#2b2b2b;font-weight:600}.philosophy-quote{margin-top:2.5rem;padding:2rem;border-left:3px solid #7B3F00;background:linear-gradient(90deg,rgb(123 63 0 / .03),transparent);border-radius:0 4px 4px 0;position:relative}.philosophy-quote::before{content:'"';position:absolute;top:-10px;left:-15px;font-size:4rem;color:rgb(123 63 0 / .1);font-family:serif;font-weight:700}.philosophy-quote p{font-style:italic;color:#555;font-size:1.2rem;line-height:1.7}.quote-author{color:#7B3F00;font-size:1rem;margin-top:1rem;text-align:right;font-weight:600}.footer{background:rgb(255 255 255 / .9);padding:3rem 2rem 2rem;text-align:center;border-top:1px solid rgb(123 63 0 / .1);position:relative}.footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(to right,transparent,#7B3F00,transparent)}.footer-content{max-width:1200px;margin:0 auto}.footer p{color:#888;margin-bottom:.8rem;font-size:.9rem}.social-links{display:flex;justify-content:center;gap:1.5rem;margin:2rem 0}.social-links a{color:#888;font-size:1.2rem;transition:all 0.3s ease;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgb(255 255 255 / .9);border:1px solid rgb(123 63 0 / .1)}.social-links a:hover{color:#7B3F00;transform:translateY(-3px);box-shadow:0 6px 15px rgb(123 63 0 / .15);border-color:rgb(123 63 0 / .2)}.lang-content{display:none}.lang-content.active{display:block}.layer-badge{display:inline-block;padding:8px 20px;background:linear-gradient(135deg,#7B3F00,#d4af37);color:white;border-radius:20px;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2rem;font-weight:600}.layer-form{background:rgb(255 255 255 / .95);border:1px solid rgb(212 175 55 / .1);border-radius:8px;padding:3rem;margin-top:2rem;box-shadow:0 8px 30px rgb(123 63 0 / .05)}.form-section{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid rgb(212 175 55 / .1)}.form-section-title{color:#7B3F00;font-size:1.2rem;margin-bottom:1.5rem;font-weight:500;display:flex;align-items:center;gap:10px}.form-section-title i{color:#d4af37}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}.form-group{margin-bottom:1.5rem}.form-group label{display:block;color:#2b2b2b;margin-bottom:0.5rem;font-weight:500;font-size:0.9rem}.form-control{width:100%;padding:12px 16px;border:1px solid rgb(212 175 55 / .2);border-radius:4px;background:rgb(255 255 255 / .9);color:#3a3a3a;font-size:0.95rem;transition:all 0.3s ease}.form-control:focus{outline:none;border-color:#d4af37;box-shadow:0 0 0 2px rgb(212 175 55 / .1)}.form-control.select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%237B3F00' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:16px}.checkbox-group{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.5rem}.checkbox-item{display:flex;align-items:center;gap:8px;cursor:pointer}.checkbox-item input[type="checkbox"]{appearance:none;width:18px;height:18px;border:2px solid rgb(212 175 55 / .3);border-radius:3px;cursor:pointer;position:relative}.checkbox-item input[type="checkbox"]:checked{background-color:#d4af37;border-color:#d4af37}.checkbox-item input[type="checkbox"]:checked::after{content:'✓';position:absolute;color:white;font-size:12px;top:50%;left:50%;transform:translate(-50%, -50%)}.checkbox-item label{margin-bottom:0;cursor:pointer;font-size:0.9rem;color:#666}.slider-container{margin-top:0.5rem}.slider-value{text-align:center;color:#7B3F00;font-weight:600;margin-top:10px;font-size:1.1rem}input[type="range"]{width:100%;height:6px;-webkit-appearance:none;background:linear-gradient(to right, rgb(212 175 55 / .2), #d4af37);border-radius:3px;outline:none}input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#7B3F00;cursor:pointer;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.2)}.layer-results{background:linear-gradient(135deg,#f9f5f0 0%,#f5f0e8 100%);border:1px solid rgb(212 175 55 / .2);border-radius:8px;padding:2.5rem;margin-top:3rem;display:none}.layer-results.active{display:block;animation:fadeIn 0.5s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.result-title{color:#7B3F00;font-size:1.4rem;margin-bottom:1.5rem;text-align:center;font-weight:500}.result-value{text-align:center;font-size:2.5rem;color:#2b2b2b;margin-bottom:2rem;font-weight:300}.result-value span{color:#d4af37;font-weight:600}.result-details{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem}.result-item{background:white;padding:1.5rem;border-radius:4px;border:1px solid rgb(212 175 55 / .1);text-align:center}.result-item-title{color:#666;font-size:0.9rem;margin-bottom:0.5rem}.result-item-value{color:#7B3F00;font-size:1.2rem;font-weight:600}.declaration-box{background:rgb(250 245 240 / .8);border:2px solid #d4af37;padding:2rem;margin-top:2rem;border-radius:8px;font-size:0.95rem;color:#666;line-height:1.6}.declaration-title{color:#7B3F00;font-weight:600;margin-bottom:1rem;font-size:1.1rem;text-align:center}body[dir="rtl"] .declaration-box{border-right:2px solid #d4af37}.actions{display:flex;gap:1rem;justify-content:center;margin-top:3rem;flex-wrap:wrap}.btn-pdf{background:linear-gradient(to right,#7B3F00,#8B4513);color:white}.btn-pdf:hover{background:linear-gradient(to right,#8B4513,#7B3F00)}.btn-submit{background:linear-gradient(to right,#7B3F00,#d4af37);color:white}.btn-submit:hover{background:linear-gradient(to right,#d4af37,#7B3F00)}.submission-form{background:rgb(255 255 255 / .98);border:2px solid #7B3F00;border-radius:8px;padding:2.5rem;margin-top:2rem;display:none;box-shadow:0 10px 40px rgb(123 63 0 / .1)}.submission-form.active{display:block;animation:fadeIn 0.5s ease}.legal-consent{background:rgb(249 245 240 / .9);padding:1.5rem;border-radius:6px;margin:2rem 0;border-left:4px solid #7B3F00}body[dir="rtl"] .legal-consent{border-left:none;border-right:4px solid #7B3F00}.system-info{font-size:0.85rem;color:#888;text-align:center;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgb(123 63 0 / .1)}.hidden{display:none}.required::after{content:" *";color:#d4af37}.form-help{font-size:0.8rem;color:#888;margin-top:0.25rem;font-style:italic}.progress-bar{height:4px;background:rgb(212 175 55 / .2);border-radius:2px;margin:2rem 0;overflow:hidden}.progress{height:100%;background:linear-gradient(to right, #d4af37, #7B3F00);width:0%;transition:width 0.5s ease}.step-indicator{display:flex;justify-content:space-between;margin-bottom:2rem}.step{text-align:center;flex:1;position:relative}.step-number{width:30px;height:30px;border-radius:50%;background:rgb(212 175 55 / .1);color:#666;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;font-size:0.9rem;font-weight:500}.step.active .step-number{background:#d4af37;color:white}.step-label{font-size:0.8rem;color:#666}.step.active .step-label{color:#7B3F00;font-weight:500}body[dir="rtl"] .form-control.select{background-position:left 16px center;padding-right:16px;padding-left:40px}body[dir="rtl"] .step-indicator{flex-direction:row-reverse}body[dir="rtl"] .actions{flex-direction:row-reverse}body[dir="rtl"] .btn i{order:1;margin-left:0.8rem;margin-right:0}body[dir="rtl"] .checkbox-group{justify-content:flex-end}body[dir="rtl"] .slider-value{direction:ltr;unicode-bidi:bidi-override}.arabic-pdf{font-family:'Noto Naskh Arabic', serif !important;direction:rtl !important;text-align:right !important}.warning-box{background:linear-gradient(135deg,#fff8e1 0%,#fff3cd 100%);border:1px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.legal-footer{margin-top:2rem;padding-top:1rem;border-top:1px solid rgb(123 63 0 / .1);font-size:.8rem;color:#888}.legal-footer a{color:#7B3F00;text-decoration:none;margin:0 .5rem}.legal-footer a:hover{text-decoration:underline}.compliance-details{background:rgb(255 255 255 / .7);border-radius:8px;padding:1.5rem;margin:1rem 0;border-left:3px solid #7B3F00;font-size:.9rem}.compliance-details summary{font-weight:600;color:#7B3F00;cursor:pointer;list-style:none}.compliance-details summary::-webkit-details-marker{display:none}.compliance-details summary i{margin-right:.5rem}@media (max-width: 1024px){.lang-toggle{top:85px;right:15px}}@media (max-width: 768px){.hamburger{display:flex}.nav-menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:2rem;transition:right 0.5s cubic-bezier(0.25,0.46,0.45,0.94);box-shadow:-10px 0 30px rgba(123,63,0,0.1);border-left:1px solid rgba(212,175,55,0.2);z-index:1001;padding:2rem}.nav-menu.active{right:0}.nav-menu a{font-size:1.2rem;padding:10px 0}.nav-menu a::after{bottom:0}.lang-toggle{top:75px;right:10px;min-width:100px;padding:6px 12px}.cards-grid,.products-grid{grid-template-columns:1fr}.cta-buttons{flex-direction:column;align-items:center}.btn{padding:12px 24px;width:100%;max-width:300px;justify-content:center}.philosophy-content{padding:2rem 1.5rem}.philosophy-quote{padding:1.5rem}.hero{padding:5rem 1.5rem 3rem;min-height:calc(100vh - 70px)}}@media (max-width:480px){.section{padding:4rem 1rem}.lang-toggle{top:70px;right:8px;min-width:90px;padding:5px 10px}.lang-toggle .current-lang span{font-size:0.8rem}.hero{padding:4rem 1rem 2.5rem}}@media (min-width:1366px){.hero{padding:7rem 2rem 5rem;min-height:calc(100vh - 90px)}}@media (min-width:1440px){.hero{padding:7.5rem 2rem 5.5rem;min-height:calc(100vh - 85px)}}@media (min-width:1920px){.hero{padding:8rem 2rem 6rem;min-height:calc(100vh - 100px)}}@media (min-width:2560px){.hero{padding:10rem 2rem 8rem;min-height:calc(100vh - 120px)}}body[dir="rtl"] .logo::after,body[dir="rtl"] .nav-menu a::after,body[dir="rtl"] .section-title::after{left:auto;right:0;transform:none}body[dir="rtl"] .section-title::after,body[dir="rtl"] .philosophy-content::before{right:50%;transform:translateX(50%)}body[dir="rtl"] .philosophy-quote{border-left:none;border-right:3px solid #7B3F00;background:linear-gradient(90deg,transparent,rgb(123 63 0 / .03))}body[dir="rtl"] .philosophy-quote::before{left:auto;right:-15px}.text-center{text-align:center}.mb-2{margin-bottom:2rem}.mb-3{margin-bottom:3rem}body[dir="rtl"] .lang-content[data-lang="ar"]{display:block!important;text-align:right;direction:rtl}
+        /* ===== NOVOS ESTILOS PARA MÉTRICAS ===== */
+        .metric-grid {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .metric-card {
+            flex: 1 1 200px;
+            background: rgba(10, 49, 71, 0.02);
+            border-radius: 12px;
+            padding: 1.5rem 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .metric-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7B3F00;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .gauge {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            background: conic-gradient(#0a3147 0deg, #f0e8e0 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #0a3147;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: background 0.3s ease;
+        }
+        .gauge span { font-size: 1rem; color: #666; margin-left: 2px; }
+        .clarity-bar {
+            width: 100%;
+            height: 18px;
+            background: #eee;
+            border-radius: 40px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+            box-shadow: inset 0 1px 3px #ccc;
+        }
+        .clarity-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0a3147, #7B3F00);
+            width: 48%;
+            border-radius: 40px;
+            position: relative;
+            color: white;
+            line-height: 18px;
+            font-size: 0.7rem;
+            padding-left: 8px;
+            transition: width 0.3s ease;
+        }
+        .composite-score {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #0a3147;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .composite-score small { font-size: 1rem; color: #888; }
+        .chip-info {
+            background: rgba(212,175,55,0.08);
+            border-radius: 30px;
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+            color: #7B3F00;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .simulate-btn {
+            background: none;
+            border: 1px dashed #0a3147;
+            color: #0a3147;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+        .simulate-btn:hover {
+            background: #0a3147;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <!-- Menu Overlay -->
     <div class="menu-overlay" id="menuOverlay"></div>
-
-    <!-- Botão de Idioma Premium - 3 IDIOMAS -->
     <div class="lang-toggle" id="langToggle">
-        <div class="current-lang" id="currentLang">
-            <span class="lang-flag">🇧🇷</span>
-            <span>Português</span>
-        </div>
+        <div class="current-lang" id="currentLang"><span class="lang-flag">🇧🇷</span><span>Português</span></div>
         <i class="fas fa-chevron-down lang-arrow" id="langArrow"></i>
         <ul class="lang-dropdown" id="langDropdown">
-            <li data-lang="pt" class="active">
-                <span class="lang-flag">🇧🇷</span>
-                <span>Português (Brasil, Portugal, Angola, Moçambique)</span>
-            </li>
-            <li data-lang="en">
-                <span class="lang-flag">🇺🇸</span>
-                <span>English (USA, UK, Canada, Australia)</span>
-            </li>
-            <li data-lang="ar">
-                <span class="lang-flag">🇸🇦</span>
-                <span>العربية (الإمارات, السعودية, قطر, الكويت)</span>
-            </li>
+            <li data-lang="pt" class="active"><span class="lang-flag">🇧🇷</span><span>Português (Brasil, Portugal, Angola, Moçambique)</span></li>
+            <li data-lang="en"><span class="lang-flag">🇺🇸</span><span>English (USA, UK, Canada, Australia)</span></li>
+            <li data-lang="ar"><span class="lang-flag">🇸🇦</span><span>العربية (الإمارات, السعودية, قطر, الكويت)</span></li>
         </ul>
     </div>
 
     <header class="header">
         <nav class="nav-container">
             <div class="logo">AVZ INFRA<span>Portfólio Global</span></div>
-            
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio"><span class="lang-content active" data-lang="pt">Início</span><span class="lang-content" data-lang="en">Home</span><span class="lang-content" data-lang="ar">الرئيسية</span></a></li>
                 <li><a href="#portfolio"><span class="lang-content active" data-lang="pt">Portfólio</span><span class="lang-content" data-lang="en">Portfolio</span><span class="lang-content" data-lang="ar">محفظة</span></a></li>
@@ -58,7 +127,6 @@
         </nav>
     </header>
 
-    <!-- SEÇÃO INICIAL -->
     <section id="inicio" class="hero">
         <div class="hero-content">
             <div class="layer-badge" style="background: #0a3147;">
@@ -66,345 +134,111 @@
                 <span class="lang-content" data-lang="en">🌟 GLOBAL PORTFOLIO · 12 COUNTRIES · 3 LANGUAGES</span>
                 <span class="lang-content" data-lang="ar">🌟 محفظة عالمية · 12 دولة · 3 لغات</span>
             </div>
-            
-            <h1>
-                <span class="lang-content active" data-lang="pt">Seu projeto merece <span>visibilidade internacional</span></span>
-                <span class="lang-content" data-lang="en">Your project deserves <span>international visibility</span></span>
-                <span class="lang-content" data-lang="ar">مشروعك يستحق <span>رؤية دولية</span></span>
-            </h1>
-            
-            <p class="hero-subtitle">
-                <span class="lang-content active" data-lang="pt">A AVZ Infra seleciona projetos inovadores para compor seu portfólio, que é apresentado em 3 idiomas para uma rede qualificada em 12 países.</span>
-                <span class="lang-content" data-lang="en">AVZ Infra selects innovative projects for its portfolio, which is presented in 3 languages to a qualified network in 12 countries.</span>
-                <span class="lang-content" data-lang="ar">تختار AVZ Infra المشاريع المبتكرة لمحفظتها، والتي يتم تقديمها بثلاث لغات لشبكة مؤهلة في 12 دولة.</span>
-            </p>
-
-            <div class="cta-buttons">
-                <a href="#submissao" class="btn btn-primary"><i class="fas fa-plus-circle"></i><span class="lang-content active" data-lang="pt">Incluir meu projeto</span><span class="lang-content" data-lang="en">Include my project</span><span class="lang-content" data-lang="ar">تضمين مشروعي</span></a>
-                <a href="#portfolio" class="btn btn-secondary"><i class="fas fa-info-circle"></i><span class="lang-content active" data-lang="pt">Como funciona</span><span class="lang-content" data-lang="en">How it works</span><span class="lang-content" data-lang="ar">كيف يعمل</span></a>
-            </div>
+            <h1><span class="lang-content active" data-lang="pt">Seu projeto merece <span>visibilidade internacional</span></span><span class="lang-content" data-lang="en">Your project deserves <span>international visibility</span></span><span class="lang-content" data-lang="ar">مشروعك يستحق <span>رؤية دولية</span></span></h1>
+            <p class="hero-subtitle"><span class="lang-content active" data-lang="pt">A AVZ Infra seleciona projetos inovadores para compor seu portfólio, que é apresentado em 3 idiomas para uma rede qualificada em 12 países.</span><span class="lang-content" data-lang="en">AVZ Infra selects innovative projects for its portfolio, which is presented in 3 languages to a qualified network in 12 countries.</span><span class="lang-content" data-lang="ar">تختار AVZ Infra المشاريع المبتكرة لمحفظتها، والتي يتم تقديمها بثلاث لغات لشبكة مؤهلة في 12 دولة.</span></p>
+            <div class="cta-buttons"><a href="#submissao" class="btn btn-primary"><i class="fas fa-plus-circle"></i><span class="lang-content active" data-lang="pt">Incluir meu projeto</span><span class="lang-content" data-lang="en">Include my project</span><span class="lang-content" data-lang="ar">تضمين مشروعي</span></a><a href="#portfolio" class="btn btn-secondary"><i class="fas fa-info-circle"></i><span class="lang-content active" data-lang="pt">Como funciona</span><span class="lang-content" data-lang="en">How it works</span><span class="lang-content" data-lang="ar">كيف يعمل</span></a></div>
         </div>
     </section>
 
-    <!-- SEÇÃO COMO FUNCIONA -->
     <section id="portfolio" class="section section-light">
         <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Como funciona o Portfólio AVZ Infra</span>
-                <span class="lang-content" data-lang="en">How AVZ Infra Portfolio works</span>
-                <span class="lang-content" data-lang="ar">كيف تعمل محفظة AVZ Infra</span>
-            </h2>
-            
+            <h2 class="section-title"><span class="lang-content active" data-lang="pt">Como funciona o Portfólio AVZ Infra</span><span class="lang-content" data-lang="en">How AVZ Infra Portfolio works</span><span class="lang-content" data-lang="ar">كيف تعمل محفظة AVZ Infra</span></h2>
             <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-file-signature"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">1. Submissão</span>
-                        <span class="lang-content" data-lang="en">1. Submission</span>
-                        <span class="lang-content" data-lang="ar">1. التقديم</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Você preenche o formulário com as informações do seu projeto, incluindo sua percepção de valor intrínseco.</span>
-                        <span class="lang-content" data-lang="en">You fill out the form with your project information, including your intrinsic value perception.</span>
-                        <span class="lang-content" data-lang="ar">تملأ النموذج بمعلومات مشروعك، بما في ذلك تصورك للقيمة الجوهرية.</span>
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-search"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">2. Análise</span>
-                        <span class="lang-content" data-lang="en">2. Analysis</span>
-                        <span class="lang-content" data-lang="ar">2. التحليل</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Nossa equipe avalia o projeto e, se aprovado, ele é incluído em nosso portfólio multilíngue.</span>
-                        <span class="lang-content" data-lang="en">Our team evaluates the project and, if approved, it is included in our multilingual portfolio.</span>
-                        <span class="lang-content" data-lang="ar">يقيم فريقنا المشروع، وإذا تمت الموافقة عليه، يتم تضمينه في محفظتنا متعددة اللغات.</span>
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-globe"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">3. Exposição Global</span>
-                        <span class="lang-content" data-lang="en">3. Global Exposure</span>
-                        <span class="lang-content" data-lang="ar">3. العرض العالمي</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Seu projeto é apresentado em 3 idiomas para nossa rede de contatos em 12 países.</span>
-                        <span class="lang-content" data-lang="en">Your project is presented in 3 languages to our network of contacts in 12 countries.</span>
-                        <span class="lang-content" data-lang="ar">يتم تقديم مشروعك بثلاث لغات لشبكة اتصالاتنا في 12 دولة.</span>
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">4. Conexão</span>
-                        <span class="lang-content" data-lang="en">4. Connection</span>
-                        <span class="lang-content" data-lang="ar">4. الاتصال</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Quando surge interesse, apresentamos um contrato modelo para formalizar a negociação diretamente entre as partes.</span>
-                        <span class="lang-content" data-lang="en">When interest arises, we present a standard contract to formalize the negotiation directly between the parties.</span>
-                        <span class="lang-content" data-lang="ar">عندما ينشأ الاهتمام، نقدم عقدًا نموذجيًا لإضفاء الطابع الرسمي على التفاوض مباشرة بين الأطراف.</span>
-                    </p>
-                </div>
+                <div class="card"><div class="card-icon"><i class="fas fa-file-signature"></i></div><h3><span class="lang-content active" data-lang="pt">1. Submissão</span><span class="lang-content" data-lang="en">1. Submission</span><span class="lang-content" data-lang="ar">1. التقديم</span></h3><p><span class="lang-content active" data-lang="pt">Você preenche o formulário com as informações do seu projeto, incluindo sua percepção de valor intrínseco.</span><span class="lang-content" data-lang="en">You fill out the form with your project information, including your intrinsic value perception.</span><span class="lang-content" data-lang="ar">تملأ النموذج بمعلومات مشروعك، بما في ذلك تصورك للقيمة الجوهرية.</span></p></div>
+                <div class="card"><div class="card-icon"><i class="fas fa-search"></i></div><h3><span class="lang-content active" data-lang="pt">2. Análise</span><span class="lang-content" data-lang="en">2. Analysis</span><span class="lang-content" data-lang="ar">2. التحليل</span></h3><p><span class="lang-content active" data-lang="pt">Nossa equipe avalia o projeto e, se aprovado, ele é incluído em nosso portfólio multilíngue.</span><span class="lang-content" data-lang="en">Our team evaluates the project and, if approved, it is included in our multilingual portfolio.</span><span class="lang-content" data-lang="ar">يقيم فريقنا المشروع، وإذا تمت الموافقة عليه، يتم تضمينه في محفظتنا متعددة اللغات.</span></p></div>
+                <div class="card"><div class="card-icon"><i class="fas fa-globe"></i></div><h3><span class="lang-content active" data-lang="pt">3. Exposição Global</span><span class="lang-content" data-lang="en">3. Global Exposure</span><span class="lang-content" data-lang="ar">3. العرض العالمي</span></h3><p><span class="lang-content active" data-lang="pt">Seu projeto é apresentado em 3 idiomas para nossa rede de contatos em 12 países.</span><span class="lang-content" data-lang="en">Your project is presented in 3 languages to our network of contacts in 12 countries.</span><span class="lang-content" data-lang="ar">يتم تقديم مشروعك بثلاث لغات لشبكة اتصالاتنا في 12 دولة.</span></p></div>
+                <div class="card"><div class="card-icon"><i class="fas fa-handshake"></i></div><h3><span class="lang-content active" data-lang="pt">4. Conexão</span><span class="lang-content" data-lang="en">4. Connection</span><span class="lang-content" data-lang="ar">4. الاتصال</span></h3><p><span class="lang-content active" data-lang="pt">Quando surge interesse, apresentamos um contrato modelo para formalizar a negociação diretamente entre as partes.</span><span class="lang-content" data-lang="en">When interest arises, we present a standard contract to formalize the negotiation directly between the parties.</span><span class="lang-content" data-lang="ar">عندما ينشأ الاهتمام، نقدم عقدًا نموذجيًا لإضفاء الطابع الرسمي على التفاوض مباشرة بين الأطراف.</span></p></div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE SUBMISSÃO COM VALUATION INTRÍNSECO -->
     <section id="submissao" class="section">
         <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Inscreva seu projeto no portfólio global</span>
-                <span class="lang-content" data-lang="en">Submit your project to the global portfolio</span>
-                <span class="lang-content" data-lang="ar">قدم مشروعك إلى المحفظة العالمية</span>
-            </h2>
-
-            <!-- AVISO IMPORTANTE -->
+            <h2 class="section-title"><span class="lang-content active" data-lang="pt">Inscreva seu projeto no portfólio global</span><span class="lang-content" data-lang="en">Submit your project to the global portfolio</span><span class="lang-content" data-lang="ar">قدم مشروعك إلى المحفظة العالمية</span></h2>
             <div class="declaration-box" style="border-color: #0a3147; margin-bottom: 2rem;">
-                <div class="declaration-title" style="color: #0a3147;">
-                    <i class="fas fa-info-circle"></i>
-                    <span class="lang-content active" data-lang="pt">SOBRE O PORTFÓLIO</span>
-                    <span class="lang-content" data-lang="en">ABOUT THE PORTFOLIO</span>
-                    <span class="lang-content" data-lang="ar">حول المحفظة</span>
-                </div>
-                <p>
-                    <span class="lang-content active" data-lang="pt"><strong>A AVZ Infra não compra projetos.</strong> Atuamos como vitrine e facilitadores, oferecendo exposição qualificada em 3 idiomas para 12 países. Os campos de "percepção de valor" representam sua autoavaliação e serão usados apenas como referência para potenciais interessados.</span>
-                    <span class="lang-content" data-lang="en"><strong>AVZ Infra does not buy projects.</strong> We act as a showcase and facilitators, offering qualified exposure in 3 languages to 12 countries. The "value perception" fields represent your self-assessment and will be used only as reference for potential interested parties.</span>
-                    <span class="lang-content" data-lang="ar"><strong>AVZ Infra لا تشتري المشاريع.</strong> نحن نعمل كواجهة عرض وميسرين، نقدم عرضًا مؤهلاً بثلاث لغات لـ 12 دولة. تمثل حقول "تصور القيمة" تقييمك الذاتي وستستخدم فقط كمرجع للأطراف المهتمة المحتملة.</span>
-                </p>
+                <div class="declaration-title" style="color: #0a3147;"><i class="fas fa-info-circle"></i> <span class="lang-content active" data-lang="pt">SOBRE O PORTFÓLIO</span><span class="lang-content" data-lang="en">ABOUT THE PORTFOLIO</span><span class="lang-content" data-lang="ar">حول المحفظة</span></div>
+                <p><span class="lang-content active" data-lang="pt"><strong>A AVZ Infra não compra projetos.</strong> Atuamos como vitrine e facilitadores, oferecendo exposição qualificada em 3 idiomas para 12 países. Os campos de "percepção de valor" representam sua autoavaliação e serão usados apenas como referência para potenciais interessados.</span><span class="lang-content" data-lang="en"><strong>AVZ Infra does not buy projects.</strong> We act as a showcase and facilitators, offering qualified exposure in 3 languages to 12 countries. The "value perception" fields represent your self-assessment and will be used only as reference for potential interested parties.</span><span class="lang-content" data-lang="ar"><strong>AVZ Infra لا تشتري المشاريع.</strong> نحن نعمل كواجهة عرض وميسرين، نقدم عرضًا مؤهلاً بثلاث لغات لـ 12 دولة. تمثل حقول "تصور القيمة" تقييمك الذاتي وستستخدم فقط كمرجع للأطراف المهتمة المحتملة.</span></p>
             </div>
 
             <div class="layer-form">
-                <!-- INFORMAÇÕES DO PROJETO -->
-                <div class="form-section">
-                    <div class="form-section-title">
-                        <i class="fas fa-cube" style="color: #0a3147;"></i>
-                        <span class="lang-content active" data-lang="pt">Identificação do Projeto</span>
-                        <span class="lang-content" data-lang="en">Project Identification</span>
-                        <span class="lang-content" data-lang="ar">تعريف المشروع</span>
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label class="required">
-                                <span class="lang-content active" data-lang="pt">Nome do projeto</span>
-                                <span class="lang-content" data-lang="en">Project name</span>
-                                <span class="lang-content" data-lang="ar">اسم المشروع</span>
-                            </label>
-                            <input type="text" class="form-control" id="projectName" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="required">
-                                <span class="lang-content active" data-lang="pt">Categoria</span>
-                                <span class="lang-content" data-lang="en">Category</span>
-                                <span class="lang-content" data-lang="ar">الفئة</span>
-                            </label>
-                            <select class="form-control select" id="projectCategory" required>
-                                <option value="">Selecione...</option>
-                                <option value="Software/SaaS">Software/SaaS</option>
-                                <option value="Hardware/IoT">Hardware/IoT</option>
-                                <option value="Inteligência Artificial/ML">Inteligência Artificial/ML</option>
-                                <option value="Blockchain/Cripto">Blockchain/Cripto</option>
-                                <option value="Infraestrutura/Cloud">Infraestrutura/Cloud</option>
-                                <option value="Healthtech/Biotech">Healthtech/Biotech</option>
-                                <option value="Fintech/Insurtech">Fintech/Insurtech</option>
-                                <option value="Edtech">Edtech</option>
-                                <option value="Cleantech/Energy">Cleantech/Energy</option>
-                                <option value="Outra">Outra</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="required">
-                            <span class="lang-content active" data-lang="pt">Descrição completa do projeto</span>
-                            <span class="lang-content" data-lang="en">Complete project description</span>
-                            <span class="lang-content" data-lang="ar">وصف كامل للمشروع</span>
-                        </label>
-                        <textarea class="form-control" id="projectDescription" rows="4" required placeholder="Descreva o projeto em detalhes: funcionalidades, tecnologias utilizadas, público-alvo, problema que resolve, diferenciais competitivos..."></textarea>
-                    </div>
-                </div>
-
-                <!-- SEÇÃO: PERCEPÇÃO DE VALOR INTRÍNSECO -->
-                <div class="form-section" style="background: rgba(10, 49, 71, 0.02); border-radius: 8px; padding: 2rem;">
-                    <div class="form-section-title">
-                        <i class="fas fa-chart-line" style="color: #0a3147;"></i>
-                        <span class="lang-content active" data-lang="pt">Percepção de Valor Intrínseco</span>
-                        <span class="lang-content" data-lang="en">Intrinsic Value Perception</span>
-                        <span class="lang-content" data-lang="ar">تصور القيمة الجوهرية</span>
-                        <span style="margin-left: auto; font-size: 0.7rem; background: #0a3147; color: white; padding: 0.2rem 1rem; border-radius: 20px;">
-                            <span class="lang-content active" data-lang="pt">Autoavaliação</span>
-                            <span class="lang-content" data-lang="en">Self-assessment</span>
-                            <span class="lang-content" data-lang="ar">تقييم ذاتي</span>
-                        </span>
-                    </div>
+                <!-- SEÇÃO DE MÉTRICAS CORRIGIDA - BOTÕES FUNCIONANDO -->
+                <div class="form-section" style="background: #faf6f0; border-radius: 16px;">
+                    <div class="form-section-title"><i class="fas fa-chart-pie"></i> <span class="lang-content active" data-lang="pt">Autoavaliação de Maturidade & Inovação (0‑100)</span><span class="lang-content" data-lang="en">Maturity & Innovation Self‑assessment (0‑100)</span><span class="lang-content" data-lang="ar">التقييم الذاتي للنضج والابتكار (0-100)</span></div>
+                    <p class="form-help" style="margin-bottom: 1.5rem;"><i class="fas fa-info-circle"></i> <span class="lang-content active" data-lang="pt">Use os sliders para ajustar sua percepção. A nota de clareza é simulada com base na descrição.</span><span class="lang-content" data-lang="en">Use sliders to adjust your perception. Clarity score is simulated based on the description.</span><span class="lang-content" data-lang="ar">استخدم أشرطة التمرير لضبط تصورك. يتم محاكاة درجة الوضوح بناءً على الوصف.</span></p>
                     
-                    <p style="margin-bottom: 1.5rem; color: #666; font-style: italic;">
-                        <span class="lang-content active" data-lang="pt">Os campos abaixo representam sua própria percepção sobre o valor do projeto.</span>
-                        <span class="lang-content" data-lang="en">The fields below represent your own perception of the project's value.</span>
-                        <span class="lang-content" data-lang="ar">تمثل الحقول أدناه تصورك الخاص لقيمة المشروع.</span>
-                    </p>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label>
-                                <span class="lang-content active" data-lang="pt">Qual o valor que você atribui ao projeto? (USD)</span>
-                                <span class="lang-content" data-lang="en">What value do you attribute to the project? (USD)</span>
-                                <span class="lang-content" data-lang="ar">ما القيمة التي تنسبها للمشروع؟ (دولار)</span>
-                            </label>
-                            <select class="form-control select" id="valuationRange">
-                                <option value="">Selecione uma faixa...</option>
-                                <option value="Até $50k">Até $50k</option>
-                                <option value="$50k - $100k">$50k - $100k</option>
-                                <option value="$100k - $250k">$100k - $250k</option>
-                                <option value="$250k - $500k">$250k - $500k</option>
-                                <option value="$500k - $1M">$500k - $1M</option>
-                                <option value="$1M - $5M">$1M - $5M</option>
-                                <option value="$5M - $10M">$5M - $10M</option>
-                                <option value="$10M - $50M">$10M - $50M</option>
-                                <option value="Acima de $50M">Acima de $50M</option>
-                                <option value="Prefiro não informar">Prefiro não informar</option>
-                            </select>
+                    <div class="metric-grid">
+                        <!-- Nível de Maturidade -->
+                        <div class="metric-card">
+                            <div class="metric-label"><i class="fas fa-seedling" style="color:#0a3147;"></i> <span class="lang-content active" data-lang="pt">Maturidade</span><span class="lang-content" data-lang="en">Maturity</span><span class="lang-content" data-lang="ar">النضج</span></div>
+                            <div class="gauge" id="gaugeMaturity">35<span>%</span></div>
+                            <input type="range" id="maturitySlider" min="0" max="100" value="35" class="slider-maturity" style="width:100%;" oninput="updateMaturity(this.value)">
+                            <div style="text-align:center; margin-top:5px;"><span id="maturityValue">35</span>%</div>
                         </div>
-
-                        <div class="form-group">
-                            <label>
-                                <span class="lang-content active" data-lang="pt">Estágio atual do projeto</span>
-                                <span class="lang-content" data-lang="en">Current project stage</span>
-                                <span class="lang-content" data-lang="ar">المرحلة الحالية للمشروع</span>
-                            </label>
-                            <select class="form-control select" id="projectStage" required>
-                                <option value="">Selecione...</option>
-                                <option value="Ideia/Conceito">Ideia/Conceito</option>
-                                <option value="MVP/Protótipo">MVP/Protótipo</option>
-                                <option value="Em desenvolvimento">Em desenvolvimento</option>
-                                <option value="Beta/Testes">Beta/Testes</option>
-                                <option value="Lançado no mercado">Lançado no mercado</option>
-                                <option value="Em operação (com receita)">Em operação (com receita)</option>
-                                <option value="Escalando">Escalando</option>
-                                <option value="Maduro/Estável">Maduro/Estável</option>
-                            </select>
+                        <!-- Nível de Inovação -->
+                        <div class="metric-card">
+                            <div class="metric-label"><i class="fas fa-lightbulb" style="color:#0a3147;"></i> <span class="lang-content active" data-lang="pt">Inovação</span><span class="lang-content" data-lang="en">Innovation</span><span class="lang-content" data-lang="ar">الابتكار</span></div>
+                            <div class="gauge" id="gaugeInnovation">72<span>%</span></div>
+                            <input type="range" id="innovationSlider" min="0" max="100" value="72" class="slider-innovation" style="width:100%;" oninput="updateInnovation(this.value)">
+                            <div style="text-align:center; margin-top:5px;"><span id="innovationValue">72</span>%</div>
+                        </div>
+                        <!-- Clareza do projeto (com botão funcional) -->
+                        <div class="metric-card">
+                            <div class="metric-label"><i class="fas fa-file-alt" style="color:#0a3147;"></i> <span class="lang-content active" data-lang="pt">Clareza</span><span class="lang-content" data-lang="en">Clarity</span><span class="lang-content" data-lang="ar">الوضوح</span></div>
+                            <div class="gauge" id="gaugeClarity">48<span>%</span></div>
+                            <div class="clarity-bar"><div class="clarity-fill" id="clarityFill" style="width:48%;">48%</div></div>
+                            <p style="font-size:0.8rem; margin-top:8px;" id="clarityHint"><span class="lang-content active" data-lang="pt">Baseado no campo descrição</span><span class="lang-content" data-lang="en">Based on description field</span><span class="lang-content" data-lang="ar">بناء على حقل الوصف</span></p>
+                            <button class="simulate-btn" id="simulateClarity" type="button" onclick="calculateClarity()"><i class="fas fa-sync-alt"></i> <span class="lang-content active" data-lang="pt">simular análise</span><span class="lang-content" data-lang="en">simulate</span><span class="lang-content" data-lang="ar">محاكاة</span></button>
                         </div>
                     </div>
 
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label>
-                                <span class="lang-content active" data-lang="pt">Receita anual atual (se houver)</span>
-                                <span class="lang-content" data-lang="en">Current annual revenue (if any)</span>
-                                <span class="lang-content" data-lang="ar">الإيرادات السنوية الحالية (إن وجدت)</span>
-                            </label>
-                            <select class="form-control select" id="currentRevenue">
-                                <option value="">Selecione...</option>
-                                <option value="Pré-receita">Pré-receita</option>
-                                <option value="Até $50k">Até $50k</option>
-                                <option value="$50k - $100k">$50k - $100k</option>
-                                <option value="$100k - $500k">$100k - $500k</option>
-                                <option value="$500k - $1M">$500k - $1M</option>
-                                <option value="$1M - $5M">$1M - $5M</option>
-                                <option value="Acima de $5M">Acima de $5M</option>
-                                <option value="Não aplicável">Não aplicável</option>
-                            </select>
+                    <!-- Média composta -->
+                    <div style="background: #fff; border-radius: 40px; padding: 1rem 2rem; margin-top: 1.5rem; border:1px solid rgba(212,175,55,0.2);">
+                        <div style="display:flex; align-items: center; justify-content: space-between; flex-wrap:wrap;">
+                            <span class="chip-info"><i class="fas fa-calculator"></i> <span class="lang-content active" data-lang="pt">Média (maturidade/inovação/clareza)</span><span class="lang-content" data-lang="en">Average (maturity/innovation/clarity)</span><span class="lang-content" data-lang="ar">المتوسط (النضج / الابتكار / الوضوح)</span></span>
+                            <span class="composite-score" id="compositeScore">51.7<small>%</small></span>
                         </div>
-
-                        <div class="form-group">
-                            <label>
-                                <span class="lang-content active" data-lang="pt">Propriedade intelectual</span>
-                                <span class="lang-content" data-lang="en">Intellectual property</span>
-                                <span class="lang-content" data-lang="ar">الملكية الفكرية</span>
-                            </label>
-                            <select class="form-control select" id="ipStatus">
-                                <option value="">Selecione...</option>
-                                <option value="Nenhuma">Nenhuma</option>
-                                <option value="Pedido de patente protocolado">Pedido de patente protocolado</option>
-                                <option value="Patente concedida">Patente concedida</option>
-                                <option value="Direitos autorais registrados">Direitos autorais registrados</option>
-                                <option value="Marca registrada">Marca registrada</option>
-                                <option value="Segredo industrial">Segredo industrial</option>
-                                <option value="Código-fonte proprietário">Código-fonte proprietário</option>
-                            </select>
-                        </div>
+                        <div class="progress-bar" style="margin:0.5rem 0 0;"><div class="progress" id="compositeProgress" style="width:51.7%"></div></div>
                     </div>
                 </div>
 
-                <!-- INFORMAÇÕES DO PROPONENTE -->
+                <!-- Restante do formulário (mantido intacto) -->
                 <div class="form-section">
-                    <div class="form-section-title">
-                        <i class="fas fa-user" style="color: #0a3147;"></i>
-                        <span class="lang-content active" data-lang="pt">Sobre o proponente</span>
-                        <span class="lang-content" data-lang="en">About the proponent</span>
-                        <span class="lang-content" data-lang="ar">عن مقدم الطلب</span>
-                    </div>
-
+                    <div class="form-section-title"><i class="fas fa-cube" style="color: #0a3147;"></i><span class="lang-content active" data-lang="pt">Identificação do Projeto</span><span class="lang-content" data-lang="en">Project Identification</span><span class="lang-content" data-lang="ar">تعريف المشروع</span></div>
                     <div class="form-grid">
-                        <div class="form-group">
-                            <label class="required">
-                                <span class="lang-content active" data-lang="pt">Nome completo</span>
-                                <span class="lang-content" data-lang="en">Full name</span>
-                                <span class="lang-content" data-lang="ar">الاسم الكامل</span>
-                            </label>
-                            <input type="text" class="form-control" id="applicantName" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="required">
-                                <span class="lang-content active" data-lang="pt">E-mail para contato</span>
-                                <span class="lang-content" data-lang="en">Contact email</span>
-                                <span class="lang-content" data-lang="ar">البريد الإلكتروني للاتصال</span>
-                            </label>
-                            <input type="email" class="form-control" id="applicantEmail" required>
-                        </div>
+                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Nome do projeto</span><span class="lang-content" data-lang="en">Project name</span><span class="lang-content" data-lang="ar">اسم المشروع</span></label><input type="text" class="form-control" id="projectName" required></div>
+                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Categoria</span><span class="lang-content" data-lang="en">Category</span><span class="lang-content" data-lang="ar">الفئة</span></label><select class="form-control select" id="projectCategory" required><option value="">Selecione...</option><option value="Software/SaaS">Software/SaaS</option><option value="Hardware/IoT">Hardware/IoT</option><option value="Inteligência Artificial/ML">Inteligência Artificial/ML</option><option value="Blockchain/Cripto">Blockchain/Cripto</option><option value="Infraestrutura/Cloud">Infraestrutura/Cloud</option><option value="Healthtech/Biotech">Healthtech/Biotech</option><option value="Fintech/Insurtech">Fintech/Insurtech</option><option value="Edtech">Edtech</option><option value="Cleantech/Energy">Cleantech/Energy</option><option value="Outra">Outra</option></select></div>
                     </div>
+                    <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Descrição completa do projeto</span><span class="lang-content" data-lang="en">Complete project description</span><span class="lang-content" data-lang="ar">وصف كامل للمشروع</span></label><textarea class="form-control" id="projectDescription" rows="4" required placeholder="Descreva o projeto em detalhes: funcionalidades, tecnologias, público-alvo..."></textarea></div>
+                </div>
 
+                <div class="form-section" style="background: rgba(10, 49, 71, 0.02); border-radius: 8px; padding: 2rem;">
+                    <div class="form-section-title"><i class="fas fa-chart-line" style="color: #0a3147;"></i><span class="lang-content active" data-lang="pt">Percepção de Valor Intrínseco</span><span class="lang-content" data-lang="en">Intrinsic Value Perception</span><span class="lang-content" data-lang="ar">تصور القيمة الجوهرية</span><span style="margin-left: auto; font-size: 0.7rem; background: #0a3147; color: white; padding: 0.2rem 1rem; border-radius: 20px;"><span class="lang-content active" data-lang="pt">Autoavaliação</span><span class="lang-content" data-lang="en">Self-assessment</span><span class="lang-content" data-lang="ar">تقييم ذاتي</span></span></div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-style: italic;"><span class="lang-content active" data-lang="pt">Os campos abaixo representam sua própria percepção sobre o valor do projeto.</span><span class="lang-content" data-lang="en">The fields below represent your own perception of the project's value.</span><span class="lang-content" data-lang="ar">تمثل الحقول أدناه تصورك الخاص لقيمة المشروع.</span></p>
                     <div class="form-grid">
-                        <div class="form-group">
-                            <label>
-                                <span class="lang-content active" data-lang="pt">País de residência</span>
-                                <span class="lang-content" data-lang="en">Country of residence</span>
-                                <span class="lang-content" data-lang="ar">بلد الإقامة</span>
-                            </label>
-                            <select class="form-control select" id="applicantCountry">
-                                <option value="">Selecione...</option>
-                                <option value="Brasil">Brasil</option>
-                                <option value="Portugal">Portugal</option>
-                                <option value="Angola">Angola</option>
-                                <option value="Moçambique">Moçambique</option>
-                                <option value="EUA">EUA</option>
-                                <option value="Reino Unido">Reino Unido</option>
-                                <option value="Canadá">Canadá</option>
-                                <option value="Austrália">Austrália</option>
-                                <option value="Emirados Árabes">Emirados Árabes</option>
-                                <option value="Arábia Saudita">Arábia Saudita</option>
-                                <option value="Catar">Catar</option>
-                                <option value="Kuwait">Kuwait</option>
-                                <option value="Outro">Outro</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>
-                                <span class="lang-content active" data-lang="pt">LinkedIn / Website</span>
-                                <span class="lang-content" data-lang="en">LinkedIn / Website</span>
-                                <span class="lang-content" data-lang="ar">لينكد إن / موقع ويب</span>
-                            </label>
-                            <input type="url" class="form-control" id="applicantLinkedin" placeholder="https://...">
-                        </div>
+                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">Qual o valor que você atribui ao projeto? (USD)</span><span class="lang-content" data-lang="en">What value do you attribute to the project? (USD)</span><span class="lang-content" data-lang="ar">ما القيمة التي تنسبها للمشروع؟ (دولار)</span></label><select class="form-control select" id="valuationRange"><option value="">Selecione...</option><option value="Até $50k">Até $50k</option><option value="$50k - $100k">$50k - $100k</option><option value="$100k - $250k">$100k - $250k</option><option value="$250k - $500k">$250k - $500k</option><option value="$500k - $1M">$500k - $1M</option><option value="$1M - $5M">$1M - $5M</option><option value="$5M - $10M">$5M - $10M</option><option value="$10M - $50M">$10M - $50M</option><option value="Acima de $50M">Acima de $50M</option><option value="Prefiro não informar">Prefiro não informar</option></select></div>
+                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">Estágio atual do projeto</span><span class="lang-content" data-lang="en">Current project stage</span><span class="lang-content" data-lang="ar">المرحلة الحالية للمشروع</span></label><select class="form-control select" id="projectStage" required><option value="">Selecione...</option><option value="Ideia/Conceito">Ideia/Conceito</option><option value="MVP/Protótipo">MVP/Protótipo</option><option value="Em desenvolvimento">Em desenvolvimento</option><option value="Beta/Testes">Beta/Testes</option><option value="Lançado no mercado">Lançado no mercado</option><option value="Em operação (com receita)">Em operação (com receita)</option><option value="Escalando">Escalando</option><option value="Maduro/Estável">Maduro/Estável</option></select></div>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">Receita anual atual (se houver)</span><span class="lang-content" data-lang="en">Current annual revenue (if any)</span><span class="lang-content" data-lang="ar">الإيرادات السنوية الحالية (إن وجدت)</span></label><select class="form-control select" id="currentRevenue"><option value="">Selecione...</option><option value="Pré-receita">Pré-receita</option><option value="Até $50k">Até $50k</option><option value="$50k - $100k">$50k - $100k</option><option value="$100k - $500k">$100k - $500k</option><option value="$500k - $1M">$500k - $1M</option><option value="$1M - $5M">$1M - $5M</option><option value="Acima de $5M">Acima de $5M</option><option value="Não aplicável">Não aplicável</option></select></div>
+                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">Propriedade intelectual</span><span class="lang-content" data-lang="en">Intellectual property</span><span class="lang-content" data-lang="ar">الملكية الفكرية</span></label><select class="form-control select" id="ipStatus"><option value="">Selecione...</option><option value="Nenhuma">Nenhuma</option><option value="Pedido de patente protocolado">Pedido de patente protocolado</option><option value="Patente concedida">Patente concedida</option><option value="Direitos autorais registrados">Direitos autorais registrados</option><option value="Marca registrada">Marca registrada</option><option value="Segredo industrial">Segredo industrial</option><option value="Código-fonte proprietário">Código-fonte proprietário</option></select></div>
                     </div>
                 </div>
 
-                <!-- PAÍSES DE INTERESSE PARA EXPOSIÇÃO -->
                 <div class="form-section">
-                    <div class="form-section-title">
-                        <i class="fas fa-globe-americas" style="color: #0a3147;"></i>
-                        <span class="lang-content active" data-lang="pt">Onde você quer que seu projeto seja visto?</span>
-                        <span class="lang-content" data-lang="en">Where do you want your project to be seen?</span>
-                        <span class="lang-content" data-lang="ar">أين تريد أن يُرى مشروعك؟</span>
+                    <div class="form-section-title"><i class="fas fa-user" style="color: #0a3147;"></i><span class="lang-content active" data-lang="pt">Sobre o proponente</span><span class="lang-content" data-lang="en">About the proponent</span><span class="lang-content" data-lang="ar">عن مقدم الطلب</span></div>
+                    <div class="form-grid">
+                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">Nome completo</span><span class="lang-content" data-lang="en">Full name</span><span class="lang-content" data-lang="ar">الاسم الكامل</span></label><input type="text" class="form-control" id="applicantName" required></div>
+                        <div class="form-group"><label class="required"><span class="lang-content active" data-lang="pt">E-mail para contato</span><span class="lang-content" data-lang="en">Contact email</span><span class="lang-content" data-lang="ar">البريد الإلكتروني للاتصال</span></label><input type="email" class="form-control" id="applicantEmail" required></div>
                     </div>
+                    <div class="form-grid">
+                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">País de residência</span><span class="lang-content" data-lang="en">Country of residence</span><span class="lang-content" data-lang="ar">بلد الإقامة</span></label><select class="form-control select" id="applicantCountry"><option value="">Selecione...</option><option value="Brasil">Brasil</option><option value="Portugal">Portugal</option><option value="Angola">Angola</option><option value="Moçambique">Moçambique</option><option value="EUA">EUA</option><option value="Reino Unido">Reino Unido</option><option value="Canadá">Canadá</option><option value="Austrália">Austrália</option><option value="Emirados Árabes">Emirados Árabes</option><option value="Arábia Saudita">Arábia Saudita</option><option value="Catar">Catar</option><option value="Kuwait">Kuwait</option><option value="Outro">Outro</option></select></div>
+                        <div class="form-group"><label><span class="lang-content active" data-lang="pt">LinkedIn / Website</span><span class="lang-content" data-lang="en">LinkedIn / Website</span><span class="lang-content" data-lang="ar">لينكد إن / موقع ويب</span></label><input type="url" class="form-control" id="applicantLinkedin" placeholder="https://..."></div>
+                    </div>
+                </div>
 
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                <div class="form-section">
+                    <div class="form-section-title"><i class="fas fa-globe-americas" style="color: #0a3147;"></i><span class="lang-content active" data-lang="pt">Onde você quer que seu projeto seja visto?</span><span class="lang-content" data-lang="en">Where do you want your project to be seen?</span><span class="lang-content" data-lang="ar">أين تريد أن يُرى مشروعك؟</span></div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;" id="countriesContainer">
                         <div class="checkbox-item"><input type="checkbox" id="country-br"><label for="country-br">Brasil 🇧🇷</label></div>
                         <div class="checkbox-item"><input type="checkbox" id="country-pt"><label for="country-pt">Portugal 🇵🇹</label></div>
                         <div class="checkbox-item"><input type="checkbox" id="country-ao"><label for="country-ao">Angola 🇦🇴</label></div>
@@ -420,66 +254,23 @@
                     </div>
                 </div>
 
-                <!-- CONTRATO MODELO -->
                 <div class="form-section" style="background: #f8f6f2; border-radius: 8px; padding: 2rem;">
-                    <div class="form-section-title">
-                        <i class="fas fa-file-contract" style="color: #0a3147;"></i>
-                        <span class="lang-content active" data-lang="pt">Contrato modelo</span>
-                        <span class="lang-content" data-lang="en">Standard contract</span>
-                        <span class="lang-content" data-lang="ar">عقد نموذجي</span>
-                    </div>
-                    
-                    <p style="margin-bottom: 1rem;">
-                        <span class="lang-content active" data-lang="pt">Quando um interessado contatar a AVZ Infra buscando seu projeto, disponibilizaremos um contrato modelo que poderá ser utilizado para formalizar a negociação diretamente entre as partes.</span>
-                        <span class="lang-content" data-lang="en">When an interested party contacts AVZ Infra looking for your project, we will provide a standard contract that can be used to formalize the negotiation directly between the parties.</span>
-                        <span class="lang-content" data-lang="ar">عندما يتصل طرف مهتم بـ AVZ Infra باحثًا عن مشروعك، سنقدم عقدًا نموذجيًا يمكن استخدامه لإضفاء الطابع الرسمي على التفاوض مباشرة بين الأطراف.</span>
-                    </p>
+                    <div class="form-section-title"><i class="fas fa-file-contract" style="color: #0a3147;"></i><span class="lang-content active" data-lang="pt">Contrato modelo</span><span class="lang-content" data-lang="en">Standard contract</span><span class="lang-content" data-lang="ar">عقد نموذجي</span></div>
+                    <p style="margin-bottom: 1rem;"><span class="lang-content active" data-lang="pt">Quando um interessado contatar a AVZ Infra buscando seu projeto, disponibilizaremos um contrato modelo que poderá ser utilizado para formalizar a negociação diretamente entre as partes.</span><span class="lang-content" data-lang="en">When an interested party contacts AVZ Infra looking for your project, we will provide a standard contract that can be used to formalize the negotiation directly between the parties.</span><span class="lang-content" data-lang="ar">عندما يتصل طرف مهتم بـ AVZ Infra باحثًا عن مشروعك، سنقدم عقدًا نموذجيًا يمكن استخدامه لإضفاء الطابع الرسمي على التفاوض مباشرة بين الأطراف.</span></p>
                 </div>
 
-                <!-- DECLARAÇÕES -->
                 <div class="form-section">
-                    <div class="checkbox-item" style="margin-bottom: 1rem;">
-                        <input type="checkbox" id="declaration1" required>
-                        <label for="declaration1">
-                            <span class="lang-content active" data-lang="pt"><strong>Declaro que sou o autor do projeto</strong> e possuo os direitos sobre ele.</span>
-                            <span class="lang-content" data-lang="en"><strong>I declare that I am the author of the project</strong> and own the rights to it.</span>
-                            <span class="lang-content" data-lang="ar"><strong>أعلن أنني مؤلف المشروع</strong> وأن لي الحقوق فيه.</span>
-                        </label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="declaration2" required>
-                        <label for="declaration2">
-                            <span class="lang-content active" data-lang="pt"><strong>Compreendo que a AVZ Infra não compra projetos</strong>, apenas oferece exposição em seu portfólio global.</span>
-                            <span class="lang-content" data-lang="en"><strong>I understand that AVZ Infra does not buy projects</strong>, only offers exposure in its global portfolio.</span>
-                            <span class="lang-content" data-lang="ar"><strong>أفهم أن AVZ Infra لا تشتري المشاريع</strong>، بل تقدم فقط عرضًا في محفظتها العالمية.</span>
-                        </label>
-                    </div>
+                    <div class="checkbox-item" style="margin-bottom: 1rem;"><input type="checkbox" id="declaration1" required><label for="declaration1"><span class="lang-content active" data-lang="pt"><strong>Declaro que sou o autor do projeto</strong> e possuo os direitos sobre ele.</span><span class="lang-content" data-lang="en"><strong>I declare that I am the author of the project</strong> and own the rights to it.</span><span class="lang-content" data-lang="ar"><strong>أعلن أنني مؤلف المشروع</strong> وأن لي الحقوق فيه.</span></label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="declaration2" required><label for="declaration2"><span class="lang-content active" data-lang="pt"><strong>Compreendo que a AVZ Infra não compra projetos</strong>, apenas oferece exposição em seu portfólio global.</span><span class="lang-content" data-lang="en"><strong>I understand that AVZ Infra does not buy projects</strong>, only offers exposure in its global portfolio.</span><span class="lang-content" data-lang="ar"><strong>أفهم أن AVZ Infra لا تشتري المشاريع</strong>، بل تقدم فقط عرضًا في محفظتها العالمية.</span></label></div>
                 </div>
 
-                <!-- FLUXO -->
                 <div class="form-section" style="background: #f0e8e0; border-radius: 8px; padding: 2rem;">
-                    <div class="form-section-title">
-                        <i class="fas fa-shield-alt" style="color: #0a3147;"></i>
-                        <span class="lang-content active" data-lang="pt">Próximos passos</span>
-                        <span class="lang-content" data-lang="en">Next steps</span>
-                        <span class="lang-content" data-lang="ar">الخطوات التالية</span>
-                    </div>
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
-                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">1</div><span style="font-size: 0.8rem;">Análise</span></div>
-                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">2</div><span style="font-size: 0.8rem;">Inclusão</span></div>
-                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">3</div><span style="font-size: 0.8rem;">Exposição</span></div>
-                        <div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">4</div><span style="font-size: 0.8rem;">Conexão</span></div>
-                    </div>
+                    <div class="form-section-title"><i class="fas fa-shield-alt" style="color: #0a3147;"></i><span class="lang-content active" data-lang="pt">Próximos passos</span><span class="lang-content" data-lang="en">Next steps</span><span class="lang-content" data-lang="ar">الخطوات التالية</span></div>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;"><div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">1</div><span style="font-size: 0.8rem;">Análise</span></div><div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">2</div><span style="font-size: 0.8rem;">Inclusão</span></div><div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">3</div><span style="font-size: 0.8rem;">Exposição</span></div><div><div style="width: 35px; height: 35px; background: #0a3147; color: white; border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center;">4</div><span style="font-size: 0.8rem;">Conexão</span></div></div>
                 </div>
 
-                <!-- BOTÃO -->
                 <div class="actions">
-                    <button class="btn btn-layer" onclick="submitToPortfolio()" style="background: #0a3147;">
-                        <i class="fas fa-paper-plane"></i>
-                        <span class="lang-content active" data-lang="pt">Enviar projeto para análise</span>
-                        <span class="lang-content" data-lang="en">Submit project for analysis</span>
-                        <span class="lang-content" data-lang="ar">إرسال المشروع للتحليل</span>
-                    </button>
+                    <button class="btn btn-layer" onclick="submitToPortfolio()" style="background: #0a3147;"><i class="fas fa-paper-plane"></i><span class="lang-content active" data-lang="pt">Enviar projeto para análise</span><span class="lang-content" data-lang="en">Submit project for analysis</span><span class="lang-content" data-lang="ar">إرسال المشروع للتحليل</span></button>
                 </div>
             </div>
         </div>
@@ -490,22 +281,65 @@
             <div class="logo" style="font-size: 1.4rem;">AVZ INFRA<span>Portfólio Global</span></div>
             <p style="color: #7B3F00; margin: 1rem 0;">12 países · 3 idiomas</p>
             <p style="font-size:0.8rem;">🇧🇷 Brasil · 🇵🇹 Portugal · 🇦🇴 Angola · 🇲🇿 Moçambique · 🇺🇸 EUA · 🇬🇧 Reino Unido · 🇨🇦 Canadá · 🇦🇺 Austrália · 🇦🇪 Emirados Árabes · 🇸🇦 Arábia Saudita · 🇶🇦 Catar · 🇰🇼 Kuwait</p>
-            <div style="margin: 2rem 0;">
-                <a href="https://avzinfra.com" target="_blank" style="color: #0a3147; text-decoration: none; font-weight: 500;">avzinfra.com</a>
-            </div>
-            <div class="legal-footer">
-                <p>© 2026 AVZ Infra. Todos os direitos reservados.</p>
-                <p style="font-size:0.7rem;">A AVZ Infra não compra projetos. Atuamos como vitrine e facilitadora de conexões.</p>
-            </div>
+            <div style="margin: 2rem 0;"><a href="https://avzinfra.com" target="_blank" style="color: #0a3147; text-decoration: none; font-weight: 500;">avzinfra.com</a></div>
+            <div class="legal-footer"><p>© 2026 AVZ Infra. Todos os direitos reservados.</p><p style="font-size:0.7rem;">A AVZ Infra não compra projetos. Atuamos como vitrine e facilitadora de conexões.</p></div>
         </div>
     </footer>
 
     <script>
-        // Configuração
-        const AVZ_CONFIG = {
-            INSTITUTIONAL_EMAIL: "avzproptech@outlook.com",
-            PORTFOLIO_VERSION: "2.0"
-        };
+        const AVZ_CONFIG = { INSTITUTIONAL_EMAIL: "avzproptech@outlook.com", PORTFOLIO_VERSION: "2.0" };
+        
+        // Funções globais para os botões
+        function updateMaturity(val) {
+            document.getElementById('maturityValue').textContent = val;
+            let gauge = document.getElementById('gaugeMaturity');
+            let deg = (val / 100) * 360;
+            gauge.style.background = `conic-gradient(#0a3147 ${deg}deg, #f0e8e0 0deg)`;
+            gauge.innerHTML = val + '<span>%</span>';
+            updateComposite();
+        }
+
+        function updateInnovation(val) {
+            document.getElementById('innovationValue').textContent = val;
+            let gauge = document.getElementById('gaugeInnovation');
+            let deg = (val / 100) * 360;
+            gauge.style.background = `conic-gradient(#0a3147 ${deg}deg, #f0e8e0 0deg)`;
+            gauge.innerHTML = val + '<span>%</span>';
+            updateComposite();
+        }
+
+        function updateClarity(val) {
+            let gauge = document.getElementById('gaugeClarity');
+            let deg = (val / 100) * 360;
+            gauge.style.background = `conic-gradient(#0a3147 ${deg}deg, #f0e8e0 0deg)`;
+            gauge.innerHTML = val + '<span>%</span>';
+            document.getElementById('clarityFill').style.width = val + '%';
+            document.getElementById('clarityFill').textContent = val + '%';
+            updateComposite();
+        }
+
+        function calculateClarity() {
+            let desc = document.getElementById('projectDescription').value;
+            let clarity = 30; // base
+            if (desc.length > 50) clarity += 15;
+            if (desc.length > 150) clarity += 15;
+            if (desc.includes('objetivo') || desc.includes('goal') || desc.includes('هدف')) clarity += 8;
+            if (desc.includes('tecnologia') || desc.includes('tech')) clarity += 7;
+            if (desc.includes('mercado') || desc.includes('market')) clarity += 7;
+            if (desc.includes('diferencial') || desc.includes('differential')) clarity += 8;
+            if (clarity > 95) clarity = 95;
+            updateClarity(clarity);
+        }
+
+        function updateComposite() {
+            let m = parseFloat(document.getElementById('maturitySlider').value) || 0;
+            let i = parseFloat(document.getElementById('innovationSlider').value) || 0;
+            let cText = document.getElementById('clarityFill').style.width;
+            let c = parseFloat(cText) || 48;
+            let avg = (m + i + c) / 3;
+            document.getElementById('compositeScore').innerHTML = avg.toFixed(1) + '<small>%</small>';
+            document.getElementById('compositeProgress').style.width = avg.toFixed(1) + '%';
+        }
 
         // Inicialização
         document.addEventListener('DOMContentLoaded', function() {
@@ -578,6 +412,11 @@
                     langArrow.style.transform = 'rotate(0)';
                 });
             });
+
+            // Inicializar valores
+            updateMaturity(35);
+            updateInnovation(72);
+            updateClarity(48);
         });
 
         function setLanguage(lang) {
@@ -593,7 +432,6 @@
         function submitToPortfolio() {
             const lang = document.documentElement.lang || 'pt';
             
-            // Validações básicas
             if (!document.getElementById('declaration1')?.checked || !document.getElementById('declaration2')?.checked) {
                 alert(lang === 'pt' ? 'Por favor, confirme as declarações.' :
                       lang === 'en' ? 'Please confirm the declarations.' :
@@ -615,14 +453,12 @@
                 return;
             }
 
-            // Coletar dados opcionais
             const valuationRange = document.getElementById('valuationRange')?.value || 'Não informado';
             const currentRevenue = document.getElementById('currentRevenue')?.value || 'Não informado';
             const ipStatus = document.getElementById('ipStatus')?.value || 'Não informado';
             const applicantCountry = document.getElementById('applicantCountry')?.value || 'Não informado';
             const applicantLinkedin = document.getElementById('applicantLinkedin')?.value || 'Não informado';
 
-            // Países selecionados
             const selectedCountries = [];
             const countryIds = ['br', 'pt', 'ao', 'mz', 'us', 'uk', 'ca', 'au', 'ae', 'sa', 'qa', 'kw'];
             countryIds.forEach(id => {
@@ -631,39 +467,28 @@
                 }
             });
 
-            // Construir email
+            // métricas atuais
+            let maturity = document.getElementById('maturitySlider').value;
+            let innovation = document.getElementById('innovationSlider').value;
+            let clarityFill = document.getElementById('clarityFill');
+            let clarity = clarityFill.style.width ? parseInt(clarityFill.style.width) : 48;
+            let composite = document.getElementById('compositeScore').innerText.replace('small', '').replace('%', '');
+
             const subject = encodeURIComponent(`[PORTFÓLIO] Projeto: ${projectName}`);
-            
             const body = encodeURIComponent(
                 `AVZ INFRA - SUBMISSÃO AO PORTFÓLIO GLOBAL\n` +
                 `========================================\n\n` +
-                `PROJETO:\n` +
-                `Nome: ${projectName}\n` +
-                `Categoria: ${projectCategory}\n` +
-                `Estágio: ${projectStage}\n` +
-                `Valuação pretendida: ${valuationRange}\n` +
-                `Receita atual: ${currentRevenue}\n` +
-                `Propriedade intelectual: ${ipStatus}\n\n` +
+                `PROJETO:\nNome: ${projectName}\nCategoria: ${projectCategory}\nEstágio: ${projectStage}\n` +
+                `Valuação pretendida: ${valuationRange}\nReceita atual: ${currentRevenue}\nPropriedade intelectual: ${ipStatus}\n\n` +
                 `DESCRIÇÃO:\n${projectDescription}\n\n` +
-                `PAÍSES DE INTERESSE:\n` +
-                `${selectedCountries.length > 0 ? selectedCountries.join(', ') : 'Todos'}\n\n` +
-                `PROPONENTE:\n` +
-                `Nome: ${applicantName}\n` +
-                `E-mail: ${applicantEmail}\n` +
-                `País: ${applicantCountry}\n` +
-                `LinkedIn: ${applicantLinkedin}\n\n` +
-                `DECLARAÇÕES CONFIRMADAS\n` +
-                `---\n` +
-                `Data: ${new Date().toLocaleString()}\n` +
-                `Idioma: ${lang}\n` +
-                `Protocolo: AVZ-${Date.now().toString().slice(-6)}`
+                `MÉTRICAS AUTOAVALIADAS:\nMaturidade: ${maturity}% | Inovação: ${innovation}% | Clareza: ${clarity}% | Média composta: ${composite}%\n\n` +
+                `PAÍSES DE INTERESSE: ${selectedCountries.length > 0 ? selectedCountries.join(', ') : 'Todos'}\n\n` +
+                `PROPONENTE:\nNome: ${applicantName}\nE-mail: ${applicantEmail}\nPaís: ${applicantCountry}\nLinkedIn: ${applicantLinkedin}\n\n` +
+                `DECLARAÇÕES CONFIRMADAS\n---\nData: ${new Date().toLocaleString()}\nIdioma: ${lang}\nProtocolo: AVZ-${Date.now().toString().slice(-6)}`
             );
-
-            // Abrir email
             window.location.href = `mailto:${AVZ_CONFIG.INSTITUTIONAL_EMAIL}?subject=${subject}&body=${body}`;
-
-            alert(lang === 'pt' ? '✅ Cliente de email aberto. Envie a mensagem para completar sua submissão.' :
-                  lang === 'en' ? '✅ Email client opened. Send the message to complete your submission.' :
+            alert(lang === 'pt' ? '✅ Cliente de email aberto. Envie a mensagem para completar sua submissão.' : 
+                  lang === 'en' ? '✅ Email client opened. Send the message to complete your submission.' : 
                   '✅ تم فتح عميل البريد الإلكتروني. أرسل الرسالة لإكمال تقديمك.');
         }
     </script>
