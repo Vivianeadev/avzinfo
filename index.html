@@ -193,7 +193,7 @@
             background: var(--gradient-gold);
         }
 
-        /* CARDS DOS EVENTOS */
+        /* CARDS DOS EVENTOS – APENAS BAIRROS, SEM DATAS */
         .event-cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -247,8 +247,8 @@
             margin-bottom: 0.5rem;
         }
         .event-neighborhood {
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--gold-dark);
             margin-bottom: 1rem;
             display: flex;
@@ -260,14 +260,6 @@
         .event-neighborhood i {
             color: var(--gold-primary);
             font-size: 1.2rem;
-        }
-        .event-date-detail {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin: 0.8rem 0;
-            color: var(--color-text-light);
-            font-weight: 500;
         }
         .event-description {
             margin: 1.2rem 0;
@@ -287,7 +279,7 @@
             color: var(--gold-primary);
             margin-right: 0.5rem;
         }
-        .event-status-confirmed {
+        .event-status {
             display: inline-block;
             background: rgba(212, 175, 55, 0.12);
             border: 1px solid rgba(212, 175, 55, 0.3);
@@ -396,6 +388,9 @@
             text-align: center;
             border-top: 1px solid rgba(212, 175, 55, 0.3);
         }
+        .footer p {
+            color: rgba(255, 255, 255, 0.8);
+        }
     </style>
 </head>
 <body>
@@ -418,7 +413,7 @@
 
     <section class="section" id="eventos-sp">
         <div class="container">
-            <h2 class="section-title">Agenda de Apresentações Estratégicas</h2>
+            <h2 class="section-title">Circuitos de Apresentação Estratégica</h2>
             <div class="event-cards-grid">
                 
                 <!-- LAPA -->
@@ -426,14 +421,13 @@
                     <div class="event-badge"><i class="fas fa-chalkboard-user"></i> APRESENTAÇÃO DE PORTFÓLIO</div>
                     <h3>Rodada Estratégica</h3>
                     <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Lapa • São Paulo</div>
-                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 10 de Abril, 2026 • 15h – 18h</div>
                     <div class="event-description">
                         Apresentação dos produtos do Programa IP: soluções em governança tecnológica, estruturação jurídica para ativos digitais e desenvolvimento sob demanda.
                     </div>
                     <div class="investment-note">
                         <i class="fas fa-hand-holding-usd"></i> <strong>Para investidores e parceiros:</strong> Envie sua proposta indicando o tipo de serviço desejado dentro do nosso nicho e oferte o valor de investimento para desenvolvimento de produto exclusivo.
                     </div>
-                    <div class="event-status-confirmed"><i class="fas fa-gem"></i> Reunião por agendamento prévio</div>
+                    <div class="event-status"><i class="fas fa-gem"></i> Reunião por agendamento prévio</div>
                     <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Enviar proposta de investimento</a>
                 </div>
 
@@ -442,14 +436,13 @@
                     <div class="event-badge"><i class="fas fa-chart-line"></i> RODADA DE NEGÓCIOS</div>
                     <h3>Apresentação Executiva</h3>
                     <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Santo Amaro • São Paulo</div>
-                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 28 de Maio, 2026 • 10h – 13h</div>
                     <div class="event-description">
                         Demonstração das soluções LAYER Governance e Exclusive Identity. Apresentação da capacidade técnica e jurídica do programa para desenvolvimento de produtos sob encomenda.
                     </div>
                     <div class="investment-note">
                         <i class="fas fa-file-contract"></i> <strong>Modelo de parceria:</strong> Você define o produto que deseja, especifica o serviço dentro do nosso ecossistema e apresenta a oferta de investimento.
                     </div>
-                    <div class="event-status-confirmed"><i class="fas fa-handshake"></i> Agendamento exclusivo</div>
+                    <div class="event-status"><i class="fas fa-handshake"></i> Agendamento exclusivo</div>
                     <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Apresentar sua oferta</a>
                 </div>
 
@@ -458,14 +451,13 @@
                     <div class="event-badge"><i class="fas fa-building"></i> CAPITAL & INOVAÇÃO</div>
                     <h3>Fórum de Investidores</h3>
                     <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Faria Lima • São Paulo</div>
-                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 17 de Junho, 2026 • 14h – 18h30</div>
                     <div class="event-description">
                         Apresentação institucional do Programa IP. Portfólio completo de ativos tecnológicos, capacidade de desenvolvimento e cases de estruturação jurídica para investidores qualificados.
                     </div>
                     <div class="investment-note">
                         <i class="fas fa-chart-simple"></i> <strong>Para fundos e investidores:</strong> Submeta sua proposta de investimento, especificando o produto exclusivo que deseja desenvolver em parceria conosco.
                     </div>
-                    <div class="event-status-confirmed"><i class="fas fa-chart-simple"></i> Encontros one-on-one</div>
+                    <div class="event-status"><i class="fas fa-chart-simple"></i> Encontros one-on-one</div>
                     <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Enviar proposta de parceria</a>
                 </div>
 
@@ -474,14 +466,13 @@
                     <div class="event-badge"><i class="fas fa-microchip"></i> ECOSSISTEMA TECH</div>
                     <h3>Rodada de Desenvolvimento</h3>
                     <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Osasco • Grande São Paulo</div>
-                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 4 de Setembro, 2026 • 09h – 12h</div>
                     <div class="event-description">
                         Apresentação da capacidade técnica do programa para desenvolvimento de soluções exclusivas. Conheça nossa metodologia de estruturação jurídica e governança aplicada.
                     </div>
                     <div class="investment-note">
                         <i class="fas fa-code"></i> <strong>Produtos sob demanda:</strong> Indique qual solução tecnológica você precisa, o tipo de serviço desejado e o valor do investimento proposto.
                     </div>
-                    <div class="event-status-confirmed"><i class="fas fa-users"></i> Vagas para parceiros estratégicos</div>
+                    <div class="event-status"><i class="fas fa-users"></i> Vagas para parceiros estratégicos</div>
                     <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Apresentar sua demanda</a>
                 </div>
             </div>
@@ -510,13 +501,13 @@
                             <input type="text" name="telefone" required placeholder="(11) 99999-9999">
                         </div>
                         <div class="form-group">
-                            <label><i class="fas fa-calendar-alt"></i> Evento de interesse</label>
-                            <select name="evento_interesse" required>
+                            <label><i class="fas fa-map-marker-alt"></i> Local de interesse</label>
+                            <select name="local_interesse" required>
                                 <option value="">Selecione o local</option>
-                                <option value="Lapa - 10/04/2026">Lapa • 10 de Abril, 2026</option>
-                                <option value="Santo Amaro - 28/05/2026">Santo Amaro • 28 de Maio, 2026</option>
-                                <option value="Faria Lima - 17/06/2026">Faria Lima • 17 de Junho, 2026</option>
-                                <option value="Osasco - 04/09/2026">Osasco • 4 de Setembro, 2026</option>
+                                <option value="Lapa">Lapa • São Paulo</option>
+                                <option value="Santo Amaro">Santo Amaro • São Paulo</option>
+                                <option value="Faria Lima">Faria Lima • São Paulo</option>
+                                <option value="Osasco">Osasco • Grande São Paulo</option>
                             </select>
                         </div>
                         <div class="form-group">
