@@ -2,13 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponte para Investidores – Estruturação para Criadores Independentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>IP Club | Rodadas de Apresentação Estratégica – São Paulo</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        /* VARIÁVEIS DE DESIGN - ATUALIZADAS PARA AZUL MARINHO E DOURADO */
+        /* ===== VARIÁVEIS LUXO – AZUL MARINHO & DOURADO ===== */
         :root {
             --color-primary: #0a3147;
             --color-primary-light: #1a4b6d;
@@ -19,8 +18,6 @@
             --color-text: #2b2b2b;
             --color-text-light: #4a4a4a;
             --color-bg: linear-gradient(135deg, #f9f5f0 0%, #faf0f4 100%);
-            
-            /* Transições e Efeitos */
             --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --shadow-luxury: 0 25px 50px rgba(10, 49, 71, 0.1);
             --shadow-gold: 0 8px 32px rgba(212, 175, 55, 0.3);
@@ -29,11 +26,7 @@
             --gradient-gold-subtle: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 228, 184, 0.1) 100%);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -42,10 +35,9 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
-            font-size: 15px;
         }
 
-        /* EFEITO DE PARTÍCULAS DOURADAS */
+        /* EFEITO PARTÍCULAS DOURADAS */
         .luxury-particles {
             position: fixed;
             top: 0;
@@ -53,9 +45,8 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -1;
+            z-index: 0;
         }
-
         .luxury-particle {
             position: absolute;
             background: radial-gradient(circle, var(--gold-primary) 0%, transparent 70%);
@@ -63,25 +54,14 @@
             opacity: 0;
             animation: floatLuxury 20s infinite linear;
         }
-
         @keyframes floatLuxury {
-            0% {
-                transform: translateY(100vh) rotate(0deg) scale(0.5);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.15;
-            }
-            90% {
-                opacity: 0.15;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg) scale(1);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.5); opacity: 0; }
+            10% { opacity: 0.15; }
+            90% { opacity: 0.15; }
+            100% { transform: translateY(-100px) rotate(360deg) scale(1); opacity: 0; }
         }
 
-        /* HEADER */
+        /* HEADER FIXO */
         .header {
             position: fixed;
             top: 0;
@@ -94,7 +74,6 @@
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
             box-shadow: 0 5px 20px rgba(10, 49, 71, 0.05);
         }
-
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -103,7 +82,6 @@
             align-items: center;
             padding: 0 2rem;
         }
-
         .logo {
             font-family: 'Cinzel', serif;
             font-size: 1.8rem;
@@ -114,7 +92,6 @@
             position: relative;
             padding-bottom: 8px;
         }
-
         .logo::after {
             content: '';
             position: absolute;
@@ -125,7 +102,6 @@
             background: var(--gradient-gold);
             box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
         }
-
         .logo span {
             display: block;
             font-size: 0.7rem;
@@ -136,307 +112,76 @@
             font-family: 'Marcellus', serif;
         }
 
-        /* MENU HAMBÚRGUER PARA MOBILE */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            z-index: 1002;
-            padding: 10px;
-        }
-
-        .hamburger span {
-            width: 28px;
-            height: 2px;
-            background: var(--gradient-gold);
-            margin: 3px 0;
-            transition: var(--transition);
-            border-radius: 2px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
-
-        /* MENU MOBILE */
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-menu a {
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 400;
-            transition: var(--transition);
-            position: relative;
-            font-size: 14px;
-            letter-spacing: .5px;
-            padding: 5px 0;
-        }
-
-        .nav-menu a:hover {
-            color: var(--gold-primary);
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--gradient-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        /* BOTÃO DE IDIOMA UNIFICADO */
-        .lang-toggle {
-            position: fixed;
-            top: 90px;
-            right: 20px;
-            z-index: 999;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        .back-link {
+            background: rgba(10, 49, 71, 0.05);
+            padding: 8px 20px;
             border-radius: 40px;
-            padding: 8px 16px;
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 8px 20px rgba(10, 49, 71, 0.12);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--color-primary);
+            font-size: 0.9rem;
             transition: var(--transition);
-            min-width: 120px;
-            justify-content: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-
-        .lang-toggle:hover {
+        .back-link i { color: var(--gold-primary); }
+        .back-link:hover {
+            background: var(--color-primary);
+            color: var(--gold-secondary);
             border-color: var(--gold-primary);
-            box-shadow: var(--shadow-gold);
             transform: translateY(-2px);
         }
 
-        .lang-toggle .current-lang {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-family: 'Cinzel', serif;
-            font-weight: 500;
-            color: var(--color-primary);
-        }
-
-        .lang-toggle .current-lang span {
-            font-size: 0.9rem;
-        }
-
-        .lang-toggle .lang-flag {
-            font-size: 1.2rem;
-        }
-
-        .lang-toggle .lang-arrow {
-            color: var(--gold-primary);
-            font-size: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-
-        .lang-dropdown {
-            position: absolute;
-            top: 110%;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 15px 30px rgba(10, 49, 71, 0.15);
-            padding: 8px 0;
-            min-width: 140px;
-            display: none;
-            overflow: hidden;
-            list-style: none;
-        }
-
-        .lang-dropdown.show {
-            display: block;
-        }
-
-        .lang-dropdown li {
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: var(--transition);
-            color: var(--color-text);
-            font-size: 0.9rem;
-        }
-
-        .lang-dropdown li:hover {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold-primary);
-        }
-
-        .lang-dropdown li.active {
-            background: var(--gradient-gold);
-            color: white;
-            font-weight: 500;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            min-height: calc(100vh - 80px);
+        /* HERO EXECUTIVO */
+        .hero-exec {
+            min-height: 45vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 6rem 2rem 4rem;
+            padding: 8rem 2rem 4rem;
             position: relative;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(10, 49, 71, 0.08) 0%, transparent 50%),
-                linear-gradient(135deg, rgb(249 245 240 / .95), rgb(250 240 244 / .95));
-            overflow: hidden;
+            background: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 70%, rgba(10, 49, 71, 0.05) 0%, transparent 70%);
         }
-
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
-        }
-
-        .hero h1 {
+        .hero-exec h1 {
             font-family: 'Cinzel', serif;
-            font-size: clamp(2.8rem, 6vw, 4rem);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            letter-spacing: 1px;
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
             color: var(--color-primary);
-            line-height: 1.2;
+            margin-bottom: 1rem;
         }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, #D4AF37 0%, #F4E4B8 50%, #B8860B 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-            font-weight: 600;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--color-primary);
-            margin-bottom: 3rem;
+        .hero-exec h1 span { background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-exec p {
+            font-size: 1.2rem;
             font-family: 'Marcellus', serif;
-            letter-spacing: .5px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
+            color: var(--color-text-light);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        /* BOTÕES - ATUALIZADOS */
-        .btn {
-            padding: 1.2rem 2.8rem;
-            border: none;
-            border-radius: 2px;
-            font-weight: 500;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            transition: var(--transition);
-            cursor: pointer;
-            font-size: 14px;
-            position: relative;
-            overflow: hidden;
-            letter-spacing: .5px;
-            font-family: 'Inter', sans-serif;
-            text-transform: uppercase;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.7s ease;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: var(--gradient-gold);
-            color: var(--color-primary);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-gold-strong);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--color-primary);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--gold-primary);
-            color: var(--gold-primary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        /* SEÇÕES */
+        /* SEÇÃO PRINCIPAL */
         .section {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             position: relative;
-            background: rgb(255 255 255 / .8);
+            background: rgba(255, 255, 255, 0.7);
         }
-
-        .section-light {
-            background: linear-gradient(135deg, #f5f1ec 0%, #f7ecec 100%);
-        }
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
         }
-
         .section-title {
             font-family: 'Cinzel', serif;
             font-size: clamp(2rem, 4vw, 2.8rem);
             text-align: center;
-            margin-bottom: 4rem;
-            font-weight: 400;
-            letter-spacing: 1px;
+            margin-bottom: 3rem;
             color: var(--color-primary);
             position: relative;
             padding-bottom: 20px;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
@@ -446,29 +191,25 @@
             width: 80px;
             height: 3px;
             background: var(--gradient-gold);
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
 
-        /* CARDS GRID */
-        .cards-grid {
+        /* CARDS DOS EVENTOS */
+        .event-cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
         }
-
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            padding: 3rem 2.5rem;
-            text-align: center;
-            border: 1px solid rgba(212, 175, 55, 0.15);
+        .event-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             transition: var(--transition);
+            box-shadow: 0 12px 28px rgba(10, 49, 71, 0.05);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
-
-        .card::before {
+        .event-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -476,1122 +217,413 @@
             width: 100%;
             height: 4px;
             background: var(--gradient-gold);
-            transform: translateX(-100%);
-            transition: transform 0.5s ease;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
         }
-
-        .card:hover {
-            transform: translateY(-10px);
+        .event-card:hover {
+            transform: translateY(-8px);
             border-color: var(--gold-primary);
             box-shadow: var(--shadow-luxury);
         }
+        .event-card:hover::before { transform: scaleX(1); }
 
-        .card:hover::before {
-            transform: translateX(0);
+        .event-badge {
+            display: inline-block;
+            background: var(--gradient-gold-subtle);
+            color: var(--gold-dark);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
-
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--gold-primary);
-            text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-        }
-
-        .card h3 {
+        .event-card h3 {
             font-family: 'Cinzel', serif;
             font-size: 1.6rem;
             color: var(--color-primary);
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        .card p,
-        .event-description {
-            color: var(--color-text-light);
-            font-size: 1rem;
-            line-height: 1.7;
-            font-family: 'Marcellus', serif;
-        }
-
-        /* BENEFIT ITEMS */
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 12px;
-            border-left: 3px solid var(--gold-primary);
-        }
-
-        .benefit-icon {
-            color: var(--gold-primary);
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
-        }
-
-        .benefit-item h4 {
-            font-family: 'Cinzel', serif;
-            color: var(--color-primary);
             margin-bottom: 0.5rem;
-            font-weight: 600;
         }
-
-        .benefit-item p {
-            color: var(--color-text-light);
-        }
-
-        /* COORDINATOR SECTION */
-        .coordinator-section {
-            background: linear-gradient(135deg, rgb(249 245 240 / .7) 0%, rgb(250 240 244 / .7) 100%);
-            border-radius: 16px;
-            padding: 3rem;
-            margin: 3rem 0;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        .coordinator-grid {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .coordinator-photo {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #f5f1ec 0%, #f7ecec 100%);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            box-shadow: 0 8px 25px rgba(10, 49, 71, 0.08);
-        }
-
-        .coordinator-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .manifesto-text {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--color-text-light);
-        }
-
-        .manifesto-text p {
-            margin-bottom: 1.2rem;
-            font-family: 'Marcellus', serif;
-        }
-
-        .manifesto-text strong {
-            color: var(--color-primary);
-        }
-
-        /* EVENTOS */
-        .event-date, .event-location {
-            font-size: 0.9rem;
-            color: var(--color-text-light);
-            margin: 0.5rem 0;
+        .event-neighborhood {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--gold-dark);
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
+            gap: 0.6rem;
+            border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+            padding-bottom: 0.5rem;
+        }
+        .event-neighborhood i {
+            color: var(--gold-primary);
+            font-size: 1.2rem;
+        }
+        .event-date-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 0.8rem 0;
+            color: var(--color-text-light);
+            font-weight: 500;
+        }
+        .event-description {
+            margin: 1.2rem 0;
+            font-family: 'Marcellus', serif;
+            color: var(--color-text-light);
+            line-height: 1.5;
+        }
+        .investment-note {
+            background: rgba(212, 175, 55, 0.08);
+            padding: 1rem;
+            border-radius: 16px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--gold-primary);
+            font-size: 0.85rem;
+        }
+        .investment-note i {
+            color: var(--gold-primary);
+            margin-right: 0.5rem;
+        }
+        .event-status-confirmed {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold-dark);
+            margin-top: 0.5rem;
+        }
+        .btn-outline-gold {
+            margin-top: 1.2rem;
+            background: transparent;
+            border: 1px solid var(--gold-primary);
+            padding: 0.7rem 1.6rem;
+            border-radius: 40px;
+            color: var(--color-primary);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            width: 100%;
+            justify-content: center;
+        }
+        .btn-outline-gold:hover {
+            background: var(--gradient-gold);
+            color: var(--color-primary);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-3px);
+        }
+        .proposal-form {
+            margin-top: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: var(--shadow-luxury);
+        }
+        .proposal-form h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
             gap: 0.5rem;
         }
-
-        .event-date i, .event-location i {
-            color: var(--gold-primary);
-            width: 1.2rem;
+        .form-group.full-width {
+            grid-column: span 2;
         }
-
-        .event-status {
-            display: inline-block;
-            padding: 0.5rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .form-group label {
             font-weight: 500;
-            letter-spacing: 0.5px;
-            margin-top: 1rem;
-            background: rgba(212, 175, 55, 0.08);
-            border: 1px solid rgba(212, 175, 55, 0.2);
             color: var(--color-primary);
-            font-family: 'Marcellus', serif;
+            font-size: 0.85rem;
         }
-
-        .status-confirmado {
-            background: rgba(40, 167, 69, 0.08);
-            border-color: rgba(40, 167, 69, 0.2);
-            color: #28a745;
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            background: white;
+            transition: var(--transition);
         }
-
-        .status-a-confirmar {
-            background: rgba(255, 193, 7, 0.08);
-            border-color: rgba(255, 193, 7, 0.2);
-            color: #b76e00;
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
         }
-
-        /* FOOTER */
+        .btn-submit {
+            background: var(--gradient-gold);
+            color: var(--color-primary);
+            border: none;
+            padding: 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+        @media (max-width: 768px) {
+            .event-cards-grid { grid-template-columns: 1fr; }
+            .hero-exec { padding-top: 7rem; }
+            .nav-container { padding: 0 1.2rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+        }
         .footer {
             background: var(--color-primary);
             color: white;
-            padding: 4rem 2rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--gradient-gold);
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            font-family: 'Marcellus', serif;
-        }
-
-        .footer p:last-child {
-            color: var(--gold-secondary);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.2rem;
-            transition: var(--transition);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .social-links a:hover {
-            color: var(--gold-primary);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-gold);
-            border-color: var(--gold-primary);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        /* LANGUAGE CONTENT */
-        .lang-content {
-            display: none;
-        }
-
-        .lang-content.active {
-            display: block;
-        }
-
-        .nav-menu .lang-content.active,
-        .btn .lang-content.active,
-        .card .lang-content.active {
-            display: inline-block;
-        }
-
-        /* DISCREET NOTE */
-        .discreet-note {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-            margin-top: 0.5rem;
-            line-height: 1.5;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        .discreet-note i {
-            color: var(--gold-primary);
-            margin-right: 0.3rem;
-        }
-
-        body[dir="rtl"] .discreet-note i {
-            margin-right: 0;
-            margin-left: 0.3rem;
-        }
-
-        /* UTILITIES */
-        .text-center {
-            text-align: center;
-        }
-
-        .mb-3 {
-            margin-bottom: 3rem;
-        }
-
-        /* RTL SUPPORT */
-        body[dir="rtl"] .logo::after {
-            left: auto;
-            right: 0;
-        }
-        
-        body[dir="rtl"] .section-title::after {
-            left: auto;
-            right: 50%;
-            transform: translateX(50%);
-        }
-        
-        body[dir="rtl"] .benefit-item {
-            border-left: none;
-            border-right: 3px solid var(--gold-primary);
-        }
-        
-        body[dir="rtl"] .lang-content[data-lang="ar"] {
-            text-align: right;
-            direction: rtl;
-        }
-
-        body[dir="rtl"] .manifesto-text p[style*="border-left"] {
-            border-left: none;
-            border-right: 2px solid var(--gold-primary);
-            padding-left: 0;
-            padding-right: 1rem;
-        }
-
-        /* RESPONSIVIDADE COM MENU HAMBÚRGUER */
-        @media (max-width: 1024px) {
-            .nav-menu {
-                gap: 1.5rem;
-            }
-            
-            .lang-toggle {
-                top: 85px;
-                right: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            /* Mostrar hambúrguer */
-            .hamburger {
-                display: flex;
-            }
-
-            /* Esconder menu desktop */
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 280px;
-                height: 100vh;
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(20px);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                box-shadow: -10px 0 30px rgba(10, 49, 71, 0.1);
-                border-left: 1px solid rgba(212, 175, 55, 0.2);
-                z-index: 1001;
-                padding: 2rem;
-            }
-
-            .nav-menu.active {
-                right: 0;
-            }
-
-            .nav-menu a {
-                font-size: 1.2rem;
-                padding: 10px 0;
-            }
-
-            .nav-menu a::after {
-                bottom: 0;
-            }
-
-            /* Overlay escuro quando menu está aberto */
-            .menu-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(3px);
-                z-index: 1000;
-                display: none;
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
-
-            .menu-overlay.active {
-                display: block;
-                opacity: 1;
-            }
-
-            .hero {
-                padding: 5rem 1.5rem 3rem;
-            }
-            
-            .lang-toggle {
-                top: 75px;
-                right: 10px;
-                min-width: 100px;
-                padding: 6px 12px;
-            }
-            
-            .section {
-                padding: 4rem 1.5rem;
-            }
-            
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .card {
-                padding: 2rem;
-            }
-
-            .coordinator-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .coordinator-section {
-                padding: 2rem;
-                margin: 2rem 0;
-            }
-            
-            .btn {
-                padding: 1rem 2rem;
-                font-size: 0.9rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .benefit-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                border-left: none;
-                border-top: 3px solid var(--gold-primary);
-                padding: 1.5rem;
-            }
-
-            body[dir="rtl"] .benefit-item {
-                border-right: none;
-                border-top: 3px solid var(--gold-primary);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
-            
-            .logo {
-                font-size: 1.5rem;
-            }
-            
-            .logo span {
-                font-size: 0.6rem;
-            }
-            
-            .hero {
-                padding: 4rem 1rem 2.5rem;
-            }
-            
-            .section {
-                padding: 3rem 1rem;
-            }
-            
-            .lang-toggle {
-                top: 70px;
-                right: 8px;
-                min-width: 90px;
-                padding: 5px 10px;
-            }
-            
-            .lang-toggle .current-lang span {
-                font-size: 0.8rem;
-            }
-
-            .nav-menu {
-                width: 100%;
-                border-left: none;
-            }
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
         }
     </style>
 </head>
 <body>
-    <!-- Efeito de Partículas de Luxo -->
-    <div class="luxury-particles" id="luxuryParticles"></div>
+<div class="luxury-particles" id="luxuryParticles"></div>
 
-    <!-- Menu Overlay (fundo escuro) -->
-    <div class="menu-overlay" id="menuOverlay"></div>
+<header class="header">
+    <div class="nav-container">
+        <div class="logo">PROGRAMA IP<span>Ponte para Investidores</span></div>
+        <a href="javascript:history.back()" class="back-link"><i class="fas fa-arrow-left"></i> Voltar à página principal</a>
+    </div>
+</header>
 
-    <!-- Botão de Idioma Unificado -->
-    <div class="lang-toggle" id="langToggle">
-        <div class="current-lang" id="currentLang">
-            <span class="lang-flag">🇧🇷</span>
-            <span>Português</span>
+<main>
+    <div class="hero-exec">
+        <div class="hero-exec-content">
+            <h1><span>Rodadas de Apresentação</span> • São Paulo</h1>
+            <p>Apresentamos nosso portfólio de soluções tecnológicas e estruturação jurídica para investidores e parceiros estratégicos. Você define o investimento e o produto exclusivo que deseja que desenvolvamos para o seu negócio.</p>
         </div>
-        <i class="fas fa-chevron-down lang-arrow" id="langArrow"></i>
-        <ul class="lang-dropdown" id="langDropdown">
-            <li data-lang="pt" class="active">
-                <span class="lang-flag">🇧🇷</span>
-                <span>Português</span>
-            </li>
-            <li data-lang="en">
-                <span class="lang-flag">🇺🇸</span>
-                <span>English</span>
-            </li>
-            <li data-lang="ar">
-                <span class="lang-flag">🇸🇦</span>
-                <span>العربية</span>
-            </li>
-        </ul>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div>
-                <div class="logo">PROGRAMA IP<span>Ponte para Investidores</span></div>
-            </div>
-            
-            <!-- Hambúrguer Menu (visível apenas em mobile) -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <!-- Menu de Navegação -->
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#convite">
-                    <span class="lang-content active" data-lang="pt">Convite</span>
-                    <span class="lang-content" data-lang="en">Invitation</span>
-                    <span class="lang-content" data-lang="ar">دعوة</span>
-                </a></li>
-                <li><a href="#coordenadora">
-                    <span class="lang-content active" data-lang="pt">Manifesto</span>
-                    <span class="lang-content" data-lang="en">Manifesto</span>
-                    <span class="lang-content" data-lang="ar">بيان</span>
-                </a></li>
-                <li><a href="#beneficios">
-                    <span class="lang-content active" data-lang="pt">Benefícios</span>
-                    <span class="lang-content" data-lang="en">Benefits</span>
-                    <span class="lang-content" data-lang="ar">فوائد</span>
-                </a></li>
-                <li><a href="#como-funciona">
-                    <span class="lang-content active" data-lang="pt">Como Funciona</span>
-                    <span class="lang-content" data-lang="en">How It Works</span>
-                    <span class="lang-content" data-lang="ar">كيف يعمل</span>
-                </a></li>
-                <li><a href="#eventos">
-                    <span class="lang-content active" data-lang="pt">Eventos</span>
-                    <span class="lang-content" data-lang="en">Events</span>
-                    <span class="lang-content" data-lang="ar">الفعاليات</span>
-                </a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>
-                <span class="lang-content active" data-lang="pt">Ponte Direta para <span>Investidores</span></span>
-                <span class="lang-content" data-lang="en">Direct Bridge to <span>Investors</span></span>
-                <span class="lang-content" data-lang="ar">جسر مباشر إلى <span>المستثمرين</span></span>
-            </h1>
-            
-            <p class="hero-subtitle">
-                <span class="lang-content active" data-lang="pt">Conectamos talentos independentes e projetos inovadores diretamente com investidores reais. Estrutura institucional para profissionais, freelancers e iniciantes.</span>
-                <span class="lang-content" data-lang="en">We connect independent talents and innovative projects directly with real investors. Institutional structure for professionals, freelancers, and beginners.</span>
-                <span class="lang-content" data-lang="ar">نحن نربط المواهب المستقلة والمشاريع المبتكرة مباشرة بالمستثمرين الحقيقيين. هيكل مؤسسي للمحترفين والمستقلين والمبتدئين.</span>
-            </p>
-            
-            <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="layer-governance.html" class="btn btn-primary" id="developer-invitation-link">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span class="lang-content active" data-lang="pt">Conheça o Convite para Desenvolvedores</span>
-                    <span class="lang-content" data-lang="en">View Developer Invitation</span>
-                    <span class="lang-content" data-lang="ar">شاهد دعوة المطورين</span>
-                </a>
-                <a href="#beneficios" class="btn btn-secondary">
-                    <i class="fas fa-user-tie"></i>
-                    <span class="lang-content active" data-lang="pt">Benefícios para Profissionais</span>
-                    <span class="lang-content" data-lang="en">Professional Benefits</span>
-                    <span class="lang-content" data-lang="ar">فوائد للمحترفين</span>
-                </a>
-            </div>
-            <div class="discreet-note" style="margin-top: 1rem;">
-                <span class="lang-content active" data-lang="pt">
-                    <i class="fas fa-arrow-right"></i> Desenvolvedores: preencha seus dados para valuation do seu ativo e envie seu material para apresentação a potenciais compradores.
-                </span>
-                <span class="lang-content" data-lang="en">
-                    <i class="fas fa-arrow-right"></i> Developers: fill in your details for asset valuation and submit your material for presentation to potential buyers.
-                </span>
-                <span class="lang-content" data-lang="ar">
-                    <i class="fas fa-arrow-left"></i> المطورون: قم بتعبئة بياناتك لتقييم أصولك وإرسال المواد الخاصة بك لعرضها على المشترين المحتملين.
-                </span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção: Convite -->
-    <section id="convite" class="section">
+    <section class="section" id="eventos-sp">
         <div class="container">
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Ponte Direta</span>
-                        <span class="lang-content" data-lang="en">Direct Bridge</span>
-                        <span class="lang-content" data-lang="ar">جسر مباشر</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Conectamos criadores e profissionais independentes diretamente com investidores interessados em tecnologia e inovação.</span>
-                        <span class="lang-content" data-lang="en">We connect creators and independent professionals directly with investors interested in technology and innovation.</span>
-                        <span class="lang-content" data-lang="ar">نربط المبدعين والمحترفين المستقلين مباشرة بمستثمرين مهتمين بالتكنولوجيا والابتكار.</span>
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-filter"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Seleção Técnica</span>
-                        <span class="lang-content" data-lang="en">Technical Selection</span>
-                        <span class="lang-content" data-lang="ar">اختيار تقني</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Identificamos projetos de mérito desenvolvidos por talentos independentes. Realizamos curadoria técnica e apresentamos aos investidores.</span>
-                        <span class="lang-content" data-lang="en">We identify meritorious projects developed by independent talents. We perform technical curation and present to investors.</span>
-                        <span class="lang-content" data-lang="ar">نحدد المشاريع الجديرة المطورة من قبل المواهب المستقلة. نقوم بالتقييم التقني ونقدم للمستثمرين.</span>
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Destino Intelectual</span>
-                        <span class="lang-content" data-lang="en">Intellectual Destination</span>
-                        <span class="lang-content" data-lang="ar">وجهة فكرية</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Projetos que teriam ficado restritos ao portfólio pessoal ganham oportunidade de se tornarem produtos ou empresas com estrutura jurídica adequada.</span>
-                        <span class="lang-content" data-lang="en">Projects that would have remained restricted to personal portfolios gain the opportunity to become products or companies with proper legal structure.</span>
-                        <span class="lang-content" data-lang="ar">المشاريع التي كانت ستقتصر على المحفظة الشخصية تحصل على فرصة لتصبح منتجات أو شركات بهيكل قانوني مناسب.</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção: Manifesto da Idealizadora -->
-    <section id="coordenadora" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Manifesto da Idealizadora</span>
-                <span class="lang-content" data-lang="en">Founder's Manifesto</span>
-                <span class="lang-content" data-lang="ar">بيان المؤسسة</span>
-            </h2>
-            
-            <div class="coordinator-section">
-                <div class="coordinator-grid">
-                    <div class="coordinator-photo">
-                        <img src="photo-coordenadora.jpg" alt="Idealizadora do Programa">
+            <h2 class="section-title">Agenda de Apresentações Estratégicas</h2>
+            <div class="event-cards-grid">
+                
+                <!-- LAPA -->
+                <div class="event-card">
+                    <div class="event-badge"><i class="fas fa-chalkboard-user"></i> APRESENTAÇÃO DE PORTFÓLIO</div>
+                    <h3>Rodada Estratégica</h3>
+                    <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Lapa • São Paulo</div>
+                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 10 de Abril, 2026 • 15h – 18h</div>
+                    <div class="event-description">
+                        Apresentação dos produtos do Programa IP: soluções em governança tecnológica, estruturação jurídica para ativos digitais e desenvolvimento sob demanda.
                     </div>
+                    <div class="investment-note">
+                        <i class="fas fa-hand-holding-usd"></i> <strong>Para investidores e parceiros:</strong> Envie sua proposta indicando o tipo de serviço desejado dentro do nosso nicho e oferte o valor de investimento para desenvolvimento de produto exclusivo.
+                    </div>
+                    <div class="event-status-confirmed"><i class="fas fa-gem"></i> Reunião por agendamento prévio</div>
+                    <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Enviar proposta de investimento</a>
+                </div>
+
+                <!-- SANTO AMARO -->
+                <div class="event-card">
+                    <div class="event-badge"><i class="fas fa-chart-line"></i> RODADA DE NEGÓCIOS</div>
+                    <h3>Apresentação Executiva</h3>
+                    <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Santo Amaro • São Paulo</div>
+                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 28 de Maio, 2026 • 10h – 13h</div>
+                    <div class="event-description">
+                        Demonstração das soluções LAYER Governance e Exclusive Identity. Apresentação da capacidade técnica e jurídica do programa para desenvolvimento de produtos sob encomenda.
+                    </div>
+                    <div class="investment-note">
+                        <i class="fas fa-file-contract"></i> <strong>Modelo de parceria:</strong> Você define o produto que deseja, especifica o serviço dentro do nosso ecossistema e apresenta a oferta de investimento.
+                    </div>
+                    <div class="event-status-confirmed"><i class="fas fa-handshake"></i> Agendamento exclusivo</div>
+                    <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Apresentar sua oferta</a>
+                </div>
+
+                <!-- FARIA LIMA -->
+                <div class="event-card">
+                    <div class="event-badge"><i class="fas fa-building"></i> CAPITAL & INOVAÇÃO</div>
+                    <h3>Fórum de Investidores</h3>
+                    <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Faria Lima • São Paulo</div>
+                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 17 de Junho, 2026 • 14h – 18h30</div>
+                    <div class="event-description">
+                        Apresentação institucional do Programa IP. Portfólio completo de ativos tecnológicos, capacidade de desenvolvimento e cases de estruturação jurídica para investidores qualificados.
+                    </div>
+                    <div class="investment-note">
+                        <i class="fas fa-chart-simple"></i> <strong>Para fundos e investidores:</strong> Submeta sua proposta de investimento, especificando o produto exclusivo que deseja desenvolver em parceria conosco.
+                    </div>
+                    <div class="event-status-confirmed"><i class="fas fa-chart-simple"></i> Encontros one-on-one</div>
+                    <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Enviar proposta de parceria</a>
+                </div>
+
+                <!-- OSASCO -->
+                <div class="event-card">
+                    <div class="event-badge"><i class="fas fa-microchip"></i> ECOSSISTEMA TECH</div>
+                    <h3>Rodada de Desenvolvimento</h3>
+                    <div class="event-neighborhood"><i class="fas fa-location-dot"></i> Osasco • Grande São Paulo</div>
+                    <div class="event-date-detail"><i class="fas fa-calendar-alt"></i> 4 de Setembro, 2026 • 09h – 12h</div>
+                    <div class="event-description">
+                        Apresentação da capacidade técnica do programa para desenvolvimento de soluções exclusivas. Conheça nossa metodologia de estruturação jurídica e governança aplicada.
+                    </div>
+                    <div class="investment-note">
+                        <i class="fas fa-code"></i> <strong>Produtos sob demanda:</strong> Indique qual solução tecnológica você precisa, o tipo de serviço desejado e o valor do investimento proposto.
+                    </div>
+                    <div class="event-status-confirmed"><i class="fas fa-users"></i> Vagas para parceiros estratégicos</div>
+                    <a href="#proposta" class="btn-outline-gold"><i class="fas fa-paper-plane"></i> Apresentar sua demanda</a>
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO DE PROPOSTA -->
+            <div class="proposal-form" id="proposta">
+                <h3><i class="fas fa-pen-alt" style="color: var(--gold-primary);"></i> Envie sua Proposta de Investimento</h3>
+                <p style="text-align: center; color: var(--color-text-light); margin-bottom: 1rem;">Para participar das rodadas de apresentação, preencha o formulário abaixo com sua proposta. Após análise, entraremos em contato para agendamento.</p>
+                
+                <form id="investmentProposalForm" action="https://formsubmit.co/avzproptech@outlook.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nova Proposta de Investimento - Programa IP">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://avzproptech.com.br/obrigado.html">
                     
-                    <div class="manifesto-text">
-                        <div class="lang-content active" data-lang="pt">
-                            <p><strong>Por anos, caminhei por um território onde quase ninguém olhava para a tecnologia como estrutura de direitos.</strong> Eu estudava Direito, observando sistemas, contratos, soberania, propriedade, responsabilidade. Enquanto muitos viam apenas código, eu via algo maior: arquiteturas jurídicas invisíveis que sustentam, ou derrubam o futuro.</p>
-                            <p>Sempre carreguei o desejo profundo de criar algo verdadeiramente valioso para a humanidade. Não como produto vazio, mas como instrumento legítimo, capaz de organizar, proteger e dar destino real à criação intelectual das pessoas. O problema nunca foi a visão. O problema era simples: faltava o instrumento certo.</p>
-                            <p>Hoje, esse instrumento existe.</p>
-                            <p>Este programa nasce como uma ponte formal e segura entre a produção intelectual independente e o mercado real. Uma estrutura pensada não apenas para funcionar tecnicamente, mas para respeitar direitos, autoria, propriedade intelectual e responsabilidade. Nada aqui é improviso. Tudo foi desenhado com base jurídica, clareza e propósito.</p>
-                            <p>Não falamos apenas com desenvolvedores. Falamos com criadores. Com profissionais, freelancers e inovadores que constroem soluções reais, mas que esbarram em um mercado desorganizado, muitas vezes predatório, onde boas ideias são absorvidas sem proteção ou reconhecimento.</p>
-                            <p>Convidamos talentos independentes que compartilham dessa visão. Profissionais que entendem que conhecimento não pode ficar restrito a portfólios pessoais. Que acreditam que sua produção intelectual merece destino, proteção e impacto real, sem perder sua integridade jurídica.</p>
-                            <p>Tudo o que foi criado aqui carrega a marca do Direito aplicado à tecnologia. Um olhar que entende que inovação só é sustentável quando respeita regras, direitos e responsabilidades.</p>
-                            <p style="font-style: italic; margin-top: 2rem; color: var(--color-primary); border-left: 2px solid var(--gold-primary); padding-left: 1rem;">
-                                "Se você acredita que o futuro da tecnologia precisa de mais do que código — precisa de estrutura, ética e fundamento legal, então você entende exatamente por que este programa existe.<br>E nasce do Direito, para organizar o futuro que a tecnologia insiste em criar sem regras."
-                            </p>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Nome completo</label>
+                            <input type="text" name="nome" required placeholder="Seu nome">
                         </div>
-                        
-                        <div class="lang-content" data-lang="en">
-                            <p><strong>For years, I walked through a territory where almost no one looked at technology as a structure of rights.</strong> I studied Law, observing systems, contracts, sovereignty, property, responsibility. While many saw only code, I saw something greater: invisible legal architectures that support, or bring down, the future.</p>
-                            <p>I always carried the deep desire to create something truly valuable for humanity. Not as an empty product, but as a legitimate instrument, capable of organizing, protecting, and giving real purpose to people's intellectual creations. The problem was never the vision. The problem was simple: the right instrument was missing.</p>
-                            <p>Today, that instrument exists.</p>
-                            <p>This program is born as a formal and secure bridge between independent intellectual production and the real market. A structure designed not only to function technically, but to respect rights, authorship, intellectual property, and responsibility. Nothing here is improvised. Everything was designed with legal basis, clarity, and purpose.</p>
-                            <p>We don't just talk to developers. We talk to creators. To professionals, freelancers, and innovators who build real solutions, but who stumble upon a disorganized, often predatory market, where good ideas are absorbed without protection or recognition.</p>
-                            <p>We invite independent talents who share this vision. Professionals who understand that knowledge cannot be restricted to personal portfolios. That believe their intellectual production deserves purpose, protection, and real impact, without losing its legal integrity.</p>
-                            <p>Everything created here carries the mark of Law applied to technology. A perspective that understands that innovation is only sustainable when it respects rules, rights, and responsibilities.</p>
-                            <p style="font-style: italic; margin-top: 2rem; color: var(--color-primary); border-left: 2px solid var(--gold-primary); padding-left: 1rem;">
-                                "If you believe that the future of technology needs more than code — it needs structure, ethics, and legal foundation, then you understand exactly why this program exists.<br>And it is born from Law, to organize the future that technology insists on creating without rules."
-                            </p>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> E-mail</label>
+                            <input type="email" name="email" required placeholder="contato@exemplo.com">
                         </div>
-                        
-                        <div class="lang-content" data-lang="ar">
-                            <p style="text-align: right;"><strong>لسنوات، سلكت طريقًا لم ينظر فيه أحد تقريبًا إلى التكنولوجيا كبنية للحقوق.</strong> درست القانون، وراقبت الأنظمة والعقود والسيادة والملكية والمسؤولية. بينما رأى الكثيرون مجرد رمز برمجي، رأيت شيئًا أكبر: هياكل قانونية خفية تدعم المستقبل أو تسقطه.</p>
-                            <p style="text-align: right;">لطالما حملت الرغبة العميقة في إنشاء شيء ذي قيمة حقيقية للبشرية. ليس كمنتج فارغ، ولكن كأداة شرعية، قادرة على تنظيم وحماية وإعطاء هدف حقيقي للإبداعات الفكرية للناس. لم تكن المشكلة أبدًا في الرؤية. كانت المشكلة بسيطة: الأداة المناسبة كانت مفقودة.</p>
-                            <p style="text-align: right;">اليوم، هذه الأداة موجودة.</p>
-                            <p style="text-align: right;">يولد هذا البرنامج كجسر رسمي وآمن بين الإنتاج الفكري المستقل والسوق الحقيقي. هيكل مصمم ليس فقط ليعمل تقنيًا، بل لاحترام الحقوق والمؤلفية والملكية الفكرية والمسؤولية. لا شيء هنا مرتجل. كل شيء صُمم بأساس قانوني ووضوح وهدف.</p>
-                            <p style="text-align: right;">لا نتحدث فقط مع المطورين. نتحدث مع المبدعين. مع المحترفين والمستقلين والمبتكرين الذين يبنون حلولاً حقيقية، لكنهم يصطدمون بسوق غير منظم، وغالبًا ما يكون مفترسًا، حيث تُستوعب الأفكار الجيدة دون حماية أو اعتراف.</p>
-                            <p style="text-align: right;">ندعو المواهب المستقلة التي تشارك هذه الرؤية. المحترفين الذين يفهمون أن المعرفة لا يمكن أن تقتصر على المحافظ الشخصية. الذين يؤمنون بأن إنتاجهم الفكري يستحق الهدف والحماية والتأثير الحقيقي، دون أن يفقد سلامته القانونية.</p>
-                            <p style="text-align: right;">كل ما تم إنشاؤه هنا يحمل بصمة القانون المطبق على التكنولوجيا. منظور يفهم أن الابتكار يكون مستدامًا فقط عندما يحترم القواعد والحقوق والمسؤوليات.</p>
-                            <p style="font-style: italic; margin-top: 2rem; color: var(--color-primary); border-right: 2px solid var(--gold-primary); padding-right: 1rem; text-align: right;">
-                                "إذا كنت تعتقد أن مستقبل التكنولوجيا يحتاج إلى أكثر من الرمز البرمجي — يحتاج إلى بنية وأخلاق وأساس قانوني، فإنك تفهم تمامًا سبب وجود هذا البرنامج.<br>وقد وُلد من القانون، لتنظيم المستقبل الذي تصر التكنولوجيا على إنشائه دون قواعد."
-                            </p>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Telefone / WhatsApp</label>
+                            <input type="text" name="telefone" required placeholder="(11) 99999-9999">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-alt"></i> Evento de interesse</label>
+                            <select name="evento_interesse" required>
+                                <option value="">Selecione o local</option>
+                                <option value="Lapa - 10/04/2026">Lapa • 10 de Abril, 2026</option>
+                                <option value="Santo Amaro - 28/05/2026">Santo Amaro • 28 de Maio, 2026</option>
+                                <option value="Faria Lima - 17/06/2026">Faria Lima • 17 de Junho, 2026</option>
+                                <option value="Osasco - 04/09/2026">Osasco • 4 de Setembro, 2026</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-cubes"></i> Tipo de serviço desejado</label>
+                            <select name="tipo_servico" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="Estruturação jurídica de ativos tecnológicos">Estruturação jurídica de ativos tecnológicos</option>
+                                <option value="Desenvolvimento de software sob demanda">Desenvolvimento de software sob demanda</option>
+                                <option value="Soluções de governança e compliance">Soluções de governança e compliance</option>
+                                <option value="Produto exclusivo (descrever no campo abaixo)">Produto exclusivo (descrever no campo abaixo)</option>
+                                <option value="Parceria estratégica para distribuição">Parceria estratégica para distribuição</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-dollar-sign"></i> Valor do investimento proposto (R$)</label>
+                            <input type="text" name="valor_investimento" placeholder="Ex: R$ 50.000,00">
+                        </div>
+                        <div class="form-group full-width">
+                            <label><i class="fas fa-file-alt"></i> Descrição do produto ou serviço desejado</label>
+                            <textarea name="descricao_produto" rows="3" placeholder="Descreva qual produto exclusivo você deseja que desenvolvamos, ou qual serviço dentro do nosso nicho você precisa..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label><i class="fas fa-comment-dots"></i> Mensagem adicional / observações</label>
+                            <textarea name="mensagem" rows="2" placeholder="Informações complementares sobre sua proposta..."></textarea>
                         </div>
                     </div>
+                    <button type="submit" class="btn-submit" style="margin-top: 1.5rem; width: 100%;"><i class="fas fa-paper-plane"></i> Enviar proposta para análise</button>
+                </form>
+                <p style="font-size: 0.75rem; text-align: center; margin-top: 1rem; color: var(--color-text-light);">Após o envio, nossa equipe analisará sua proposta e entrará em contato para confirmar o agendamento da reunião.</p>
+            </div>
+
+            <!-- INFORMAÇÃO INSTITUCIONAL -->
+            <div style="margin-top: 3rem; text-align: center; background: rgba(10, 49, 71, 0.03); padding: 2rem; border-radius: 28px;">
+                <i class="fas fa-gem" style="font-size: 2rem; color: var(--gold-primary); margin-bottom: 0.5rem; display: inline-block;"></i>
+                <h3 style="font-family: 'Cinzel', serif; color: var(--color-primary);">O que apresentamos nas rodadas?</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                    <div><i class="fas fa-balance-scale" style="color: var(--gold-primary);"></i> <strong>Estruturação Jurídica</strong><br><span style="font-size: 0.85rem;">Proteção de ativos e contratos</span></div>
+                    <div><i class="fas fa-code" style="color: var(--gold-primary);"></i> <strong>Desenvolvimento Sob Demanda</strong><br><span style="font-size: 0.85rem;">Produtos exclusivos para seu negócio</span></div>
+                    <div><i class="fas fa-chart-line" style="color: var(--gold-primary);"></i> <strong>Governança Tecnológica</strong><br><span style="font-size: 0.85rem;">Modelos LAYER e Exclusive Identity</span></div>
+                    <div><i class="fas fa-handshake" style="color: var(--gold-primary);"></i> <strong>Parcerias Estratégicas</strong><br><span style="font-size: 0.85rem;">Estrutura para investidores</span></div>
                 </div>
+                <p style="margin-top: 1.5rem; color: var(--color-text-light); font-family: 'Marcellus', serif;">Apresentamos nossa capacidade técnica e jurídica. Você define o investimento e o produto exclusivo que deseja que desenvolvamos para o seu ecossistema.</p>
             </div>
         </div>
     </section>
+</main>
 
-    <!-- Seção: Benefícios -->
-    <section id="beneficios" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Benefícios para Profissionais Independentes</span>
-                <span class="lang-content" data-lang="en">Benefits for Independent Professionals</span>
-                <span class="lang-content" data-lang="ar">فوائد للمحترفين المستقلين</span>
-            </h2>
-            
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="benefit-item">
-                    <div class="benefit-icon"><i class="fas fa-medal"></i></div>
-                    <div>
-                        <h4>
-                            <span class="lang-content active" data-lang="pt">Estruturação Profissional</span>
-                            <span class="lang-content" data-lang="en">Professional Structuring</span>
-                            <span class="lang-content" data-lang="ar">هيكلة مهنية</span>
-                        </h4>
-                        <p>
-                            <span class="lang-content active" data-lang="pt">Ofereça uma estrutura formal de conexão com o mercado, fortalecendo sua posição como criador profissional independente.</span>
-                            <span class="lang-content" data-lang="en">Offer a formal structure for market connection, strengthening your position as an independent professional creator.</span>
-                            <span class="lang-content" data-lang="ar">قدم هيكلاً رسميًا للاتصال بالسوق، مما يعزز موقعك كمبدع محترف مستقل.</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-                    <div>
-                        <h4>
-                            <span class="lang-content active" data-lang="pt">Desenvolvimento Mensurável</span>
-                            <span class="lang-content" data-lang="en">Measurable Development</span>
-                            <span class="lang-content" data-lang="ar">تطور قابل للقياس</span>
-                        </h4>
-                        <p>
-                            <span class="lang-content active" data-lang="pt">Acompanhe o impacto da sua produção intelectual, com métricas claras sobre desenvolvimento técnico e progressão profissional.</span>
-                            <span class="lang-content" data-lang="en">Track the impact of your intellectual production, with clear metrics on technical development and professional progression.</span>
-                            <span class="lang-content" data-lang="ar">تتبع تأثير إنتاجك الفكري، مع مقاييس واضحة حول التطور التقني والتقدم المهني.</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon"><i class="fas fa-network-wired"></i></div>
-                    <div>
-                        <h4>
-                            <span class="lang-content active" data-lang="pt">Integração Estrutural</span>
-                            <span class="lang-content" data-lang="en">Structural Integration</span>
-                            <span class="lang-content" data-lang="ar">تكامل هيكلي</span>
-                        </h4>
-                        <p>
-                            <span class="lang-content active" data-lang="pt">Estabeleça uma ponte institucional entre sua produção criativa e o ecossistema de inovação, com estrutura jurídica adequada.</span>
-                            <span class="lang-content" data-lang="en">Establish an institutional bridge between your creative production and the innovation ecosystem, with proper legal structure.</span>
-                            <span class="lang-content" data-lang="ar">أنشئ جسرًا مؤسسيًا بين إنتاجك الإبداعي والنظام البيئي للابتكار، مع هيكل قانوني مناسب.</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div>
-                        <h4>
-                            <span class="lang-content active" data-lang="pt">Formação Completa</span>
-                            <span class="lang-content" data-lang="en">Complete Formation</span>
-                            <span class="lang-content" data-lang="ar">تكوين كامل</span>
-                        </h4>
-                        <p>
-                            <span class="lang-content active" data-lang="pt">Complemente suas habilidades técnicas com a perspectiva real do ciclo completo: da criação à estruturação profissional com base jurídica.</span>
-                            <span class="lang-content" data-lang="en">Complement your technical skills with the real perspective of the complete cycle: from creation to professional structuring with legal basis.</span>
-                            <span class="lang-content" data-lang="ar">أكمل مهاراتك التقنية بمنظور حقيقي للدورة الكاملة: من الإبداع إلى البنية المهنية بأساس قانوني.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+<footer class="footer">
+    <div class="footer-content">
+        <p>© 2026 Programa IP – Ponte para Investidores. Estruturação para Criadores Independentes.</p>
+        <p style="color: var(--gold-secondary); font-size: 0.9rem; margin: 0.5rem 0;">"Apresentamos soluções. Você define o investimento e o produto exclusivo que deseja."</p>
+        <div class="social-links" style="display: flex; justify-content: center; gap: 1.2rem; margin: 1rem 0;">
+            <a href="#" style="color: var(--gold-secondary);"><i class="fas fa-user-tie"></i></a>
+            <a href="#" style="color: var(--gold-secondary);"><i class="fas fa-handshake"></i></a>
+            <a href="#" style="color: var(--gold-secondary);"><i class="fas fa-chart-line"></i></a>
         </div>
-    </section>
+        <p style="font-size: 0.8rem;">Rodadas de apresentação em Lapa, Santo Amaro, Faria Lima e Osasco. Envie sua proposta para participação.</p>
+    </div>
+</footer>
 
-    <!-- Seção: Como Funciona -->
-    <section id="como-funciona" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Como Funciona</span>
-                <span class="lang-content" data-lang="en">How It Works</span>
-                <span class="lang-content" data-lang="ar">كيف يعمل</span>
-            </h2>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-1"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Identificação de Talentos</span>
-                        <span class="lang-content" data-lang="en">Talent Identification</span>
-                        <span class="lang-content" data-lang="ar">تحديد المواهب</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Identificamos projetos de mérito desenvolvidos por profissionais independentes, freelancers e iniciantes talentosos.</span>
-                        <span class="lang-content" data-lang="en">We identify meritorious projects developed by independent professionals, freelancers, and talented beginners.</span>
-                        <span class="lang-content" data-lang="ar">نحدد المشاريع الجديرة المطورة من قبل المحترفين المستقلين والمستقلين والمبتدئين الموهوبين.</span>
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-2"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Curadoria Técnica</span>
-                        <span class="lang-content" data-lang="en">Technical Curation</span>
-                        <span class="lang-content" data-lang="ar">تقييم تقني</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Realizamos a preparação técnica e jurídica dos projetos, apresentando-os a investidores qualificados.</span>
-                        <span class="lang-content" data-lang="en">We perform technical and legal preparation of projects, presenting them to qualified investors.</span>
-                        <span class="lang-content" data-lang="ar">نقوم بالإعداد التقني والقانوني للمشاريع، وعرضها على مستثمرين مؤهلين.</span>
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-3"></i></div>
-                    <h3>
-                        <span class="lang-content active" data-lang="pt">Conexão Estruturada</span>
-                        <span class="lang-content" data-lang="en">Structured Connection</span>
-                        <span class="lang-content" data-lang="ar">اتصال منظم</span>
-                    </h3>
-                    <p>
-                        <span class="lang-content active" data-lang="pt">Investidores interessados conectam-se com os criadores através de mecanismos formais que preservam direitos e responsabilidades.</span>
-                        <span class="lang-content" data-lang="en">Interested investors connect with creators through formal mechanisms that preserve rights and responsibilities.</span>
-                        <span class="lang-content" data-lang="ar">يتصل المستثمرون المهتمون بالمبدعين من خلال آليات رسمية تحفظ الحقوق والمسؤوليات.</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção: Eventos (Agenda de Conexões) -->
-    <section id="eventos" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-content active" data-lang="pt">Agenda de Conexões</span>
-                <span class="lang-content" data-lang="en">Connection Agenda</span>
-                <span class="lang-content" data-lang="ar">جدول اللقاءات</span>
-            </h2>
-            <p class="text-center mb-3" style="color: var(--color-text-light); font-size: 1.05rem; font-family: 'Marcellus', serif;">
-                <span class="lang-content active" data-lang="pt">Eventos onde estaremos presentes para conectar talentos e investidores.</span>
-                <span class="lang-content" data-lang="en">Events where we will be present to connect talents and investors.</span>
-                <span class="lang-content" data-lang="ar">الفعاليات التي سنكون فيها لتوحيد المواهب والمستثمرين.</span>
-            </p>
-
-            <div class="cards-grid">
-                <!-- Start Up Summit 2026 -->
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Start Up Summit 2026</span><span class="lang-content" data-lang="en">Start Up Summit 2026</span><span class="lang-content" data-lang="ar">قمة الشركات الناشئة 2026</span></h3>
-                    <div class="event-date"><i class="fas fa-calendar-day"></i><span>26 a 28 de Agosto, 2026</span></div>
-                    <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>Florianópolis/SC, Brasil</span></div>
-                    <div class="event-description">Apresentação dos produtos tecnológicos Exclusive Identity e LAYER 2026.</div>
-                    <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
-                </div>
-                <!-- Rio Tech Summit 2026 -->
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Rio Tech Summit 2026</span><span class="lang-content" data-lang="en">Rio Tech Summit 2026</span><span class="lang-content" data-lang="ar">قمة ريو للتكنولوجيا 2026</span></h3>
-                    <div class="event-date"><i class="fas fa-calendar-day"></i><span>12 e 13 de Março, 2026</span></div>
-                    <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>Rio de Janeiro/RJ, Brasil</span></div>
-                    <div class="event-description">Encontro de lideranças tecnológicas e apresentação do portfólio Exclusive Identity.</div>
-                    <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
-                </div>
-                <!-- Franchising Expo 2026 -->
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Franchising Expo 2026</span><span class="lang-content" data-lang="en">Franchising Expo 2026</span><span class="lang-content" data-lang="ar">معرض الامتياز التجاري 2026</span></h3>
-                    <div class="event-date"><i class="fas fa-calendar-day"></i><span>24 a 27 de Junho, 2026</span></div>
-                    <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>Expo Center Norte, São Paulo/SP</span></div>
-                    <div class="event-description">Exposição de soluções tecnológicas para expansão de redes.</div>
-                    <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
-                </div>
-                <!-- Brasil Tech Summit -->
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Brasil Tech Summit 2026</span><span class="lang-content" data-lang="en">Brazil Tech Summit 2026</span><span class="lang-content" data-lang="ar">قمة البرازيل للتكنولوجيا 2026</span></h3>
-                    <div class="event-date"><i class="fas fa-calendar-day"></i><span>Sexta, 24 Jul 2026 • 10h–13h (BRT)</span></div>
-                    <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>São Paulo/SP, Brasil</span></div>
-                    <div class="event-description"><strong>Cúpula da Tecnologia no Brasil.</strong> Reuniões com formuladores de políticas públicas, CEOs e investidores.</div>
-                    <div class="event-status status-a-confirmar">🔶 Ainda a confirmar</div>
-                </div>
-                <!-- Tech Meeting SP (confirmado) -->
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Tech Meeting SP</span><span class="lang-content" data-lang="en">Tech Meeting SP</span><span class="lang-content" data-lang="ar">لقاء التكنولوجيا SP</span></h3>
-                    <div class="event-date"><i class="fas fa-calendar-day"></i><span>10 de Outubro, 2026</span></div>
-                    <div class="event-location"><i class="fas fa-map-marker-alt"></i><span>São Paulo/SP, Brasil</span></div>
-                    <div class="event-description">Reuniões com investidores e demonstração do programa LAYER 2026. <strong>Reserva de IP para investidores estratégicos mundiais.</strong></div>
-                    <div class="event-status status-confirmado">✅ Confirmado • Reserva de IP para investidores estratégicos mundiais</div>
-                </div>
-            </div>
-
-            <div style="margin-top: 3rem; text-align: center;">
-                <p style="color: var(--color-text-light); font-family: 'Marcellus', serif;">Deseja agendar uma reunião em um desses eventos? Entre em contato.</p>
-                <a href="mailto:avzproptech@outlook.com?subject=Agendamento%20em%20evento" class="btn btn-primary" style="margin-top: 1rem;">
-                    <i class="fas fa-calendar-check"></i> Solicitar reunião
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>
-                <span class="lang-content active" data-lang="pt">© 2026 Ponte para Investidores – Estruturação para Criadores Independentes.</span>
-                <span class="lang-content" data-lang="en">© 2026 Bridge to Investors – Structuring for Independent Creators.</span>
-                <span class="lang-content" data-lang="ar">© 2026 جسر إلى المستثمرين – هيكلة للمبدعين المستقلين.</span>
-            </p>
-            
-            <p style="color: var(--gold-secondary); font-size: 0.9rem; margin-top: 1.5rem; font-weight: 500;">
-                <span class="lang-content active" data-lang="pt">"Conectando talento independente com investimento real."</span>
-                <span class="lang-content" data-lang="en">"Connecting independent talent with real investment."</span>
-                <span class="lang-content" data-lang="ar">"ربط المواهب المستقلة باستثمار حقيقي."</span>
-            </p>
-            
-            <div class="social-links">
-                <a href="#"><i class="fas fa-user-tie"></i></a>
-                <a href="#"><i class="fas fa-handshake"></i></a>
-                <a href="#"><i class="fas fa-chart-line"></i></a>
-            </div>
-            
-            <p style="color: rgba(255,255,255,0.8); font-size: 0.8rem; margin-top: 2rem;">
-                <span class="lang-content active" data-lang="pt">Uma ponte institucional entre criadores independentes e investidores.</span>
-                <span class="lang-content" data-lang="en">An institutional bridge between independent creators and investors.</span>
-                <span class="lang-content" data-lang="ar">جسر مؤسسي بين المبدعين المستقلين والمستثمرين.</span>
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Efeito de partículas de luxo
-        function createLuxuryParticles() {
-            const particlesContainer = document.getElementById('luxuryParticles');
-            if (!particlesContainer) {
-                const newContainer = document.createElement('div');
-                newContainer.className = 'luxury-particles';
-                newContainer.id = 'luxuryParticles';
-                document.body.appendChild(newContainer);
-            }
-            
-            const container = document.getElementById('luxuryParticles');
-            const particlesCount = 25;
-            
-            for (let i = 0; i < particlesCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('luxury-particle');
-                
-                const size = Math.random() * 4 + 1;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${Math.random() * 100}vw`;
-                particle.style.animationDelay = `${Math.random() * 15}s`;
-                particle.style.animationDuration = `${Math.random() * 8 + 12}s`;
-                
-                container.appendChild(particle);
-            }
+<script>
+    // Partículas douradas
+    function createLuxuryParticles() {
+        let container = document.getElementById('luxuryParticles');
+        if (!container) {
+            const newDiv = document.createElement('div');
+            newDiv.id = 'luxuryParticles';
+            newDiv.className = 'luxury-particles';
+            document.body.appendChild(newDiv);
+            container = newDiv;
         }
-        
-        createLuxuryParticles();
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('luxury-particle');
+            const size = Math.random() * 5 + 1.5;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.animationDelay = `${Math.random() * 18}s`;
+            particle.style.animationDuration = `${Math.random() * 12 + 10}s`;
+            container.appendChild(particle);
+        }
+    }
+    createLuxuryParticles();
 
-        // Sistema de Idioma Unificado
-        document.addEventListener('DOMContentLoaded', function() {
-            const langToggle = document.getElementById('langToggle');
-            const langDropdown = document.getElementById('langDropdown');
-            const langArrow = document.getElementById('langArrow');
-            const currentLang = document.getElementById('currentLang');
-            const langOptions = document.querySelectorAll('.lang-dropdown li');
-            const langContents = document.querySelectorAll('.lang-content');
-            
-            // Menu Hambúrguer
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('navMenu');
-            const menuOverlay = document.getElementById('menuOverlay');
-            
-            // Toggle menu hambúrguer
-            if (hamburger) {
-                hamburger.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    menuOverlay.classList.toggle('active');
-                    
-                    // Prevenir scroll do body quando menu está aberto
-                    if (navMenu.classList.contains('active')) {
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        document.body.style.overflow = '';
-                    }
-                });
-            }
-            
-            // Fechar menu ao clicar no overlay
-            if (menuOverlay) {
-                menuOverlay.addEventListener('click', function() {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    menuOverlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            }
-            
-            // Fechar menu ao clicar em um link
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    if (window.innerWidth <= 768) {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                        menuOverlay.classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-                });
-            });
-            
-            // Set initial language to Portuguese
-            let currentLanguage = 'pt';
-            
-            // Toggle dropdown
-            langToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                langDropdown.classList.toggle('show');
-                langArrow.style.transform = langDropdown.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
-            });
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function() {
-                langDropdown.classList.remove('show');
-                langArrow.style.transform = 'rotate(0)';
-            });
-            
-            // Select language
-            langOptions.forEach(option => {
-                option.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const lang = this.getAttribute('data-lang');
-                    
-                    // Update current language display
-                    const flag = this.querySelector('.lang-flag').textContent;
-                    const langName = this.querySelector('span:last-child').textContent;
-                    currentLang.innerHTML = `<span class="lang-flag">${flag}</span><span>${langName}</span>`;
-                    
-                    // Update active state in dropdown
-                    langOptions.forEach(opt => opt.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Set language
-                    setLanguage(lang);
-                    currentLanguage = lang;
-                    
-                    // Close dropdown
-                    langDropdown.classList.remove('show');
-                    langArrow.style.transform = 'rotate(0)';
-                    
-                    // Update RTL for Arabic
-                    if (lang === 'ar') {
-                        document.body.setAttribute('dir', 'rtl');
-                        document.documentElement.setAttribute('dir', 'rtl');
-                        document.documentElement.setAttribute('lang', 'ar');
-                    } else {
-                        document.body.removeAttribute('dir');
-                        document.documentElement.removeAttribute('dir');
-                        document.documentElement.setAttribute('lang', lang);
-                    }
-                });
-            });
-            
-            function setLanguage(lang) {
-                // Hide all language content
-                langContents.forEach(content => {
-                    content.classList.remove('active');
-                });
-                
-                // Show content for selected language
-                const activeContents = document.querySelectorAll(`.lang-content[data-lang="${lang}"]`);
-                activeContents.forEach(content => {
-                    content.classList.add('active');
-                });
-                
-                // Update HTML lang attribute
-                document.documentElement.setAttribute('lang', lang);
-            }
-            
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-            
-            // Header scroll effect
-            window.addEventListener('scroll', () => {
-                const header = document.querySelector('.header');
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgb(255 255 255 / .99)';
-                    header.style.backdropFilter = 'blur(25px)';
-                    header.style.boxShadow = '0 8px 30px rgba(10, 49, 71, 0.1)';
-                    header.style.borderBottomColor = 'rgba(212, 175, 55, 0.2)';
-                } else {
-                    header.style.background = 'rgb(255 255 255 / .98)';
-                    header.style.backdropFilter = 'blur(20px)';
-                    header.style.boxShadow = '0 5px 20px rgba(10, 49, 71, 0.05)';
-                    header.style.borderBottomColor = 'rgba(212, 175, 55, 0.15)';
-                }
-            });
+    // Scroll effect no header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 60) {
+            header.style.background = 'rgb(255 255 255 / 0.98)';
+            header.style.backdropFilter = 'blur(24px)';
+        } else {
+            header.style.background = 'rgb(255 255 255 / 0.98)';
+            header.style.backdropFilter = 'blur(20px)';
+        }
+    });
 
-            // Adjust hero height on resize
-            function adjustHeroHeight() {
-                const header = document.querySelector('.header');
-                const hero = document.querySelector('.hero');
-                if (header && hero) {
-                    const headerHeight = header.offsetHeight;
-                    hero.style.minHeight = `calc(100vh - ${headerHeight}px)`;
-                }
-            }
-
-            adjustHeroHeight();
-            window.addEventListener('resize', adjustHeroHeight);
-        });
-    </script>
+    function adjustHeroPadding() {
+        const header = document.querySelector('.header');
+        const hero = document.querySelector('.hero-exec');
+        if (header && hero) {
+            hero.style.paddingTop = `${header.offsetHeight + 20}px`;
+        }
+    }
+    adjustHeroPadding();
+    window.addEventListener('resize', adjustHeroPadding);
+</script>
 </body>
 </html>
