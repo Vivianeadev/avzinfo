@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Arquitetura Sob Demanda | Viviane Baz – Programa IP</title>
+    <title>Arquitetura Sob Demanda | Programa IP – Estruturas Exclusivas para Investidores</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* ===== VARIÁVEIS LUXO – AZUL MARINHO & DOURADO ===== */
         :root {
             --color-primary: #0a3147;
             --color-primary-light: #1a4b6d;
@@ -24,19 +23,14 @@
             --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F4E4B8 50%, #B8860B 100%);
             --gradient-gold-subtle: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 228, 184, 0.1) 100%);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: 'Inter', sans-serif;
             background: var(--color-bg);
             color: var(--color-text);
             line-height: 1.6;
             overflow-x: hidden;
-            position: relative;
         }
-
-        /* EFEITO PARTÍCULAS DOURADAS */
         .luxury-particles {
             position: fixed;
             top: 0;
@@ -59,8 +53,6 @@
             90% { opacity: 0.15; }
             100% { transform: translateY(-100px) rotate(360deg) scale(1); opacity: 0; }
         }
-
-        /* HEADER */
         .header {
             position: fixed;
             top: 0;
@@ -71,7 +63,6 @@
             padding: 0.8rem 0;
             transition: var(--transition);
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-            box-shadow: 0 5px 20px rgba(10, 49, 71, 0.05);
         }
         .nav-container {
             max-width: 1400px;
@@ -105,11 +96,8 @@
             font-size: 0.7rem;
             letter-spacing: 3px;
             color: var(--gold-dark);
-            margin-top: 2px;
-            font-weight: 300;
             font-family: 'Marcellus', serif;
         }
-
         .back-link {
             background: rgba(10, 49, 71, 0.05);
             padding: 8px 20px;
@@ -117,7 +105,6 @@
             text-decoration: none;
             font-weight: 500;
             color: var(--color-primary);
-            font-size: 0.9rem;
             transition: var(--transition);
             border: 1px solid rgba(212, 175, 55, 0.2);
             display: inline-flex;
@@ -129,10 +116,7 @@
             background: var(--color-primary);
             color: var(--gold-secondary);
             border-color: var(--gold-primary);
-            transform: translateY(-2px);
         }
-
-        /* BOTÃO DE IDIOMA UNIFICADO */
         .lang-toggle {
             position: fixed;
             top: 90px;
@@ -148,14 +132,8 @@
             align-items: center;
             gap: 10px;
             cursor: pointer;
-            transition: var(--transition);
             min-width: 120px;
             justify-content: center;
-        }
-        .lang-toggle:hover {
-            border-color: var(--gold-primary);
-            box-shadow: var(--shadow-gold);
-            transform: translateY(-2px);
         }
         .lang-toggle .current-lang {
             display: flex;
@@ -165,7 +143,6 @@
             font-weight: 500;
             color: var(--color-primary);
         }
-        .lang-toggle .lang-flag { font-size: 1.2rem; }
         .lang-toggle .lang-arrow {
             color: var(--gold-primary);
             font-size: 0.8rem;
@@ -194,7 +171,6 @@
             cursor: pointer;
             transition: var(--transition);
             color: var(--color-text);
-            font-size: 0.9rem;
         }
         .lang-dropdown li:hover {
             background: rgba(212, 175, 55, 0.1);
@@ -203,12 +179,9 @@
         .lang-dropdown li.active {
             background: var(--gradient-gold);
             color: white;
-            font-weight: 500;
         }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-
-        /* HERO */
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
         .hero {
             min-height: 65vh;
             display: flex;
@@ -217,44 +190,30 @@
             text-align: center;
             padding: 8rem 2rem 4rem;
             position: relative;
-            background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
-                        radial-gradient(circle at 90% 80%, rgba(10, 49, 71, 0.05) 0%, transparent 70%);
+            background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
         }
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
-        }
+        .hero-content { max-width: 900px; z-index: 2; }
         .hero h1 {
             font-family: 'Cinzel', serif;
             font-size: clamp(2.8rem, 6vw, 4rem);
             margin-bottom: 1rem;
             color: var(--color-primary);
         }
-        .hero h1 span {
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .hero h1 span { background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-subtitle { font-size: 1.2rem; color: var(--color-text-light); margin-bottom: 2rem; font-family: 'Marcellus', serif; }
+        .hero-value-badge { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem; }
+        .hero-value-badge span {
+            background: rgba(10, 49, 71, 0.06);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--color-primary);
         }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--color-text-light);
-            margin-bottom: 2rem;
-            font-family: 'Marcellus', serif;
-        }
-
-        /* SEÇÕES */
-        .section {
-            padding: 5rem 2rem;
-            position: relative;
-            background: rgba(255, 255, 255, 0.7);
-        }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
+        .section { padding: 5rem 2rem; position: relative; background: rgba(255, 255, 255, 0.7); }
+        .container { max-width: 1400px; margin: 0 auto; z-index: 2; }
         .section-title {
             font-family: 'Cinzel', serif;
             font-size: clamp(2rem, 4vw, 2.8rem);
@@ -274,8 +233,6 @@
             height: 3px;
             background: var(--gradient-gold);
         }
-
-        /* PERFIL DA CEO */
         .profile-section {
             display: grid;
             grid-template-columns: 320px 1fr;
@@ -293,14 +250,8 @@
             border-radius: 20px;
             overflow: hidden;
             border: 1px solid rgba(212, 175, 55, 0.2);
-            box-shadow: 0 12px 28px rgba(10, 49, 71, 0.1);
         }
-        .profile-photo img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
+        .profile-photo img { width: 100%; height: auto; display: block; }
         .profile-badge {
             display: inline-block;
             background: var(--gradient-gold-subtle);
@@ -312,33 +263,11 @@
             margin-bottom: 1rem;
             border: 1px solid rgba(212, 175, 55, 0.3);
         }
-        .profile-name {
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-        .profile-title {
-            font-size: 1.1rem;
-            color: var(--gold-dark);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-        .profile-text {
-            color: var(--color-text-light);
-            line-height: 1.7;
-            font-family: 'Marcellus', serif;
-        }
-        .profile-text p {
-            margin-bottom: 1rem;
-        }
-        .highlight {
-            background: rgba(212, 175, 55, 0.08);
-            padding: 0.2rem 0.4rem;
-            border-radius: 6px;
-            font-weight: 500;
-            color: var(--color-primary);
-        }
+        .profile-name { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+        .profile-title { font-size: 1.1rem; color: var(--gold-dark); margin-bottom: 1.5rem; font-weight: 500; }
+        .profile-text { color: var(--color-text-light); line-height: 1.7; font-family: 'Marcellus', serif; }
+        .profile-text p { margin-bottom: 1rem; }
+        .highlight { background: rgba(212, 175, 55, 0.08); padding: 0.2rem 0.4rem; border-radius: 6px; font-weight: 500; color: var(--color-primary); }
         .signature {
             margin-top: 2rem;
             font-family: 'Cinzel', serif;
@@ -347,14 +276,7 @@
             border-left: 3px solid var(--gold-primary);
             padding-left: 1.2rem;
         }
-
-        /* CARDS DE SERVIÇOS */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
         .service-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
@@ -363,35 +285,11 @@
             transition: var(--transition);
             text-align: center;
         }
-        .service-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--gold-primary);
-            box-shadow: var(--shadow-luxury);
-        }
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--gold-primary);
-            margin-bottom: 1rem;
-        }
-        .service-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-        }
-        .service-card p {
-            color: var(--color-text-light);
-            font-family: 'Marcellus', serif;
-            font-size: 0.9rem;
-        }
-
-        /* PROCESSO */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .service-card:hover { transform: translateY(-6px); border-color: var(--gold-primary); box-shadow: var(--shadow-luxury); }
+        .service-icon { font-size: 2.5rem; color: var(--gold-primary); margin-bottom: 1rem; }
+        .service-card h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--color-primary); margin-bottom: 1rem; }
+        .service-card p { color: var(--color-text-light); font-family: 'Marcellus', serif; font-size: 0.9rem; }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
         .step {
             text-align: center;
             background: rgba(255, 255, 255, 0.9);
@@ -413,17 +311,8 @@
             margin: 0 auto 1rem;
             font-family: 'Cinzel', serif;
         }
-        .step h4 {
-            font-family: 'Cinzel', serif;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-        .step p {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-        }
-
-        /* FORMULÁRIO */
+        .step h4 { font-family: 'Cinzel', serif; color: var(--color-primary); margin-bottom: 0.5rem; }
+        .step p { font-size: 0.85rem; color: var(--color-text-light); }
         .proposal-form {
             margin-top: 3rem;
             background: rgba(255, 255, 255, 0.95);
@@ -432,25 +321,10 @@
             border: 1px solid rgba(212, 175, 55, 0.25);
             box-shadow: var(--shadow-luxury);
         }
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .form-group.full-width {
-            grid-column: span 2;
-        }
-        .form-group label {
-            font-weight: 500;
-            color: var(--color-primary);
-            font-size: 0.85rem;
-        }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .form-group.full-width { grid-column: span 2; }
+        .form-group label { font-weight: 500; color: var(--color-primary); font-size: 0.85rem; }
         .form-group input, .form-group select, .form-group textarea {
             padding: 0.8rem 1rem;
             border: 1px solid rgba(212, 175, 55, 0.3);
@@ -458,10 +332,7 @@
             font-family: 'Inter', sans-serif;
             background: white;
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--gold-primary);
-        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gold-primary); }
         .btn-submit {
             background: var(--gradient-gold);
             color: var(--color-primary);
@@ -474,59 +345,23 @@
             font-size: 1rem;
             width: 100%;
         }
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .footer {
-            background: var(--color-primary);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        body[dir="rtl"] .signature {
-            border-left: none;
-            border-right: 3px solid var(--gold-primary);
-            padding-left: 0;
-            padding-right: 1.2rem;
-        }
-
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+        .footer { background: var(--color-primary); color: white; padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.3); }
+        body[dir="rtl"] .signature { border-left: none; border-right: 3px solid var(--gold-primary); padding-left: 0; padding-right: 1.2rem; }
         @media (max-width: 768px) {
-            .profile-section {
-                grid-template-columns: 1fr;
-                padding: 1.5rem;
-            }
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            .form-group.full-width {
-                grid-column: span 1;
-            }
-            .hero {
-                padding-top: 7rem;
-            }
-            .nav-container {
-                padding: 0 1rem;
-            }
-            .lang-toggle {
-                top: 75px;
-                right: 10px;
-            }
+            .profile-section { grid-template-columns: 1fr; padding: 1.5rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .hero { padding-top: 7rem; }
+            .lang-toggle { top: 75px; right: 10px; }
         }
     </style>
 </head>
 <body>
 <div class="luxury-particles" id="luxuryParticles"></div>
 
-<!-- Botão de Idioma Unificado -->
 <div class="lang-toggle" id="langToggle">
-    <div class="current-lang" id="currentLang">
-        <span class="lang-flag">🇧🇷</span>
-        <span>Português</span>
-    </div>
+    <div class="current-lang" id="currentLang"><span class="lang-flag">🇧🇷</span><span>Português</span></div>
     <i class="fas fa-chevron-down lang-arrow" id="langArrow"></i>
     <ul class="lang-dropdown" id="langDropdown">
         <li data-lang="pt" class="active"><span class="lang-flag">🇧🇷</span><span>Português</span></li>
@@ -538,226 +373,169 @@
 <header class="header">
     <div class="nav-container">
         <div class="logo">PROGRAMA IP<span>Ponte para Investidores</span></div>
-        <a href="https://www.avzinfra.com" class="back-link"><i class="fas fa-arrow-left"></i> <span class="lang-content active" data-lang="pt">Voltar à página principal</span><span class="lang-content" data-lang="en">Back to main page</span><span class="lang-content" data-lang="ar">العودة إلى الصفحة الرئيسية</span></a>
+        <a href="https://www.avzinfra.com" class="back-link"><i class="fas fa-arrow-left"></i> <span id="backLinkText">Voltar à página principal</span></a>
     </div>
 </header>
 
 <main>
-    <div class="hero">
-        <div class="hero-content">
-            <h1><span class="lang-content active" data-lang="pt">Arquitetura <span>Sob Demanda</span></span><span class="lang-content" data-lang="en">Architecture <span>On Demand</span></span><span class="lang-content" data-lang="ar">الهندسة <span>حسب الطلب</span></span></h1>
-            <p class="hero-subtitle"><span class="lang-content active" data-lang="pt">Desenvolvimento exclusivo com estrutura descentralizada, governança técnica e proteção jurídica integrada — para investidores e parceiros estratégicos.</span><span class="lang-content" data-lang="en">Exclusive development with decentralized structure, technical governance and integrated legal protection — for investors and strategic partners.</span><span class="lang-content" data-lang="ar">تطوير حصري بهيكل لا مركزي، وحوكمة تقنية، وحماية قانونية متكاملة — للمستثمرين والشركاء الاستراتيجيين.</span></p>
+    <!-- PT -->
+    <div class="lang-section active" data-lang="pt">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Arquitetura <span>Sob Demanda</span></h1>
+                <p class="hero-subtitle">Desenvolvimento exclusivo com estrutura descentralizada, governança técnica e proteção jurídica integrada — para investidores e parceiros estratégicos.</p>
+                <div class="hero-value-badge"><span><i class="fas fa-gem"></i> Ativo institucional pronto</span><span><i class="fas fa-crown"></i> Exclusividade garantida</span><span><i class="fas fa-shield-hart"></i> Governança + IP integrados</span></div>
+            </div>
         </div>
+        <section class="section"><div class="container"><div class="profile-section"><div class="profile-photo"><img src="photo-coordenadora.jpg" alt="Viviane Baz"></div><div><div class="profile-badge"><i class="fas fa-crown"></i> Arquiteta de Estruturas Descentralizadas</div><h2 class="profile-name">Viviane Baz</h2><div class="profile-title">Diretora Técnica do Programa IP | Pioneira em Blockchain e Arquiteturas Descentralizadas no Brasil</div><div class="profile-text"><p>Há <span class="highlight">7 anos</span> me dedico integralmente ao estudo e à implementação de arquiteturas descentralizadas no Brasil — muito antes de o mercado nacional ter qualquer familiaridade com blockchain. Atuei como uma das expectadoras pioneiras ao entregar soluções estruturadas que uniam tecnologia, governança e modelo de negócio.</p><p>No Programa IP, minha atuação como diretora técnica consiste em estruturar <span class="highlight">soluções completas sob demanda</span>, onde cada produto nasce com:</p><ul style="margin: 1rem 0 1rem 1.5rem;"><li><strong>Estrutura técnica descentralizada</strong> — escalável, segura e desenhada para crescimento institucional</li><li><strong>Proteção jurídica integrada</strong> — propriedade intelectual e contratos como parte inerente da arquitetura</li><li><strong>Governança para investidores e parceiros</strong> — modelos que viabilizam captação e segurança de capital</li><li><strong>Filosofia de destino intelectual</strong> — cada ativo desenvolvido tem um propósito claro e valor agregado</li></ul><p>Ao longo de 7 anos, desenvolvi uma metodologia única que combina <span class="highlight">observação profunda do ecossistema blockchain</span> com uma visão estrutural que antecipa as exigências de investidores. Não entrego apenas código — entrego <span class="highlight">ativos prontos para o mercado</span>, com todas as camadas de valor já incorporadas.</p><div class="signature"><i class="fas fa-feather-alt"></i> Viviane Baz<br><span style="font-size: 0.8rem;">Diretora Técnica | 7 anos de imersão em Blockchain no Brasil</span></div></div></div></div></div></section>
+        <section class="section" style="background: var(--gradient-gold-subtle);"><div class="container"><h2 class="section-title">O Que Estruturamos Sob Demanda</h2><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fas fa-code-branch"></i></div><h3>Arquitetura Descentralizada</h3><p>Projetos com estrutura distribuída, escalável e preparada para crescimento institucional.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-shield-alt"></i></div><h3>Proteção Jurídica Integrada</h3><p>Cada solução nasce com cláusulas de propriedade intelectual e contratos como parte da arquitetura.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-layer-group"></i></div><h3>Produtos Exclusivos</h3><p>Desenvolvimento sob medida com camadas de governança e compliance integradas.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-chart-network"></i></div><h3>Estrutura para Investidores</h3><p>Modelos de governança que garantem transparência, segurança e rastreabilidade para aportes.</p></div></div></div></section>
+        <section class="section"><div class="container"><h2 class="section-title">Como Trabalhamos Juntos</h2><div class="process-steps"><div class="step"><div class="step-number">1</div><h4>Proposta & Briefing</h4><p>Você apresenta o produto exclusivo que deseja e oferta o investimento.</p></div><div class="step"><div class="step-number">2</div><h4>Análise Estratégica</h4><p>Analisamos a viabilidade técnica e estrutural do projeto.</p></div><div class="step"><div class="step-number">3</div><h4>Arquitetura & Estruturação</h4><p>Desenhamos a arquitetura e integramos as camadas de governança e proteção.</p></div><div class="step"><div class="step-number">4</div><h4>Desenvolvimento & Entrega</h4><p>Orquestramos o desenvolvimento e entregamos o produto com estrutura institucional completa.</p></div></div></div></section>
+        <section class="section" style="background: var(--gradient-gold-subtle);"><div class="container"><h2 class="section-title">Solicite uma Proposta Exclusiva</h2><p style="text-align: center; margin-bottom: 2rem;">Apresente sua ideia, o produto exclusivo que deseja e o valor do investimento. Analisaremos pessoalmente e estruturaremos a solução sob medida.</p><div class="proposal-form"><form id="emailFormPt" onsubmit="sendEmail(event, 'pt')"><div class="form-grid"><div class="form-group"><label>Nome completo</label><input type="text" id="nomePt" name="nome" required></div><div class="form-group"><label>E-mail</label><input type="email" id="emailPt" name="email" required></div><div class="form-group"><label>Telefone / WhatsApp</label><input type="text" id="telefonePt" name="telefone" required></div><div class="form-group"><label>Empresa / Fundo</label><input type="text" id="empresaPt" name="empresa"></div><div class="form-group full-width"><label>Produto exclusivo desejado</label><textarea id="produtoPt" name="produto_desejado" rows="3"></textarea></div><div class="form-group"><label>Valor do investimento (R$)</label><input type="text" id="valorPt" name="valor_investimento"></div><div class="form-group"><label>Prazo desejado</label><select id="prazoPt" name="prazo"><option value="">Selecione</option><option value="Até 30 dias">Até 30 dias</option><option value="1 a 3 meses">1 a 3 meses</option><option value="3 a 6 meses">3 a 6 meses</option><option value="Flexível">Flexível</option></select></div><div class="form-group full-width"><label>Mensagem adicional</label><textarea id="mensagemPt" name="mensagem" rows="2"></textarea></div></div><button type="submit" class="btn-submit">Enviar proposta para análise</button></form><p style="font-size: 0.75rem; text-align: center; margin-top: 1rem;">Resposta em até 48h. Propostas analisadas pela equipe técnica liderada por Viviane Baz.</p></div></div></section>
     </div>
 
-    <section class="section">
-        <div class="container">
-            <div class="profile-section">
-                <div class="profile-photo">
-                    <img src="photo-coordenadora.jpg" alt="Viviane Baz - CEO Programa IP">
-                </div>
-                <div>
-                    <div class="profile-badge"><i class="fas fa-crown"></i> <span class="lang-content active" data-lang="pt">CEO & Responsável Técnica</span><span class="lang-content" data-lang="en">CEO & Technical Lead</span><span class="lang-content" data-lang="ar">الرئيس التنفيذي والمسؤول التقني</span></div>
-                    <h2 class="profile-name">Viviane Baz</h2>
-                    <div class="profile-title"><span class="lang-content active" data-lang="pt">CEO do Programa IP | Especialista em Arquiteturas Descentralizadas e Blockchain</span><span class="lang-content" data-lang="en">CEO of IP Program | Specialist in Decentralized Architectures and Blockchain</span><span class="lang-content" data-lang="ar">الرئيس التنفيذي لبرنامج IP | خبيرة في الهندسة اللامركزية وسلسلة الكتل</span></div>
-                    <div class="profile-text">
-                        <div class="lang-content active" data-lang="pt">
-                            <p>Há <span class="highlight">7 anos</span> estudo e implemento arquiteturas descentralizadas no Brasil — muito antes de o mercado brasileiro ter familiaridade com blockchain. Fui uma das pioneiras a compreender que a verdadeira inovação não está apenas na tecnologia, mas na <span class="highlight">estrutura</span> que a sustenta: governança, proteção jurídica e modelo de negócio institucional.</p>
-                            <p>Como CEO e responsável pelos principais projetos da empresa, minha linha de atuação é o desenvolvimento de <span class="highlight">arquiteturas completas</span> dentro da filosofia do Programa IP. Cada projeto que lidero nasce com:</p>
-                            <ul style="margin: 1rem 0 1rem 1.5rem;">
-                                <li><strong>Estrutura técnica descentralizada</strong> — escalável, segura e preparada para crescimento</li>
-                                <li><strong>Proteção jurídica integrada</strong> — propriedade intelectual e contratos como parte da arquitetura</li>
-                                <li><strong>Governança para investidores e parceiros</strong> — modelos que viabilizam captação e estruturação de capital</li>
-                                <li><strong>Filosofia de destino intelectual</strong> — cada ativo criado tem um propósito institucional claro</li>
-                            </ul>
-                            <p>Minha trajetória de 7 anos me permitiu desenvolver uma metodologia única: unir <span class="highlight">expertise técnica em blockchain e arquiteturas descentralizadas</span> com uma visão estrutural que antecipa as necessidades de investidores e parceiros. Não entrego apenas código — entrego <span class="highlight">ativos prontos para o mercado</span>, com todas as camadas de valor já incorporadas.</p>
-                            <div class="signature"><i class="fas fa-feather-alt"></i> Viviane Baz<br><span style="font-size: 0.8rem;">CEO | Arquiteturas Descentralizadas | Blockchain desde 2019</span></div>
-                        </div>
-                        <div class="lang-content" data-lang="en">
-                            <p>For <span class="highlight">7 years</span> I have been studying and implementing decentralized architectures in Brazil — long before the Brazilian market had familiarity with blockchain. I was one of the pioneers to understand that true innovation lies not only in technology, but in the <span class="highlight">structure</span> that supports it: governance, legal protection, and institutional business model.</p>
-                            <p>As CEO and responsible for the company's main projects, my focus is developing <span class="highlight">complete architectures</span> within the IP Program philosophy. Every project I lead is born with:</p>
-                            <ul style="margin: 1rem 0 1rem 1.5rem;">
-                                <li><strong>Decentralized technical structure</strong> — scalable, secure, and ready for growth</li>
-                                <li><strong>Integrated legal protection</strong> — intellectual property and contracts as part of the architecture</li>
-                                <li><strong>Governance for investors and partners</strong> — models that enable capital raising and structuring</li>
-                                <li><strong>Intellectual destination philosophy</strong> — every created asset has a clear institutional purpose</li>
-                            </ul>
-                            <p>My 7-year journey allowed me to develop a unique methodology: combining <span class="highlight">technical expertise in blockchain and decentralized architectures</span> with a structural vision that anticipates the needs of investors and partners. I don't just deliver code — I deliver <span class="highlight">market-ready assets</span>, with all value layers already incorporated.</p>
-                            <div class="signature"><i class="fas fa-feather-alt"></i> Viviane Baz<br><span style="font-size: 0.8rem;">CEO | Decentralized Architectures | Blockchain since 2019</span></div>
-                        </div>
-                        <div class="lang-content" data-lang="ar">
-                            <p>منذ <span class="highlight">7 سنوات</span> وأنا أدرس وأطبق الهندسات اللامركزية في البرازيل — قبل وقت طويل من أن يصبح السوق البرازيلي على دراية بسلسلة الكتل. كنت من الرواد الذين أدركوا أن الابتكار الحقيقي لا يكمن فقط في التكنولوجيا، بل في <span class="highlight">الهيكل</span> الذي يدعمها: الحوكمة، الحماية القانونية، ونموذج العمل المؤسسي.</p>
-                            <p>بصفتي الرئيس التنفيذي والمسؤول عن المشاريع الرئيسية للشركة، فإن مجال عملي هو تطوير <span class="highlight">هندسات كاملة</span> ضمن فلسفة برنامج IP. كل مشروع أقوده يولد مع:</p>
-                            <ul style="margin: 1rem 0 1rem 1.5rem;">
-                                <li><strong>هيكل تقني لا مركزي</strong> — قابل للتطوير، آمن، وجاهز للنمو</li>
-                                <li><strong>حماية قانونية متكاملة</strong> — الملكية الفكرية والعقود كجزء من الهندسة</li>
-                                <li><strong>حوكمة للمستثمرين والشركاء</strong> — نماذج تمكن من جمع رأس المال وهيكلته</li>
-                                <li><strong>فلسفة الوجهة الفكرية</strong> — كل أصل يتم إنشاؤه له غرض مؤسسي واضح</li>
-                            </ul>
-                            <p>سمحت لي رحلتي التي استمرت 7 سنوات بتطوير منهجية فريدة: الجمع بين <span class="highlight">الخبرة التقنية في سلسلة الكتل والهندسات اللامركزية</span> ورؤية هيكلية تستبق احتياجات المستثمرين والشركاء. لا أقدم مجرد كود — بل أقدم <span class="highlight">أصولاً جاهزة للسوق</span>، مع دمج جميع طبقات القيمة مسبقًا.</p>
-                            <div class="signature"><i class="fas fa-feather-alt"></i> فيفيان باز<br><span style="font-size: 0.8rem;">الرئيس التنفيذي | الهندسات اللامركزية | سلسلة الكتل منذ 2019</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- EN -->
+    <div class="lang-section" data-lang="en">
+        <div class="hero"><div class="hero-content"><h1>Architecture <span>On Demand</span></h1><p class="hero-subtitle">Exclusive development with decentralized structure, technical governance and integrated legal protection — for investors and strategic partners.</p><div class="hero-value-badge"><span><i class="fas fa-gem"></i> Institutional-ready asset</span><span><i class="fas fa-crown"></i> Guaranteed exclusivity</span><span><i class="fas fa-shield-hart"></i> Governance + IP integrated</span></div></div></div>
+        <section class="section"><div class="container"><div class="profile-section"><div class="profile-photo"><img src="photo-coordenadora.jpg" alt="Viviane Baz"></div><div><div class="profile-badge"><i class="fas fa-crown"></i> Decentralized Structures Architect</div><h2 class="profile-name">Viviane Baz</h2><div class="profile-title">Technical Director of IP Program | Pioneer in Blockchain & Decentralized Architectures in Brazil</div><div class="profile-text"><p>For <span class="highlight">7 years</span> I have been fully dedicated to studying and implementing decentralized architectures in Brazil — long before the national market had any familiarity with blockchain. I acted as one of the pioneering observers by delivering structured solutions that combined technology, governance, and business models.</p><p>At IP Program, as Technical Director, I structure <span class="highlight">complete on-demand solutions</span>, where each product is born with:</p><ul><li><strong>Decentralized technical structure</strong> — scalable, secure, designed for institutional growth</li><li><strong>Integrated legal protection</strong> — intellectual property and contracts as inherent parts</li><li><strong>Governance for investors</strong> — models enabling capital raising and security</li><li><strong>Intellectual destination philosophy</strong> — every asset has a clear purpose and added value</li></ul><p>Over 7 years, I developed a unique methodology combining <span class="highlight">deep blockchain ecosystem observation</span> with a structural vision. I don't just deliver code — I deliver <span class="highlight">market-ready assets</span> with all value layers incorporated.</p><div class="signature"><i class="fas fa-feather-alt"></i> Viviane Baz<br><span style="font-size: 0.8rem;">Technical Director | 7 years of blockchain immersion in Brazil</span></div></div></div></div></div></section>
+        <section class="section" style="background: var(--gradient-gold-subtle);"><div class="container"><h2 class="section-title">What We Structure On Demand</h2><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fas fa-code-branch"></i></div><h3>Decentralized Architecture</h3><p>Distributed, scalable structure ready for institutional growth.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-shield-alt"></i></div><h3>Integrated Legal Protection</h3><p>IP clauses and contracts as part of the architecture.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-layer-group"></i></div><h3>Exclusive Products</h3><p>Custom development with governance and compliance layers.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-chart-network"></i></div><h3>Investor Structure</h3><p>Governance models ensuring transparency and traceability.</p></div></div></div></section>
+        <section class="section"><div class="container"><h2 class="section-title">How We Work Together</h2><div class="process-steps"><div class="step"><div class="step-number">1</div><h4>Proposal & Briefing</h4><p>You present your exclusive product and investment offer.</p></div><div class="step"><div class="step-number">2</div><h4>Strategic Analysis</h4><p>We analyze technical and structural feasibility.</p></div><div class="step"><div class="step-number">3</div><h4>Architecture & Structuring</h4><p>We design architecture and integrate governance layers.</p></div><div class="step"><div class="step-number">4</div><h4>Development & Delivery</h4><p>We orchestrate development and deliver the complete product.</p></div></div></div></section>
+        <section class="section" style="background: var(--gradient-gold-subtle);"><div class="container"><h2 class="section-title">Request an Exclusive Proposal</h2><p style="text-align: center; margin-bottom: 2rem;">Present your idea, the exclusive product you want, and the investment amount. We will analyze and structure a custom solution.</p><div class="proposal-form"><form id="emailFormEn" onsubmit="sendEmail(event, 'en')"><div class="form-grid"><div class="form-group"><label>Full name</label><input type="text" id="nomeEn" name="nome" required></div><div class="form-group"><label>Email</label><input type="email" id="emailEn" name="email" required></div><div class="form-group"><label>Phone / WhatsApp</label><input type="text" id="telefoneEn" name="telefone" required></div><div class="form-group"><label>Company / Fund</label><input type="text" id="empresaEn" name="empresa"></div><div class="form-group full-width"><label>Desired exclusive product</label><textarea id="produtoEn" name="produto_desejado" rows="3"></textarea></div><div class="form-group"><label>Investment amount (R$)</label><input type="text" id="valorEn" name="valor_investimento"></div><div class="form-group"><label>Desired timeframe</label><select id="prazoEn" name="prazo"><option value="">Select</option><option value="Up to 30 days">Up to 30 days</option><option value="1 to 3 months">1 to 3 months</option><option value="3 to 6 months">3 to 6 months</option><option value="Flexible">Flexible</option></select></div><div class="form-group full-width"><label>Additional message</label><textarea id="mensagemEn" name="mensagem" rows="2"></textarea></div></div><button type="submit" class="btn-submit">Send proposal for analysis</button></form><p style="font-size: 0.75rem; text-align: center; margin-top: 1rem;">Response within 48h. Proposals analyzed by the technical team led by Viviane Baz.</p></div></div></section>
+    </div>
 
-    <section class="section" style="background: var(--gradient-gold-subtle);">
-        <div class="container">
-            <h2 class="section-title"><span class="lang-content active" data-lang="pt">O Que Estruturo Sob Demanda</span><span class="lang-content" data-lang="en">What I Structure On Demand</span><span class="lang-content" data-lang="ar">ما أقدمه حسب الطلب</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-code-branch"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Arquitetura Descentralizada</span><span class="lang-content" data-lang="en">Decentralized Architecture</span><span class="lang-content" data-lang="ar">هندسة لا مركزية</span></h3>
-                    <p><span class="lang-content active" data-lang="pt">Projetos com estrutura distribuída, escalável e preparada para crescimento institucional.</span><span class="lang-content" data-lang="en">Projects with distributed, scalable structure ready for institutional growth.</span><span class="lang-content" data-lang="ar">مشاريع بهيكل موزع وقابل للتطوير وجاهز للنمو المؤسسي.</span></p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Proteção Jurídica Integrada</span><span class="lang-content" data-lang="en">Integrated Legal Protection</span><span class="lang-content" data-lang="ar">حماية قانونية متكاملة</span></h3>
-                    <p><span class="lang-content active" data-lang="pt">Cada solução nasce com cláusulas de propriedade intelectual e contratos como parte da arquitetura.</span><span class="lang-content" data-lang="en">Each solution is born with intellectual property clauses and contracts as part of the architecture.</span><span class="lang-content" data-lang="ar">كل حل يولد مع بنود الملكية الفكرية والعقود كجزء من الهندسة.</span></p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Produtos Exclusivos</span><span class="lang-content" data-lang="en">Exclusive Products</span><span class="lang-content" data-lang="ar">منتجات حصرية</span></h3>
-                    <p><span class="lang-content active" data-lang="pt">Desenvolvimento sob medida com camadas de governança e compliance integradas.</span><span class="lang-content" data-lang="en">Custom development with integrated governance and compliance layers.</span><span class="lang-content" data-lang="ar">تطوير مخصص مع طبقات حوكمة والامتثال المدمجة.</span></p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-chart-network"></i></div>
-                    <h3><span class="lang-content active" data-lang="pt">Estrutura para Investidores e Parceiros</span><span class="lang-content" data-lang="en">Structure for Investors and Partners</span><span class="lang-content" data-lang="ar">هيكل للمستثمرين والشركاء</span></h3>
-                    <p><span class="lang-content active" data-lang="pt">Modelos de governança que garantem transparência, segurança e rastreabilidade para aportes.</span><span class="lang-content" data-lang="en">Governance models ensuring transparency, security and traceability for investments.</span><span class="lang-content" data-lang="ar">نماذج حوكمة تضمن الشفافية والأمان وقابلية التتبع للاستثمارات.</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="lang-content active" data-lang="pt">Como Trabalhamos Juntos</span><span class="lang-content" data-lang="en">How We Work Together</span><span class="lang-content" data-lang="ar">كيف نعمل معًا</span></h2>
-            <div class="process-steps">
-                <div class="step"><div class="step-number">1</div><h4><span class="lang-content active" data-lang="pt">Proposta & Briefing</span><span class="lang-content" data-lang="en">Proposal & Briefing</span><span class="lang-content" data-lang="ar">الاقتراح والإحاطة</span></h4><p><span class="lang-content active" data-lang="pt">Você apresenta o produto exclusivo que deseja e oferta o investimento.</span><span class="lang-content" data-lang="en">You present the exclusive product you want and offer the investment.</span><span class="lang-content" data-lang="ar">تقدم المنتج الحصري الذي ترغب فيه وتعرض الاستثمار.</span></p></div>
-                <div class="step"><div class="step-number">2</div><h4><span class="lang-content active" data-lang="pt">Análise Estratégica</span><span class="lang-content" data-lang="en">Strategic Analysis</span><span class="lang-content" data-lang="ar">تحليل استراتيجي</span></h4><p><span class="lang-content active" data-lang="pt">Analiso a viabilidade técnica e estrutural do projeto.</span><span class="lang-content" data-lang="en">I analyze the technical and structural feasibility of the project.</span><span class="lang-content" data-lang="ar">أقوم بتحليل الجدوى التقنية والهيكلية للمشروع.</span></p></div>
-                <div class="step"><div class="step-number">3</div><h4><span class="lang-content active" data-lang="pt">Arquitetura & Estruturação</span><span class="lang-content" data-lang="en">Architecture & Structuring</span><span class="lang-content" data-lang="ar">الهندسة والهيكلة</span></h4><p><span class="lang-content active" data-lang="pt">Desenho a arquitetura e integro as camadas de governança e proteção.</span><span class="lang-content" data-lang="en">I design the architecture and integrate governance and protection layers.</span><span class="lang-content" data-lang="ar">أقوم بتصميم الهندسة ودمج طبقات الحوكمة والحماية.</span></p></div>
-                <div class="step"><div class="step-number">4</div><h4><span class="lang-content active" data-lang="pt">Desenvolvimento & Entrega</span><span class="lang-content" data-lang="en">Development & Delivery</span><span class="lang-content" data-lang="ar">التطوير والتسليم</span></h4><p><span class="lang-content active" data-lang="pt">Orquestro o desenvolvimento e entrego o produto com estrutura institucional completa.</span><span class="lang-content" data-lang="en">I orchestrate development and deliver the product with complete institutional structure.</span><span class="lang-content" data-lang="ar">أقوم بتنسيق التطوير وتسليم المنتج بهيكل مؤسسي كامل.</span></p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" style="background: var(--gradient-gold-subtle);">
-        <div class="container">
-            <h2 class="section-title"><span class="lang-content active" data-lang="pt">Solicite uma Proposta Exclusiva</span><span class="lang-content" data-lang="en">Request an Exclusive Proposal</span><span class="lang-content" data-lang="ar">طلب عرض حصري</span></h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);"><span class="lang-content active" data-lang="pt">Apresente sua ideia, o produto que deseja que desenvolvamos e o valor do investimento. Analisarei pessoalmente e estruturarei a solução sob medida para investidores e parceiros estratégicos.</span><span class="lang-content" data-lang="en">Present your idea, the product you want us to develop, and the investment amount. I will personally analyze and structure the custom solution for investors and strategic partners.</span><span class="lang-content" data-lang="ar">قدم فكرتك، والمنتج الذي ترغب في تطويره، وقيمة الاستثمار. سأقوم بتحليلها شخصيًا وهيكلة الحل المخصص للمستثمرين والشركاء الاستراتيجيين.</span></p>
-            
-            <div class="proposal-form" id="proposta">
-                <form action="https://formsubmit.co/avzproptech@outlook.com" method="POST">
-                    <input type="hidden" name="_subject" value="Proposta de Desenvolvimento Sob Demanda - Viviane Baz">
-                    <input type="hidden" name="_captcha" value="false">
-                    <div class="form-grid">
-                        <div class="form-group"><label><i class="fas fa-user"></i> <span class="lang-content active" data-lang="pt">Nome completo</span><span class="lang-content" data-lang="en">Full name</span><span class="lang-content" data-lang="ar">الاسم الكامل</span></label><input type="text" name="nome" required placeholder="Seu nome"></div>
-                        <div class="form-group"><label><i class="fas fa-envelope"></i> E-mail</label><input type="email" name="email" required placeholder="contato@exemplo.com"></div>
-                        <div class="form-group"><label><i class="fas fa-phone"></i> <span class="lang-content active" data-lang="pt">Telefone / WhatsApp</span><span class="lang-content" data-lang="en">Phone / WhatsApp</span><span class="lang-content" data-lang="ar">الهاتف / واتساب</span></label><input type="text" name="telefone" required placeholder="(11) 99999-9999"></div>
-                        <div class="form-group"><label><i class="fas fa-building"></i> <span class="lang-content active" data-lang="pt">Empresa / Fundo</span><span class="lang-content" data-lang="en">Company / Fund</span><span class="lang-content" data-lang="ar">الشركة / الصندوق</span></label><input type="text" name="empresa" placeholder="Nome da empresa ou fundo"></div>
-                        <div class="form-group full-width"><label><i class="fas fa-cube"></i> <span class="lang-content active" data-lang="pt">Produto exclusivo desejado</span><span class="lang-content" data-lang="en">Desired exclusive product</span><span class="lang-content" data-lang="ar">المنتج الحصري المطلوب</span></label><textarea name="produto_desejado" rows="3" placeholder="Descreva qual produto exclusivo você deseja que desenvolvamos, qual problema resolve..."></textarea></div>
-                        <div class="form-group"><label><i class="fas fa-dollar-sign"></i> <span class="lang-content active" data-lang="pt">Valor do investimento proposto (R$)</span><span class="lang-content" data-lang="en">Proposed investment amount (R$)</span><span class="lang-content" data-lang="ar">قيمة الاستثمار المقترحة (ريال برازيلي)</span></label><input type="text" name="valor_investimento" placeholder="Ex: R$ 80.000,00"></div>
-                        <div class="form-group"><label><i class="fas fa-clock"></i> <span class="lang-content active" data-lang="pt">Prazo desejado</span><span class="lang-content" data-lang="en">Desired timeframe</span><span class="lang-content" data-lang="ar">الإطار الزمني المطلوب</span></label><select name="prazo"><option value="">Selecione</option><option value="Até 30 dias">Até 30 dias</option><option value="1 a 3 meses">1 a 3 meses</option><option value="3 a 6 meses">3 a 6 meses</option><option value="Flexível">Flexível</option></select></div>
-                        <div class="form-group full-width"><label><i class="fas fa-comment-dots"></i> <span class="lang-content active" data-lang="pt">Mensagem adicional</span><span class="lang-content" data-lang="en">Additional message</span><span class="lang-content" data-lang="ar">رسالة إضافية</span></label><textarea name="mensagem" rows="2" placeholder="Informações complementares..."></textarea></div>
-                    </div>
-                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> <span class="lang-content active" data-lang="pt">Enviar proposta para análise</span><span class="lang-content" data-lang="en">Send proposal for analysis</span><span class="lang-content" data-lang="ar">إرسال العرض للتحليل</span></button>
-                </form>
-                <p style="font-size: 0.75rem; text-align: center; margin-top: 1rem; color: var(--color-text-light);"><span class="lang-content active" data-lang="pt">Receberá resposta em até 48 horas úteis. Propostas são analisadas diretamente por mim, Viviane Baz.</span><span class="lang-content" data-lang="en">You will receive a response within 48 business hours. Proposals are analyzed directly by me, Viviane Baz.</span><span class="lang-content" data-lang="ar">سوف تتلقى ردًا في غضون 48 ساعة عمل. يتم تحليل العروض مباشرة من قبلي، فيفيان باز.</span></p>
-            </div>
-        </div>
-    </section>
+    <!-- AR -->
+    <div class="lang-section" data-lang="ar">
+        <div class="hero"><div class="hero-content"><h1>الهندسة <span>حسب الطلب</span></h1><p class="hero-subtitle">تطوير حصري بهيكل لا مركزي، وحوكمة تقنية، وحماية قانونية متكاملة — للمستثمرين والشركاء الاستراتيجيين.</p><div class="hero-value-badge"><span><i class="fas fa-gem"></i> أصل مؤسسي جاهز</span><span><i class="fas fa-crown"></i> حصريّة مضمونة</span><span><i class="fas fa-shield-hart"></i> حوكمة + ملكية فكرية مدمجة</span></div></div></div>
+        <section class="section"><div class="container"><div class="profile-section"><div class="profile-photo"><img src="photo-coordenadora.jpg" alt="فيفيان باز"></div><div><div class="profile-badge"><i class="fas fa-crown"></i> مهندس الهياكل اللامركزية</div><h2 class="profile-name">فيفيان باز</h2><div class="profile-title">المدير الفني لبرنامج IP | رائدة في سلسلة الكتل والهياكل اللامركزية في البرازيل</div><div class="profile-text"><p>منذ <span class="highlight">7 سنوات</span> وأنا ملتزمة بدراسة وتنفيذ الهندسات اللامركزية في البرازيل — قبل وقت طويل من معرفة السوق بسلسلة الكتل. كنت من المراقبات الرائدات في تقديم حلول منظمة تجمع التكنولوجيا والحوكمة ونموذج العمل.</p><p>في برنامج IP، أقوم كهندسة تقنية بهيكلة <span class="highlight">حلول كاملة حسب الطلب</span>، حيث يولد كل منتج مع:</p><ul><li><strong>هيكل تقني لا مركزي</strong> — قابل للتطوير وآمن للنمو المؤسسي</li><li><strong>حماية قانونية متكاملة</strong> — الملكية الفكرية والعقود كجزء أصيل</li><li><strong>حوكمة للمستثمرين</strong> — نماذج تمكن جمع رأس المال والأمان</li><li><strong>فلسفة الوجهة الفكرية</strong> — كل أصل له غرض واضح وقيمة مضافة</li></ul><p>على مدى 7 سنوات، طورت منهجية فريدة تجمع <span class="highlight">المراقبة العميقة للنظام البيئي لسلسلة الكتل</span> ورؤية هيكلية. لا أقدم مجرد كود — بل أقدم <span class="highlight">أصولاً جاهزة للسوق</span> مع دمج جميع طبقات القيمة.</p><div class="signature"><i class="fas fa-feather-alt"></i> فيفيان باز<br><span style="font-size: 0.8rem;">المدير الفني | 7 سنوات من الانغماس في سلسلة الكتل في البرازيل</span></div></div></div></div></div></section>
+        <section class="section" style="background: var(--gradient-gold-subtle);"><div class="container"><h2 class="section-title">ما نقدمه حسب الطلب</h2><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fas fa-code-branch"></i></div><h3>هندسة لا مركزية</h3><p>مشاريع بهيكل موزع وقابل للتطوير وجاهز للنمو المؤسسي.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-shield-alt"></i></div><h3>حماية قانونية متكاملة</h3><p>كل حل يولد مع بنود الملكية الفكرية والعقود كجزء من الهندسة.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-layer-group"></i></div><h3>منتجات حصرية</h3><p>تطوير مخصص مع طبقات حوكمة والامتثال المدمجة.</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-chart-network"></i></div><h3>هيكل للمستثمرين</h3><p>نماذج حوكمة تضمن الشفافية والأمان وقابلية التتبع للاستثمارات.</p></div></div></div></section>
+        <section class="section"><div class="container"><h2 class="section-title">كيف نعمل معًا</h2><div class="process-steps"><div class="step"><div class="step-number">1</div><h4>الاقتراح والإحاطة</h4><p>تقدم المنتج الحصري الذي ترغب فيه وتعرض الاستثمار.</p></div><div class="step"><div class="step-number">2</div><h4>تحليل استراتيجي</h4><p>نقوم بتحليل الجدوى التقنية والهيكلية للمشروع.</p></div><div class="step"><div class="step-number">3</div><h4>الهندسة والهيكلة</h4><p>نقوم بتصميم الهندسة ودمج طبقات الحوكمة والحماية.</p></div><div class="step"><div class="step-number">4</div><h4>التطوير والتسليم</h4><p>نقوم بتنسيق التطوير وتسليم المنتج بهيكل مؤسسي كامل.</p></div></div></div></section>
+        <section class="section" style="background: var(--gradient-gold-subtle);"><div class="container"><h2 class="section-title">طلب عرض حصري</h2><p style="text-align: center; margin-bottom: 2rem;">قدم فكرتك، والمنتج الحصري الذي ترغب فيه، وقيمة الاستثمار. سنقوم بتحليلها وهيكلة الحل المخصص.</p><div class="proposal-form"><form id="emailFormAr" onsubmit="sendEmail(event, 'ar')"><div class="form-grid"><div class="form-group"><label>الاسم الكامل</label><input type="text" id="nomeAr" name="nome" required></div><div class="form-group"><label>البريد الإلكتروني</label><input type="email" id="emailAr" name="email" required></div><div class="form-group"><label>الهاتف / واتساب</label><input type="text" id="telefoneAr" name="telefone" required></div><div class="form-group"><label>الشركة / الصندوق</label><input type="text" id="empresaAr" name="empresa"></div><div class="form-group full-width"><label>المنتج الحصري المطلوب</label><textarea id="produtoAr" name="produto_desejado" rows="3"></textarea></div><div class="form-group"><label>قيمة الاستثمار (ريال)</label><input type="text" id="valorAr" name="valor_investimento"></div><div class="form-group"><label>الإطار الزمني المطلوب</label><select id="prazoAr" name="prazo"><option value="">اختر</option><option value="حتى 30 يومًا">حتى 30 يومًا</option><option value="1 إلى 3 أشهر">1 إلى 3 أشهر</option><option value="3 إلى 6 أشهر">3 إلى 6 أشهر</option><option value="مرن">مرن</option></select></div><div class="form-group full-width"><label>رسالة إضافية</label><textarea id="mensagemAr" name="mensagem" rows="2"></textarea></div></div><button type="submit" class="btn-submit">إرسال العرض للتحليل</button></form><p style="font-size: 0.75rem; text-align: center; margin-top: 1rem;">سوف تتلقى ردًا خلال 48 ساعة. يتم تحليل العروض من قبل الفريق الفني بقيادة فيفيان باز.</p></div></div></section>
+    </div>
 </main>
 
 <footer class="footer">
     <div class="footer-content">
         <p>© 2026 Programa IP – Ponte para Investidores</p>
-        <p style="color: var(--gold-secondary); font-size: 0.9rem; margin: 0.5rem 0;"><span class="lang-content active" data-lang="pt">Arquitetura Sob Demanda • Estrutura Descentralizada • Governança Integrada</span><span class="lang-content" data-lang="en">Architecture On Demand • Decentralized Structure • Integrated Governance</span><span class="lang-content" data-lang="ar">هندسة حسب الطلب • هيكل لا مركزي • حوكمة متكاملة</span></p>
-        <p style="font-size: 0.8rem;"><span class="lang-content active" data-lang="pt">Responsável técnica: Viviane Baz | CEO | Especialista em Blockchain e Arquiteturas Descentralizadas</span><span class="lang-content" data-lang="en">Technical Lead: Viviane Baz | CEO | Specialist in Blockchain and Decentralized Architectures</span><span class="lang-content" data-lang="ar">المسؤول التقني: فيفيان باز | الرئيس التنفيذي | خبيرة في سلسلة الكتل والهندسات اللامركزية</span></p>
+        <p id="footerTagline" style="color: var(--gold-secondary); font-size: 0.9rem; margin: 0.5rem 0;">Arquitetura Sob Demanda • Estrutura Descentralizada • Governança Integrada</p>
+        <p id="footerCredits" style="font-size: 0.8rem;">Responsável técnica: Viviane Baz | Diretora Técnica | Arquiteturas Descentralizadas e Blockchain desde 2019</p>
     </div>
 </footer>
 
 <script>
     function createLuxuryParticles() {
         let container = document.getElementById('luxuryParticles');
-        if (!container) {
-            const newDiv = document.createElement('div');
-            newDiv.id = 'luxuryParticles';
-            newDiv.className = 'luxury-particles';
-            document.body.appendChild(newDiv);
-            container = newDiv;
-        }
+        if (!container) { const div = document.createElement('div'); div.id = 'luxuryParticles'; div.className = 'luxury-particles'; document.body.appendChild(div); container = div; }
         for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('luxury-particle');
+            const p = document.createElement('div');
+            p.classList.add('luxury-particle');
             const size = Math.random() * 5 + 1.5;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}vw`;
-            particle.style.animationDelay = `${Math.random() * 18}s`;
-            particle.style.animationDuration = `${Math.random() * 12 + 10}s`;
-            container.appendChild(particle);
+            p.style.width = `${size}px`; p.style.height = `${size}px`;
+            p.style.left = `${Math.random() * 100}vw`;
+            p.style.animationDelay = `${Math.random() * 18}s`;
+            p.style.animationDuration = `${Math.random() * 12 + 10}s`;
+            container.appendChild(p);
         }
     }
     createLuxuryParticles();
 
-    // Sistema de Idioma
+    function sendEmail(event, lang) {
+        event.preventDefault();
+        
+        let nome, email, telefone, empresa, produto, valor, prazo, mensagem;
+        
+        if (lang === 'pt') {
+            nome = document.getElementById('nomePt').value;
+            email = document.getElementById('emailPt').value;
+            telefone = document.getElementById('telefonePt').value;
+            empresa = document.getElementById('empresaPt').value;
+            produto = document.getElementById('produtoPt').value;
+            valor = document.getElementById('valorPt').value;
+            prazo = document.getElementById('prazoPt').value;
+            mensagem = document.getElementById('mensagemPt').value;
+        } else if (lang === 'en') {
+            nome = document.getElementById('nomeEn').value;
+            email = document.getElementById('emailEn').value;
+            telefone = document.getElementById('telefoneEn').value;
+            empresa = document.getElementById('empresaEn').value;
+            produto = document.getElementById('produtoEn').value;
+            valor = document.getElementById('valorEn').value;
+            prazo = document.getElementById('prazoEn').value;
+            mensagem = document.getElementById('mensagemEn').value;
+        } else {
+            nome = document.getElementById('nomeAr').value;
+            email = document.getElementById('emailAr').value;
+            telefone = document.getElementById('telefoneAr').value;
+            empresa = document.getElementById('empresaAr').value;
+            produto = document.getElementById('produtoAr').value;
+            valor = document.getElementById('valorAr').value;
+            prazo = document.getElementById('prazoAr').value;
+            mensagem = document.getElementById('mensagemAr').value;
+        }
+        
+        const subject = encodeURIComponent(`Proposta de Desenvolvimento - ${nome}`);
+        const body = encodeURIComponent(
+            `NOVO FORMULÁRIO DE PROPOSTA - PROGRAMA IP\n\n` +
+            `Nome: ${nome}\n` +
+            `E-mail: ${email}\n` +
+            `Telefone: ${telefone}\n` +
+            `Empresa/Fundo: ${empresa || 'Não informado'}\n\n` +
+            `PRODUTO EXCLUSIVO DESEJADO:\n${produto || 'Não informado'}\n\n` +
+            `Valor do investimento: ${valor || 'Não informado'}\n` +
+            `Prazo desejado: ${prazo || 'Não informado'}\n\n` +
+            `MENSAGEM ADICIONAL:\n${mensagem || 'Não informada'}\n\n` +
+            `---\nEsta proposta foi enviada através do site Programa IP - Arquitetura Sob Demanda`
+        );
+        
+        window.location.href = `mailto:avzproptech@outlook.com?subject=${subject}&body=${body}`;
+    }
+
+    const translations = {
+        pt: { back: "Voltar à página principal", footerTag: "Arquitetura Sob Demanda • Estrutura Descentralizada • Governança Integrada", footerCred: "Responsável técnica: Viviane Baz | Diretora Técnica | Arquiteturas Descentralizadas e Blockchain desde 2019" },
+        en: { back: "Back to main page", footerTag: "Architecture On Demand • Decentralized Structure • Integrated Governance", footerCred: "Technical Lead: Viviane Baz | Technical Director | Decentralized Architectures and Blockchain since 2019" },
+        ar: { back: "العودة إلى الصفحة الرئيسية", footerTag: "هندسة حسب الطلب • هيكل لا مركزي • حوكمة متكاملة", footerCred: "المسؤول التقني: فيفيان باز | المدير الفني | الهندسات اللامركزية وسلسلة الكتل منذ 2019" }
+    };
+
     const langToggle = document.getElementById('langToggle');
     const langDropdown = document.getElementById('langDropdown');
     const langArrow = document.getElementById('langArrow');
     const currentLang = document.getElementById('currentLang');
     const langOptions = document.querySelectorAll('.lang-dropdown li');
-    const langContents = document.querySelectorAll('.lang-content');
+    const langSections = document.querySelectorAll('.lang-section');
+    const backLinkText = document.getElementById('backLinkText');
+    const footerTagline = document.getElementById('footerTagline');
+    const footerCredits = document.getElementById('footerCredits');
 
-    langToggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        langDropdown.classList.toggle('show');
-        langArrow.style.transform = langDropdown.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
-    });
+    langToggle.addEventListener('click', (e) => { e.stopPropagation(); langDropdown.classList.toggle('show'); langArrow.style.transform = langDropdown.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; });
+    document.addEventListener('click', () => { langDropdown.classList.remove('show'); langArrow.style.transform = 'rotate(0)'; });
 
-    document.addEventListener('click', function() {
-        langDropdown.classList.remove('show');
-        langArrow.style.transform = 'rotate(0)';
-    });
-
-    langOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
+    langOptions.forEach(opt => {
+        opt.addEventListener('click', (e) => {
             e.stopPropagation();
-            const lang = this.getAttribute('data-lang');
-            const flag = this.querySelector('.lang-flag').textContent;
-            const langName = this.querySelector('span:last-child').textContent;
+            const lang = opt.getAttribute('data-lang');
+            const flag = opt.querySelector('.lang-flag').textContent;
+            const langName = opt.querySelector('span:last-child').textContent;
             currentLang.innerHTML = `<span class="lang-flag">${flag}</span><span>${langName}</span>`;
-            langOptions.forEach(opt => opt.classList.remove('active'));
-            this.classList.add('active');
+            langOptions.forEach(o => o.classList.remove('active'));
+            opt.classList.add('active');
             setLanguage(lang);
             langDropdown.classList.remove('show');
             langArrow.style.transform = 'rotate(0)';
-            if (lang === 'ar') {
-                document.body.setAttribute('dir', 'rtl');
-                document.documentElement.setAttribute('dir', 'rtl');
-            } else {
-                document.body.removeAttribute('dir');
-                document.documentElement.removeAttribute('dir');
-            }
+            document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            backLinkText.textContent = translations[lang].back;
+            footerTagline.textContent = translations[lang].footerTag;
+            footerCredits.textContent = translations[lang].footerCred;
         });
     });
 
     function setLanguage(lang) {
-        langContents.forEach(content => content.classList.remove('active'));
-        document.querySelectorAll(`.lang-content[data-lang="${lang}"]`).forEach(content => content.classList.add('active'));
-        document.documentElement.setAttribute('lang', lang);
+        langSections.forEach(section => section.classList.remove('active'));
+        document.querySelectorAll(`.lang-section[data-lang="${lang}"]`).forEach(section => section.classList.add('active'));
+        document.documentElement.lang = lang;
     }
 
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
-        if (window.scrollY > 60) {
-            header.style.background = 'rgb(255 255 255 / 0.98)';
-            header.style.backdropFilter = 'blur(24px)';
-        } else {
-            header.style.background = 'rgb(255 255 255 / 0.98)';
-            header.style.backdropFilter = 'blur(20px)';
-        }
+        header.style.background = window.scrollY > 60 ? 'rgb(255 255 255 / 0.98)' : 'rgb(255 255 255 / 0.98)';
     });
 
     function adjustHeroPadding() {
